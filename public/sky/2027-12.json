@@ -1,0 +1,183 @@
+{
+  "schemaVersion": 1,
+  "validFrom": "2027-12-01T00:00:00Z",
+  "validUntil": "2028-01-01T00:00:00Z",
+  "source": {
+    "name": "pyswisseph",
+    "version": "2.10.03",
+    "url": "https://github.com/astrorigin/pyswisseph",
+    "ephemeris": "Moshier (built into Swiss Ephemeris)",
+    "coordinates": "geocentric tropical ecliptic",
+    "timeScale": "UT"
+  },
+  "events": [
+    {
+      "id": "moon-sign-Capricorn-2027-12-01T00:00:00Z",
+      "kind": "moon-sign",
+      "subject": "Capricorn",
+      "startsAt": "2027-12-01T00:00:00Z",
+      "endsAt": "2027-12-02T12:26:07Z",
+      "fact": "The Moon is in tropical Capricorn (geocentric zodiac)."
+    },
+    {
+      "id": "retrograde-Neptune-2027-12-01T00:00:00Z",
+      "kind": "retrograde",
+      "subject": "Neptune",
+      "startsAt": "2027-12-01T00:00:00Z",
+      "endsAt": "2027-12-15T09:06:21Z",
+      "fact": "Neptune is in apparent retrograde motion as seen from Earth."
+    },
+    {
+      "id": "retrograde-Saturn-2027-12-01T00:00:00Z",
+      "kind": "retrograde",
+      "subject": "Saturn",
+      "startsAt": "2027-12-01T00:00:00Z",
+      "endsAt": "2027-12-24T02:47:22Z",
+      "fact": "Saturn is in apparent retrograde motion as seen from Earth."
+    },
+    {
+      "id": "retrograde-Uranus-2027-12-01T00:00:00Z",
+      "kind": "retrograde",
+      "subject": "Uranus",
+      "startsAt": "2027-12-01T00:00:00Z",
+      "endsAt": "2028-01-01T00:00:00Z",
+      "fact": "Uranus is in apparent retrograde motion as seen from Earth."
+    },
+    {
+      "id": "moon-sign-Aquarius-2027-12-02T12:26:07Z",
+      "kind": "moon-sign",
+      "subject": "Aquarius",
+      "startsAt": "2027-12-02T12:26:07Z",
+      "endsAt": "2027-12-05T01:20:00Z",
+      "fact": "The Moon is in tropical Aquarius (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Pisces-2027-12-05T01:20:00Z",
+      "kind": "moon-sign",
+      "subject": "Pisces",
+      "startsAt": "2027-12-05T01:20:00Z",
+      "endsAt": "2027-12-07T13:30:29Z",
+      "fact": "The Moon is in tropical Pisces (geocentric zodiac)."
+    },
+    {
+      "id": "moon-phase-first-quarter Moon-2027-12-05T09:28:22Z",
+      "kind": "moon-phase",
+      "subject": "first-quarter Moon",
+      "startsAt": "2027-12-05T09:28:22Z",
+      "endsAt": "2027-12-07T01:01:29Z",
+      "fact": "The Moon is near its first-quarter Moon phase (within 9 degrees of the phase angle)."
+    },
+    {
+      "id": "moon-sign-Aries-2027-12-07T13:30:29Z",
+      "kind": "moon-sign",
+      "subject": "Aries",
+      "startsAt": "2027-12-07T13:30:29Z",
+      "endsAt": "2027-12-09T22:35:40Z",
+      "fact": "The Moon is in tropical Aries (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Taurus-2027-12-09T22:35:40Z",
+      "kind": "moon-sign",
+      "subject": "Taurus",
+      "startsAt": "2027-12-09T22:35:40Z",
+      "endsAt": "2027-12-12T03:54:42Z",
+      "fact": "The Moon is in tropical Taurus (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Gemini-2027-12-12T03:54:42Z",
+      "kind": "moon-sign",
+      "subject": "Gemini",
+      "startsAt": "2027-12-12T03:54:42Z",
+      "endsAt": "2027-12-14T06:24:06Z",
+      "fact": "The Moon is in tropical Gemini (geocentric zodiac)."
+    },
+    {
+      "id": "moon-phase-full Moon-2027-12-12T23:53:47Z",
+      "kind": "moon-phase",
+      "subject": "full Moon",
+      "startsAt": "2027-12-12T23:53:47Z",
+      "endsAt": "2027-12-14T08:12:31Z",
+      "fact": "The Moon is near its full Moon phase (within 9 degrees of the phase angle)."
+    },
+    {
+      "id": "moon-sign-Cancer-2027-12-14T06:24:06Z",
+      "kind": "moon-sign",
+      "subject": "Cancer",
+      "startsAt": "2027-12-14T06:24:06Z",
+      "endsAt": "2027-12-16T07:41:02Z",
+      "fact": "The Moon is in tropical Cancer (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Leo-2027-12-16T07:41:02Z",
+      "kind": "moon-sign",
+      "subject": "Leo",
+      "startsAt": "2027-12-16T07:41:02Z",
+      "endsAt": "2027-12-18T09:16:46Z",
+      "fact": "The Moon is in tropical Leo (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Virgo-2027-12-18T09:16:46Z",
+      "kind": "moon-sign",
+      "subject": "Virgo",
+      "startsAt": "2027-12-18T09:16:46Z",
+      "endsAt": "2027-12-20T12:13:16Z",
+      "fact": "The Moon is in tropical Virgo (geocentric zodiac)."
+    },
+    {
+      "id": "moon-phase-last-quarter Moon-2027-12-19T16:32:55Z",
+      "kind": "moon-phase",
+      "subject": "last-quarter Moon",
+      "startsAt": "2027-12-19T16:32:55Z",
+      "endsAt": "2027-12-21T02:01:27Z",
+      "fact": "The Moon is near its last-quarter Moon phase (within 9 degrees of the phase angle)."
+    },
+    {
+      "id": "moon-sign-Libra-2027-12-20T12:13:16Z",
+      "kind": "moon-sign",
+      "subject": "Libra",
+      "startsAt": "2027-12-20T12:13:16Z",
+      "endsAt": "2027-12-22T17:00:32Z",
+      "fact": "The Moon is in tropical Libra (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Scorpio-2027-12-22T17:00:32Z",
+      "kind": "moon-sign",
+      "subject": "Scorpio",
+      "startsAt": "2027-12-22T17:00:32Z",
+      "endsAt": "2027-12-24T23:50:08Z",
+      "fact": "The Moon is in tropical Scorpio (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Sagittarius-2027-12-24T23:50:08Z",
+      "kind": "moon-sign",
+      "subject": "Sagittarius",
+      "startsAt": "2027-12-24T23:50:08Z",
+      "endsAt": "2027-12-27T08:50:52Z",
+      "fact": "The Moon is in tropical Sagittarius (geocentric zodiac)."
+    },
+    {
+      "id": "moon-phase-new Moon-2027-12-27T01:10:23Z",
+      "kind": "moon-phase",
+      "subject": "new Moon",
+      "startsAt": "2027-12-27T01:10:23Z",
+      "endsAt": "2027-12-28T15:29:48Z",
+      "fact": "The Moon is near its new Moon phase (within 9 degrees of the phase angle)."
+    },
+    {
+      "id": "moon-sign-Capricorn-2027-12-27T08:50:52Z",
+      "kind": "moon-sign",
+      "subject": "Capricorn",
+      "startsAt": "2027-12-27T08:50:52Z",
+      "endsAt": "2027-12-29T20:04:03Z",
+      "fact": "The Moon is in tropical Capricorn (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Aquarius-2027-12-29T20:04:03Z",
+      "kind": "moon-sign",
+      "subject": "Aquarius",
+      "startsAt": "2027-12-29T20:04:03Z",
+      "endsAt": "2028-01-01T00:00:00Z",
+      "fact": "The Moon is in tropical Aquarius (geocentric zodiac)."
+    }
+  ]
+}

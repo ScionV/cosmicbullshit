@@ -1,0 +1,175 @@
+{
+  "schemaVersion": 1,
+  "validFrom": "2027-06-01T00:00:00Z",
+  "validUntil": "2027-07-01T00:00:00Z",
+  "source": {
+    "name": "pyswisseph",
+    "version": "2.10.03",
+    "url": "https://github.com/astrorigin/pyswisseph",
+    "ephemeris": "Moshier (built into Swiss Ephemeris)",
+    "coordinates": "geocentric tropical ecliptic",
+    "timeScale": "UT"
+  },
+  "events": [
+    {
+      "id": "moon-sign-Aries-2027-06-01T00:00:00Z",
+      "kind": "moon-sign",
+      "subject": "Aries",
+      "startsAt": "2027-06-01T00:00:00Z",
+      "endsAt": "2027-06-01T17:33:04Z",
+      "fact": "The Moon is in tropical Aries (geocentric zodiac)."
+    },
+    {
+      "id": "retrograde-Pluto-2027-06-01T00:00:00Z",
+      "kind": "retrograde",
+      "subject": "Pluto",
+      "startsAt": "2027-06-01T00:00:00Z",
+      "endsAt": "2027-07-01T00:00:00Z",
+      "fact": "Pluto is in apparent retrograde motion as seen from Earth."
+    },
+    {
+      "id": "moon-sign-Taurus-2027-06-01T17:33:04Z",
+      "kind": "moon-sign",
+      "subject": "Taurus",
+      "startsAt": "2027-06-01T17:33:04Z",
+      "endsAt": "2027-06-03T20:43:17Z",
+      "fact": "The Moon is in tropical Taurus (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Gemini-2027-06-03T20:43:17Z",
+      "kind": "moon-sign",
+      "subject": "Gemini",
+      "startsAt": "2027-06-03T20:43:17Z",
+      "endsAt": "2027-06-05T21:38:55Z",
+      "fact": "The Moon is in tropical Gemini (geocentric zodiac)."
+    },
+    {
+      "id": "moon-phase-new Moon-2027-06-04T03:53:52Z",
+      "kind": "moon-phase",
+      "subject": "new Moon",
+      "startsAt": "2027-06-04T03:53:52Z",
+      "endsAt": "2027-06-05T11:17:49Z",
+      "fact": "The Moon is near its new Moon phase (within 9 degrees of the phase angle)."
+    },
+    {
+      "id": "moon-sign-Cancer-2027-06-05T21:38:55Z",
+      "kind": "moon-sign",
+      "subject": "Cancer",
+      "startsAt": "2027-06-05T21:38:55Z",
+      "endsAt": "2027-06-07T22:12:54Z",
+      "fact": "The Moon is in tropical Cancer (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Leo-2027-06-07T22:12:54Z",
+      "kind": "moon-sign",
+      "subject": "Leo",
+      "startsAt": "2027-06-07T22:12:54Z",
+      "endsAt": "2027-06-10T00:00:29Z",
+      "fact": "The Moon is in tropical Leo (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Virgo-2027-06-10T00:00:29Z",
+      "kind": "moon-sign",
+      "subject": "Virgo",
+      "startsAt": "2027-06-10T00:00:29Z",
+      "endsAt": "2027-06-12T03:57:08Z",
+      "fact": "The Moon is in tropical Virgo (geocentric zodiac)."
+    },
+    {
+      "id": "moon-phase-first-quarter Moon-2027-06-10T18:11:11Z",
+      "kind": "moon-phase",
+      "subject": "first-quarter Moon",
+      "startsAt": "2027-06-10T18:11:11Z",
+      "endsAt": "2027-06-12T03:57:12Z",
+      "fact": "The Moon is near its first-quarter Moon phase (within 9 degrees of the phase angle)."
+    },
+    {
+      "id": "retrograde-Mercury-2027-06-10T18:15:19Z",
+      "kind": "retrograde",
+      "subject": "Mercury",
+      "startsAt": "2027-06-10T18:15:19Z",
+      "endsAt": "2027-07-01T00:00:00Z",
+      "fact": "Mercury is in apparent retrograde motion as seen from Earth."
+    },
+    {
+      "id": "moon-sign-Libra-2027-06-12T03:57:08Z",
+      "kind": "moon-sign",
+      "subject": "Libra",
+      "startsAt": "2027-06-12T03:57:08Z",
+      "endsAt": "2027-06-14T10:17:17Z",
+      "fact": "The Moon is in tropical Libra (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Scorpio-2027-06-14T10:17:17Z",
+      "kind": "moon-sign",
+      "subject": "Scorpio",
+      "startsAt": "2027-06-14T10:17:17Z",
+      "endsAt": "2027-06-16T18:53:28Z",
+      "fact": "The Moon is in tropical Scorpio (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Sagittarius-2027-06-16T18:53:28Z",
+      "kind": "moon-sign",
+      "subject": "Sagittarius",
+      "startsAt": "2027-06-16T18:53:28Z",
+      "endsAt": "2027-06-19T05:35:27Z",
+      "fact": "The Moon is in tropical Sagittarius (geocentric zodiac)."
+    },
+    {
+      "id": "moon-phase-full Moon-2027-06-18T05:27:45Z",
+      "kind": "moon-phase",
+      "subject": "full Moon",
+      "startsAt": "2027-06-18T05:27:45Z",
+      "endsAt": "2027-06-19T20:13:30Z",
+      "fact": "The Moon is near its full Moon phase (within 9 degrees of the phase angle)."
+    },
+    {
+      "id": "moon-sign-Capricorn-2027-06-19T05:35:27Z",
+      "kind": "moon-sign",
+      "subject": "Capricorn",
+      "startsAt": "2027-06-19T05:35:27Z",
+      "endsAt": "2027-06-21T18:00:29Z",
+      "fact": "The Moon is in tropical Capricorn (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Aquarius-2027-06-21T18:00:29Z",
+      "kind": "moon-sign",
+      "subject": "Aquarius",
+      "startsAt": "2027-06-21T18:00:29Z",
+      "endsAt": "2027-06-24T07:00:52Z",
+      "fact": "The Moon is in tropical Aquarius (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Pisces-2027-06-24T07:00:52Z",
+      "kind": "moon-sign",
+      "subject": "Pisces",
+      "startsAt": "2027-06-24T07:00:52Z",
+      "endsAt": "2027-06-26T18:35:22Z",
+      "fact": "The Moon is in tropical Pisces (geocentric zodiac)."
+    },
+    {
+      "id": "moon-phase-last-quarter Moon-2027-06-26T10:02:09Z",
+      "kind": "moon-phase",
+      "subject": "last-quarter Moon",
+      "startsAt": "2027-06-26T10:02:09Z",
+      "endsAt": "2027-06-27T23:20:53Z",
+      "fact": "The Moon is near its last-quarter Moon phase (within 9 degrees of the phase angle)."
+    },
+    {
+      "id": "moon-sign-Aries-2027-06-26T18:35:22Z",
+      "kind": "moon-sign",
+      "subject": "Aries",
+      "startsAt": "2027-06-26T18:35:22Z",
+      "endsAt": "2027-06-29T02:46:23Z",
+      "fact": "The Moon is in tropical Aries (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Taurus-2027-06-29T02:46:23Z",
+      "kind": "moon-sign",
+      "subject": "Taurus",
+      "startsAt": "2027-06-29T02:46:23Z",
+      "endsAt": "2027-07-01T00:00:00Z",
+      "fact": "The Moon is in tropical Taurus (geocentric zodiac)."
+    }
+  ]
+}

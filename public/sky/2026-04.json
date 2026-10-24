@@ -1,0 +1,175 @@
+{
+  "schemaVersion": 1,
+  "validFrom": "2026-04-01T00:00:00Z",
+  "validUntil": "2026-05-01T00:00:00Z",
+  "source": {
+    "name": "pyswisseph",
+    "version": "2.10.03",
+    "url": "https://github.com/astrorigin/pyswisseph",
+    "ephemeris": "Moshier (built into Swiss Ephemeris)",
+    "coordinates": "geocentric tropical ecliptic",
+    "timeScale": "UT"
+  },
+  "events": [
+    {
+      "id": "moon-sign-Virgo-2026-04-01T00:00:00Z",
+      "kind": "moon-sign",
+      "subject": "Virgo",
+      "startsAt": "2026-04-01T00:00:00Z",
+      "endsAt": "2026-04-01T02:50:47Z",
+      "fact": "The Moon is in tropical Virgo (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Libra-2026-04-01T02:50:47Z",
+      "kind": "moon-sign",
+      "subject": "Libra",
+      "startsAt": "2026-04-01T02:50:47Z",
+      "endsAt": "2026-04-03T12:10:53Z",
+      "fact": "The Moon is in tropical Libra (geocentric zodiac)."
+    },
+    {
+      "id": "moon-phase-full Moon-2026-04-01T07:43:11Z",
+      "kind": "moon-phase",
+      "subject": "full Moon",
+      "startsAt": "2026-04-01T07:43:11Z",
+      "endsAt": "2026-04-02T20:55:16Z",
+      "fact": "The Moon is near its full Moon phase (within 9 degrees of the phase angle)."
+    },
+    {
+      "id": "moon-sign-Scorpio-2026-04-03T12:10:53Z",
+      "kind": "moon-sign",
+      "subject": "Scorpio",
+      "startsAt": "2026-04-03T12:10:53Z",
+      "endsAt": "2026-04-05T23:31:31Z",
+      "fact": "The Moon is in tropical Scorpio (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Sagittarius-2026-04-05T23:31:31Z",
+      "kind": "moon-sign",
+      "subject": "Sagittarius",
+      "startsAt": "2026-04-05T23:31:31Z",
+      "endsAt": "2026-04-08T12:04:17Z",
+      "fact": "The Moon is in tropical Sagittarius (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Capricorn-2026-04-08T12:04:17Z",
+      "kind": "moon-sign",
+      "subject": "Capricorn",
+      "startsAt": "2026-04-08T12:04:17Z",
+      "endsAt": "2026-04-10T23:55:31Z",
+      "fact": "The Moon is in tropical Capricorn (geocentric zodiac)."
+    },
+    {
+      "id": "moon-phase-last-quarter Moon-2026-04-09T09:17:12Z",
+      "kind": "moon-phase",
+      "subject": "last-quarter Moon",
+      "startsAt": "2026-04-09T09:17:12Z",
+      "endsAt": "2026-04-11T00:10:11Z",
+      "fact": "The Moon is near its last-quarter Moon phase (within 9 degrees of the phase angle)."
+    },
+    {
+      "id": "moon-sign-Aquarius-2026-04-10T23:55:31Z",
+      "kind": "moon-sign",
+      "subject": "Aquarius",
+      "startsAt": "2026-04-10T23:55:31Z",
+      "endsAt": "2026-04-13T08:55:34Z",
+      "fact": "The Moon is in tropical Aquarius (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Pisces-2026-04-13T08:55:34Z",
+      "kind": "moon-sign",
+      "subject": "Pisces",
+      "startsAt": "2026-04-13T08:55:34Z",
+      "endsAt": "2026-04-15T14:03:56Z",
+      "fact": "The Moon is in tropical Pisces (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Aries-2026-04-15T14:03:56Z",
+      "kind": "moon-sign",
+      "subject": "Aries",
+      "startsAt": "2026-04-15T14:03:56Z",
+      "endsAt": "2026-04-17T15:57:47Z",
+      "fact": "The Moon is in tropical Aries (geocentric zodiac)."
+    },
+    {
+      "id": "moon-phase-new Moon-2026-04-16T20:01:51Z",
+      "kind": "moon-phase",
+      "subject": "new Moon",
+      "startsAt": "2026-04-16T20:01:51Z",
+      "endsAt": "2026-04-18T03:30:08Z",
+      "fact": "The Moon is near its new Moon phase (within 9 degrees of the phase angle)."
+    },
+    {
+      "id": "moon-sign-Taurus-2026-04-17T15:57:47Z",
+      "kind": "moon-sign",
+      "subject": "Taurus",
+      "startsAt": "2026-04-17T15:57:47Z",
+      "endsAt": "2026-04-19T16:17:38Z",
+      "fact": "The Moon is in tropical Taurus (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Gemini-2026-04-19T16:17:38Z",
+      "kind": "moon-sign",
+      "subject": "Gemini",
+      "startsAt": "2026-04-19T16:17:38Z",
+      "endsAt": "2026-04-21T17:00:16Z",
+      "fact": "The Moon is in tropical Gemini (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Cancer-2026-04-21T17:00:16Z",
+      "kind": "moon-sign",
+      "subject": "Cancer",
+      "startsAt": "2026-04-21T17:00:16Z",
+      "endsAt": "2026-04-23T19:40:43Z",
+      "fact": "The Moon is in tropical Cancer (geocentric zodiac)."
+    },
+    {
+      "id": "moon-phase-first-quarter Moon-2026-04-23T09:46:46Z",
+      "kind": "moon-phase",
+      "subject": "first-quarter Moon",
+      "startsAt": "2026-04-23T09:46:46Z",
+      "endsAt": "2026-04-24T19:35:41Z",
+      "fact": "The Moon is near its first-quarter Moon phase (within 9 degrees of the phase angle)."
+    },
+    {
+      "id": "moon-sign-Leo-2026-04-23T19:40:43Z",
+      "kind": "moon-sign",
+      "subject": "Leo",
+      "startsAt": "2026-04-23T19:40:43Z",
+      "endsAt": "2026-04-26T01:04:26Z",
+      "fact": "The Moon is in tropical Leo (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Virgo-2026-04-26T01:04:26Z",
+      "kind": "moon-sign",
+      "subject": "Virgo",
+      "startsAt": "2026-04-26T01:04:26Z",
+      "endsAt": "2026-04-28T09:02:44Z",
+      "fact": "The Moon is in tropical Virgo (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Libra-2026-04-28T09:02:44Z",
+      "kind": "moon-sign",
+      "subject": "Libra",
+      "startsAt": "2026-04-28T09:02:44Z",
+      "endsAt": "2026-04-30T19:01:50Z",
+      "fact": "The Moon is in tropical Libra (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Scorpio-2026-04-30T19:01:50Z",
+      "kind": "moon-sign",
+      "subject": "Scorpio",
+      "startsAt": "2026-04-30T19:01:50Z",
+      "endsAt": "2026-05-01T00:00:00Z",
+      "fact": "The Moon is in tropical Scorpio (geocentric zodiac)."
+    },
+    {
+      "id": "moon-phase-full Moon-2026-04-30T22:06:23Z",
+      "kind": "moon-phase",
+      "subject": "full Moon",
+      "startsAt": "2026-04-30T22:06:23Z",
+      "endsAt": "2026-05-01T00:00:00Z",
+      "fact": "The Moon is near its full Moon phase (within 9 degrees of the phase angle)."
+    }
+  ]
+}

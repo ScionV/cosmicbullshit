@@ -1,0 +1,56 @@
+[
+  {
+    "name": "idle",
+    "jobId": "56c4f878-7749-4fb6-8d93-11fe8bde85cd",
+    "model": "kling3_0",
+    "prompt": "Animate the exact original illustrated mechanical fortune teller in the supplied frame. Keep face identity, paisley suit, cap, glasses, crystal ball, cabinet shape and lettering unchanged. Locked straight-on camera; no zoom, pan, cut or reframing. Cabinet and paper background stay completely stationary. Only character and explicitly described props move. Gentle believable mechanical motion and comic warmth; no speech, no new lettering. Begin and finish on the same supplied resting frame. Over five seconds, he slowly blinks, glances wearily sideways, makes a tiny resigned sigh with shoulders, then returns to the exact resting pose. Understated comic timing, no speaking, hands stay near resting position. No paper emerges."
+  },
+  {
+    "name": "reading",
+    "jobId": "6bf7af5c-a150-4ac1-8e6d-5ec5c56bc78b",
+    "model": "kling3_0",
+    "prompt": "Animate the exact original illustrated mechanical fortune teller in the supplied frame. Keep face identity, paisley suit, cap, glasses, crystal ball, cabinet shape and lettering unchanged. Locked straight-on camera; no zoom, pan, cut or reframing. Cabinet and paper background stay completely stationary. Only character and explicitly described props move. Gentle believable mechanical motion and comic warmth; no speech, no new lettering. Begin and finish on the same supplied resting frame. Over five seconds, he leans slightly toward the cloudy crystal ball, squints skeptically at its gently swirling contents, raises one eyebrow as though the stars have filed the wrong paperwork, then settles into the exact original resting pose. Hands stay believable. No paper emerges."
+  },
+  {
+    "name": "dispensing",
+    "jobId": "f2109dbd-0ed1-4f02-a207-d329c4e6c93f",
+    "model": "kling3_0",
+    "prompt": "Animate the exact original illustrated mechanical fortune teller in the supplied frame. Keep face identity, paisley suit, cap, glasses, crystal ball, cabinet shape and lettering unchanged. Locked straight-on camera; no zoom, pan, cut or reframing. Cabinet and paper background stay completely stationary. Only character and explicitly described props move. Gentle believable mechanical motion and comic warmth; no speech, no new lettering. Begin and finish on the same supplied resting frame. Over five seconds, he presses a small counter lever, the cabinet feeds a short blank cream paper fortune from its output slot, he gives a small apologetic open-palmed shrug, then returns to his original resting pose. The fortune detaches and slips below the frame leaving the slot empty at the end. No text drawn on fortune; website supplies it separately."
+  },
+  {
+    "name": "reading-v2",
+    "jobId": "de3cb127-50b1-4775-9057-ada55b536bc6",
+    "model": "kling3_0",
+    "prompt": "Single fixed-camera animation of the exact supplied illustrated fortune teller resting frame. Preserve his facial structure, wrinkles, spectacles, cap, paisley suit, cabinet, glass and all lettering. Flat soft warm frontal illumination remains IDENTICAL throughout. No changing light direction, darkening, hard cheek shadows, flicker, crystal-ball glow, exposure changes or dramatic lighting. His face never turns or leans into shadow. Camera, background, brass frame and cabinet remain pixel-stationary. Subtle mechanical movement; no talking, no new objects, no paper. Begin and end in exactly the supplied resting pose, hands on counter beside crystal ball. He keeps his head essentially still while his eyes look down into the cloudy ball, then slowly squints, raises one skeptical eyebrow, gives the tiniest doubtful head tilt, and restores the original expression. The ball remains unlit and its brightness unchanged. Restrained comedy expressed with eyes and eyebrows, not a face transformation."
+  },
+  {
+    "name": "idle-sleeve",
+    "jobId": "ade46b4d-9e2f-4aab-9cb8-19a08a9b2bb0",
+    "model": "kling3_0",
+    "prompt": "Single fixed-camera animation of the exact supplied illustrated fortune teller resting frame. Preserve his facial structure, wrinkles, spectacles, cap, paisley suit, cabinet, glass and all lettering. Flat soft warm frontal illumination remains IDENTICAL throughout. No changing light direction, darkening, hard cheek shadows, flicker, crystal-ball glow, exposure changes or dramatic lighting. His face never turns or leans into shadow. Camera, background, brass frame and cabinet remain pixel-stationary. Subtle mechanical movement; no talking, no new objects, no paper. Begin and end in exactly the supplied resting pose, hands on counter beside crystal ball. He looks down briefly at one rumpled cuff, tugs the sleeve into place with the other hand, realizes it is hopeless, and quietly returns both hands to their exact original resting positions. Face stays forward with stable warm lighting; tiny tired half smile."
+  },
+  {
+    "name": "idle-sleepy",
+    "jobId": "09ef3791-2adf-4f6e-ad78-a5a92167b00d",
+    "model": "kling3_0",
+    "prompt": "Single fixed-camera animation of the exact supplied illustrated fortune teller resting frame. Preserve his facial structure, wrinkles, spectacles, cap, paisley suit, cabinet, glass and all lettering. Flat soft warm frontal illumination remains IDENTICAL throughout. No changing light direction, darkening, hard cheek shadows, flicker, crystal-ball glow, exposure changes or dramatic lighting. His face never turns or leans into shadow. Camera, background, brass frame and cabinet remain pixel-stationary. Subtle mechanical movement; no talking, no new objects, no paper. Begin and end in exactly the supplied resting pose, hands on counter beside crystal ball. His eyelids slowly droop shut for a moment, his chin dips just slightly as he catches himself nodding off, then his eyes open and one eyebrow rises in mild embarrassment. Settle precisely into original resting pose. Keep head displacement very small and lighting constant."
+  },
+  {
+    "name": "idle-tie",
+    "jobId": "28d217b5-790d-4c64-b1bc-642fa43cbee3",
+    "model": "kling3_0",
+    "prompt": "Animate the exact illustrated mechanical cosmic bureaucrat supplied in the start and end reference. Fixed straight-on camera. Preserve facial identity, wrinkled plum paisley suit, crooked cap, spectacles, crystal ball, cabinet and all lettering. Soft warm frontal lighting remains constant on his face; no dark moving shadows, changes of exposure, glowing ball or flicker. Head stays facing mostly forward, tiny movements only. Cabinet, background and framing stay stationary. Natural small expressive gestures, not talking. Begin and finish in exactly the supplied resting pose: both hands on counter, eyes open, closed mouth, weary half smile. No paper emerges. He glances down with his eyes, lifts one hand and carefully straightens his crooked loosened tie with a small tug. He gives a faint self-satisfied eyebrow lift before realizing the tie remains crooked, then returns his hand and expression to the original resting pose. Five seconds, one unhurried gesture, believable fingers."
+  },
+  {
+    "name": "idle-yawn",
+    "jobId": "dc9badae-2da8-4559-bba0-ce753418e498",
+    "model": "kling3_0",
+    "prompt": "Animate the exact illustrated mechanical cosmic bureaucrat supplied in the start and end reference. Fixed straight-on camera. Preserve facial identity, wrinkled plum paisley suit, crooked cap, spectacles, crystal ball, cabinet and all lettering. Soft warm frontal lighting remains constant on his face; no dark moving shadows, changes of exposure, glowing ball or flicker. Head stays facing mostly forward, tiny movements only. Cabinet, background and framing stay stationary. Natural small expressive gestures, not talking. Begin and finish in exactly the supplied resting pose: both hands on counter, eyes open, closed mouth, weary half smile. No paper emerges. He closes his eyes and gives a small tired yawn, politely covering his mouth with one hand, then closes his mouth, lowers the hand back to its original position and resumes his weary half smile. Keep his head nearly still and face recognizable throughout; restrained mouth opening, no exaggerated jaw stretching, no face morphing. Five seconds."
+  },
+  {
+    "name": "reading-hands",
+    "jobId": "2410a35f-37dc-4b67-8dc2-dc8ea6f0cb15",
+    "model": "kling3_0",
+    "prompt": "Animate the exact illustrated mechanical cosmic bureaucrat supplied in the start and end reference. Fixed straight-on camera. Preserve facial identity, wrinkled plum paisley suit, crooked cap, spectacles, crystal ball, cabinet and all lettering. Soft warm frontal lighting remains constant on his face; no dark moving shadows, changes of exposure, glowing ball or flicker. Head stays facing mostly forward, tiny movements only. Cabinet, background and framing stay stationary. Natural small expressive gestures, not talking. Begin and finish in exactly the supplied resting pose: both hands on counter, eyes open, closed mouth, weary half smile. No paper emerges. He keeps his face oriented forward, looks down into the cloudy unlit crystal ball and slowly passes one open hand just above it as though trying to coax a reluctant answer. A tiny eyebrow lift and doubtful pursed lips convey cosmic paperwork confusion. Return hand, eyes and expression to the exact original resting pose. No new objects, no light effects, no new shadows. Five seconds."
+  }
+]

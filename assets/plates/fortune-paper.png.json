@@ -1,0 +1,8 @@
+{
+  "tool": "image_gen.imagegen",
+  "prompt": "Isolate and recreate ONLY the flared cream fortune paper in this approved crop as a clean production illustration. The reference's cabinet, slot, floor and shadows around the paper are context only and must be removed. Preserve the paper's broad trapezoid silhouette: narrow top edge, gently curving sides widening downwards, broad lower edge with tiny torn deckle zigzags. Light warm ivory paper, subtle creases, ochre grain, plum engraving along the bottom quarter of a sleepy crescent moon, little circling airplane, tiny stars and small cloud curls. The TOP TWO THIRDS of the sheet must be entirely BLANK softly textured cream for real HTML fortune text—no letters, rules, text-like marks, rectangular editing patches or labels. Keep the full paper visible with a thin transparent margin and subtle shadow belonging to its lower edge. Approximately 1.394:1 landscape canvas, at least 960x690 output. Keep warm material and illustration detail true to supplied crop. Transparent PNG native alpha outside the opaque paper; no cream page ground, cabinet, UI, checkerboard or matte.",
+  "reference": ".impeccable/build/plate-references/fortune-paper.png",
+  "transparent_background": true,
+  "createdAt": "2026-10-24",
+  "productionPlate": true
+}

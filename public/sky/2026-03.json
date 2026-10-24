@@ -1,0 +1,175 @@
+{
+  "schemaVersion": 1,
+  "validFrom": "2026-03-01T00:00:00Z",
+  "validUntil": "2026-04-01T00:00:00Z",
+  "source": {
+    "name": "pyswisseph",
+    "version": "2.10.03",
+    "url": "https://github.com/astrorigin/pyswisseph",
+    "ephemeris": "Moshier (built into Swiss Ephemeris)",
+    "coordinates": "geocentric tropical ecliptic",
+    "timeScale": "UT"
+  },
+  "events": [
+    {
+      "id": "moon-sign-Leo-2026-03-01T00:00:00Z",
+      "kind": "moon-sign",
+      "subject": "Leo",
+      "startsAt": "2026-03-01T00:00:00Z",
+      "endsAt": "2026-03-02T12:33:43Z",
+      "fact": "The Moon is in tropical Leo (geocentric zodiac)."
+    },
+    {
+      "id": "retrograde-Jupiter-2026-03-01T00:00:00Z",
+      "kind": "retrograde",
+      "subject": "Jupiter",
+      "startsAt": "2026-03-01T00:00:00Z",
+      "endsAt": "2026-03-11T03:30:08Z",
+      "fact": "Jupiter is in apparent retrograde motion as seen from Earth."
+    },
+    {
+      "id": "retrograde-Mercury-2026-03-01T00:00:00Z",
+      "kind": "retrograde",
+      "subject": "Mercury",
+      "startsAt": "2026-03-01T00:00:00Z",
+      "endsAt": "2026-03-20T19:32:54Z",
+      "fact": "Mercury is in apparent retrograde motion as seen from Earth."
+    },
+    {
+      "id": "moon-sign-Virgo-2026-03-02T12:33:43Z",
+      "kind": "moon-sign",
+      "subject": "Virgo",
+      "startsAt": "2026-03-02T12:33:43Z",
+      "endsAt": "2026-03-04T18:55:47Z",
+      "fact": "The Moon is in tropical Virgo (geocentric zodiac)."
+    },
+    {
+      "id": "moon-phase-full Moon-2026-03-02T18:11:33Z",
+      "kind": "moon-phase",
+      "subject": "full Moon",
+      "startsAt": "2026-03-02T18:11:33Z",
+      "endsAt": "2026-03-04T05:21:03Z",
+      "fact": "The Moon is near its full Moon phase (within 9 degrees of the phase angle)."
+    },
+    {
+      "id": "moon-sign-Libra-2026-03-04T18:55:47Z",
+      "kind": "moon-sign",
+      "subject": "Libra",
+      "startsAt": "2026-03-04T18:55:47Z",
+      "endsAt": "2026-03-07T04:01:27Z",
+      "fact": "The Moon is in tropical Libra (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Scorpio-2026-03-07T04:01:27Z",
+      "kind": "moon-sign",
+      "subject": "Scorpio",
+      "startsAt": "2026-03-07T04:01:27Z",
+      "endsAt": "2026-03-09T15:36:30Z",
+      "fact": "The Moon is in tropical Scorpio (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Sagittarius-2026-03-09T15:36:30Z",
+      "kind": "moon-sign",
+      "subject": "Sagittarius",
+      "startsAt": "2026-03-09T15:36:30Z",
+      "endsAt": "2026-03-12T04:07:08Z",
+      "fact": "The Moon is in tropical Sagittarius (geocentric zodiac)."
+    },
+    {
+      "id": "moon-phase-last-quarter Moon-2026-03-10T13:47:39Z",
+      "kind": "moon-phase",
+      "subject": "last-quarter Moon",
+      "startsAt": "2026-03-10T13:47:39Z",
+      "endsAt": "2026-03-12T05:24:20Z",
+      "fact": "The Moon is near its last-quarter Moon phase (within 9 degrees of the phase angle)."
+    },
+    {
+      "id": "moon-sign-Capricorn-2026-03-12T04:07:08Z",
+      "kind": "moon-sign",
+      "subject": "Capricorn",
+      "startsAt": "2026-03-12T04:07:08Z",
+      "endsAt": "2026-03-14T15:13:31Z",
+      "fact": "The Moon is in tropical Capricorn (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Aquarius-2026-03-14T15:13:31Z",
+      "kind": "moon-sign",
+      "subject": "Aquarius",
+      "startsAt": "2026-03-14T15:13:31Z",
+      "endsAt": "2026-03-16T23:15:38Z",
+      "fact": "The Moon is in tropical Aquarius (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Pisces-2026-03-16T23:15:38Z",
+      "kind": "moon-sign",
+      "subject": "Pisces",
+      "startsAt": "2026-03-16T23:15:38Z",
+      "endsAt": "2026-03-19T04:02:59Z",
+      "fact": "The Moon is in tropical Pisces (geocentric zodiac)."
+    },
+    {
+      "id": "moon-phase-new Moon-2026-03-18T08:35:49Z",
+      "kind": "moon-phase",
+      "subject": "new Moon",
+      "startsAt": "2026-03-18T08:35:49Z",
+      "endsAt": "2026-03-19T17:55:14Z",
+      "fact": "The Moon is near its new Moon phase (within 9 degrees of the phase angle)."
+    },
+    {
+      "id": "moon-sign-Aries-2026-03-19T04:02:59Z",
+      "kind": "moon-sign",
+      "subject": "Aries",
+      "startsAt": "2026-03-19T04:02:59Z",
+      "endsAt": "2026-03-21T06:35:08Z",
+      "fact": "The Moon is in tropical Aries (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Taurus-2026-03-21T06:35:08Z",
+      "kind": "moon-sign",
+      "subject": "Taurus",
+      "startsAt": "2026-03-21T06:35:08Z",
+      "endsAt": "2026-03-23T08:18:40Z",
+      "fact": "The Moon is in tropical Taurus (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Gemini-2026-03-23T08:18:40Z",
+      "kind": "moon-sign",
+      "subject": "Gemini",
+      "startsAt": "2026-03-23T08:18:40Z",
+      "endsAt": "2026-03-25T10:32:57Z",
+      "fact": "The Moon is in tropical Gemini (geocentric zodiac)."
+    },
+    {
+      "id": "moon-phase-first-quarter Moon-2026-03-25T02:53:36Z",
+      "kind": "moon-phase",
+      "subject": "first-quarter Moon",
+      "startsAt": "2026-03-25T02:53:36Z",
+      "endsAt": "2026-03-26T11:52:00Z",
+      "fact": "The Moon is near its first-quarter Moon phase (within 9 degrees of the phase angle)."
+    },
+    {
+      "id": "moon-sign-Cancer-2026-03-25T10:32:57Z",
+      "kind": "moon-sign",
+      "subject": "Cancer",
+      "startsAt": "2026-03-25T10:32:57Z",
+      "endsAt": "2026-03-27T14:10:11Z",
+      "fact": "The Moon is in tropical Cancer (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Leo-2026-03-27T14:10:11Z",
+      "kind": "moon-sign",
+      "subject": "Leo",
+      "startsAt": "2026-03-27T14:10:11Z",
+      "endsAt": "2026-03-29T19:33:19Z",
+      "fact": "The Moon is in tropical Leo (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Virgo-2026-03-29T19:33:19Z",
+      "kind": "moon-sign",
+      "subject": "Virgo",
+      "startsAt": "2026-03-29T19:33:19Z",
+      "endsAt": "2026-04-01T00:00:00Z",
+      "fact": "The Moon is in tropical Virgo (geocentric zodiac)."
+    }
+  ]
+}

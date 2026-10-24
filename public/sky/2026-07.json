@@ -1,0 +1,199 @@
+{
+  "schemaVersion": 1,
+  "validFrom": "2026-07-01T00:00:00Z",
+  "validUntil": "2026-08-01T00:00:00Z",
+  "source": {
+    "name": "pyswisseph",
+    "version": "2.10.03",
+    "url": "https://github.com/astrorigin/pyswisseph",
+    "ephemeris": "Moshier (built into Swiss Ephemeris)",
+    "coordinates": "geocentric tropical ecliptic",
+    "timeScale": "UT"
+  },
+  "events": [
+    {
+      "id": "moon-sign-Capricorn-2026-07-01T00:00:00Z",
+      "kind": "moon-sign",
+      "subject": "Capricorn",
+      "startsAt": "2026-07-01T00:00:00Z",
+      "endsAt": "2026-07-01T19:32:51Z",
+      "fact": "The Moon is in tropical Capricorn (geocentric zodiac)."
+    },
+    {
+      "id": "retrograde-Mercury-2026-07-01T00:00:00Z",
+      "kind": "retrograde",
+      "subject": "Mercury",
+      "startsAt": "2026-07-01T00:00:00Z",
+      "endsAt": "2026-07-23T22:57:55Z",
+      "fact": "Mercury is in apparent retrograde motion as seen from Earth."
+    },
+    {
+      "id": "retrograde-Pluto-2026-07-01T00:00:00Z",
+      "kind": "retrograde",
+      "subject": "Pluto",
+      "startsAt": "2026-07-01T00:00:00Z",
+      "endsAt": "2026-08-01T00:00:00Z",
+      "fact": "Pluto is in apparent retrograde motion as seen from Earth."
+    },
+    {
+      "id": "moon-sign-Aquarius-2026-07-01T19:32:51Z",
+      "kind": "moon-sign",
+      "subject": "Aquarius",
+      "startsAt": "2026-07-01T19:32:51Z",
+      "endsAt": "2026-07-04T06:30:11Z",
+      "fact": "The Moon is in tropical Aquarius (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Pisces-2026-07-04T06:30:11Z",
+      "kind": "moon-sign",
+      "subject": "Pisces",
+      "startsAt": "2026-07-04T06:30:11Z",
+      "endsAt": "2026-07-06T15:07:04Z",
+      "fact": "The Moon is in tropical Pisces (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Aries-2026-07-06T15:07:04Z",
+      "kind": "moon-sign",
+      "subject": "Aries",
+      "startsAt": "2026-07-06T15:07:04Z",
+      "endsAt": "2026-07-08T20:30:44Z",
+      "fact": "The Moon is in tropical Aries (geocentric zodiac)."
+    },
+    {
+      "id": "moon-phase-last-quarter Moon-2026-07-07T02:04:48Z",
+      "kind": "moon-phase",
+      "subject": "last-quarter Moon",
+      "startsAt": "2026-07-07T02:04:48Z",
+      "endsAt": "2026-07-08T12:30:00Z",
+      "fact": "The Moon is near its last-quarter Moon phase (within 9 degrees of the phase angle)."
+    },
+    {
+      "id": "retrograde-Neptune-2026-07-07T10:54:38Z",
+      "kind": "retrograde",
+      "subject": "Neptune",
+      "startsAt": "2026-07-07T10:54:38Z",
+      "endsAt": "2026-08-01T00:00:00Z",
+      "fact": "Neptune is in apparent retrograde motion as seen from Earth."
+    },
+    {
+      "id": "moon-sign-Taurus-2026-07-08T20:30:44Z",
+      "kind": "moon-sign",
+      "subject": "Taurus",
+      "startsAt": "2026-07-08T20:30:44Z",
+      "endsAt": "2026-07-10T22:41:36Z",
+      "fact": "The Moon is in tropical Taurus (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Gemini-2026-07-10T22:41:36Z",
+      "kind": "moon-sign",
+      "subject": "Gemini",
+      "startsAt": "2026-07-10T22:41:36Z",
+      "endsAt": "2026-07-12T22:46:30Z",
+      "fact": "The Moon is in tropical Gemini (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Cancer-2026-07-12T22:46:30Z",
+      "kind": "moon-sign",
+      "subject": "Cancer",
+      "startsAt": "2026-07-12T22:46:30Z",
+      "endsAt": "2026-07-14T22:35:12Z",
+      "fact": "The Moon is in tropical Cancer (geocentric zodiac)."
+    },
+    {
+      "id": "moon-phase-new Moon-2026-07-13T18:25:06Z",
+      "kind": "moon-phase",
+      "subject": "new Moon",
+      "startsAt": "2026-07-13T18:25:06Z",
+      "endsAt": "2026-07-15T01:10:09Z",
+      "fact": "The Moon is near its new Moon phase (within 9 degrees of the phase angle)."
+    },
+    {
+      "id": "moon-sign-Leo-2026-07-14T22:35:12Z",
+      "kind": "moon-sign",
+      "subject": "Leo",
+      "startsAt": "2026-07-14T22:35:12Z",
+      "endsAt": "2026-07-17T00:07:07Z",
+      "fact": "The Moon is in tropical Leo (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Virgo-2026-07-17T00:07:07Z",
+      "kind": "moon-sign",
+      "subject": "Virgo",
+      "startsAt": "2026-07-17T00:07:07Z",
+      "endsAt": "2026-07-19T04:56:33Z",
+      "fact": "The Moon is in tropical Virgo (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Libra-2026-07-19T04:56:33Z",
+      "kind": "moon-sign",
+      "subject": "Libra",
+      "startsAt": "2026-07-19T04:56:33Z",
+      "endsAt": "2026-07-21T13:34:33Z",
+      "fact": "The Moon is in tropical Libra (geocentric zodiac)."
+    },
+    {
+      "id": "moon-phase-first-quarter Moon-2026-07-20T16:21:02Z",
+      "kind": "moon-phase",
+      "subject": "first-quarter Moon",
+      "startsAt": "2026-07-20T16:21:02Z",
+      "endsAt": "2026-07-22T06:11:07Z",
+      "fact": "The Moon is near its first-quarter Moon phase (within 9 degrees of the phase angle)."
+    },
+    {
+      "id": "moon-sign-Scorpio-2026-07-21T13:34:33Z",
+      "kind": "moon-sign",
+      "subject": "Scorpio",
+      "startsAt": "2026-07-21T13:34:33Z",
+      "endsAt": "2026-07-24T01:06:59Z",
+      "fact": "The Moon is in tropical Scorpio (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Sagittarius-2026-07-24T01:06:59Z",
+      "kind": "moon-sign",
+      "subject": "Sagittarius",
+      "startsAt": "2026-07-24T01:06:59Z",
+      "endsAt": "2026-07-26T13:44:17Z",
+      "fact": "The Moon is in tropical Sagittarius (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Capricorn-2026-07-26T13:44:17Z",
+      "kind": "moon-sign",
+      "subject": "Capricorn",
+      "startsAt": "2026-07-26T13:44:17Z",
+      "endsAt": "2026-07-29T01:46:10Z",
+      "fact": "The Moon is in tropical Capricorn (geocentric zodiac)."
+    },
+    {
+      "id": "retrograde-Saturn-2026-07-26T19:56:47Z",
+      "kind": "retrograde",
+      "subject": "Saturn",
+      "startsAt": "2026-07-26T19:56:47Z",
+      "endsAt": "2026-08-01T00:00:00Z",
+      "fact": "Saturn is in apparent retrograde motion as seen from Earth."
+    },
+    {
+      "id": "moon-phase-full Moon-2026-07-28T19:17:53Z",
+      "kind": "moon-phase",
+      "subject": "full Moon",
+      "startsAt": "2026-07-28T19:17:53Z",
+      "endsAt": "2026-07-30T09:41:42Z",
+      "fact": "The Moon is near its full Moon phase (within 9 degrees of the phase angle)."
+    },
+    {
+      "id": "moon-sign-Aquarius-2026-07-29T01:46:10Z",
+      "kind": "moon-sign",
+      "subject": "Aquarius",
+      "startsAt": "2026-07-29T01:46:10Z",
+      "endsAt": "2026-07-31T12:13:52Z",
+      "fact": "The Moon is in tropical Aquarius (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Pisces-2026-07-31T12:13:52Z",
+      "kind": "moon-sign",
+      "subject": "Pisces",
+      "startsAt": "2026-07-31T12:13:52Z",
+      "endsAt": "2026-08-01T00:00:00Z",
+      "fact": "The Moon is in tropical Pisces (geocentric zodiac)."
+    }
+  ]
+}

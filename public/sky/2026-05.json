@@ -1,0 +1,175 @@
+{
+  "schemaVersion": 1,
+  "validFrom": "2026-05-01T00:00:00Z",
+  "validUntil": "2026-06-01T00:00:00Z",
+  "source": {
+    "name": "pyswisseph",
+    "version": "2.10.03",
+    "url": "https://github.com/astrorigin/pyswisseph",
+    "ephemeris": "Moshier (built into Swiss Ephemeris)",
+    "coordinates": "geocentric tropical ecliptic",
+    "timeScale": "UT"
+  },
+  "events": [
+    {
+      "id": "moon-phase-full Moon-2026-05-01T00:00:00Z",
+      "kind": "moon-phase",
+      "subject": "full Moon",
+      "startsAt": "2026-05-01T00:00:00Z",
+      "endsAt": "2026-05-02T12:49:38Z",
+      "fact": "The Moon is near its full Moon phase (within 9 degrees of the phase angle)."
+    },
+    {
+      "id": "moon-sign-Scorpio-2026-05-01T00:00:00Z",
+      "kind": "moon-sign",
+      "subject": "Scorpio",
+      "startsAt": "2026-05-01T00:00:00Z",
+      "endsAt": "2026-05-03T06:33:29Z",
+      "fact": "The Moon is in tropical Scorpio (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Sagittarius-2026-05-03T06:33:29Z",
+      "kind": "moon-sign",
+      "subject": "Sagittarius",
+      "startsAt": "2026-05-03T06:33:29Z",
+      "endsAt": "2026-05-05T19:06:06Z",
+      "fact": "The Moon is in tropical Sagittarius (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Capricorn-2026-05-05T19:06:06Z",
+      "kind": "moon-sign",
+      "subject": "Capricorn",
+      "startsAt": "2026-05-05T19:06:06Z",
+      "endsAt": "2026-05-08T07:27:25Z",
+      "fact": "The Moon is in tropical Capricorn (geocentric zodiac)."
+    },
+    {
+      "id": "retrograde-Pluto-2026-05-06T15:34:17Z",
+      "kind": "retrograde",
+      "subject": "Pluto",
+      "startsAt": "2026-05-06T15:34:17Z",
+      "endsAt": "2026-06-01T00:00:00Z",
+      "fact": "Pluto is in apparent retrograde motion as seen from Earth."
+    },
+    {
+      "id": "moon-sign-Aquarius-2026-05-08T07:27:25Z",
+      "kind": "moon-sign",
+      "subject": "Aquarius",
+      "startsAt": "2026-05-08T07:27:25Z",
+      "endsAt": "2026-05-10T17:39:24Z",
+      "fact": "The Moon is in tropical Aquarius (geocentric zodiac)."
+    },
+    {
+      "id": "moon-phase-last-quarter Moon-2026-05-09T02:11:11Z",
+      "kind": "moon-phase",
+      "subject": "last-quarter Moon",
+      "startsAt": "2026-05-09T02:11:11Z",
+      "endsAt": "2026-05-10T15:46:02Z",
+      "fact": "The Moon is near its last-quarter Moon phase (within 9 degrees of the phase angle)."
+    },
+    {
+      "id": "moon-sign-Pisces-2026-05-10T17:39:24Z",
+      "kind": "moon-sign",
+      "subject": "Pisces",
+      "startsAt": "2026-05-10T17:39:24Z",
+      "endsAt": "2026-05-13T00:03:40Z",
+      "fact": "The Moon is in tropical Pisces (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Aries-2026-05-13T00:03:40Z",
+      "kind": "moon-sign",
+      "subject": "Aries",
+      "startsAt": "2026-05-13T00:03:40Z",
+      "endsAt": "2026-05-15T02:31:08Z",
+      "fact": "The Moon is in tropical Aries (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Taurus-2026-05-15T02:31:08Z",
+      "kind": "moon-sign",
+      "subject": "Taurus",
+      "startsAt": "2026-05-15T02:31:08Z",
+      "endsAt": "2026-05-17T02:23:01Z",
+      "fact": "The Moon is in tropical Taurus (geocentric zodiac)."
+    },
+    {
+      "id": "moon-phase-new Moon-2026-05-16T04:47:58Z",
+      "kind": "moon-phase",
+      "subject": "new Moon",
+      "startsAt": "2026-05-16T04:47:58Z",
+      "endsAt": "2026-05-17T11:08:58Z",
+      "fact": "The Moon is near its new Moon phase (within 9 degrees of the phase angle)."
+    },
+    {
+      "id": "moon-sign-Gemini-2026-05-17T02:23:01Z",
+      "kind": "moon-sign",
+      "subject": "Gemini",
+      "startsAt": "2026-05-17T02:23:01Z",
+      "endsAt": "2026-05-19T01:46:05Z",
+      "fact": "The Moon is in tropical Gemini (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Cancer-2026-05-19T01:46:05Z",
+      "kind": "moon-sign",
+      "subject": "Cancer",
+      "startsAt": "2026-05-19T01:46:05Z",
+      "endsAt": "2026-05-21T02:47:39Z",
+      "fact": "The Moon is in tropical Cancer (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Leo-2026-05-21T02:47:39Z",
+      "kind": "moon-sign",
+      "subject": "Leo",
+      "startsAt": "2026-05-21T02:47:39Z",
+      "endsAt": "2026-05-23T06:57:00Z",
+      "fact": "The Moon is in tropical Leo (geocentric zodiac)."
+    },
+    {
+      "id": "moon-phase-first-quarter Moon-2026-05-22T17:50:52Z",
+      "kind": "moon-phase",
+      "subject": "first-quarter Moon",
+      "startsAt": "2026-05-22T17:50:52Z",
+      "endsAt": "2026-05-24T04:54:48Z",
+      "fact": "The Moon is near its first-quarter Moon phase (within 9 degrees of the phase angle)."
+    },
+    {
+      "id": "moon-sign-Virgo-2026-05-23T06:57:00Z",
+      "kind": "moon-sign",
+      "subject": "Virgo",
+      "startsAt": "2026-05-23T06:57:00Z",
+      "endsAt": "2026-05-25T14:34:09Z",
+      "fact": "The Moon is in tropical Virgo (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Libra-2026-05-25T14:34:09Z",
+      "kind": "moon-sign",
+      "subject": "Libra",
+      "startsAt": "2026-05-25T14:34:09Z",
+      "endsAt": "2026-05-28T00:52:33Z",
+      "fact": "The Moon is in tropical Libra (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Scorpio-2026-05-28T00:52:33Z",
+      "kind": "moon-sign",
+      "subject": "Scorpio",
+      "startsAt": "2026-05-28T00:52:33Z",
+      "endsAt": "2026-05-30T12:44:48Z",
+      "fact": "The Moon is in tropical Scorpio (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Sagittarius-2026-05-30T12:44:48Z",
+      "kind": "moon-sign",
+      "subject": "Sagittarius",
+      "startsAt": "2026-05-30T12:44:48Z",
+      "endsAt": "2026-06-01T00:00:00Z",
+      "fact": "The Moon is in tropical Sagittarius (geocentric zodiac)."
+    },
+    {
+      "id": "moon-phase-full Moon-2026-05-30T13:01:54Z",
+      "kind": "moon-phase",
+      "subject": "full Moon",
+      "startsAt": "2026-05-30T13:01:54Z",
+      "endsAt": "2026-06-01T00:00:00Z",
+      "fact": "The Moon is near its full Moon phase (within 9 degrees of the phase angle)."
+    }
+  ]
+}

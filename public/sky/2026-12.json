@@ -1,0 +1,199 @@
+{
+  "schemaVersion": 1,
+  "validFrom": "2026-12-01T00:00:00Z",
+  "validUntil": "2027-01-01T00:00:00Z",
+  "source": {
+    "name": "pyswisseph",
+    "version": "2.10.03",
+    "url": "https://github.com/astrorigin/pyswisseph",
+    "ephemeris": "Moshier (built into Swiss Ephemeris)",
+    "coordinates": "geocentric tropical ecliptic",
+    "timeScale": "UT"
+  },
+  "events": [
+    {
+      "id": "moon-phase-last-quarter Moon-2026-12-01T00:00:00Z",
+      "kind": "moon-phase",
+      "subject": "last-quarter Moon",
+      "startsAt": "2026-12-01T00:00:00Z",
+      "endsAt": "2026-12-01T23:35:36Z",
+      "fact": "The Moon is near its last-quarter Moon phase (within 9 degrees of the phase angle)."
+    },
+    {
+      "id": "moon-sign-Virgo-2026-12-01T00:00:00Z",
+      "kind": "moon-sign",
+      "subject": "Virgo",
+      "startsAt": "2026-12-01T00:00:00Z",
+      "endsAt": "2026-12-02T20:03:53Z",
+      "fact": "The Moon is in tropical Virgo (geocentric zodiac)."
+    },
+    {
+      "id": "retrograde-Neptune-2026-12-01T00:00:00Z",
+      "kind": "retrograde",
+      "subject": "Neptune",
+      "startsAt": "2026-12-01T00:00:00Z",
+      "endsAt": "2026-12-12T22:17:21Z",
+      "fact": "Neptune is in apparent retrograde motion as seen from Earth."
+    },
+    {
+      "id": "retrograde-Saturn-2026-12-01T00:00:00Z",
+      "kind": "retrograde",
+      "subject": "Saturn",
+      "startsAt": "2026-12-01T00:00:00Z",
+      "endsAt": "2026-12-10T23:31:02Z",
+      "fact": "Saturn is in apparent retrograde motion as seen from Earth."
+    },
+    {
+      "id": "retrograde-Uranus-2026-12-01T00:00:00Z",
+      "kind": "retrograde",
+      "subject": "Uranus",
+      "startsAt": "2026-12-01T00:00:00Z",
+      "endsAt": "2027-01-01T00:00:00Z",
+      "fact": "Uranus is in apparent retrograde motion as seen from Earth."
+    },
+    {
+      "id": "moon-sign-Libra-2026-12-02T20:03:53Z",
+      "kind": "moon-sign",
+      "subject": "Libra",
+      "startsAt": "2026-12-02T20:03:53Z",
+      "endsAt": "2026-12-05T04:35:04Z",
+      "fact": "The Moon is in tropical Libra (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Scorpio-2026-12-05T04:35:04Z",
+      "kind": "moon-sign",
+      "subject": "Scorpio",
+      "startsAt": "2026-12-05T04:35:04Z",
+      "endsAt": "2026-12-07T15:06:34Z",
+      "fact": "The Moon is in tropical Scorpio (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Sagittarius-2026-12-07T15:06:34Z",
+      "kind": "moon-sign",
+      "subject": "Sagittarius",
+      "startsAt": "2026-12-07T15:06:34Z",
+      "endsAt": "2026-12-10T03:08:40Z",
+      "fact": "The Moon is in tropical Sagittarius (geocentric zodiac)."
+    },
+    {
+      "id": "moon-phase-new Moon-2026-12-08T05:13:37Z",
+      "kind": "moon-phase",
+      "subject": "new Moon",
+      "startsAt": "2026-12-08T05:13:37Z",
+      "endsAt": "2026-12-09T20:39:03Z",
+      "fact": "The Moon is near its new Moon phase (within 9 degrees of the phase angle)."
+    },
+    {
+      "id": "moon-sign-Capricorn-2026-12-10T03:08:40Z",
+      "kind": "moon-sign",
+      "subject": "Capricorn",
+      "startsAt": "2026-12-10T03:08:40Z",
+      "endsAt": "2026-12-12T16:05:38Z",
+      "fact": "The Moon is in tropical Capricorn (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Aquarius-2026-12-12T16:05:38Z",
+      "kind": "moon-sign",
+      "subject": "Aquarius",
+      "startsAt": "2026-12-12T16:05:38Z",
+      "endsAt": "2026-12-15T04:35:37Z",
+      "fact": "The Moon is in tropical Aquarius (geocentric zodiac)."
+    },
+    {
+      "id": "retrograde-Jupiter-2026-12-13T00:56:36Z",
+      "kind": "retrograde",
+      "subject": "Jupiter",
+      "startsAt": "2026-12-13T00:56:36Z",
+      "endsAt": "2027-01-01T00:00:00Z",
+      "fact": "Jupiter is in apparent retrograde motion as seen from Earth."
+    },
+    {
+      "id": "moon-sign-Pisces-2026-12-15T04:35:37Z",
+      "kind": "moon-sign",
+      "subject": "Pisces",
+      "startsAt": "2026-12-15T04:35:37Z",
+      "endsAt": "2026-12-17T14:34:21Z",
+      "fact": "The Moon is in tropical Pisces (geocentric zodiac)."
+    },
+    {
+      "id": "moon-phase-first-quarter Moon-2026-12-16T10:58:46Z",
+      "kind": "moon-phase",
+      "subject": "first-quarter Moon",
+      "startsAt": "2026-12-16T10:58:46Z",
+      "endsAt": "2026-12-17T23:58:31Z",
+      "fact": "The Moon is near its first-quarter Moon phase (within 9 degrees of the phase angle)."
+    },
+    {
+      "id": "moon-sign-Aries-2026-12-17T14:34:21Z",
+      "kind": "moon-sign",
+      "subject": "Aries",
+      "startsAt": "2026-12-17T14:34:21Z",
+      "endsAt": "2026-12-19T20:29:41Z",
+      "fact": "The Moon is in tropical Aries (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Taurus-2026-12-19T20:29:41Z",
+      "kind": "moon-sign",
+      "subject": "Taurus",
+      "startsAt": "2026-12-19T20:29:41Z",
+      "endsAt": "2026-12-21T22:27:06Z",
+      "fact": "The Moon is in tropical Taurus (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Gemini-2026-12-21T22:27:06Z",
+      "kind": "moon-sign",
+      "subject": "Gemini",
+      "startsAt": "2026-12-21T22:27:06Z",
+      "endsAt": "2026-12-23T21:58:23Z",
+      "fact": "The Moon is in tropical Gemini (geocentric zodiac)."
+    },
+    {
+      "id": "moon-phase-full Moon-2026-12-23T10:21:02Z",
+      "kind": "moon-phase",
+      "subject": "full Moon",
+      "startsAt": "2026-12-23T10:21:02Z",
+      "endsAt": "2026-12-24T16:34:45Z",
+      "fact": "The Moon is near its full Moon phase (within 9 degrees of the phase angle)."
+    },
+    {
+      "id": "moon-sign-Cancer-2026-12-23T21:58:23Z",
+      "kind": "moon-sign",
+      "subject": "Cancer",
+      "startsAt": "2026-12-23T21:58:23Z",
+      "endsAt": "2026-12-25T21:12:17Z",
+      "fact": "The Moon is in tropical Cancer (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Leo-2026-12-25T21:12:17Z",
+      "kind": "moon-sign",
+      "subject": "Leo",
+      "startsAt": "2026-12-25T21:12:17Z",
+      "endsAt": "2026-12-27T22:12:51Z",
+      "fact": "The Moon is in tropical Leo (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Virgo-2026-12-27T22:12:51Z",
+      "kind": "moon-sign",
+      "subject": "Virgo",
+      "startsAt": "2026-12-27T22:12:51Z",
+      "endsAt": "2026-12-30T02:26:40Z",
+      "fact": "The Moon is in tropical Virgo (geocentric zodiac)."
+    },
+    {
+      "id": "moon-phase-last-quarter Moon-2026-12-30T01:14:49Z",
+      "kind": "moon-phase",
+      "subject": "last-quarter Moon",
+      "startsAt": "2026-12-30T01:14:49Z",
+      "endsAt": "2026-12-31T13:08:36Z",
+      "fact": "The Moon is near its last-quarter Moon phase (within 9 degrees of the phase angle)."
+    },
+    {
+      "id": "moon-sign-Libra-2026-12-30T02:26:40Z",
+      "kind": "moon-sign",
+      "subject": "Libra",
+      "startsAt": "2026-12-30T02:26:40Z",
+      "endsAt": "2027-01-01T00:00:00Z",
+      "fact": "The Moon is in tropical Libra (geocentric zodiac)."
+    }
+  ]
+}

@@ -1,0 +1,312 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-24T19:22:06.627Z",
+  "title": "Design System: Cosmic Bullshit",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "primary",
+        "displayName": "Plum Ink",
+        "canonical": "#40192e",
+        "tonalRamp": [
+          "oklch(15.00% 0.0672 348.83)",
+          "oklch(26.43% 0.0672 348.83)",
+          "oklch(37.86% 0.0672 348.83)",
+          "oklch(49.29% 0.0672 348.83)",
+          "oklch(60.71% 0.0672 348.83)",
+          "oklch(72.14% 0.0672 348.83)",
+          "oklch(83.57% 0.0672 348.83)",
+          "oklch(95.00% 0.0672 348.83)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Ochre Paper",
+        "canonical": "#e8c898",
+        "tonalRamp": [
+          "oklch(15.00% 0.0724 77.60)",
+          "oklch(26.43% 0.0724 77.60)",
+          "oklch(37.86% 0.0724 77.60)",
+          "oklch(49.29% 0.0724 77.60)",
+          "oklch(60.71% 0.0724 77.60)",
+          "oklch(72.14% 0.0724 77.60)",
+          "oklch(83.57% 0.0724 77.60)",
+          "oklch(95.00% 0.0724 77.60)"
+        ]
+      },
+      "action": {
+        "role": "primary",
+        "displayName": "Vermilion Action",
+        "canonical": "#9c321e",
+        "tonalRamp": [
+          "oklch(15.00% 0.1448 32.80)",
+          "oklch(26.43% 0.1448 32.80)",
+          "oklch(37.86% 0.1448 32.80)",
+          "oklch(49.29% 0.1448 32.80)",
+          "oklch(60.71% 0.1448 32.80)",
+          "oklch(72.14% 0.1448 32.80)",
+          "oklch(83.57% 0.1448 32.80)",
+          "oklch(95.00% 0.1448 32.80)"
+        ]
+      },
+      "gold": {
+        "role": "secondary",
+        "displayName": "Worn Brass",
+        "canonical": "#dfb567",
+        "tonalRamp": [
+          "oklch(15.00% 0.1082 81.63)",
+          "oklch(26.43% 0.1082 81.63)",
+          "oklch(37.86% 0.1082 81.63)",
+          "oklch(49.29% 0.1082 81.63)",
+          "oklch(60.71% 0.1082 81.63)",
+          "oklch(72.14% 0.1082 81.63)",
+          "oklch(83.57% 0.1082 81.63)",
+          "oklch(95.00% 0.1082 81.63)"
+        ]
+      },
+      "focus": {
+        "role": "primary",
+        "displayName": "Plum Focus",
+        "canonical": "#722d47",
+        "tonalRamp": [
+          "oklch(15.00% 0.1014 359.11)",
+          "oklch(26.43% 0.1014 359.11)",
+          "oklch(37.86% 0.1014 359.11)",
+          "oklch(49.29% 0.1014 359.11)",
+          "oklch(60.71% 0.1014 359.11)",
+          "oklch(72.14% 0.1014 359.11)",
+          "oklch(83.57% 0.1014 359.11)",
+          "oklch(95.00% 0.1014 359.11)"
+        ]
+      },
+      "action-text": {
+        "role": "neutral",
+        "displayName": "Cream Action Lettering",
+        "canonical": "#fff2d4",
+        "tonalRamp": [
+          "oklch(15.00% 0.0416 87.36)",
+          "oklch(26.43% 0.0416 87.36)",
+          "oklch(37.86% 0.0416 87.36)",
+          "oklch(49.29% 0.0416 87.36)",
+          "oklch(60.71% 0.0416 87.36)",
+          "oklch(72.14% 0.0416 87.36)",
+          "oklch(83.57% 0.0416 87.36)",
+          "oklch(95.00% 0.0416 87.36)"
+        ]
+      },
+      "action-hover": {
+        "role": "primary",
+        "displayName": "Dark Vermilion Hover",
+        "canonical": "#7e2417",
+        "tonalRamp": [
+          "oklch(15.00% 0.1264 31.21)",
+          "oklch(26.43% 0.1264 31.21)",
+          "oklch(37.86% 0.1264 31.21)",
+          "oklch(49.29% 0.1264 31.21)",
+          "oklch(60.71% 0.1264 31.21)",
+          "oklch(72.14% 0.1264 31.21)",
+          "oklch(83.57% 0.1264 31.21)",
+          "oklch(95.00% 0.1264 31.21)"
+        ]
+      },
+      "action-disabled": {
+        "role": "primary",
+        "displayName": "Muted Vermilion Waiting",
+        "canonical": "#773425",
+        "tonalRamp": [
+          "oklch(15.00% 0.0978 34.01)",
+          "oklch(26.43% 0.0978 34.01)",
+          "oklch(37.86% 0.0978 34.01)",
+          "oklch(49.29% 0.0978 34.01)",
+          "oklch(60.71% 0.0978 34.01)",
+          "oklch(72.14% 0.0978 34.01)",
+          "oklch(83.57% 0.0978 34.01)",
+          "oklch(95.00% 0.0978 34.01)"
+        ]
+      },
+      "action-rim": {
+        "role": "secondary",
+        "displayName": "Brass Action Rim",
+        "canonical": "#cda855",
+        "tonalRamp": [
+          "oklch(15.00% 0.1106 85.49)",
+          "oklch(26.43% 0.1106 85.49)",
+          "oklch(37.86% 0.1106 85.49)",
+          "oklch(49.29% 0.1106 85.49)",
+          "oklch(60.71% 0.1106 85.49)",
+          "oklch(72.14% 0.1106 85.49)",
+          "oklch(83.57% 0.1106 85.49)",
+          "oklch(95.00% 0.1106 85.49)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Brand Display",
+        "purpose": "Bold linked brand; responsive compact serif."
+      },
+      "headline": {
+        "displayName": "Explanatory Heading",
+        "purpose": "About section heading."
+      },
+      "body": {
+        "displayName": "Explanatory Prose",
+        "purpose": "Readable supporting explanation."
+      },
+      "fortune": {
+        "displayName": "Fortune Result",
+        "purpose": "Live text over separate fortune stock; responsive fitting may reduce size."
+      },
+      "label": {
+        "displayName": "Fortune Classification",
+        "purpose": "Semantic factual/invented distinction, uppercase."
+      },
+      "action": {
+        "displayName": "Cabinet Action",
+        "purpose": "Bold uppercase HTML button label."
+      }
+    },
+    "shadows": [
+      {
+        "name": "action-contact",
+        "value": "0 2px 5px #32181266",
+        "purpose": "Button meets the cabinet plaque."
+      },
+      {
+        "name": "paper-contact",
+        "value": "drop-shadow(0 7px 5px #54311c30)",
+        "purpose": "Fortune stock projects from the slot."
+      }
+    ],
+    "motion": [
+      {
+        "name": "action-transition",
+        "value": "background .16s, translate .16s",
+        "purpose": "Darken and shift primary action."
+      },
+      {
+        "name": "fortune-opacity",
+        "value": "opacity .18s",
+        "purpose": "Hide the old fortune during the request."
+      },
+      {
+        "name": "fortune-feed",
+        "value": "issue-fortune .65s cubic-bezier(.16,1,.3,1) both",
+        "purpose": "Clip from inset(0 0 100%) and translateY(-12px) to full paper."
+      },
+      {
+        "name": "idle-pause",
+        "value": "15000 + Math.random() * 15000 milliseconds",
+        "purpose": "Random 15–30 seconds after each completed idle clip; no immediate repeat."
+      },
+      {
+        "name": "clip-timeout",
+        "value": "8500ms",
+        "purpose": "Playback safety timeout; no continuous loop."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "prefers-reduced-motion: reduce",
+        "purpose": "Disable CSS motion, smooth scrolling, and character playback; retain still and result."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "small-mobile",
+        "value": "360px"
+      },
+      {
+        "name": "mobile",
+        "value": "700px"
+      },
+      {
+        "name": "tablet-upper",
+        "value": "1100px"
+      },
+      {
+        "name": "wide",
+        "value": "1600px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Cabinet Action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Primary cabinet action; real HTML over a blank illustrated plaque.",
+      "html": "<button class=\"ds-action\">Blame the cosmos</button>",
+      "css": ".ds-action{font-family:Buenard,Georgia,serif;font-size:16px;font-weight:700;line-height:1.1;letter-spacing:.08em;text-transform:uppercase;min-height:42px;padding:0 6px;width:252px;border:2px solid #cda855;border-radius:999px;background:var(--action,#9c321e);color:#fff2d4;box-shadow:0 2px 5px #32181266;cursor:pointer;transition:background .16s,translate .16s}.ds-action:hover{background:#7e2417;translate:0 -1px}.ds-action:active{translate:0 1px}.ds-action:disabled{background:#773425;cursor:wait}.ds-action:focus-visible,.ds-nav a:focus-visible,.ds-motion:focus-visible,.ds-disclosure summary:focus-visible{outline:3px solid var(--focus,#722d47);outline-offset:5px;border-radius:3px}"
+    },
+    {
+      "name": "Text Navigation",
+      "kind": "nav",
+      "description": "Quiet ordinary underlined navigation in the paper margin.",
+      "html": "<nav class=\"ds-nav\"><a href=\"#about\">About</a></nav>",
+      "css": ".ds-nav{font-family:Buenard,Georgia,serif;font-size:20px;color:var(--ink,#40192e)}.ds-nav a{color:inherit;text-underline-offset:.2em;text-decoration-thickness:1px}.ds-nav a:hover{text-decoration-thickness:2px}.ds-action:focus-visible,.ds-nav a:focus-visible,.ds-motion:focus-visible,.ds-disclosure summary:focus-visible{outline:3px solid var(--focus,#722d47);outline-offset:5px;border-radius:3px}"
+    },
+    {
+      "name": "Motion Preference",
+      "kind": "button",
+      "refersTo": "motion-toggle",
+      "description": "Underlined pause/resume control beneath the footer.",
+      "html": "<button class=\"ds-motion\" aria-pressed=\"false\">Pause character animations</button>",
+      "css": ".ds-motion{font-family:Buenard,Georgia,serif;font-size:14px;border:0;border-bottom:1px solid currentColor;padding:4px 0;background:none;color:var(--ink,#40192e);cursor:pointer}.ds-motion:hover{border-bottom-width:2px}.ds-motion:disabled{cursor:wait}.ds-action:focus-visible,.ds-nav a:focus-visible,.ds-motion:focus-visible,.ds-disclosure summary:focus-visible{outline:3px solid var(--focus,#722d47);outline-offset:5px;border-radius:3px}"
+    },
+    {
+      "name": "Fortune Copy",
+      "kind": "custom",
+      "refersTo": "fortune-copy",
+      "description": "Live classification and result text; artwork intentionally omitted from this text-only preview.",
+      "html": "<section class=\"ds-fortune\"><p class=\"ds-kind\">Invented nonsense</p><h2 class=\"ds-result\">The Moon has put your motivation on airplane mode.</h2></section>",
+      "css": ".ds-fortune{font-family:Buenard,Georgia,serif;color:var(--ink,#40192e);width:240px;text-align:center}.ds-kind{font-size:11px;letter-spacing:.11em;text-transform:uppercase;margin:0 0 9px;font-weight:700;line-height:1.25}.ds-result{font-size:28px;font-weight:700;line-height:1.05;letter-spacing:-.02em;margin:0;text-wrap:balance}"
+    },
+    {
+      "name": "Factual Disclosure",
+      "kind": "custom",
+      "description": "Native disclosure for the real event, calculation window, and source.",
+      "html": "<details class=\"ds-disclosure\"><summary>What’s actually happening?</summary><p>The event is real. Blaming your day on it is the joke.</p></details>",
+      "css": ".ds-disclosure{font-family:Buenard,Georgia,serif;max-width:392px;color:var(--ink,#40192e);font-size:17px;line-height:1.4;padding:10px 24px 0}.ds-disclosure summary{cursor:pointer;text-align:center;text-underline-offset:.2em;text-decoration:underline}.ds-disclosure p{margin:.8rem 0;font-style:italic}.ds-action:focus-visible,.ds-nav a:focus-visible,.ds-motion:focus-visible,.ds-disclosure summary:focus-visible{outline:3px solid var(--focus,#722d47);outline-offset:5px;border-radius:3px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Weary Cosmic Clerk",
+    "overview": "Cosmic Bullshit feels like an old printed amusement made operational: warm ochre paper, plum engraving, worn brass, and an exhausted but charming clerk. The illustration carries the ornate personality; the surrounding interface stays readable and spare. The humor is warm, absurd, and plainly entertainment.\n\nThis document records the implemented system in `src/pages/index.astro`, `src/styles/home.css`, and `src/scripts/fortune-machine.ts`. It describes code authority, not a finish verdict. The user approved the taller production cabinet during asset review; the original decision comp retains shorter geometry. Automated comparison and plate concerns remain open and are not converted into design rules.",
+    "keyCharacteristics": [
+      "Warm printed material and plum ink.",
+      "One locally hosted serif family with a compact hierarchy.",
+      "Illustrated depth with real HTML text and controls.",
+      "Mostly still character performance with deliberate comic pauses.",
+      "Clear separation between factual sky events and invented excuses."
+    ],
+    "rules": [
+      {
+        "name": "The Ink and Paper Rule",
+        "body": "Use plum text on the warm paper ground for ordinary content; reserve vermilion for the primary action.",
+        "section": "colors"
+      },
+      {
+        "name": "The Material Depth Rule",
+        "body": "Add depth where an object physically meets another surface; keep ordinary text content on the paper ground.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Still First Rule",
+        "body": "Keep the clerk still most of the time; animate one restrained gesture only after a random 15–30 second pause or a user request.",
+        "section": "components"
+      }
+    ],
+    "dos": [
+      "Do preserve warm paper, plum ink, and restrained vermilion action.",
+      "Do keep text and interaction in live HTML above the illustration.",
+      "Do preserve the clerk's identity, steady lighting, fixed window, and long still pauses.",
+      "Do retain visible factual-versus-invented labels, keyboard focus, motion preferences, and asset provenance."
+    ],
+    "donts": [
+      "Don't replace the illustration's material depth with generic floating cards.",
+      "Don't bake changing fortune text or the interactive action label into artwork.",
+      "Don't turn unresolved plate edges, crop drift, or old-comp geometry differences into reusable design rules.",
+      "Don't describe this documentation or the taller-cabinet approval as a closed finish review."
+    ]
+  }
+}

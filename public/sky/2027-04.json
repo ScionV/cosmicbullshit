@@ -1,0 +1,175 @@
+{
+  "schemaVersion": 1,
+  "validFrom": "2027-04-01T00:00:00Z",
+  "validUntil": "2027-05-01T00:00:00Z",
+  "source": {
+    "name": "pyswisseph",
+    "version": "2.10.03",
+    "url": "https://github.com/astrorigin/pyswisseph",
+    "ephemeris": "Moshier (built into Swiss Ephemeris)",
+    "coordinates": "geocentric tropical ecliptic",
+    "timeScale": "UT"
+  },
+  "events": [
+    {
+      "id": "moon-sign-Aquarius-2027-04-01T00:00:00Z",
+      "kind": "moon-sign",
+      "subject": "Aquarius",
+      "startsAt": "2027-04-01T00:00:00Z",
+      "endsAt": "2027-04-03T07:25:06Z",
+      "fact": "The Moon is in tropical Aquarius (geocentric zodiac)."
+    },
+    {
+      "id": "retrograde-Jupiter-2027-04-01T00:00:00Z",
+      "kind": "retrograde",
+      "subject": "Jupiter",
+      "startsAt": "2027-04-01T00:00:00Z",
+      "endsAt": "2027-04-13T02:11:15Z",
+      "fact": "Jupiter is in apparent retrograde motion as seen from Earth."
+    },
+    {
+      "id": "retrograde-Mars-2027-04-01T00:00:00Z",
+      "kind": "retrograde",
+      "subject": "Mars",
+      "startsAt": "2027-04-01T00:00:00Z",
+      "endsAt": "2027-04-01T14:08:18Z",
+      "fact": "Mars is in apparent retrograde motion as seen from Earth."
+    },
+    {
+      "id": "moon-sign-Pisces-2027-04-03T07:25:06Z",
+      "kind": "moon-sign",
+      "subject": "Pisces",
+      "startsAt": "2027-04-03T07:25:06Z",
+      "endsAt": "2027-04-05T16:48:21Z",
+      "fact": "The Moon is in tropical Pisces (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Aries-2027-04-05T16:48:21Z",
+      "kind": "moon-sign",
+      "subject": "Aries",
+      "startsAt": "2027-04-05T16:48:21Z",
+      "endsAt": "2027-04-07T23:09:38Z",
+      "fact": "The Moon is in tropical Aries (geocentric zodiac)."
+    },
+    {
+      "id": "moon-phase-new Moon-2027-04-06T06:09:17Z",
+      "kind": "moon-phase",
+      "subject": "new Moon",
+      "startsAt": "2027-04-06T06:09:17Z",
+      "endsAt": "2027-04-07T17:14:47Z",
+      "fact": "The Moon is near its new Moon phase (within 9 degrees of the phase angle)."
+    },
+    {
+      "id": "moon-sign-Taurus-2027-04-07T23:09:38Z",
+      "kind": "moon-sign",
+      "subject": "Taurus",
+      "startsAt": "2027-04-07T23:09:38Z",
+      "endsAt": "2027-04-10T03:21:17Z",
+      "fact": "The Moon is in tropical Taurus (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Gemini-2027-04-10T03:21:17Z",
+      "kind": "moon-sign",
+      "subject": "Gemini",
+      "startsAt": "2027-04-10T03:21:17Z",
+      "endsAt": "2027-04-12T06:31:54Z",
+      "fact": "The Moon is in tropical Gemini (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Cancer-2027-04-12T06:31:54Z",
+      "kind": "moon-sign",
+      "subject": "Cancer",
+      "startsAt": "2027-04-12T06:31:54Z",
+      "endsAt": "2027-04-14T09:29:57Z",
+      "fact": "The Moon is in tropical Cancer (geocentric zodiac)."
+    },
+    {
+      "id": "moon-phase-first-quarter Moon-2027-04-13T06:30:54Z",
+      "kind": "moon-phase",
+      "subject": "first-quarter Moon",
+      "startsAt": "2027-04-13T06:30:54Z",
+      "endsAt": "2027-04-14T15:23:17Z",
+      "fact": "The Moon is near its first-quarter Moon phase (within 9 degrees of the phase angle)."
+    },
+    {
+      "id": "moon-sign-Leo-2027-04-14T09:29:57Z",
+      "kind": "moon-sign",
+      "subject": "Leo",
+      "startsAt": "2027-04-14T09:29:57Z",
+      "endsAt": "2027-04-16T12:39:21Z",
+      "fact": "The Moon is in tropical Leo (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Virgo-2027-04-16T12:39:21Z",
+      "kind": "moon-sign",
+      "subject": "Virgo",
+      "startsAt": "2027-04-16T12:39:21Z",
+      "endsAt": "2027-04-18T16:21:49Z",
+      "fact": "The Moon is in tropical Virgo (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Libra-2027-04-18T16:21:49Z",
+      "kind": "moon-sign",
+      "subject": "Libra",
+      "startsAt": "2027-04-18T16:21:49Z",
+      "endsAt": "2027-04-20T21:20:37Z",
+      "fact": "The Moon is in tropical Libra (geocentric zodiac)."
+    },
+    {
+      "id": "moon-phase-full Moon-2027-04-20T05:05:51Z",
+      "kind": "moon-phase",
+      "subject": "full Moon",
+      "startsAt": "2027-04-20T05:05:51Z",
+      "endsAt": "2027-04-21T16:04:22Z",
+      "fact": "The Moon is near its full Moon phase (within 9 degrees of the phase angle)."
+    },
+    {
+      "id": "moon-sign-Scorpio-2027-04-20T21:20:37Z",
+      "kind": "moon-sign",
+      "subject": "Scorpio",
+      "startsAt": "2027-04-20T21:20:37Z",
+      "endsAt": "2027-04-23T04:37:17Z",
+      "fact": "The Moon is in tropical Scorpio (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Sagittarius-2027-04-23T04:37:17Z",
+      "kind": "moon-sign",
+      "subject": "Sagittarius",
+      "startsAt": "2027-04-23T04:37:17Z",
+      "endsAt": "2027-04-25T14:51:55Z",
+      "fact": "The Moon is in tropical Sagittarius (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Capricorn-2027-04-25T14:51:55Z",
+      "kind": "moon-sign",
+      "subject": "Capricorn",
+      "startsAt": "2027-04-25T14:51:55Z",
+      "endsAt": "2027-04-28T03:23:36Z",
+      "fact": "The Moon is in tropical Capricorn (geocentric zodiac)."
+    },
+    {
+      "id": "moon-phase-last-quarter Moon-2027-04-28T00:22:21Z",
+      "kind": "moon-phase",
+      "subject": "last-quarter Moon",
+      "startsAt": "2027-04-28T00:22:21Z",
+      "endsAt": "2027-04-29T16:07:20Z",
+      "fact": "The Moon is near its last-quarter Moon phase (within 9 degrees of the phase angle)."
+    },
+    {
+      "id": "moon-sign-Aquarius-2027-04-28T03:23:36Z",
+      "kind": "moon-sign",
+      "subject": "Aquarius",
+      "startsAt": "2027-04-28T03:23:36Z",
+      "endsAt": "2027-04-30T15:52:19Z",
+      "fact": "The Moon is in tropical Aquarius (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Pisces-2027-04-30T15:52:19Z",
+      "kind": "moon-sign",
+      "subject": "Pisces",
+      "startsAt": "2027-04-30T15:52:19Z",
+      "endsAt": "2027-05-01T00:00:00Z",
+      "fact": "The Moon is in tropical Pisces (geocentric zodiac)."
+    }
+  ]
+}

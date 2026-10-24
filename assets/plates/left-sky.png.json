@@ -1,0 +1,8 @@
+{
+  "tool": "image_gen.imagegen",
+  "prompt": "Recreate the supplied approved illustration crop as a production web illustration, maintaining the same composition and plum engraved linework: a large sleepy crescent moon with a closed eye and small profile nose centered in the upper half, a tiny airplane circling toward the upper right on dotted elliptical orbit lines, tiny scattered eight-point stars and stippled billowing clouds filling the lower half and bleeding toward the left and bottom edges. Keep the drawing, silhouettes, composition, line weight, detail density and warm faded plum ink exactly as the reference. Output portrait canvas around 928x1064 or larger with same 0.87 width-to-height ratio. Remove the ochre page ground completely to native PNG transparency. The moon and clouds should carry only sparse plum printed lines and a very faint warm cream translucent wash, so the page's own ochre paper will show through; stars and ink are solid plum. No brown paper rectangle, no checkerboard, no text, no frame, no shadow. Keep top/right spacious negative gaps genuinely transparent. Native transparent-background PNG cutout. This is a single page-side celestial engraving plate, not a new scene.",
+  "reference": ".impeccable/build/plate-references/left-sky.png",
+  "transparent_background": true,
+  "createdAt": "2026-10-24",
+  "productionPlate": true
+}

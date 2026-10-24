@@ -1,0 +1,199 @@
+{
+  "schemaVersion": 1,
+  "validFrom": "2028-09-01T00:00:00Z",
+  "validUntil": "2028-10-01T00:00:00Z",
+  "source": {
+    "name": "pyswisseph",
+    "version": "2.10.03",
+    "url": "https://github.com/astrorigin/pyswisseph",
+    "ephemeris": "Moshier (built into Swiss Ephemeris)",
+    "coordinates": "geocentric tropical ecliptic",
+    "timeScale": "UT"
+  },
+  "events": [
+    {
+      "id": "moon-sign-Aquarius-2028-09-01T00:00:00Z",
+      "kind": "moon-sign",
+      "subject": "Aquarius",
+      "startsAt": "2028-09-01T00:00:00Z",
+      "endsAt": "2028-09-02T23:33:12Z",
+      "fact": "The Moon is in tropical Aquarius (geocentric zodiac)."
+    },
+    {
+      "id": "retrograde-Neptune-2028-09-01T00:00:00Z",
+      "kind": "retrograde",
+      "subject": "Neptune",
+      "startsAt": "2028-09-01T00:00:00Z",
+      "endsAt": "2028-10-01T00:00:00Z",
+      "fact": "Neptune is in apparent retrograde motion as seen from Earth."
+    },
+    {
+      "id": "retrograde-Pluto-2028-09-01T00:00:00Z",
+      "kind": "retrograde",
+      "subject": "Pluto",
+      "startsAt": "2028-09-01T00:00:00Z",
+      "endsAt": "2028-10-01T00:00:00Z",
+      "fact": "Pluto is in apparent retrograde motion as seen from Earth."
+    },
+    {
+      "id": "retrograde-Saturn-2028-09-01T00:00:00Z",
+      "kind": "retrograde",
+      "subject": "Saturn",
+      "startsAt": "2028-09-01T00:00:00Z",
+      "endsAt": "2028-10-01T00:00:00Z",
+      "fact": "Saturn is in apparent retrograde motion as seen from Earth."
+    },
+    {
+      "id": "moon-sign-Pisces-2028-09-02T23:33:12Z",
+      "kind": "moon-sign",
+      "subject": "Pisces",
+      "startsAt": "2028-09-02T23:33:12Z",
+      "endsAt": "2028-09-05T12:15:05Z",
+      "fact": "The Moon is in tropical Pisces (geocentric zodiac)."
+    },
+    {
+      "id": "moon-phase-full Moon-2028-09-03T03:58:22Z",
+      "kind": "moon-phase",
+      "subject": "full Moon",
+      "startsAt": "2028-09-03T03:58:22Z",
+      "endsAt": "2028-09-04T19:38:08Z",
+      "fact": "The Moon is near its full Moon phase (within 9 degrees of the phase angle)."
+    },
+    {
+      "id": "moon-sign-Aries-2028-09-05T12:15:05Z",
+      "kind": "moon-sign",
+      "subject": "Aries",
+      "startsAt": "2028-09-05T12:15:05Z",
+      "endsAt": "2028-09-08T00:34:28Z",
+      "fact": "The Moon is in tropical Aries (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Taurus-2028-09-08T00:34:28Z",
+      "kind": "moon-sign",
+      "subject": "Taurus",
+      "startsAt": "2028-09-08T00:34:28Z",
+      "endsAt": "2028-09-10T11:24:39Z",
+      "fact": "The Moon is in tropical Taurus (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Gemini-2028-09-10T11:24:39Z",
+      "kind": "moon-sign",
+      "subject": "Gemini",
+      "startsAt": "2028-09-10T11:24:39Z",
+      "endsAt": "2028-09-12T19:26:11Z",
+      "fact": "The Moon is in tropical Gemini (geocentric zodiac)."
+    },
+    {
+      "id": "moon-phase-last-quarter Moon-2028-09-11T06:33:48Z",
+      "kind": "moon-phase",
+      "subject": "last-quarter Moon",
+      "startsAt": "2028-09-11T06:33:48Z",
+      "endsAt": "2028-09-12T18:33:28Z",
+      "fact": "The Moon is near its last-quarter Moon phase (within 9 degrees of the phase angle)."
+    },
+    {
+      "id": "moon-sign-Cancer-2028-09-12T19:26:11Z",
+      "kind": "moon-sign",
+      "subject": "Cancer",
+      "startsAt": "2028-09-12T19:26:11Z",
+      "endsAt": "2028-09-14T23:48:25Z",
+      "fact": "The Moon is in tropical Cancer (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Leo-2028-09-14T23:48:25Z",
+      "kind": "moon-sign",
+      "subject": "Leo",
+      "startsAt": "2028-09-14T23:48:25Z",
+      "endsAt": "2028-09-17T00:51:46Z",
+      "fact": "The Moon is in tropical Leo (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Virgo-2028-09-17T00:51:46Z",
+      "kind": "moon-sign",
+      "subject": "Virgo",
+      "startsAt": "2028-09-17T00:51:46Z",
+      "endsAt": "2028-09-19T00:06:02Z",
+      "fact": "The Moon is in tropical Virgo (geocentric zodiac)."
+    },
+    {
+      "id": "moon-phase-new Moon-2028-09-18T03:19:34Z",
+      "kind": "moon-phase",
+      "subject": "new Moon",
+      "startsAt": "2028-09-18T03:19:34Z",
+      "endsAt": "2028-09-19T09:28:12Z",
+      "fact": "The Moon is near its new Moon phase (within 9 degrees of the phase angle)."
+    },
+    {
+      "id": "retrograde-Uranus-2028-09-19T00:01:14Z",
+      "kind": "retrograde",
+      "subject": "Uranus",
+      "startsAt": "2028-09-19T00:01:14Z",
+      "endsAt": "2028-10-01T00:00:00Z",
+      "fact": "Uranus is in apparent retrograde motion as seen from Earth."
+    },
+    {
+      "id": "moon-sign-Libra-2028-09-19T00:06:02Z",
+      "kind": "moon-sign",
+      "subject": "Libra",
+      "startsAt": "2028-09-19T00:06:02Z",
+      "endsAt": "2028-09-20T23:38:49Z",
+      "fact": "The Moon is in tropical Libra (geocentric zodiac)."
+    },
+    {
+      "id": "retrograde-Mercury-2028-09-19T16:33:52Z",
+      "kind": "retrograde",
+      "subject": "Mercury",
+      "startsAt": "2028-09-19T16:33:52Z",
+      "endsAt": "2028-10-01T00:00:00Z",
+      "fact": "Mercury is in apparent retrograde motion as seen from Earth."
+    },
+    {
+      "id": "moon-sign-Scorpio-2028-09-20T23:38:49Z",
+      "kind": "moon-sign",
+      "subject": "Scorpio",
+      "startsAt": "2028-09-20T23:38:49Z",
+      "endsAt": "2028-09-23T01:39:00Z",
+      "fact": "The Moon is in tropical Scorpio (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Sagittarius-2028-09-23T01:39:00Z",
+      "kind": "moon-sign",
+      "subject": "Sagittarius",
+      "startsAt": "2028-09-23T01:39:00Z",
+      "endsAt": "2028-09-25T07:33:19Z",
+      "fact": "The Moon is in tropical Sagittarius (geocentric zodiac)."
+    },
+    {
+      "id": "moon-phase-first-quarter Moon-2028-09-24T19:04:23Z",
+      "kind": "moon-phase",
+      "subject": "first-quarter Moon",
+      "startsAt": "2028-09-24T19:04:23Z",
+      "endsAt": "2028-09-26T07:42:42Z",
+      "fact": "The Moon is near its first-quarter Moon phase (within 9 degrees of the phase angle)."
+    },
+    {
+      "id": "moon-sign-Capricorn-2028-09-25T07:33:19Z",
+      "kind": "moon-sign",
+      "subject": "Capricorn",
+      "startsAt": "2028-09-25T07:33:19Z",
+      "endsAt": "2028-09-27T17:21:12Z",
+      "fact": "The Moon is in tropical Capricorn (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Aquarius-2028-09-27T17:21:12Z",
+      "kind": "moon-sign",
+      "subject": "Aquarius",
+      "startsAt": "2028-09-27T17:21:12Z",
+      "endsAt": "2028-09-30T05:33:23Z",
+      "fact": "The Moon is in tropical Aquarius (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Pisces-2028-09-30T05:33:23Z",
+      "kind": "moon-sign",
+      "subject": "Pisces",
+      "startsAt": "2028-09-30T05:33:23Z",
+      "endsAt": "2028-10-01T00:00:00Z",
+      "fact": "The Moon is in tropical Pisces (geocentric zodiac)."
+    }
+  ]
+}

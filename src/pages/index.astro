@@ -1,0 +1,89 @@
+---
+import { Image, getImage } from 'astro:assets';
+import cabinet from '../../assets/plates/cabinet.png';
+import paper from '../../assets/plates/fortune-paper.png';
+import leftSky from '../../assets/plates/left-sky.png';
+import rightSky from '../../assets/plates/right-sky.png';
+import texture from '../../assets/plates/paper.png';
+import '../styles/home.css';
+const background = await getImage({src: texture, width: 560, format: 'webp'});
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#e8c898" />
+    <meta name="description" content="A cosmic excuse for whatever went wrong. Consult our very tired fortune teller for real sky events, invented nonsense, and absolutely questionable explanations." />
+    <meta property="og:title" content="Cosmic Bullshit" />
+    <meta property="og:description" content="A cosmic excuse for whatever went wrong." />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://cosmicbullshit.com/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href="/fonts/Buenard.ttf" as="font" type="font/ttf" crossorigin />
+    <title>Cosmic Bullshit — A cosmic excuse for whatever went wrong</title>
+  </head>
+  <body style={`--paper-texture: url(${background.src})`}>
+    <a class="skip-link" href="#consult">Skip to the fortune machine</a>
+    <header class="masthead">
+      <a class="brand" href="/" aria-label="Cosmic Bullshit home">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="m24 0 3.8 17.5L40 8l-9.5 12.2L48 24l-17.5 3.8L40 40l-12.2-9.5L24 48l-3.8-17.5L8 40l9.5-12.2L0 24l17.5-3.8L8 8l12.2 9.5Z" fill="currentColor"/></svg>
+        <span>Cosmic Bullshit</span>
+      </a>
+      <p class="premise">A cosmic excuse for whatever went wrong.</p>
+      <a class="about-link" href="#about">About</a>
+    </header>
+    <main id="consult">
+      <h1 class="sr-only">What cosmic bullshit can I blame my problems on?</h1>
+      <div class="sky-scene" aria-hidden="true">
+        <Image class="sky-art sky-left" src={leftSky} alt="" widths={[480, 800]} sizes="35vw" format="webp" />
+        <Image class="sky-art sky-right" src={rightSky} alt="" widths={[480, 800]} sizes="35vw" format="webp" />
+      </div>
+      <div class="machine" data-machine data-state="resting">
+        <Image class="cabinet" src={cabinet} alt="A tired cosmic clerk in a rumpled paisley suit, seated behind the glass of a brass-trimmed fortune machine." widths={[600, 900, 1086]} sizes="(max-width: 600px) 125vw, 700px" format="webp" loading="eager" fetchpriority="high" />
+        <div class="character-window" aria-hidden="true">
+          <img class="resting-frame" src="/media/resting-window.webp" alt="" width="480" height="454" />
+          <video class="reaction" data-reaction muted playsinline preload="none" disablepictureinpicture tabindex="-1"></video>
+        </div>
+        <button class="blame-button" type="button" data-blame>
+          <span data-button-label>Blame the cosmos</span>
+        </button>
+        <p class="machine-status" data-status role="status" aria-live="polite"></p>
+        <section class="fortune" data-fortune aria-labelledby="fortune-text" aria-live="polite" aria-atomic="true">
+          <Image class="fortune-stock" src={paper} alt="" widths={[600, 900]} sizes="(max-width: 600px) 90vw, 430px" format="webp" loading="eager" />
+          <div class="fortune-copy">
+            <p class="fortune-kind" data-fortune-kind>Invented nonsense</p>
+            <h2 id="fortune-text" data-fortune-title>The Moon has put your motivation on airplane mode.</h2>
+            <p class="fortune-joke" data-fortune-joke hidden></p>
+          </div>
+        </section>
+      </div>
+      <div class="fortune-details" data-details hidden>
+        <details data-source-details>
+          <summary>What’s actually happening?</summary>
+          <p data-fact></p>
+          <p class="source-note">The event is real. Blaming your day on it is the joke.</p>
+          <p data-window></p>
+          <p><a href="https://github.com/astrorigin/pyswisseph" target="_blank" rel="noopener noreferrer">Calculated with pyswisseph</a> · <span data-ephemeris></span></p>
+        </details>
+      </div>
+      <noscript><p class="no-script">The clerk needs JavaScript to issue a new excuse. Until then, the Moon is a perfectly serviceable scapegoat.</p></noscript>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-rule" aria-hidden="true"><span></span><svg viewBox="0 0 24 24"><path d="m12 0 2 9 10 3-10 2-2 10-3-10-9-2 9-3Z" fill="currentColor"/></svg><span></span></div>
+      <p>Real sky. <span aria-hidden="true">·</span> Invented nonsense. <span aria-hidden="true">·</span> All excuses for fun.</p>
+      <button class="motion-toggle" data-motion-toggle type="button" aria-pressed="false">Pause character animations</button>
+    </footer>
+    <section class="about" id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">The universe has a lot to answer for.</h2>
+      <p>Bad day? Our overworked cosmic clerk will find you something in the sky to blame. Some excuses start with calculated celestial events. Others come straight from the Department of Complete Bullshit.</p>
+      <p><strong>Real sky</strong> means the stated event is happening within its calculated time window. The interpretation is still a joke. <strong>Invented nonsense</strong> means we made the whole thing up. Neither is advice, a prediction, or a diagnosis.</p>
+      <p class="about-source">Built with Astro and pyswisseph. <a href="https://github.com/ScionV/cosmicbullshit">Source code · AGPL-3.0</a></p>
+      <a href="#consult">Back to the clerk</a>
+    </section>
+    <script>
+      import { initFortuneMachine } from '../scripts/fortune-machine';
+      initFortuneMachine();
+    </script>
+  </body>
+</html>

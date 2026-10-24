@@ -1,0 +1,15 @@
+Cosmic Bullshit — Copyright (C) 2026 ScionV
+Licensed under GNU Affero General Public License version 3 only.
+
+Astronomical calculations use pyswisseph (AGPL-3.0) and Swiss Ephemeris.
+pyswisseph: https://github.com/astrorigin/pyswisseph
+Swiss Ephemeris: https://www.astro.com/swisseph/
+The generator explicitly selects the built-in Moshier ephemeris; it does not
+bundle or claim to use external Swiss/JPL ephemeris data files.
+
+The celestial data describes calculated geocentric positions and apparent
+motions. The explanations linking these events to personal problems are jokes.
+
+Character artwork and animation were generated for this project using image
+generation and Higgsfield/Kling. Reference prompts are retained with source
+assets during development. Locally served fonts retain their own license files.

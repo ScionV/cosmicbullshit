@@ -1,0 +1,183 @@
+{
+  "schemaVersion": 1,
+  "validFrom": "2028-06-01T00:00:00Z",
+  "validUntil": "2028-07-01T00:00:00Z",
+  "source": {
+    "name": "pyswisseph",
+    "version": "2.10.03",
+    "url": "https://github.com/astrorigin/pyswisseph",
+    "ephemeris": "Moshier (built into Swiss Ephemeris)",
+    "coordinates": "geocentric tropical ecliptic",
+    "timeScale": "UT"
+  },
+  "events": [
+    {
+      "id": "moon-sign-Virgo-2028-06-01T00:00:00Z",
+      "kind": "moon-sign",
+      "subject": "Virgo",
+      "startsAt": "2028-06-01T00:00:00Z",
+      "endsAt": "2028-06-01T16:47:04Z",
+      "fact": "The Moon is in tropical Virgo (geocentric zodiac)."
+    },
+    {
+      "id": "retrograde-Mercury-2028-06-01T00:00:00Z",
+      "kind": "retrograde",
+      "subject": "Mercury",
+      "startsAt": "2028-06-01T00:00:00Z",
+      "endsAt": "2028-06-14T06:06:04Z",
+      "fact": "Mercury is in apparent retrograde motion as seen from Earth."
+    },
+    {
+      "id": "retrograde-Pluto-2028-06-01T00:00:00Z",
+      "kind": "retrograde",
+      "subject": "Pluto",
+      "startsAt": "2028-06-01T00:00:00Z",
+      "endsAt": "2028-07-01T00:00:00Z",
+      "fact": "Pluto is in apparent retrograde motion as seen from Earth."
+    },
+    {
+      "id": "retrograde-Venus-2028-06-01T00:00:00Z",
+      "kind": "retrograde",
+      "subject": "Venus",
+      "startsAt": "2028-06-01T00:00:00Z",
+      "endsAt": "2028-06-22T22:12:38Z",
+      "fact": "Venus is in apparent retrograde motion as seen from Earth."
+    },
+    {
+      "id": "moon-sign-Libra-2028-06-01T16:47:04Z",
+      "kind": "moon-sign",
+      "subject": "Libra",
+      "startsAt": "2028-06-01T16:47:04Z",
+      "endsAt": "2028-06-03T19:44:16Z",
+      "fact": "The Moon is in tropical Libra (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Scorpio-2028-06-03T19:44:16Z",
+      "kind": "moon-sign",
+      "subject": "Scorpio",
+      "startsAt": "2028-06-03T19:44:16Z",
+      "endsAt": "2028-06-05T23:44:37Z",
+      "fact": "The Moon is in tropical Scorpio (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Sagittarius-2028-06-05T23:44:37Z",
+      "kind": "moon-sign",
+      "subject": "Sagittarius",
+      "startsAt": "2028-06-05T23:44:37Z",
+      "endsAt": "2028-06-08T05:53:10Z",
+      "fact": "The Moon is in tropical Sagittarius (geocentric zodiac)."
+    },
+    {
+      "id": "moon-phase-full Moon-2028-06-06T12:44:34Z",
+      "kind": "moon-phase",
+      "subject": "full Moon",
+      "startsAt": "2028-06-06T12:44:34Z",
+      "endsAt": "2028-06-07T23:51:27Z",
+      "fact": "The Moon is near its full Moon phase (within 9 degrees of the phase angle)."
+    },
+    {
+      "id": "moon-sign-Capricorn-2028-06-08T05:53:10Z",
+      "kind": "moon-sign",
+      "subject": "Capricorn",
+      "startsAt": "2028-06-08T05:53:10Z",
+      "endsAt": "2028-06-10T14:57:20Z",
+      "fact": "The Moon is in tropical Capricorn (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Aquarius-2028-06-10T14:57:20Z",
+      "kind": "moon-sign",
+      "subject": "Aquarius",
+      "startsAt": "2028-06-10T14:57:20Z",
+      "endsAt": "2028-06-13T02:40:53Z",
+      "fact": "The Moon is in tropical Aquarius (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Pisces-2028-06-13T02:40:53Z",
+      "kind": "moon-sign",
+      "subject": "Pisces",
+      "startsAt": "2028-06-13T02:40:53Z",
+      "endsAt": "2028-06-15T15:18:46Z",
+      "fact": "The Moon is in tropical Pisces (geocentric zodiac)."
+    },
+    {
+      "id": "moon-phase-last-quarter Moon-2028-06-14T08:40:16Z",
+      "kind": "moon-phase",
+      "subject": "last-quarter Moon",
+      "startsAt": "2028-06-14T08:40:16Z",
+      "endsAt": "2028-06-16T00:06:23Z",
+      "fact": "The Moon is near its last-quarter Moon phase (within 9 degrees of the phase angle)."
+    },
+    {
+      "id": "moon-sign-Aries-2028-06-15T15:18:46Z",
+      "kind": "moon-sign",
+      "subject": "Aries",
+      "startsAt": "2028-06-15T15:18:46Z",
+      "endsAt": "2028-06-18T02:24:51Z",
+      "fact": "The Moon is in tropical Aries (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Taurus-2028-06-18T02:24:51Z",
+      "kind": "moon-sign",
+      "subject": "Taurus",
+      "startsAt": "2028-06-18T02:24:51Z",
+      "endsAt": "2028-06-20T10:24:51Z",
+      "fact": "The Moon is in tropical Taurus (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Gemini-2028-06-20T10:24:51Z",
+      "kind": "moon-sign",
+      "subject": "Gemini",
+      "startsAt": "2028-06-20T10:24:51Z",
+      "endsAt": "2028-06-22T15:17:14Z",
+      "fact": "The Moon is in tropical Gemini (geocentric zodiac)."
+    },
+    {
+      "id": "moon-phase-new Moon-2028-06-22T01:45:53Z",
+      "kind": "moon-phase",
+      "subject": "new Moon",
+      "startsAt": "2028-06-22T01:45:53Z",
+      "endsAt": "2028-06-23T10:55:31Z",
+      "fact": "The Moon is near its new Moon phase (within 9 degrees of the phase angle)."
+    },
+    {
+      "id": "moon-sign-Cancer-2028-06-22T15:17:14Z",
+      "kind": "moon-sign",
+      "subject": "Cancer",
+      "startsAt": "2028-06-22T15:17:14Z",
+      "endsAt": "2028-06-24T18:02:26Z",
+      "fact": "The Moon is in tropical Cancer (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Leo-2028-06-24T18:02:26Z",
+      "kind": "moon-sign",
+      "subject": "Leo",
+      "startsAt": "2028-06-24T18:02:26Z",
+      "endsAt": "2028-06-26T19:57:38Z",
+      "fact": "The Moon is in tropical Leo (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Virgo-2028-06-26T19:57:38Z",
+      "kind": "moon-sign",
+      "subject": "Virgo",
+      "startsAt": "2028-06-26T19:57:38Z",
+      "endsAt": "2028-06-28T22:09:52Z",
+      "fact": "The Moon is in tropical Virgo (geocentric zodiac)."
+    },
+    {
+      "id": "moon-phase-first-quarter Moon-2028-06-28T19:50:46Z",
+      "kind": "moon-phase",
+      "subject": "first-quarter Moon",
+      "startsAt": "2028-06-28T19:50:46Z",
+      "endsAt": "2028-06-30T04:38:58Z",
+      "fact": "The Moon is near its first-quarter Moon phase (within 9 degrees of the phase angle)."
+    },
+    {
+      "id": "moon-sign-Libra-2028-06-28T22:09:52Z",
+      "kind": "moon-sign",
+      "subject": "Libra",
+      "startsAt": "2028-06-28T22:09:52Z",
+      "endsAt": "2028-07-01T00:00:00Z",
+      "fact": "The Moon is in tropical Libra (geocentric zodiac)."
+    }
+  ]
+}

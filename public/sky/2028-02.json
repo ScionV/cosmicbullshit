@@ -1,0 +1,183 @@
+{
+  "schemaVersion": 1,
+  "validFrom": "2028-02-01T00:00:00Z",
+  "validUntil": "2028-03-01T00:00:00Z",
+  "source": {
+    "name": "pyswisseph",
+    "version": "2.10.03",
+    "url": "https://github.com/astrorigin/pyswisseph",
+    "ephemeris": "Moshier (built into Swiss Ephemeris)",
+    "coordinates": "geocentric tropical ecliptic",
+    "timeScale": "UT"
+  },
+  "events": [
+    {
+      "id": "moon-sign-Aries-2028-02-01T00:00:00Z",
+      "kind": "moon-sign",
+      "subject": "Aries",
+      "startsAt": "2028-02-01T00:00:00Z",
+      "endsAt": "2028-02-02T15:37:15Z",
+      "fact": "The Moon is in tropical Aries (geocentric zodiac)."
+    },
+    {
+      "id": "retrograde-Jupiter-2028-02-01T00:00:00Z",
+      "kind": "retrograde",
+      "subject": "Jupiter",
+      "startsAt": "2028-02-01T00:00:00Z",
+      "endsAt": "2028-03-01T00:00:00Z",
+      "fact": "Jupiter is in apparent retrograde motion as seen from Earth."
+    },
+    {
+      "id": "retrograde-Mercury-2028-02-01T00:00:00Z",
+      "kind": "retrograde",
+      "subject": "Mercury",
+      "startsAt": "2028-02-01T00:00:00Z",
+      "endsAt": "2028-02-14T12:37:51Z",
+      "fact": "Mercury is in apparent retrograde motion as seen from Earth."
+    },
+    {
+      "id": "retrograde-Uranus-2028-02-01T00:00:00Z",
+      "kind": "retrograde",
+      "subject": "Uranus",
+      "startsAt": "2028-02-01T00:00:00Z",
+      "endsAt": "2028-02-12T23:49:50Z",
+      "fact": "Uranus is in apparent retrograde motion as seen from Earth."
+    },
+    {
+      "id": "moon-sign-Taurus-2028-02-02T15:37:15Z",
+      "kind": "moon-sign",
+      "subject": "Taurus",
+      "startsAt": "2028-02-02T15:37:15Z",
+      "endsAt": "2028-02-04T23:45:53Z",
+      "fact": "The Moon is in tropical Taurus (geocentric zodiac)."
+    },
+    {
+      "id": "moon-phase-first-quarter Moon-2028-02-03T00:38:36Z",
+      "kind": "moon-phase",
+      "subject": "first-quarter Moon",
+      "startsAt": "2028-02-03T00:38:36Z",
+      "endsAt": "2028-02-04T13:16:55Z",
+      "fact": "The Moon is near its first-quarter Moon phase (within 9 degrees of the phase angle)."
+    },
+    {
+      "id": "moon-sign-Gemini-2028-02-04T23:45:53Z",
+      "kind": "moon-sign",
+      "subject": "Gemini",
+      "startsAt": "2028-02-04T23:45:53Z",
+      "endsAt": "2028-02-07T04:06:30Z",
+      "fact": "The Moon is in tropical Gemini (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Cancer-2028-02-07T04:06:30Z",
+      "kind": "moon-sign",
+      "subject": "Cancer",
+      "startsAt": "2028-02-07T04:06:30Z",
+      "endsAt": "2028-02-09T05:12:29Z",
+      "fact": "The Moon is in tropical Cancer (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Leo-2028-02-09T05:12:29Z",
+      "kind": "moon-sign",
+      "subject": "Leo",
+      "startsAt": "2028-02-09T05:12:29Z",
+      "endsAt": "2028-02-11T04:35:07Z",
+      "fact": "The Moon is in tropical Leo (geocentric zodiac)."
+    },
+    {
+      "id": "moon-phase-full Moon-2028-02-09T23:52:29Z",
+      "kind": "moon-phase",
+      "subject": "full Moon",
+      "startsAt": "2028-02-09T23:52:29Z",
+      "endsAt": "2028-02-11T06:12:45Z",
+      "fact": "The Moon is near its full Moon phase (within 9 degrees of the phase angle)."
+    },
+    {
+      "id": "moon-sign-Virgo-2028-02-11T04:35:07Z",
+      "kind": "moon-sign",
+      "subject": "Virgo",
+      "startsAt": "2028-02-11T04:35:07Z",
+      "endsAt": "2028-02-13T04:12:49Z",
+      "fact": "The Moon is in tropical Virgo (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Libra-2028-02-13T04:12:49Z",
+      "kind": "moon-sign",
+      "subject": "Libra",
+      "startsAt": "2028-02-13T04:12:49Z",
+      "endsAt": "2028-02-15T06:03:00Z",
+      "fact": "The Moon is in tropical Libra (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Scorpio-2028-02-15T06:03:00Z",
+      "kind": "moon-sign",
+      "subject": "Scorpio",
+      "startsAt": "2028-02-15T06:03:00Z",
+      "endsAt": "2028-02-17T11:29:27Z",
+      "fact": "The Moon is in tropical Scorpio (geocentric zodiac)."
+    },
+    {
+      "id": "moon-phase-last-quarter Moon-2028-02-16T14:24:52Z",
+      "kind": "moon-phase",
+      "subject": "last-quarter Moon",
+      "startsAt": "2028-02-16T14:24:52Z",
+      "endsAt": "2028-02-18T02:18:22Z",
+      "fact": "The Moon is near its last-quarter Moon phase (within 9 degrees of the phase angle)."
+    },
+    {
+      "id": "moon-sign-Sagittarius-2028-02-17T11:29:27Z",
+      "kind": "moon-sign",
+      "subject": "Sagittarius",
+      "startsAt": "2028-02-17T11:29:27Z",
+      "endsAt": "2028-02-19T20:45:15Z",
+      "fact": "The Moon is in tropical Sagittarius (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Capricorn-2028-02-19T20:45:15Z",
+      "kind": "moon-sign",
+      "subject": "Capricorn",
+      "startsAt": "2028-02-19T20:45:15Z",
+      "endsAt": "2028-02-22T08:43:45Z",
+      "fact": "The Moon is in tropical Capricorn (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Aquarius-2028-02-22T08:43:45Z",
+      "kind": "moon-sign",
+      "subject": "Aquarius",
+      "startsAt": "2028-02-22T08:43:45Z",
+      "endsAt": "2028-02-24T21:43:33Z",
+      "fact": "The Moon is in tropical Aquarius (geocentric zodiac)."
+    },
+    {
+      "id": "moon-phase-new Moon-2028-02-24T14:37:33Z",
+      "kind": "moon-phase",
+      "subject": "new Moon",
+      "startsAt": "2028-02-24T14:37:33Z",
+      "endsAt": "2028-02-26T06:32:57Z",
+      "fact": "The Moon is near its new Moon phase (within 9 degrees of the phase angle)."
+    },
+    {
+      "id": "moon-sign-Pisces-2028-02-24T21:43:33Z",
+      "kind": "moon-sign",
+      "subject": "Pisces",
+      "startsAt": "2028-02-24T21:43:33Z",
+      "endsAt": "2028-02-27T10:22:00Z",
+      "fact": "The Moon is in tropical Pisces (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Aries-2028-02-27T10:22:00Z",
+      "kind": "moon-sign",
+      "subject": "Aries",
+      "startsAt": "2028-02-27T10:22:00Z",
+      "endsAt": "2028-02-29T21:41:42Z",
+      "fact": "The Moon is in tropical Aries (geocentric zodiac)."
+    },
+    {
+      "id": "moon-sign-Taurus-2028-02-29T21:41:42Z",
+      "kind": "moon-sign",
+      "subject": "Taurus",
+      "startsAt": "2028-02-29T21:41:42Z",
+      "endsAt": "2028-03-01T00:00:00Z",
+      "fact": "The Moon is in tropical Taurus (geocentric zodiac)."
+    }
+  ]
+}
