@@ -150,7 +150,7 @@ Painted cabinet shading, brass highlights, paper grain, and the paper's own silh
 
 The cabinet, finials, clouds, and flared fortune sheet are image silhouettes. Preserve their proportions and genuine transparency when producing replacements. The action is a brass-rimmed pill; keyboard focus has a small rounded outline. Thin rules and custom star SVGs provide the sparse surrounding ornament.
 
-The visible bounding edges of illustration plates in current screenshots are unresolved asset concerns. They are not a prescribed framing device.
+The sky now uses one continuous cloud bank with genuine transparency between the celestial objects and a naturally scalloped lower edge. The former separated cloud-panel edges are resolved. Remaining cabinet and fortune-paper plate concerns are outside this scoped fix and are not a prescribed framing device.
 
 ## Components
 
@@ -188,7 +188,7 @@ Five idle variants avoid immediate repetition. Requests interrupt idle and run o
 
 ### Asset provenance
 
-Shipping raster sources are `assets/plates/cabinet.png`, `fortune-paper.png`, `left-sky.png`, `right-sky.png`, and `paper.png`. Each plate has a matching `.png.json` generation record and `.prompt.txt` prompt; `.base-prompt.txt` retains the earlier prompt history. These are generated production plates, not crops presented as an approved final page.
+Shipping raster sources are `assets/plates/cabinet.png`, `fortune-paper.png`, `sky-panorama.png`, and `paper.png`. The 1774×887 RGBA panorama joins the moon and airplane at left with Saturn at right in the existing plum engraving and cream fill. Its exact generation prompt is embedded in the PNG and retained in `sky-panorama.prompt.txt` and `sky-panorama.png.json`. Original `left-sky.png` and `right-sky.png` plates remain as generation references with their provenance; the page no longer renders them directly. Each shipping plate has a matching `.png.json` generation record and `.prompt.txt` prompt; `.base-prompt.txt` retains earlier prompt history where present. These are generated production plates, not crops presented as an approved final page.
 
 Character-generation records are in `assets/animation-provenance.json`; it preserves the Kling 3.0 job IDs and prompts, including the superseded first reading and the steadier-lighting revision. Current character media lives in `public/media/v2/`. `scripts/prepare_media.py` applies the same native 396×376 crop at (216, 254) to all eight 828×1108 originals without scaling, encoding silent H.264 at CRF 17 with the slow preset. The lossless BGRA WebP resting image comes from the first decoded frame of the delivered `idle.mp4`, preserving its decoded RGB exactly. `public/media/v2/resting-window.webp.json` records the recipe, source hashes, and generation record. The new namespace keeps the current poster and videos together; earlier media and its provenance remain for cached clients and history. Keep these records when transforming or replacing assets; do not treat the historical entries as a guarantee that every generated variant ships.
 

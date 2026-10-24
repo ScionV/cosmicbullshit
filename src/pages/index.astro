@@ -2,8 +2,7 @@
 import { Image, getImage } from 'astro:assets';
 import cabinet from '../../assets/plates/cabinet.png';
 import paper from '../../assets/plates/fortune-paper.png';
-import leftSky from '../../assets/plates/left-sky.png';
-import rightSky from '../../assets/plates/right-sky.png';
+import skyPanorama from '../../assets/plates/sky-panorama.png';
 import texture from '../../assets/plates/paper.png';
 import '../styles/home.css';
 const background = await getImage({src: texture, width: 560, format: 'webp'});
@@ -36,8 +35,7 @@ const background = await getImage({src: texture, width: 560, format: 'webp'});
     <main id="consult">
       <h1 class="sr-only">What cosmic bullshit can I blame my problems on?</h1>
       <div class="sky-scene" aria-hidden="true">
-        <Image class="sky-art sky-left" src={leftSky} alt="" widths={[480, 800]} sizes="35vw" format="webp" />
-        <Image class="sky-art sky-right" src={rightSky} alt="" widths={[480, 800]} sizes="35vw" format="webp" />
+        <Image class="sky-art" src={skyPanorama} alt="" widths={[1120, 1536, 2048]} sizes="(max-width: 1120px) 1120px, 100vw" format="webp" />
       </div>
       <div class="machine" data-machine data-state="resting">
         <Image class="cabinet" src={cabinet} alt="A tired cosmic clerk in a rumpled paisley suit, seated behind the glass of a brass-trimmed fortune machine." widths={[600, 900, 1086]} sizes="(max-width: 600px) 125vw, 700px" format="webp" loading="eager" fetchpriority="high" />

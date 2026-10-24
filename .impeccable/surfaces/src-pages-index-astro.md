@@ -31,6 +31,10 @@ The code uses ochre paper (`--paper: #e8c898`), plum ink (`--ink: #40192e`), ver
 
 The cabinet stage is 3:4. The user approved the taller production cabinet during formal asset review. The original decision comp still has the earlier shorter geometry; its proportions must not silently override that later approval. Current desktop and mobile screenshots are under `.impeccable/review/`. Automated comparisons and plate fidelity remain open; the taller-cabinet approval does not close the page finish review.
 
+The user's connected-cloud request is implemented as one 1774×887 RGBA `assets/plates/sky-panorama.png`: moon and airplane at left, Saturn at right, and one continuous plum-engraved, cream-filled cloud bank. Genuine alpha between stars and around a naturally scalloped lower edge resolves the former separated-panel edges. The original left/right sky plates remain generation references with provenance and are no longer rendered directly. The exact panorama prompt is embedded in the PNG and retained in its `.prompt.txt` and `.png.json` records.
+
+One decorative Astro `Image` serves responsive WebP widths of 1120, 1536, and 2048px. The centered artwork uses `width: max(100%, 1120px)` and a 120px top offset on desktop; the offset is 200px at 701–1100px, 20px at 700px and below, and -40px at 360px and below. Mobile retains a 1120px artwork width and 0.75 opacity. At 1120px and above, `main#consult` has `min-height: calc(50vw + 120px)` to contain the full panorama. Cabinet, interaction, and palette remain unchanged.
+
 The action's transparent 44px-high hit area is 30% of cabinet width, placed at left 35.2% with its center at 64.1% of cabinet height. Its visible pill face has an 8.5 aspect ratio and 1px brass rim, fitting the illustrated plaque while retaining a taller hit area. Action type is `clamp(11px, 1.05vw, 14px)` with 0.06em tracking, becoming 11px and 0.03em tracking at 700px and below. The existing action colors remain unchanged.
 
 The still and video share a fixed glass window at left 26%, top 23%, width 48%, height 34%. Five idle clips avoid immediate repetition with a randomized 15–30 second pause after each completed clip. A request interrupts idle, chooses between two reading clips, then dispenses before revealing live HTML fortune text. Paused, hidden-tab, and reduced-motion states retain a still fallback. The paper reveal runs once per issue; the artwork itself does not supply changing result text.
@@ -42,3 +46,9 @@ Shipping production plate provenance lives alongside each PNG in `assets/plates/
 The independent refinement reviewer returned **ship** for the requested footer/license separation, plaque-sized action, and aligned native-resolution character media, with no material fixes. Evidence: `.impeccable/review/refine-{320,390,700,1100,1440}.png`, `refine-reading.png`, and `license-top-{390,1440}.png`. Production browser checks covered real-video reading/dispensing, footer/source/legal navigation, and overflow; Astro check and build passed. Pixel comparison found exact RGB agreement between the poster and the first decoded delivered idle frame (maximum difference 0); all eight clip starts had best alignment offset (0, 0).
 
 This scoped verdict does not close the earlier whole-build comparison and plate-fidelity gate.
+
+## Scoped connected-cloud review
+
+The independent fresh reviewer returned **ship** for the connected panorama, with no material fixes. Evidence: `.impeccable/review/clouds-before-user.png` and `clouds-{320,390,700,1100,1440,1906,2560}.png`. Browser checks at all seven widths found no horizontal overflow or JavaScript errors, all images complete, and the full panorama's vertical bounds inside the main region. Astro check and build passed; the 23 existing font/color design advisories remain unchanged.
+
+The separated cloud edges are resolved. Cabinet and fortune-paper concerns remain outside this request, and this scoped verdict does not close the historical whole-page comparison and plate-fidelity gate.
