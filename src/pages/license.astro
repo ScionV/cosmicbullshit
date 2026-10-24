@@ -1,0 +1,39 @@
+---
+import { getImage } from 'astro:assets';
+import texture from '../../assets/plates/paper.png';
+import license from '../../LICENSE?raw';
+import notice from '../../NOTICE?raw';
+import '../styles/home.css';
+const background = await getImage({ src: texture, width: 560, format: 'webp' });
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#e8c898" />
+    <meta name="description" content="Cosmic Bullshit source code, license, and project credits." />
+    <link rel="canonical" href="https://cosmicbullshit.com/license/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>License & source code — Cosmic Bullshit</title>
+  </head>
+  <body style={`--paper-texture: url(${background.src})`}>
+    <main class="license-page">
+      <a href="/">Back to Cosmic Bullshit</a>
+      <h1>License & source code</h1>
+      <p>Cosmic Bullshit is open source under the GNU Affero General Public License, version 3 only (AGPL-3.0-only).</p>
+      <p>You can <a href="https://github.com/ScionV/cosmicbullshit">browse the complete project source</a> or <a href="https://github.com/ScionV/cosmicbullshit/archive/refs/heads/main.zip">download it for free</a>, including the website, sky-data generator, build instructions, and dependency manifests.</p>
+      <p>You may use, study, share, and modify the software under the license below. It comes without warranty.</p>
+      <h2>Calculations & credits</h2>
+      <p>The site is built with <a href="https://astro.build/">Astro</a>. Sky calculations use <a href="https://github.com/astrorigin/pyswisseph">pyswisseph</a> and <a href="https://www.astro.com/swisseph/">Swiss Ephemeris</a>, selecting the built-in Moshier ephemeris. No external Swiss or JPL ephemeris data files are bundled.</p>
+      <p>Character artwork and animations were generated for this project with image generation and Higgsfield/Kling. Buenard is served under the <a href="/fonts/OFL.txt">SIL Open Font License</a>.</p>
+      <h2>Project notices</h2>
+      <pre class="project-notice">{notice}</pre>
+      <details class="license-text">
+        <summary>Read the full AGPL-3.0 license</summary>
+        <pre>{license}</pre>
+      </details>
+      <a href="/">Back to the clerk</a>
+    </main>
+  </body>
+</html>

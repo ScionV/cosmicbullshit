@@ -42,10 +42,10 @@ typography:
     letterSpacing: "0.11em"
   action:
     fontFamily: "Buenard, Georgia, serif"
-    fontSize: "clamp(12px, 1.05vw, 16px)"
+    fontSize: "clamp(11px, 1.05vw, 14px)"
     fontWeight: 700
     lineHeight: 1.1
-    letterSpacing: "0.08em"
+    letterSpacing: "0.06em"
 rounded:
   pill: "999px"
   focus: "3px"
@@ -59,7 +59,7 @@ components:
     textColor: "{colors.action-text}"
     typography: "{typography.action}"
     rounded: "{rounded.pill}"
-    padding: "0 6px"
+    padding: "0"
   button-primary-hover:
     backgroundColor: "{colors.action-hover}"
     textColor: "{colors.action-text}"
@@ -82,7 +82,7 @@ components:
 
 Cosmic Bullshit feels like an old printed amusement made operational: warm ochre paper, plum engraving, worn brass, and an exhausted but charming clerk. The illustration carries the ornate personality; the surrounding interface stays readable and spare. The humor is warm, absurd, and plainly entertainment.
 
-This document records the implemented system in `src/pages/index.astro`, `src/styles/home.css`, and `src/scripts/fortune-machine.ts`. It describes code authority, not a finish verdict. The user approved the taller production cabinet during asset review; the original decision comp retains shorter geometry. Automated comparison and plate concerns remain open and are not converted into design rules.
+This document records the implemented system in `src/pages/index.astro`, `src/pages/license.astro`, `src/styles/home.css`, and `src/scripts/fortune-machine.ts`. It describes code authority, not a finish verdict. The user approved the taller production cabinet during asset review; the original decision comp retains shorter geometry. Automated comparison and plate concerns remain open and are not converted into design rules.
 
 **Key Characteristics:**
 
@@ -128,7 +128,7 @@ The local variable font is served from `public/fonts/Buenard.ttf` with a declare
 - **Body:** explanatory prose; 18px on mobile. The section width is capped at 720px including side padding.
 - **Fortune:** compact, centered, bold result text on paper. Invented results use the responsive frontmatter role; real-event results begin at 23px on desktop and 21px on mobile.
 - **Label:** a small uppercase content classification on the fortune, not a decorative eyebrow. Real-event labels become 9px with tighter tracking on mobile.
-- **Action:** uppercase button text. Mobile fixes it at 12px and reduces tracking to 0.05em.
+- **Action:** uppercase button text. Mobile fixes it at 11px and reduces tracking to 0.03em.
 
 Fortune copy is fitted within the upper 58% of its paper bounds. The script can reduce result type toward 16px and supporting text toward 11px to keep long content inside that region. These are containment limits, not a general type scale.
 
@@ -156,7 +156,7 @@ The visible bounding edges of illustration plates in current screenshots are unr
 
 ### Primary action
 
-A real button sits over the cabinet's blank action plaque. It uses vermilion paint, cream uppercase lettering, a 2px brass rim, and the pill radius. Its minimum height is 42px on desktop and 44px on mobile.
+A real button sits over the cabinet's blank action plaque. Its transparent hit area is 44px high; the visible face uses vermilion paint, cream uppercase lettering, a 1px brass rim, and the pill radius. The face keeps an 8.5 aspect ratio within the hit area. Cabinet-relative placement belongs to the homepage surface brief.
 
 Hover darkens the paint and moves it upward 1px; active moves it downward 1px. The 160ms transitions cover background and translation. Busy state disables repeat activation and changes the label through reading and issuing states. Keyboard focus uses a 3px `focus` outline with 5px offset.
 
@@ -164,13 +164,19 @@ Hover darkens the paint and moves it upward 1px; active moves it downward 1px. T
 
 The linked brand and About link remain ordinary HTML navigation. Underlines thicken from 1px to 2px on link hover. About is 20px on desktop and 16px on mobile.
 
+Quiet project links live in the footer: Source code links directly to the repository, and License · AGPL-3.0 opens the separate license page. These links use 14px type, wrap with an 8px row gap and 22px column gap, and have a minimum 32px link height. About retains the site's explanation.
+
 The motion control is a quiet underlined text button, 14px on desktop and 13px on mobile, with no filled background. It records a pause preference locally. The operating system's reduced-motion setting turns character animation off and disables this toggle with an explanatory label.
 
 ### Fortune paper
 
 The illustration is separate from live text. A content label distinguishes “Invented nonsense” from “Real sky · comic excuse”; the factual version includes a separate comic interpretation. The paper is hidden during reading and dispensing, then revealed once with a 650ms clipped feed and a small downward translation.
 
-The label's semantic distinction must survive future styling. A source disclosure appears only for real events and supplies the fact, calculation window, and provenance. The current code links to the project's AGPL-3.0 source and pyswisseph calculation source; licensing was chosen by the user.
+The label's semantic distinction must survive future styling. A source disclosure appears only for real events and supplies the fact, calculation window, and provenance, including the pyswisseph calculation source. The project's AGPL-3.0 source and license are available through the footer; licensing was chosen by the user.
+
+### License reading page
+
+The separate license page uses the existing ochre paper, plum ink, and Buenard type for a quiet reading surface. It has a 760px maximum width, 28px side padding, 20px body type at 1.55 line height, and a responsive 36–48px heading. Project notices and the full raw AGPL text remain readable with wrapping; a native disclosure contains the full license. Repository browsing, free source download, credits, and return links remain ordinary underlined navigation. Its composition belongs to `.impeccable/surfaces/src-pages-license-astro.md`.
 
 ### Character window
 
@@ -184,7 +190,9 @@ Five idle variants avoid immediate repetition. Requests interrupt idle and run o
 
 Shipping raster sources are `assets/plates/cabinet.png`, `fortune-paper.png`, `left-sky.png`, `right-sky.png`, and `paper.png`. Each plate has a matching `.png.json` generation record and `.prompt.txt` prompt; `.base-prompt.txt` retains the earlier prompt history. These are generated production plates, not crops presented as an approved final page.
 
-Character-generation records are in `assets/animation-provenance.json`; it preserves the Kling 3.0 job IDs and prompts, including the superseded first reading and the steadier-lighting revision. `public/media/resting-window.webp.json` records the resting crop's derivation from `.impeccable/mocks/character/resting-frame-v1.png`. Keep these records when transforming or replacing assets; do not treat the historical entries as a guarantee that every generated variant ships.
+Character-generation records are in `assets/animation-provenance.json`; it preserves the Kling 3.0 job IDs and prompts, including the superseded first reading and the steadier-lighting revision. Current character media lives in `public/media/v2/`. `scripts/prepare_media.py` applies the same native 396×376 crop at (216, 254) to all eight 828×1108 originals without scaling, encoding silent H.264 at CRF 17 with the slow preset. The lossless BGRA WebP resting image comes from the first decoded frame of the delivered `idle.mp4`, preserving its decoded RGB exactly. `public/media/v2/resting-window.webp.json` records the recipe, source hashes, and generation record. The new namespace keeps the current poster and videos together; earlier media and its provenance remain for cached clients and history. Keep these records when transforming or replacing assets; do not treat the historical entries as a guarantee that every generated variant ships.
+
+Remaining softness inherited from the generated 540×720 reference is an asset limitation, not a reusable design treatment or a detail recoverable by upscaling.
 
 ## Do's and Don'ts
 

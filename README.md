@@ -51,6 +51,26 @@ Cloudflare custom-domain setup after reviewing a preview deployment.
 ## License
 
 AGPL-3.0-only; see `LICENSE` and `NOTICE`. The owner explicitly chose AGPL
-and open-source publication to use pyswisseph. The GitHub repository was
-private when development started; make the corresponding source publicly
-accessible before public launch and keep a source link in the site.
+and open-source publication to use pyswisseph. Corresponding source is public
+at https://github.com/ScionV/cosmicbullshit. Keep the direct source link in the
+homepage footer; `/license/` contains the full license, notices, and source download.
+
+## Character media
+
+The current assets live in `public/media/v2`. Their crop is 396×376 pixels,
+taken directly from the approved 828×1108 generated clips without upscaling.
+H.264 CRF 17 preserves more detail than the original website's CRF 24 exports.
+The resting WebP is the first decoded frame of the delivered idle video,
+encoded losslessly in RGB so framing and color match during the transition.
+All clips use the same crop. Keep the same start/end reference for future
+generations; higher-resolution source references are needed to improve the
+softness already present in the generated originals.
+
+With ffmpeg available and the original clips retained in
+`.impeccable/animations/{v1,v2,v3}`, run `python scripts/prepare_media.py`.
+Alternatively pass `--source-dir PATH` and `--ffmpeg PATH`. Source hashes,
+crop, and encoding settings are recorded next to the resting WebP; generation
+prompts and job IDs are in `assets/animation-provenance.json`.
+Use a new media version path when replacing a set, so cached pages cannot mix
+an old resting image with new videos. Pre-v2 files remain available for older
+cached clients.

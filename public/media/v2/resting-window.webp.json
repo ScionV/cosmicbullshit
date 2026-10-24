@@ -1,0 +1,50 @@
+{
+  "prompt": "Deterministic derivative of the approved Kling animation; no new generation. Resting image is the first decoded frame of the delivered idle.mp4, encoded as lossless WebP.",
+  "generationProvenance": "assets/animation-provenance.json",
+  "filter": "crop=396:376:216:254",
+  "encoding": "H.264 CRF 17, slow, yuv420p; no scaling; silent",
+  "width": 396,
+  "height": 376,
+  "clips": [
+    {
+      "name": "idle",
+      "source": "v1/idle.mp4",
+      "sourceSha256": "fc2ed9278f915fb3ed4ccc4c76bad0449ffee7b5cb2412b6b4f4bf7d2a24b43f"
+    },
+    {
+      "name": "idle-sleeve",
+      "source": "v2/idle-sleeve.mp4",
+      "sourceSha256": "8dc153fbc7c4208c3f58274d1e79b01caf5cfd629003f6dab7cac38d072ecf14"
+    },
+    {
+      "name": "idle-sleepy",
+      "source": "v2/idle-sleepy.mp4",
+      "sourceSha256": "85d01fbb181ee0785188fe89bef76d3df4a46890291dd47719dcd72675b4092f"
+    },
+    {
+      "name": "idle-tie",
+      "source": "v3/idle-tie.mp4",
+      "sourceSha256": "2fa16d8df4ca694de571308ff97d6c565d515d35abbd22cb0dcdaca7d6aa50e7"
+    },
+    {
+      "name": "idle-yawn",
+      "source": "v3/idle-yawn.mp4",
+      "sourceSha256": "0963f4bbd1ddab78497cdf46b2f2a5258b033cbd8d4f5cd3163ee0543734c39b"
+    },
+    {
+      "name": "reading",
+      "source": "v2/reading-v2.mp4",
+      "sourceSha256": "fb9a1e8fe2dc131bde5f4a373806eab4033b33f7cda32b94fb655f33fe146557"
+    },
+    {
+      "name": "reading-hands",
+      "source": "v3/reading-hands.mp4",
+      "sourceSha256": "af95bcc7b5a4a1983965a868a2b985219484e24b705811a244ef4f5eafa08e56"
+    },
+    {
+      "name": "dispensing",
+      "source": "v1/dispensing.mp4",
+      "sourceSha256": "8b06bbcccd96113a68ba57b43183018dde5131f3100a5835aae5da99896c743e"
+    }
+  ]
+}

@@ -42,7 +42,7 @@ const background = await getImage({src: texture, width: 560, format: 'webp'});
       <div class="machine" data-machine data-state="resting">
         <Image class="cabinet" src={cabinet} alt="A tired cosmic clerk in a rumpled paisley suit, seated behind the glass of a brass-trimmed fortune machine." widths={[600, 900, 1086]} sizes="(max-width: 600px) 125vw, 700px" format="webp" loading="eager" fetchpriority="high" />
         <div class="character-window" aria-hidden="true">
-          <img class="resting-frame" src="/media/resting-window.webp" alt="" width="480" height="454" />
+          <img class="resting-frame" src="/media/v2/resting-window.webp" alt="" width="396" height="376" />
           <video class="reaction" data-reaction muted playsinline preload="none" disablepictureinpicture tabindex="-1"></video>
         </div>
         <button class="blame-button" type="button" data-blame>
@@ -73,12 +73,15 @@ const background = await getImage({src: texture, width: 560, format: 'webp'});
       <div class="footer-rule" aria-hidden="true"><span></span><svg viewBox="0 0 24 24"><path d="m12 0 2 9 10 3-10 2-2 10-3-10-9-2 9-3Z" fill="currentColor"/></svg><span></span></div>
       <p>Real sky. <span aria-hidden="true">·</span> Invented nonsense. <span aria-hidden="true">·</span> All excuses for fun.</p>
       <button class="motion-toggle" data-motion-toggle type="button" aria-pressed="false">Pause character animations</button>
+      <nav class="footer-links" aria-label="Project information">
+        <a href="https://github.com/ScionV/cosmicbullshit">Source code</a>
+        <a href="/license/">License · AGPL-3.0</a>
+      </nav>
     </footer>
     <section class="about" id="about" aria-labelledby="about-heading">
       <h2 id="about-heading">The universe has a lot to answer for.</h2>
       <p>Bad day? Our overworked cosmic clerk will find you something in the sky to blame. Some excuses start with calculated celestial events. Others come straight from the Department of Complete Bullshit.</p>
       <p><strong>Real sky</strong> means the stated event is happening within its calculated time window. The interpretation is still a joke. <strong>Invented nonsense</strong> means we made the whole thing up. Neither is advice, a prediction, or a diagnosis.</p>
-      <p class="about-source">Built with Astro and pyswisseph. <a href="https://github.com/ScionV/cosmicbullshit">Source code · AGPL-3.0</a></p>
       <a href="#consult">Back to the clerk</a>
     </section>
     <script>

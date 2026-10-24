@@ -80,7 +80,7 @@ export function initFortuneMachine() {
       player.addEventListener('ended', finish, { once: true });
       player.addEventListener('error', finish, { once: true });
       player.addEventListener('playing', show, { once: true });
-      player.src = `/media/${clip}.mp4`;
+      player.src = `/media/v2/${clip}.mp4`;
       player.muted = true;
       player.load();
       void player.play().catch(finish);

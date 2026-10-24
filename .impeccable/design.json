@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-24T19:22:06.627Z",
+  "generatedAt": "2026-10-24T20:08:01.792Z",
   "title": "Design System: Cosmic Bullshit",
   "extensions": {
     "colorMeta": {
@@ -234,16 +234,16 @@
       "name": "Cabinet Action",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "Primary cabinet action; real HTML over a blank illustrated plaque.",
-      "html": "<button class=\"ds-action\">Blame the cosmos</button>",
-      "css": ".ds-action{font-family:Buenard,Georgia,serif;font-size:16px;font-weight:700;line-height:1.1;letter-spacing:.08em;text-transform:uppercase;min-height:42px;padding:0 6px;width:252px;border:2px solid #cda855;border-radius:999px;background:var(--action,#9c321e);color:#fff2d4;box-shadow:0 2px 5px #32181266;cursor:pointer;transition:background .16s,translate .16s}.ds-action:hover{background:#7e2417;translate:0 -1px}.ds-action:active{translate:0 1px}.ds-action:disabled{background:#773425;cursor:wait}.ds-action:focus-visible,.ds-nav a:focus-visible,.ds-motion:focus-visible,.ds-disclosure summary:focus-visible{outline:3px solid var(--focus,#722d47);outline-offset:5px;border-radius:3px}"
+      "description": "Primary cabinet action; an 8.5-aspect visible face inside a transparent 44px hit area over the illustrated plaque.",
+      "html": "<button class=\"ds-action\"><span>Blame the cosmos</span></button>",
+      "css": ".ds-action{font-family:Buenard,Georgia,serif;font-size:clamp(11px,1.05vw,14px);font-weight:700;line-height:1.1;letter-spacing:.06em;text-transform:uppercase;height:44px;padding:0;width:210px;border:0;background:none;color:#fff2d4;cursor:pointer}.ds-action span{display:grid;place-items:center;width:100%;aspect-ratio:8.5;border:1px solid #cda855;border-radius:999px;background:var(--action,#9c321e);box-shadow:0 2px 5px #32181266;transition:background .16s,translate .16s;white-space:nowrap}.ds-action:hover span{background:#7e2417;translate:0 -1px}.ds-action:active span{translate:0 1px}.ds-action:disabled{cursor:wait}.ds-action:disabled span{background:#773425}.ds-action:focus-visible{outline:3px solid var(--focus,#722d47);outline-offset:5px;border-radius:3px}@media(max-width:700px){.ds-action{font-size:11px;letter-spacing:.03em}}"
     },
     {
       "name": "Text Navigation",
       "kind": "nav",
-      "description": "Quiet ordinary underlined navigation in the paper margin.",
-      "html": "<nav class=\"ds-nav\"><a href=\"#about\">About</a></nav>",
-      "css": ".ds-nav{font-family:Buenard,Georgia,serif;font-size:20px;color:var(--ink,#40192e)}.ds-nav a{color:inherit;text-underline-offset:.2em;text-decoration-thickness:1px}.ds-nav a:hover{text-decoration-thickness:2px}.ds-action:focus-visible,.ds-nav a:focus-visible,.ds-motion:focus-visible,.ds-disclosure summary:focus-visible{outline:3px solid var(--focus,#722d47);outline-offset:5px;border-radius:3px}"
+      "description": "Quiet underlined margin navigation; the footer also links directly to Source code and the license page.",
+      "html": "<nav class=\"ds-nav\"><a href=\"#about\">About</a></nav><nav class=\"ds-footer-links\" aria-label=\"Project information\"><a href=\"https://github.com/ScionV/cosmicbullshit\">Source code</a><a href=\"/license/\">License · AGPL-3.0</a></nav>",
+      "css": ".ds-nav{font-family:Buenard,Georgia,serif;font-size:20px;color:var(--ink,#40192e)}.ds-nav a{color:inherit;text-underline-offset:.2em;text-decoration-thickness:1px}.ds-nav a:hover{text-decoration-thickness:2px}.ds-action:focus-visible,.ds-nav a:focus-visible,.ds-motion:focus-visible,.ds-disclosure summary:focus-visible{outline:3px solid var(--focus,#722d47);outline-offset:5px;border-radius:3px}.ds-footer-links{font-family:Buenard,Georgia,serif;display:flex;justify-content:center;flex-wrap:wrap;gap:8px 22px;margin-top:14px;font-size:14px;color:var(--ink,#40192e)}.ds-footer-links a{display:inline-flex;align-items:center;min-height:32px;color:inherit;text-underline-offset:.2em;text-decoration-thickness:1px}.ds-footer-links a:hover{text-decoration-thickness:2px}.ds-footer-links a:focus-visible{outline:3px solid var(--focus,#722d47);outline-offset:5px;border-radius:3px}"
     },
     {
       "name": "Motion Preference",
@@ -271,7 +271,7 @@
   ],
   "narrative": {
     "northStar": "The Weary Cosmic Clerk",
-    "overview": "Cosmic Bullshit feels like an old printed amusement made operational: warm ochre paper, plum engraving, worn brass, and an exhausted but charming clerk. The illustration carries the ornate personality; the surrounding interface stays readable and spare. The humor is warm, absurd, and plainly entertainment.\n\nThis document records the implemented system in `src/pages/index.astro`, `src/styles/home.css`, and `src/scripts/fortune-machine.ts`. It describes code authority, not a finish verdict. The user approved the taller production cabinet during asset review; the original decision comp retains shorter geometry. Automated comparison and plate concerns remain open and are not converted into design rules.",
+    "overview": "Cosmic Bullshit feels like an old printed amusement made operational: warm ochre paper, plum engraving, worn brass, and an exhausted but charming clerk. The illustration carries the ornate personality; the surrounding interface stays readable and spare. The humor is warm, absurd, and plainly entertainment.\n\nThis document records the implemented system in `src/pages/index.astro`, `src/pages/license.astro`, `src/styles/home.css`, and `src/scripts/fortune-machine.ts`. It describes code authority, not a finish verdict. The user approved the taller production cabinet during asset review; the original decision comp retains shorter geometry. Automated comparison and plate concerns remain open and are not converted into design rules.",
     "keyCharacteristics": [
       "Warm printed material and plum ink.",
       "One locally hosted serif family with a compact hierarchy.",
