@@ -130,7 +130,7 @@ The local variable font is served from `public/fonts/Buenard.ttf` with a declare
 - **Label:** a small uppercase content classification on the fortune, not a decorative eyebrow. Real-event labels become 9px with tighter tracking on mobile.
 - **Action:** uppercase button text. Mobile fixes it at 11px and reduces tracking to 0.03em.
 
-The busy button's decorative ASCII sky is a purposeful monospace exception: `ui-monospace, monospace` at 0.9em, normal weight, no tracking, and a fixed 9ch width. Its literal `* . ) . *` moon-and-stars sequence needs stable character spacing; ordinary labels and content retain Buenard.
+The busy button uses the user-selected `🟍✹☾✹🟍` sequence. A locally hosted 2.7kB symbol-font subset keeps these glyphs consistent across devices, at 0.9em with a fixed 5em width. Reveal one Unicode code point at a time so the outer star is never split; ordinary labels and content retain Buenard.
 
 Fortune copy is fitted within the upper 58% of its paper bounds. The script can reduce result type toward 16px and supporting text toward 11px to keep long content inside that region. These are containment limits, not a general type scale.
 
@@ -166,7 +166,7 @@ The visible face groups the label and decorative sky in a centered flex row with
 
 While resting, enabled, on screen, visible, and motion-enabled, the local halo pulses over 3.2 seconds with ease-in-out timing, opacity 0.15–0.85, and scale 0.98–1.04. It stops during a request, in a hidden tab, off screen, when paused, and under reduced motion.
 
-Activation immediately disables repeat requests, sets `aria-busy`, and shows “Reading” followed by “Issuing.” Full accessible labels confirm receipt and describe each phase; the decorative sky is hidden from assistive technology. During either busy phase, `* . ) . *` types one character at a time at 240ms steps, holds its full pattern, then repeats. Its reserved width prevents label movement. This is activity feedback, with no fabricated percentage or duration. Paused, reduced-motion, hidden-tab, and off-screen states use the full static pattern with no typing interval and no halo. Completion restores “Blame the cosmos,” its normal accessible name, and availability; completion and page exit clear the typing timer. These button cues retain the clerk's existing still-first, reading, and dispensing sequence.
+Activation immediately disables repeat requests, sets `aria-busy`, and shows “Reading” followed by “Issuing.” Full accessible labels confirm receipt and describe each phase; the decorative sky is hidden from assistive technology. During either busy phase, `🟍✹☾✹🟍` types one character at a time at 240ms steps, holds its full pattern, then repeats. Its reserved width prevents label movement. This is activity feedback, with no fabricated percentage or duration. Paused, reduced-motion, hidden-tab, and off-screen states use the full static pattern with no typing interval and no halo. Completion restores “Blame the cosmos,” its normal accessible name, and availability; completion and page exit clear the typing timer. These button cues retain the clerk's existing still-first, reading, and dispensing sequence.
 
 ### Navigation and motion control
 

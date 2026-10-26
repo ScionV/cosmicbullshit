@@ -1,0 +1,4 @@
+Cosmic Sky Symbols is a three-glyph WOFF2 subset merged from Noto Sans Symbols (weight 400) and Noto Sans Symbols 2, using fontTools. Coverage: U+263E, U+2739, U+1F7CD. Licensed under SIL OFL 1.1; see Symbols-OFL.txt.
+Sources:
+https://github.com/google/fonts/tree/main/ofl/notosanssymbols
+https://github.com/google/fonts/tree/main/ofl/notosanssymbols2

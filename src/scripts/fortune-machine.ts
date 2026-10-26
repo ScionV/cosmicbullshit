@@ -2,7 +2,7 @@ import { chooseFortune, monthKey, parseSkyMonth, type Fortune, type SkyMonth } f
 
 const IDLES = ['idle', 'idle-sleeve', 'idle-sleepy', 'idle-tie', 'idle-yawn'];
 const READINGS = ['reading', 'reading-hands'];
-const BUTTON_SKY = '* . ) . *';
+const BUTTON_SKY = Array.from('🟍✹☾✹🟍');
 
 export function initFortuneMachine() {
   const machine = document.querySelector<HTMLElement>('[data-machine]');
@@ -49,15 +49,15 @@ export function initFortuneMachine() {
       return;
     }
     if (!animate) {
-      buttonSky.textContent = BUTTON_SKY;
+      buttonSky.textContent = BUTTON_SKY.join('');
       return;
     }
     // Reserve the full sky's width; only the typed characters change.
     let step = 1;
-    buttonSky.textContent = BUTTON_SKY.slice(0, step);
+    buttonSky.textContent = BUTTON_SKY.slice(0, step).join('');
     buttonTimer = setInterval(() => {
       step = step % (BUTTON_SKY.length + 3) + 1;
-      buttonSky.textContent = BUTTON_SKY.slice(0, step);
+      buttonSky.textContent = BUTTON_SKY.slice(0, step).join('');
     }, 240);
   }
 
