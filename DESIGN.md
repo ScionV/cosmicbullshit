@@ -130,6 +130,8 @@ The local variable font is served from `public/fonts/Buenard.ttf` with a declare
 - **Label:** a small uppercase content classification on the fortune, not a decorative eyebrow. Real-event labels become 9px with tighter tracking on mobile.
 - **Action:** uppercase button text. Mobile fixes it at 11px and reduces tracking to 0.03em.
 
+The busy button's decorative ASCII sky is a purposeful monospace exception: `ui-monospace, monospace` at 0.9em, normal weight, no tracking, and a fixed 9ch width. Its literal `* . ) . *` moon-and-stars sequence needs stable character spacing; ordinary labels and content retain Buenard.
+
 Fortune copy is fitted within the upper 58% of its paper bounds. The script can reduce result type toward 16px and supporting text toward 11px to keep long content inside that region. These are containment limits, not a general type scale.
 
 ## Layout
@@ -143,6 +145,8 @@ The paper result and controls align to proportions of the cabinet rather than a 
 ## Elevation & Depth
 
 Painted cabinet shading, brass highlights, paper grain, and the paper's own silhouette provide most depth. Live interface shadows are small and material-specific. The action uses `0 2px 5px #32181266`; the fortune stock uses `drop-shadow(0 7px 5px #54311c30)`. Ordinary prose, links, and disclosure have no card shadow.
+
+The resting action also has a local worn-brass halo behind its face (`0 2px 12px 4px #dfb567c9`), derived from the existing gold with alpha. This invitation belongs to the cabinet action; it does not introduce a new palette accent or a general glow treatment.
 
 **The Material Depth Rule.** Add depth where an object physically meets another surface; keep ordinary text content on the paper ground.
 
@@ -158,7 +162,11 @@ The sky now uses one continuous cloud bank with genuine transparency between the
 
 A real button sits over the cabinet's blank action plaque. Its transparent hit area is 44px high; the visible face uses vermilion paint, cream uppercase lettering, a 1px brass rim, and the pill radius. The face keeps an 8.5 aspect ratio within the hit area. Cabinet-relative placement belongs to the homepage surface brief.
 
-Hover darkens the paint and moves it upward 1px; active moves it downward 1px. The 160ms transitions cover background and translation. Busy state disables repeat activation and changes the label through reading and issuing states. Keyboard focus uses a 3px `focus` outline with 5px offset.
+The visible face groups the label and decorative sky in a centered flex row with a 6px gap and 4px horizontal padding. Apply pill styling to that face only, so nested text spans retain their own roles. Hover darkens the paint and moves it upward 1px; active moves it downward 1px. The 160ms transitions cover background and translation. Keyboard focus uses a 3px `focus` outline with 5px offset.
+
+While resting, enabled, on screen, visible, and motion-enabled, the local halo pulses over 3.2 seconds with ease-in-out timing, opacity 0.15–0.85, and scale 0.98–1.04. It stops during a request, in a hidden tab, off screen, when paused, and under reduced motion.
+
+Activation immediately disables repeat requests, sets `aria-busy`, and shows “Reading” followed by “Issuing.” Full accessible labels confirm receipt and describe each phase; the decorative sky is hidden from assistive technology. During either busy phase, `* . ) . *` types one character at a time at 240ms steps, holds its full pattern, then repeats. Its reserved width prevents label movement. This is activity feedback, with no fabricated percentage or duration. Paused, reduced-motion, hidden-tab, and off-screen states use the full static pattern with no typing interval and no halo. Completion restores “Blame the cosmos,” its normal accessible name, and availability; completion and page exit clear the typing timer. These button cues retain the clerk's existing still-first, reading, and dispensing sequence.
 
 ### Navigation and motion control
 

@@ -43,8 +43,11 @@ const background = await getImage({src: texture, width: 560, format: 'webp'});
           <img class="resting-frame" src="/media/v2/resting-window.webp" alt="" width="396" height="376" />
           <video class="reaction" data-reaction muted playsinline preload="none" disablepictureinpicture tabindex="-1"></video>
         </div>
-        <button class="blame-button" type="button" data-blame>
-          <span data-button-label>Blame the cosmos</span>
+        <button class="blame-button" type="button" data-blame aria-busy="false">
+          <span class="button-face">
+            <span data-button-label>Blame the cosmos</span>
+            <span class="button-sky" data-button-sky aria-hidden="true" hidden></span>
+          </span>
         </button>
         <p class="machine-status" data-status role="status" aria-live="polite"></p>
         <section class="fortune" data-fortune aria-labelledby="fortune-text" aria-live="polite" aria-atomic="true">

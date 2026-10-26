@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-24T20:08:01.792Z",
+  "generatedAt": "2026-10-25T20:43:51-04:00",
   "title": "Design System: Cosmic Bullshit",
   "extensions": {
     "colorMeta": {
@@ -176,6 +176,11 @@
         "name": "paper-contact",
         "value": "drop-shadow(0 7px 5px #54311c30)",
         "purpose": "Fortune stock projects from the slot."
+      },
+      {
+        "name": "action-halo",
+        "value": "0 2px 12px 4px #dfb567c9",
+        "purpose": "Local invitation behind the resting cabinet action; alpha derives from existing worn brass, with no new palette token."
       }
     ],
     "motion": [
@@ -183,6 +188,16 @@
         "name": "action-transition",
         "value": "background .16s, translate .16s",
         "purpose": "Darken and shift primary action."
+      },
+      {
+        "name": "action-halo-pulse",
+        "value": "beckon-cosmos 3.2s ease-in-out infinite; opacity .15–.85; scale .98–1.04",
+        "purpose": "Resting, enabled action only; stops while busy, hidden, off screen, paused, or under reduced motion."
+      },
+      {
+        "name": "action-sky-typing",
+        "value": "240ms character steps; literal '* . ) . *'; full-pattern hold and repeat",
+        "purpose": "Decorative busy feedback beside Reading/Issuing, with a fixed 9ch monospace width at .9em. No fake percentage. Paused, reduced-motion, hidden-tab, and off-screen busy states show the full static pattern without an interval. Completion and page exit clear the timer."
       },
       {
         "name": "fortune-opacity",
@@ -207,7 +222,7 @@
       {
         "name": "reduced-motion",
         "value": "prefers-reduced-motion: reduce",
-        "purpose": "Disable CSS motion, smooth scrolling, and character playback; retain still and result."
+        "purpose": "Disable CSS motion, smooth scrolling, character playback, button halo, and ASCII typing; retain still, result, and a full static busy sky."
       }
     ],
     "breakpoints": [
@@ -234,9 +249,9 @@
       "name": "Cabinet Action",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "Primary cabinet action; an 8.5-aspect visible face inside a transparent 44px hit area over the illustrated plaque.",
-      "html": "<button class=\"ds-action\"><span>Blame the cosmos</span></button>",
-      "css": ".ds-action{font-family:Buenard,Georgia,serif;font-size:clamp(11px,1.05vw,14px);font-weight:700;line-height:1.1;letter-spacing:.06em;text-transform:uppercase;height:44px;padding:0;width:210px;border:0;background:none;color:#fff2d4;cursor:pointer}.ds-action span{display:grid;place-items:center;width:100%;aspect-ratio:8.5;border:1px solid #cda855;border-radius:999px;background:var(--action,#9c321e);box-shadow:0 2px 5px #32181266;transition:background .16s,translate .16s;white-space:nowrap}.ds-action:hover span{background:#7e2417;translate:0 -1px}.ds-action:active span{translate:0 1px}.ds-action:disabled{cursor:wait}.ds-action:disabled span{background:#773425}.ds-action:focus-visible{outline:3px solid var(--focus,#722d47);outline-offset:5px;border-radius:3px}@media(max-width:700px){.ds-action{font-size:11px;letter-spacing:.03em}}"
+      "description": "Primary cabinet action; an 8.5-aspect visible face inside a transparent 44px hit area. Resting preview shows the local gold invitation; production gates it by visibility and motion preference. Busy feedback uses Reading/Issuing plus a decorative fixed-width ASCII sky, with full accessible labels and immediate repeat prevention.",
+      "html": "<button class=\"ds-action\" data-state=\"resting\" data-button-motion=\"on\" aria-busy=\"false\"><span class=\"ds-button-face\"><span>Blame the cosmos</span><span class=\"ds-button-sky\" aria-hidden=\"true\" hidden></span></span></button><button class=\"ds-action\" disabled aria-busy=\"true\" aria-label=\"Reading the stars. Your request has been received.\"><span class=\"ds-button-face\"><span>Reading</span><span class=\"ds-button-sky\" aria-hidden=\"true\">* . ) . *</span></span></button>",
+      "css": ".ds-action{position:relative;isolation:isolate;font-family:Buenard,Georgia,serif;font-size:clamp(11px,1.05vw,14px);font-weight:700;line-height:1.1;letter-spacing:.06em;text-transform:uppercase;height:44px;padding:0;width:210px;border:0;background:none;color:#fff2d4;cursor:pointer}.ds-action .ds-button-face{display:flex;align-items:center;justify-content:center;gap:6px;padding:0 4px;width:100%;aspect-ratio:8.5;border:1px solid #cda855;border-radius:999px;background:var(--action,#9c321e);box-shadow:0 2px 5px #32181266;transition:background .16s,translate .16s;white-space:nowrap}.ds-action:hover .ds-button-face{background:#7e2417;translate:0 -1px}.ds-action:active .ds-button-face{translate:0 1px}.ds-action:disabled{cursor:wait}.ds-action:disabled .ds-button-face{background:#773425}.ds-action:focus-visible{outline:3px solid var(--focus,#722d47);outline-offset:5px;border-radius:3px}.ds-action::before{content:'';position:absolute;z-index:-1;left:0;top:50%;width:100%;aspect-ratio:8.5;border-radius:999px;background:var(--gold,#dfb567);box-shadow:0 2px 12px 4px #dfb567c9;opacity:0;transform:translateY(-50%);pointer-events:none}.ds-action[data-state='resting'][data-button-motion='on']:not(:disabled)::before{animation:ds-beckon-cosmos 3.2s ease-in-out infinite}.ds-action .ds-button-sky{flex:none;width:9ch;font-family:ui-monospace,monospace;font-size:.9em;font-weight:400;line-height:1;letter-spacing:0;white-space:pre;text-align:left}.ds-action [hidden]{display:none!important}@keyframes ds-beckon-cosmos{0%,100%{opacity:.15;transform:translateY(-50%) scale(.98)}50%{opacity:.85;transform:translateY(-50%) scale(1.04)}}@media(max-width:700px){.ds-action{font-size:11px;letter-spacing:.03em}}@media(prefers-reduced-motion:reduce){.ds-action::before{animation:none!important}.ds-action .ds-button-face{transition:none}}"
     },
     {
       "name": "Text Navigation",

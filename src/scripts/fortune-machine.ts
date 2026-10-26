@@ -2,6 +2,7 @@ import { chooseFortune, monthKey, parseSkyMonth, type Fortune, type SkyMonth } f
 
 const IDLES = ['idle', 'idle-sleeve', 'idle-sleepy', 'idle-tie', 'idle-yawn'];
 const READINGS = ['reading', 'reading-hands'];
+const BUTTON_SKY = '* . ) . *';
 
 export function initFortuneMachine() {
   const machine = document.querySelector<HTMLElement>('[data-machine]');
@@ -13,6 +14,7 @@ export function initFortuneMachine() {
   const player = video;
   const status = document.querySelector<HTMLElement>('[data-status]')!;
   const buttonLabel = document.querySelector<HTMLElement>('[data-button-label]')!;
+  const buttonSky = document.querySelector<HTMLElement>('[data-button-sky]')!;
   const fortuneElement = document.querySelector<HTMLElement>('[data-fortune]')!;
   const title = document.querySelector<HTMLElement>('[data-fortune-title]')!;
   const joke = document.querySelector<HTMLElement>('[data-fortune-joke]')!;
@@ -27,12 +29,37 @@ export function initFortuneMachine() {
   let lastReading = '';
   let previousId = 'airplane-mode';
   let idleTimer: ReturnType<typeof setTimeout> | undefined;
+  let buttonTimer: ReturnType<typeof setInterval> | undefined;
+  let buttonVisible = true;
   let cancelClip: (() => void) | undefined;
   let calendar: SkyMonth | null = null;
   let calendarKey = '';
   let calendarPromise: Promise<void> | undefined;
 
   function canAnimate() { return !paused && !reducedMotion.matches && !document.hidden; }
+
+  function updateButtonMotion() {
+    const animate = canAnimate() && buttonVisible;
+    root.dataset.buttonMotion = animate ? 'on' : 'off';
+    clearInterval(buttonTimer);
+    buttonTimer = undefined;
+    buttonSky.hidden = !busy;
+    if (!busy) {
+      buttonSky.textContent = '';
+      return;
+    }
+    if (!animate) {
+      buttonSky.textContent = BUTTON_SKY;
+      return;
+    }
+    // Reserve the full sky's width; only the typed characters change.
+    let step = 1;
+    buttonSky.textContent = BUTTON_SKY.slice(0, step);
+    buttonTimer = setInterval(() => {
+      step = step % (BUTTON_SKY.length + 3) + 1;
+      buttonSky.textContent = BUTTON_SKY.slice(0, step);
+    }, 240);
+  }
 
   function pick(pool: string[], previous: string) {
     const available = pool.filter(clip => clip !== previous);
@@ -144,27 +171,34 @@ export function initFortuneMachine() {
     if (busy) return;
     busy = true;
     action.disabled = true;
+    action.setAttribute('aria-busy', 'true');
+    action.setAttribute('aria-label', 'Reading the stars. Your request has been received.');
     stopIdleTimer();
     cancelClip?.();
     root.dataset.state = 'reading';
-    status.textContent = 'Consulting the appropriate celestial department…';
-    buttonLabel.textContent = 'Reading the stars';
+    status.textContent = 'Request received. Reading the stars. Your excuse is on its way.';
+    buttonLabel.textContent = 'Reading';
+    updateButtonMotion();
     details.hidden = true;
     try {
       await loadCalendar();
       lastReading = pick(READINGS, lastReading);
       await playClip(lastReading);
       root.dataset.state = 'dispensing';
-      buttonLabel.textContent = 'Issuing your excuse';
+      buttonLabel.textContent = 'Issuing';
+      action.setAttribute('aria-label', 'Issuing your cosmic excuse.');
       status.textContent = 'Your excuse has been reluctantly approved.';
       await playClip('dispensing');
       showFortune(chooseFortune(calendar, new Date(), previousId));
     } finally {
       busy = false;
       action.disabled = false;
+      action.setAttribute('aria-busy', 'false');
+      action.removeAttribute('aria-label');
       buttonLabel.textContent = 'Blame the cosmos';
       status.textContent = '';
       root.dataset.state = 'resting';
+      updateButtonMotion();
       scheduleIdle();
     }
   });
@@ -174,6 +208,7 @@ export function initFortuneMachine() {
       : reducedMotion.matches ? 'Animations off · reduced motion' : 'Pause character animations';
     motionToggle.setAttribute('aria-pressed', String(paused || reducedMotion.matches));
     motionToggle.disabled = reducedMotion.matches;
+    updateButtonMotion();
     if (!canAnimate()) { stopIdleTimer(); cancelClip?.(); }
     else scheduleIdle();
   }
@@ -187,7 +222,11 @@ export function initFortuneMachine() {
     updateMotion();
     if (!document.hidden) void loadCalendar();
   });
-  window.addEventListener('pagehide', () => { stopIdleTimer(); cancelClip?.(); });
+  window.addEventListener('pagehide', () => { stopIdleTimer(); clearInterval(buttonTimer); cancelClip?.(); });
+  new IntersectionObserver(([entry]) => {
+    buttonVisible = entry!.isIntersecting;
+    updateButtonMotion();
+  }).observe(action);
   updateMotion();
   void document.fonts.ready.then(fitFortuneCopy);
   new ResizeObserver(fitFortuneCopy).observe(root);
