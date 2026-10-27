@@ -26,7 +26,7 @@ export interface Fortune {
   endsAt?: string;
 }
 
-const nonsense = [
+export const nonsense = [
   ['airplane-mode', 'The Moon has put your motivation on airplane mode.'],
   ['saturn-inbox', 'Saturn has marked your entire inbox as a personal growth opportunity.'],
   ['cosmic-queue', 'Your good luck is important to us. Please remain in the cosmic queue.'],
@@ -51,26 +51,55 @@ const nonsense = [
   ['cosmic-stamp', 'Your request for a normal day has been stamped “adorable.”'],
   ['neptune-reply', 'Neptune replied-all to your intrusive thoughts.'],
   ['moon-tea', 'The Moon made your tea, forgot about it, and called it character development.'],
+  ['desmond-moon', 'Desmond, a minor moon of Uranus, resents you specifically. Nobody knows why.'],
+  ['venus-gary', 'Venus called in sick. Your love life has been assigned an asteroid named Gary.'],
+  ['cosmic-eyebrow', 'Your stars are aligned. Unfortunately, in the shape of a raised eyebrow.'],
+  ['user-error', 'The cosmos has reviewed your complaint and ruled it user error. Case closed.'],
+  ['karma-overdraft', 'Your karma is overdrawn. Late fees will be paid in stubbed toes.'],
+  ['orion-belt', 'Orion’s belt has come loose. Your love life is not a priority right now.'],
+  ['regulation-44b', 'Per Cosmic Regulation 44-B, nothing you did after 11 p.m. is our problem.'],
+  ['lint-nebula', 'The Great Lint Nebula has entered your seventh house. Expect fuzz.'],
+  ['pluto-wait', 'Estimated wait for good fortune: one Pluto orbit. Please do not call.'],
+  ['mars-reorg', 'Mars has restructured your department. You now report to your anxiety.'],
+  ['comet-cc', 'A passing comet has cc’d your ex.'],
+  ['saturn-audit', 'Saturn is auditing your excuses. Several have been ruled fictional.'],
+  ['moon-hold', 'The Moon has placed your glow-up on indefinite hold.'],
+  ['jupiter-lanyard', 'Jupiter promised abundance. You have received a lanyard.'],
+  ['star-ooo', 'Your guardian star is out of office until further notice.'],
+  ['cosmic-survey', 'Please rate your suffering on a scale of one to Saturn.'],
+  ['venus-deprecated', 'Venus has deprecated your flirting. Please upgrade to eye contact.'],
+  ['big-bang', 'The Big Bang was not about you. Neither is this.'],
+  ['mercury-autocorrect', 'Mercury enabled autocorrect on your life choices. It is not helping.'],
+  ['cosmic-form', 'Your miracle requires Form 7-Z, available only on alternate Thursdays.'],
 ] as const;
 
-const realJokes: Record<SkyEvent['kind'], readonly string[]> = {
+export const realJokes: Record<SkyEvent['kind'], readonly string[]> = {
   retrograde: [
     'An excellent time to revisit old mistakes. Apparently they have missed you.',
-    'Even a planet is having a “let’s circle back” moment. Your inbox never stood a chance.',
+    'Even a planet has a “circle back” moment. Your inbox never stood a chance.',
     'The sky is doing a little backtracking. Your plans have decided to join in.',
     'A celestial administrative review is underway. Please resubmit your momentum.',
+    'The planet is moonwalking. Your plans are following its lead.',
+    'Your ex has been notified of this retrograde and is drafting a text.',
+    'It only looks like it’s going backward. Much like your progress.',
   ],
   'moon-sign': [
-    'The Moon has moved departments. Your feelings are still waiting for the forwarding address.',
-    'A new celestial desk assignment. The emotional paperwork remains entirely your problem.',
-    'The Moon has a new address and the same questionable attitude toward your schedule.',
-    'The cosmic clerk has reviewed the Moon’s placement and prescribed an unnecessary little treat.',
+    'The Moon moved departments. Your feelings await a forwarding address.',
+    'A new celestial desk assignment. The emotional paperwork is still your problem.',
+    'The Moon has a new address. Its attitude toward your schedule is unchanged.',
+    'The clerk reviewed the Moon’s placement and prescribed an unnecessary treat.',
+    'The Moon has changed signs. Your mood was not consulted.',
+    'Lunar relocation complete. Please update your excuses accordingly.',
+    'The Moon has moved. The Bureau recommends that you do not.',
   ],
   'moon-phase': [
-    'A perfectly real lunar milestone. A deeply convenient excuse to cancel your plans.',
-    'The Moon is making a whole thing of it. You have permission to be equally dramatic.',
+    'A real lunar milestone. A deeply convenient excuse to cancel your plans.',
+    'The Moon is making a whole thing of it. You may be equally dramatic.',
     'The lunar cycle is progressing. Your laundry situation has declined to comment.',
     'The sky has reached a turning point. You have reached for another biscuit.',
+    'The Moon looks different tonight. You look the same. Noted.',
+    'The Moon has entered a new phase. You may remain in yours.',
+    'A lunar event of moderate importance. Your snack is more important.',
   ],
 };
 

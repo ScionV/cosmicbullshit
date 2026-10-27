@@ -18,7 +18,7 @@ main{position:relative;isolation:isolate;overflow:clip}.sky-scene{position:absol
 .fortune.has-real h2{font-size:23px}
 .fortune.has-real .fortune-joke{font-size:15px;line-height:1.2}
 @media(max-width:700px){.machine{margin-bottom:90px}.premise{max-width:280px}.fortune.has-real .fortune-copy{padding-left:24%;padding-right:24%;padding-top:10%}.fortune.has-real h2{font-size:21px}.fortune.has-real .fortune-joke{font-size:13px;line-height:1.2}.fortune.has-real .fortune-kind{font-size:9px;letter-spacing:.04em}}
-@media(max-width:360px){.sky-art{top:-40px}.brand{font-size:26px;gap:8px}.brand svg{width:24px;height:24px}.about-link{font-size:15px}.fortune-copy{padding-top:8%}.fortune.has-real .fortune-copy{padding-top:6%}}
+@media(max-width:360px){.sky-art{top:-40px}.brand{font-size:26px;gap:8px}.brand svg{width:24px;height:24px}.about-link{font-size:15px}.fortune-copy{padding-top:8%}.fortune.has-real .fortune-copy{padding-top:5%}}
 @media(prefers-reduced-motion:reduce){:root{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
 
 @media(min-width:1120px){main#consult{min-height:calc(50vw + 120px)}}

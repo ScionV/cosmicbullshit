@@ -1,9 +1,25 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { activeEvents, chooseFortune, monthKey, parseSkyMonth } from '../src/lib/fortunes.ts';
+import { activeEvents, chooseFortune, monthKey, nonsense, parseSkyMonth, realJokes } from '../src/lib/fortunes.ts';
 
 const month = parseSkyMonth(JSON.parse(readFileSync(new URL('../public/sky/2026-10.json', import.meta.url), 'utf8')))!;
+
+test('fortune catalog has unique stable IDs and slip-sized copy', () => {
+  const ids = nonsense.map(([id]) => id);
+  assert.equal(new Set(ids).size, ids.length, 'Invented fortune IDs must be unique');
+  for (const id of ids) assert.match(id, /^[a-z0-9]+(?:-[a-z0-9]+)*$/);
+  const texts = [...nonsense.map(([, text]) => text), ...Object.values(realJokes).flat()];
+  for (const text of texts) {
+    assert.ok(text.trim().length > 0, 'Fortunes must not be empty');
+    assert.equal(text, text.trim(), 'Fortunes must not have surrounding whitespace');
+    assert.ok(Array.from(text).length < 80, `Fortune must be under 80 characters: ${text}`);
+  }
+  for (const [kind, pool] of Object.entries(realJokes)) {
+    assert.ok(pool.length > 0, `${kind} needs at least one explanation`);
+    assert.equal(new Set(pool).size, pool.length, `${kind} explanations must not repeat`);
+  }
+});
 
 test('real event eligibility uses exact UTC start and exclusive end', () => {
   const event = month.events.find(e => e.kind === 'retrograde' && e.subject === 'Mercury')!;

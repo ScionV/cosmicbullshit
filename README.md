@@ -5,7 +5,8 @@ A tongue-in-cheek fortune machine for finding something cosmic to blame.
 ## Development
 
 Use Node 24 (see `.node-version`) and `npm ci`, then `npm run dev`.
-`npm test` checks event eligibility and fallback behavior. `npm run check`
+`npm test` checks event eligibility, fallback behavior, unique fortune IDs,
+and the under-80-character copy limit. `npm run check`
 checks Astro/TypeScript, and `npm run build` produces the static site in `dist/`.
 
 ## Real sky data
