@@ -32,6 +32,31 @@
       "sourceSha256": "0963f4bbd1ddab78497cdf46b2f2a5258b033cbd8d4f5cd3163ee0543734c39b"
     },
     {
+      "name": "idle-fist-stretch",
+      "source": "v4/reading-knuckles.mp4",
+      "sourceSha256": "5da0d399053be67c670616cab54a111601ff738b48ff885d360b3199b547671d"
+    },
+    {
+      "name": "idle-fist-warmup",
+      "source": "v4/reading-knuckles-v2.mp4",
+      "sourceSha256": "9cf2fee1cccfe45479cc05dc168ba1dc8fa0e851778a61d83c1ee5e240bd9732"
+    },
+    {
+      "name": "idle-eye-roll",
+      "source": "v6/idle-eye-roll.mp4",
+      "sourceSha256": "7411d03a6b1d3ee58b5c46abe2fd489e368304737c15b3a07b0f26db59fc6601"
+    },
+    {
+      "name": "idle-brief-wave",
+      "source": "v6/idle-brief-wave.mp4",
+      "sourceSha256": "ca25c7513045c7a4e2d25c85fd9298050043bed92522221dcc87c48c059387e5"
+    },
+    {
+      "name": "idle-dust-shoulders",
+      "source": "v6/idle-dust-shoulders.mp4",
+      "sourceSha256": "ebfd7d5c36853bacc5d051a21426aa3d2c534e7d1064aef34598eb645b67b6ac"
+    },
+    {
       "name": "reading",
       "source": "v2/reading-v2.mp4",
       "sourceSha256": "fb9a1e8fe2dc131bde5f4a373806eab4033b33f7cda32b94fb655f33fe146557"
@@ -42,9 +67,34 @@
       "sourceSha256": "af95bcc7b5a4a1983965a868a2b985219484e24b705811a244ef4f5eafa08e56"
     },
     {
+      "name": "reading-slow-circle",
+      "source": "v5/reading-slow-circle.mp4",
+      "sourceSha256": "fcc25c26cff573caaf097bb3f5a380c8353004f124f924c63193e6b4fe1dc8cd"
+    },
+    {
+      "name": "reading-two-hand-hover",
+      "source": "v5/reading-two-hand-hover.mp4",
+      "sourceSha256": "3ba36f54c439c46366da6218b37b39921bcbaeab7bd31942dbd32b9683c1c2c3"
+    },
+    {
+      "name": "reading-adjust-glasses",
+      "source": "v5/reading-adjust-glasses.mp4",
+      "sourceSha256": "b8b0fdc9885c42091f53a008dbede0bdf50190bf6c6230fbbd62248dfae54a30"
+    },
+    {
       "name": "dispensing",
       "source": "v1/dispensing.mp4",
       "sourceSha256": "8b06bbcccd96113a68ba57b43183018dde5131f3100a5835aae5da99896c743e"
+    },
+    {
+      "name": "dispensing-headshake",
+      "source": "v4/dispensing-headshake.mp4",
+      "sourceSha256": "29e29873461be8ce70ed76beb499ba1afc79a70fb4272d7f9a13e235eb5bc19a"
+    },
+    {
+      "name": "dispensing-shrug",
+      "source": "v4/dispensing-shrug.mp4",
+      "sourceSha256": "fc52e52e5cac8861321ec4cd6a162937a417863ce3a466971c05029fd8a619a1"
     }
   ]
 }

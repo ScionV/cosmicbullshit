@@ -68,10 +68,15 @@ generations; higher-resolution source references are needed to improve the
 softness already present in the generated originals.
 
 With ffmpeg available and the original clips retained in
-`.impeccable/animations/{v1,v2,v3}`, run `python scripts/prepare_media.py`.
+`.impeccable/animations/{v1,v2,v3,v4,v5,v6}`, run `python scripts/prepare_media.py`.
 Alternatively pass `--source-dir PATH` and `--ffmpeg PATH`. Source hashes,
 crop, and encoding settings are recorded next to the resting WebP; generation
 prompts and job IDs are in `assets/animation-provenance.json`.
 Use a new media version path when replacing a set, so cached pages cannot mix
 an old resting image with new videos. Pre-v2 files remain available for older
 cached clients.
+
+The live rotation contains 10 idles, 5 readings, and 3 dispensing clips. Both
+fist-stretch attempts are idles. Each pool avoids immediately repeating its
+last clip; the clerk still rests for 15–30 seconds between idle gestures.
+New variants use new filenames, retaining the existing poster and exports.

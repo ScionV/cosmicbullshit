@@ -1,7 +1,13 @@
 import { chooseFortune, monthKey, parseSkyMonth, type Fortune, type SkyMonth } from '../lib/fortunes';
 
-const IDLES = ['idle', 'idle-sleeve', 'idle-sleepy', 'idle-tie', 'idle-yawn'];
-const READINGS = ['reading', 'reading-hands'];
+const IDLES = [
+  'idle', 'idle-sleeve', 'idle-sleepy', 'idle-tie', 'idle-yawn',
+  'idle-fist-stretch', 'idle-fist-warmup', 'idle-eye-roll', 'idle-brief-wave', 'idle-dust-shoulders',
+];
+const READINGS = [
+  'reading', 'reading-hands', 'reading-slow-circle', 'reading-two-hand-hover', 'reading-adjust-glasses',
+];
+const DISPENSINGS = ['dispensing', 'dispensing-headshake', 'dispensing-shrug'];
 const BUTTON_SKY = Array.from('🟍✹☾✹🟍');
 
 export function initFortuneMachine() {
@@ -27,6 +33,7 @@ export function initFortuneMachine() {
   let busy = false;
   let lastIdle = '';
   let lastReading = '';
+  let lastDispensing = '';
   let previousId = 'airplane-mode';
   let idleTimer: ReturnType<typeof setTimeout> | undefined;
   let buttonTimer: ReturnType<typeof setInterval> | undefined;
@@ -188,7 +195,8 @@ export function initFortuneMachine() {
       buttonLabel.textContent = 'Issuing';
       action.setAttribute('aria-label', 'Issuing your cosmic excuse.');
       status.textContent = 'Your excuse has been reluctantly approved.';
-      await playClip('dispensing');
+      lastDispensing = pick(DISPENSINGS, lastDispensing);
+      await playClip(lastDispensing);
       showFortune(chooseFortune(calendar, new Date(), previousId));
     } finally {
       busy = false;

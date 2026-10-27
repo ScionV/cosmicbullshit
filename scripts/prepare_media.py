@@ -16,9 +16,19 @@ CLIPS = {
     "idle-sleepy": "v2/idle-sleepy.mp4",
     "idle-tie": "v3/idle-tie.mp4",
     "idle-yawn": "v3/idle-yawn.mp4",
+    "idle-fist-stretch": "v4/reading-knuckles.mp4",
+    "idle-fist-warmup": "v4/reading-knuckles-v2.mp4",
+    "idle-eye-roll": "v6/idle-eye-roll.mp4",
+    "idle-brief-wave": "v6/idle-brief-wave.mp4",
+    "idle-dust-shoulders": "v6/idle-dust-shoulders.mp4",
     "reading": "v2/reading-v2.mp4",
     "reading-hands": "v3/reading-hands.mp4",
+    "reading-slow-circle": "v5/reading-slow-circle.mp4",
+    "reading-two-hand-hover": "v5/reading-two-hand-hover.mp4",
+    "reading-adjust-glasses": "v5/reading-adjust-glasses.mp4",
     "dispensing": "v1/dispensing.mp4",
+    "dispensing-headshake": "v4/dispensing-headshake.mp4",
+    "dispensing-shrug": "v4/dispensing-shrug.mp4",
 }
 FILTER = "crop=396:376:216:254"
 
