@@ -119,7 +119,7 @@ test('10,000 readings keep the real split, kinds and events balanced without rep
     kindCounts.set(event.kind, (kindCounts.get(event.kind) ?? 0) + 1);
     eventCounts.set(event.id, (eventCounts.get(event.id) ?? 0) + 1);
   }
-  assert.ok(Math.abs(realCount / 10_000 - 0.5) < 0.02, `Real share: ${realCount / 10_000}`);
+  assert.ok(Math.abs(realCount / 10_000 - 0.9) < 0.02, `Real share: ${realCount / 10_000}`);
   assert.equal(kindCounts.size, 4);
   for (const [kind, count] of kindCounts) {
     assert.ok(Math.abs(count / realCount - 0.25) < 0.025, `${kind}: ${count / realCount}`);

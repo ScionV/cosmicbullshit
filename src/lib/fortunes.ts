@@ -403,7 +403,7 @@ export function chooseFortune(month: SkyMonth | null, now = new Date(), previous
     real.set(event.kind, events);
   }
   const inventedPool = invented.filter(item => item.id !== previousId);
-  if (real.size && random() < 0.5) {
+  if (real.size && random() < 0.9) {
     const kinds = [...real.values()];
     const events = kinds[randomIndex(kinds.length, random)];
     const jokes = events[randomIndex(events.length, random)];

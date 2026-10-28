@@ -44,7 +44,7 @@ or outside its validity range, the site must use labeled invented excuses.
 GitHub can disable scheduled workflows on inactive public repositories;
 the workflow can also be run manually. Never present stale sky as current.
 
-Readings keep a 50/50 split between real sky and invented nonsense when real
+Readings use a 90/10 split between real sky and invented nonsense when real
 events are available. Within real readings, each active event kind has an equal
 chance, followed by an equal choice of event and then joke. Nine simultaneous
 planet placements therefore cannot crowd out retrogrades or lunar events.
@@ -66,7 +66,9 @@ and lunar events. The model writes jokes; Moshier calculates the facts.
 The browser reads `public/readings/YYYY-MM-DD.json` for the New York calendar
 day. Complete valid catalogs supply the real-reading copy; absent, expired,
 or malformed catalogs fall back to the existing monthly reading pool. No
-visitor makes a live AI request. The 50/50 real/invented split remains intact.
+visitor makes a live AI request. The 90/10 real/invented split applies to both
+daily readings and the monthly fallback. With no valid sky data, all readings
+are clearly labeled invented nonsense.
 
 See [the daily desk workflow](docs/daily-readings.md) for planner assignments,
 generation and validation commands, editorial rules, and the authorized daily

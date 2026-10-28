@@ -11,6 +11,17 @@ are UTC with a `Z` suffix; daylight saving days may have 23 or 25 hours.
 `public/readings/YYYY-MM-DD.json` is both the published catalog and the durable
 record used to prevent recycling recent copy.
 
+Files are published as complete validated snapshots, never as partially filled
+public drafts. Keep the dated JSON catalogs separate from `src/lib/fortunes.ts`:
+that module validates and selects readings, while JSON supplies daily content.
+This separation makes catalogs easy to inspect, compare, and replace in forks.
+The public format includes its schema version, date, validity window, source,
+factual event records, and final jokes with stable IDs, event references, and
+tone tags. Draft instructions and worker exchanges stay in ignored scratch
+files. The owner's local schedule is configured in Codex; cloning the repository
+does not create a schedule or grant access to that account. A fork can publish
+its own validated catalogs or use the built-in fallback without running agents.
+
 The planner includes every interval intersecting that day for:
 
 - Sun and planetary sign placements, the Moon's sign, retrogrades, and the
@@ -145,7 +156,7 @@ deployment before the new file is available to visitors.
 
 The client checks the New York date and loads its daily catalog alongside the
 monthly calendar. Real readings use the daily copy when a valid batch is
-available, retaining the 50/50 split with invented nonsense and the uniform
+available, using a 90/10 split with invented nonsense and the uniform
 kind/event/joke selection. The current event's exact time window still decides
 eligibility. Missing, malformed, stale, or incomplete daily data falls back to
 the monthly catalog. The existing slip and source disclosure show the result.

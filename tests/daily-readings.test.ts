@@ -108,7 +108,7 @@ test('daily choices preserve selected copy ID, factual source and exact event el
   assert.equal(chooseFortune(null, new Date(event.endsAt), undefined, () => 0, only).kind, 'invented');
 });
 
-test('daily real readings retain the half split and balance all five kinds with no immediate repeats', () => {
+test('daily real readings retain the 90/10 split and balance all five kinds with no immediate repeats', () => {
   const data = batch();
   let seed = 20261028;
   const random = () => ((seed = (Math.imul(seed, 1664525) + 1013904223) >>> 0) / 0x100000000);
@@ -126,7 +126,7 @@ test('daily real readings retain the half split and balance all five kinds with 
     const kind = data.events.find(event => event.id === reading.eventId)!.kind;
     counts.set(kind, (counts.get(kind) ?? 0) + 1);
   }
-  assert.ok(Math.abs(real / 10_000 - 0.5) < 0.02);
+  assert.ok(Math.abs(real / 10_000 - 0.9) < 0.02);
   assert.equal(counts.size, 5);
   for (const count of counts.values()) assert.ok(Math.abs(count / real - 0.2) < 0.025);
 });

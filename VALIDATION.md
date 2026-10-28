@@ -85,6 +85,16 @@ the Codex app running; a push still depends on the hosting deployment to reach
 visitors. Publication and editorial instructions are in
 [the daily desk workflow](docs/daily-readings.md).
 
+## Reading mix update — 28 October 2026
+
+The current default is 90% real sky and 10% invented nonsense whenever valid
+real events are available, for both daily catalogs and the monthly fallback.
+Earlier 50/50 records above describe the behavior at the time of those checks.
+The updated 10,000-reading samples pass the 90/10 distribution check while
+preserving equal shares among active kinds and events and avoiding immediate
+repeats. All 32 TypeScript tests, the Astro check, and the production build pass.
+Missing valid sky data still yields clearly labeled invented readings only.
+
 ## Open visual-validation record
 
 Independent review disposition remains **fix**, not a whole-surface ship
