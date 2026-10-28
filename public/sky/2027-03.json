@@ -28,6 +28,87 @@
       "fact": "The Moon is in tropical Sagittarius (geocentric zodiac)."
     },
     {
+      "id": "planet-sign-Jupiter-2027-03-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Jupiter",
+      "startsAt": "2027-03-01T00:00:00Z",
+      "endsAt": "2027-04-01T00:00:00Z",
+      "fact": "Jupiter has been in tropical Leo since 2026-06-30 (geocentric zodiac).",
+      "sign": "Leo"
+    },
+    {
+      "id": "planet-sign-Mars-2027-03-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Mars",
+      "startsAt": "2027-03-01T00:00:00Z",
+      "endsAt": "2027-04-01T00:00:00Z",
+      "fact": "Mars has been in tropical Leo since 2027-02-21 (geocentric zodiac).",
+      "sign": "Leo"
+    },
+    {
+      "id": "planet-sign-Mercury-2027-03-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Mercury",
+      "startsAt": "2027-03-01T00:00:00Z",
+      "endsAt": "2027-03-18T10:01:54Z",
+      "fact": "Mercury has been in tropical Aquarius since 2027-02-18 (geocentric zodiac).",
+      "sign": "Aquarius"
+    },
+    {
+      "id": "planet-sign-Neptune-2027-03-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Neptune",
+      "startsAt": "2027-03-01T00:00:00Z",
+      "endsAt": "2027-04-01T00:00:00Z",
+      "fact": "Neptune has been in tropical Aries since 2026-01-26 (geocentric zodiac).",
+      "sign": "Aries"
+    },
+    {
+      "id": "planet-sign-Pluto-2027-03-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Pluto",
+      "startsAt": "2027-03-01T00:00:00Z",
+      "endsAt": "2027-04-01T00:00:00Z",
+      "fact": "Pluto has been in tropical Aquarius since 2024-11-19 (geocentric zodiac).",
+      "sign": "Aquarius"
+    },
+    {
+      "id": "planet-sign-Saturn-2027-03-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Saturn",
+      "startsAt": "2027-03-01T00:00:00Z",
+      "endsAt": "2027-04-01T00:00:00Z",
+      "fact": "Saturn has been in tropical Aries since 2026-02-14 (geocentric zodiac).",
+      "sign": "Aries"
+    },
+    {
+      "id": "planet-sign-Sun-2027-03-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Sun",
+      "startsAt": "2027-03-01T00:00:00Z",
+      "endsAt": "2027-03-20T20:24:42Z",
+      "fact": "Sun has been in tropical Pisces since 2027-02-18 (geocentric zodiac).",
+      "sign": "Pisces"
+    },
+    {
+      "id": "planet-sign-Uranus-2027-03-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Uranus",
+      "startsAt": "2027-03-01T00:00:00Z",
+      "endsAt": "2027-04-01T00:00:00Z",
+      "fact": "Uranus has been in tropical Gemini since 2026-04-26 (geocentric zodiac).",
+      "sign": "Gemini"
+    },
+    {
+      "id": "planet-sign-Venus-2027-03-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Venus",
+      "startsAt": "2027-03-01T00:00:00Z",
+      "endsAt": "2027-03-01T06:32:16Z",
+      "fact": "Venus has been in tropical Capricorn since 2027-02-03 (geocentric zodiac).",
+      "sign": "Capricorn"
+    },
+    {
       "id": "retrograde-Jupiter-2027-03-01T00:00:00Z",
       "kind": "retrograde",
       "subject": "Jupiter",
@@ -50,6 +131,15 @@
       "startsAt": "2027-03-01T00:00:00Z",
       "endsAt": "2027-03-03T12:32:06Z",
       "fact": "Mercury is in apparent retrograde motion as seen from Earth."
+    },
+    {
+      "id": "planet-sign-Venus-2027-03-01T06:32:16Z",
+      "kind": "planet-sign",
+      "subject": "Venus",
+      "startsAt": "2027-03-01T06:32:16Z",
+      "endsAt": "2027-03-26T08:16:31Z",
+      "fact": "Venus has been in tropical Aquarius since 2027-03-01 (geocentric zodiac).",
+      "sign": "Aquarius"
     },
     {
       "id": "moon-sign-Capricorn-2027-03-01T22:35:32Z",
@@ -132,12 +222,30 @@
       "fact": "The Moon is in tropical Leo (geocentric zodiac)."
     },
     {
+      "id": "planet-sign-Mercury-2027-03-18T10:01:54Z",
+      "kind": "planet-sign",
+      "subject": "Mercury",
+      "startsAt": "2027-03-18T10:01:54Z",
+      "endsAt": "2027-04-01T00:00:00Z",
+      "fact": "Mercury has been in tropical Pisces since 2027-03-18 (geocentric zodiac).",
+      "sign": "Pisces"
+    },
+    {
       "id": "moon-sign-Virgo-2027-03-20T05:36:57Z",
       "kind": "moon-sign",
       "subject": "Virgo",
       "startsAt": "2027-03-20T05:36:57Z",
       "endsAt": "2027-03-22T08:01:39Z",
       "fact": "The Moon is in tropical Virgo (geocentric zodiac)."
+    },
+    {
+      "id": "planet-sign-Sun-2027-03-20T20:24:42Z",
+      "kind": "planet-sign",
+      "subject": "Sun",
+      "startsAt": "2027-03-20T20:24:42Z",
+      "endsAt": "2027-04-01T00:00:00Z",
+      "fact": "Sun has been in tropical Aries since 2027-03-20 (geocentric zodiac).",
+      "sign": "Aries"
     },
     {
       "id": "moon-phase-full Moon-2027-03-21T18:18:13Z",
@@ -162,6 +270,15 @@
       "startsAt": "2027-03-24T12:18:16Z",
       "endsAt": "2027-03-26T19:43:09Z",
       "fact": "The Moon is in tropical Scorpio (geocentric zodiac)."
+    },
+    {
+      "id": "planet-sign-Venus-2027-03-26T08:16:31Z",
+      "kind": "planet-sign",
+      "subject": "Venus",
+      "startsAt": "2027-03-26T08:16:31Z",
+      "endsAt": "2027-04-01T00:00:00Z",
+      "fact": "Venus has been in tropical Pisces since 2027-03-26 (geocentric zodiac).",
+      "sign": "Pisces"
     },
     {
       "id": "moon-sign-Sagittarius-2027-03-26T19:43:09Z",

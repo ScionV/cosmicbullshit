@@ -20,6 +20,87 @@
       "fact": "The Moon is in tropical Sagittarius (geocentric zodiac)."
     },
     {
+      "id": "planet-sign-Jupiter-2028-08-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Jupiter",
+      "startsAt": "2028-08-01T00:00:00Z",
+      "endsAt": "2028-08-24T05:08:27Z",
+      "fact": "Jupiter has been in tropical Virgo since 2027-07-26 (geocentric zodiac).",
+      "sign": "Virgo"
+    },
+    {
+      "id": "planet-sign-Mars-2028-08-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Mars",
+      "startsAt": "2028-08-01T00:00:00Z",
+      "endsAt": "2028-09-01T00:00:00Z",
+      "fact": "Mars has been in tropical Cancer since 2028-07-20 (geocentric zodiac).",
+      "sign": "Cancer"
+    },
+    {
+      "id": "planet-sign-Mercury-2028-08-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Mercury",
+      "startsAt": "2028-08-01T00:00:00Z",
+      "endsAt": "2028-08-08T05:09:45Z",
+      "fact": "Mercury has been in tropical Leo since 2028-07-24 (geocentric zodiac).",
+      "sign": "Leo"
+    },
+    {
+      "id": "planet-sign-Neptune-2028-08-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Neptune",
+      "startsAt": "2028-08-01T00:00:00Z",
+      "endsAt": "2028-09-01T00:00:00Z",
+      "fact": "Neptune has been in tropical Aries since 2026-01-26 (geocentric zodiac).",
+      "sign": "Aries"
+    },
+    {
+      "id": "planet-sign-Pluto-2028-08-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Pluto",
+      "startsAt": "2028-08-01T00:00:00Z",
+      "endsAt": "2028-09-01T00:00:00Z",
+      "fact": "Pluto has been in tropical Aquarius since 2024-11-19 (geocentric zodiac).",
+      "sign": "Aquarius"
+    },
+    {
+      "id": "planet-sign-Saturn-2028-08-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Saturn",
+      "startsAt": "2028-08-01T00:00:00Z",
+      "endsAt": "2028-09-01T00:00:00Z",
+      "fact": "Saturn has been in tropical Taurus since 2028-04-13 (geocentric zodiac).",
+      "sign": "Taurus"
+    },
+    {
+      "id": "planet-sign-Sun-2028-08-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Sun",
+      "startsAt": "2028-08-01T00:00:00Z",
+      "endsAt": "2028-08-22T14:00:56Z",
+      "fact": "Sun has been in tropical Leo since 2028-07-22 (geocentric zodiac).",
+      "sign": "Leo"
+    },
+    {
+      "id": "planet-sign-Uranus-2028-08-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Uranus",
+      "startsAt": "2028-08-01T00:00:00Z",
+      "endsAt": "2028-09-01T00:00:00Z",
+      "fact": "Uranus has been in tropical Gemini since 2026-04-26 (geocentric zodiac).",
+      "sign": "Gemini"
+    },
+    {
+      "id": "planet-sign-Venus-2028-08-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Venus",
+      "startsAt": "2028-08-01T00:00:00Z",
+      "endsAt": "2028-08-07T15:26:19Z",
+      "fact": "Venus has been in tropical Gemini since 2028-04-03 (geocentric zodiac).",
+      "sign": "Gemini"
+    },
+    {
       "id": "retrograde-Neptune-2028-08-01T00:00:00Z",
       "kind": "retrograde",
       "subject": "Neptune",
@@ -66,6 +147,24 @@
       "startsAt": "2028-08-06T17:20:33Z",
       "endsAt": "2028-08-09T06:01:39Z",
       "fact": "The Moon is in tropical Pisces (geocentric zodiac)."
+    },
+    {
+      "id": "planet-sign-Venus-2028-08-07T15:26:19Z",
+      "kind": "planet-sign",
+      "subject": "Venus",
+      "startsAt": "2028-08-07T15:26:19Z",
+      "endsAt": "2028-09-01T00:00:00Z",
+      "fact": "Venus has been in tropical Cancer since 2028-08-07 (geocentric zodiac).",
+      "sign": "Cancer"
+    },
+    {
+      "id": "planet-sign-Mercury-2028-08-08T05:09:45Z",
+      "kind": "planet-sign",
+      "subject": "Mercury",
+      "startsAt": "2028-08-08T05:09:45Z",
+      "endsAt": "2028-08-27T13:07:54Z",
+      "fact": "Mercury has been in tropical Virgo since 2028-08-08 (geocentric zodiac).",
+      "sign": "Virgo"
     },
     {
       "id": "moon-sign-Aries-2028-08-09T06:01:39Z",
@@ -140,12 +239,30 @@
       "fact": "The Moon is in tropical Libra (geocentric zodiac)."
     },
     {
+      "id": "planet-sign-Sun-2028-08-22T14:00:56Z",
+      "kind": "planet-sign",
+      "subject": "Sun",
+      "startsAt": "2028-08-22T14:00:56Z",
+      "endsAt": "2028-09-01T00:00:00Z",
+      "fact": "Sun has been in tropical Virgo since 2028-08-22 (geocentric zodiac).",
+      "sign": "Virgo"
+    },
+    {
       "id": "retrograde-Saturn-2028-08-22T22:16:39Z",
       "kind": "retrograde",
       "subject": "Saturn",
       "startsAt": "2028-08-22T22:16:39Z",
       "endsAt": "2028-09-01T00:00:00Z",
       "fact": "Saturn is in apparent retrograde motion as seen from Earth."
+    },
+    {
+      "id": "planet-sign-Jupiter-2028-08-24T05:08:27Z",
+      "kind": "planet-sign",
+      "subject": "Jupiter",
+      "startsAt": "2028-08-24T05:08:27Z",
+      "endsAt": "2028-09-01T00:00:00Z",
+      "fact": "Jupiter has been in tropical Libra since 2028-08-24 (geocentric zodiac).",
+      "sign": "Libra"
     },
     {
       "id": "moon-sign-Scorpio-2028-08-24T14:12:06Z",
@@ -170,6 +287,15 @@
       "startsAt": "2028-08-26T17:51:20Z",
       "endsAt": "2028-08-29T01:06:55Z",
       "fact": "The Moon is in tropical Sagittarius (geocentric zodiac)."
+    },
+    {
+      "id": "planet-sign-Mercury-2028-08-27T13:07:54Z",
+      "kind": "planet-sign",
+      "subject": "Mercury",
+      "startsAt": "2028-08-27T13:07:54Z",
+      "endsAt": "2028-09-01T00:00:00Z",
+      "fact": "Mercury has been in tropical Libra since 2028-08-27 (geocentric zodiac).",
+      "sign": "Libra"
     },
     {
       "id": "moon-sign-Capricorn-2028-08-29T01:06:55Z",

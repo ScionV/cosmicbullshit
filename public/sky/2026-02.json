@@ -20,6 +20,87 @@
       "fact": "The Moon is in tropical Cancer (geocentric zodiac)."
     },
     {
+      "id": "planet-sign-Jupiter-2026-02-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Jupiter",
+      "startsAt": "2026-02-01T00:00:00Z",
+      "endsAt": "2026-03-01T00:00:00Z",
+      "fact": "Jupiter has been in tropical Cancer since 2025-06-09 (geocentric zodiac).",
+      "sign": "Cancer"
+    },
+    {
+      "id": "planet-sign-Mars-2026-02-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Mars",
+      "startsAt": "2026-02-01T00:00:00Z",
+      "endsAt": "2026-03-01T00:00:00Z",
+      "fact": "Mars has been in tropical Aquarius since 2026-01-23 (geocentric zodiac).",
+      "sign": "Aquarius"
+    },
+    {
+      "id": "planet-sign-Mercury-2026-02-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Mercury",
+      "startsAt": "2026-02-01T00:00:00Z",
+      "endsAt": "2026-02-06T22:48:04Z",
+      "fact": "Mercury has been in tropical Aquarius since 2026-01-20 (geocentric zodiac).",
+      "sign": "Aquarius"
+    },
+    {
+      "id": "planet-sign-Neptune-2026-02-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Neptune",
+      "startsAt": "2026-02-01T00:00:00Z",
+      "endsAt": "2026-03-01T00:00:00Z",
+      "fact": "Neptune has been in tropical Aries since 2026-01-26 (geocentric zodiac).",
+      "sign": "Aries"
+    },
+    {
+      "id": "planet-sign-Pluto-2026-02-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Pluto",
+      "startsAt": "2026-02-01T00:00:00Z",
+      "endsAt": "2026-03-01T00:00:00Z",
+      "fact": "Pluto has been in tropical Aquarius since 2024-11-19 (geocentric zodiac).",
+      "sign": "Aquarius"
+    },
+    {
+      "id": "planet-sign-Saturn-2026-02-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Saturn",
+      "startsAt": "2026-02-01T00:00:00Z",
+      "endsAt": "2026-02-14T00:11:33Z",
+      "fact": "Saturn has been in tropical Pisces since 2025-09-01 (geocentric zodiac).",
+      "sign": "Pisces"
+    },
+    {
+      "id": "planet-sign-Sun-2026-02-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Sun",
+      "startsAt": "2026-02-01T00:00:00Z",
+      "endsAt": "2026-02-18T15:51:55Z",
+      "fact": "Sun has been in tropical Aquarius since 2026-01-20 (geocentric zodiac).",
+      "sign": "Aquarius"
+    },
+    {
+      "id": "planet-sign-Uranus-2026-02-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Uranus",
+      "startsAt": "2026-02-01T00:00:00Z",
+      "endsAt": "2026-03-01T00:00:00Z",
+      "fact": "Uranus has been in tropical Taurus since 2025-11-08 (geocentric zodiac).",
+      "sign": "Taurus"
+    },
+    {
+      "id": "planet-sign-Venus-2026-02-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Venus",
+      "startsAt": "2026-02-01T00:00:00Z",
+      "endsAt": "2026-02-10T10:18:38Z",
+      "fact": "Venus has been in tropical Aquarius since 2026-01-17 (geocentric zodiac).",
+      "sign": "Aquarius"
+    },
+    {
       "id": "retrograde-Jupiter-2026-02-01T00:00:00Z",
       "kind": "retrograde",
       "subject": "Jupiter",
@@ -68,6 +149,15 @@
       "fact": "The Moon is in tropical Libra (geocentric zodiac)."
     },
     {
+      "id": "planet-sign-Mercury-2026-02-06T22:48:04Z",
+      "kind": "planet-sign",
+      "subject": "Mercury",
+      "startsAt": "2026-02-06T22:48:04Z",
+      "endsAt": "2026-03-01T00:00:00Z",
+      "fact": "Mercury has been in tropical Pisces since 2026-02-06 (geocentric zodiac).",
+      "sign": "Pisces"
+    },
+    {
       "id": "moon-sign-Scorpio-2026-02-07T19:13:07Z",
       "kind": "moon-sign",
       "subject": "Scorpio",
@@ -92,12 +182,30 @@
       "fact": "The Moon is in tropical Sagittarius (geocentric zodiac)."
     },
     {
+      "id": "planet-sign-Venus-2026-02-10T10:18:38Z",
+      "kind": "planet-sign",
+      "subject": "Venus",
+      "startsAt": "2026-02-10T10:18:38Z",
+      "endsAt": "2026-03-01T00:00:00Z",
+      "fact": "Venus has been in tropical Pisces since 2026-02-10 (geocentric zodiac).",
+      "sign": "Pisces"
+    },
+    {
       "id": "moon-sign-Capricorn-2026-02-12T19:44:22Z",
       "kind": "moon-sign",
       "subject": "Capricorn",
       "startsAt": "2026-02-12T19:44:22Z",
       "endsAt": "2026-02-15T06:16:38Z",
       "fact": "The Moon is in tropical Capricorn (geocentric zodiac)."
+    },
+    {
+      "id": "planet-sign-Saturn-2026-02-14T00:11:33Z",
+      "kind": "planet-sign",
+      "subject": "Saturn",
+      "startsAt": "2026-02-14T00:11:33Z",
+      "endsAt": "2026-03-01T00:00:00Z",
+      "fact": "Saturn has been in tropical Aries since 2026-02-14 (geocentric zodiac).",
+      "sign": "Aries"
     },
     {
       "id": "moon-sign-Aquarius-2026-02-15T06:16:38Z",
@@ -122,6 +230,15 @@
       "startsAt": "2026-02-17T14:09:07Z",
       "endsAt": "2026-02-19T19:39:05Z",
       "fact": "The Moon is in tropical Pisces (geocentric zodiac)."
+    },
+    {
+      "id": "planet-sign-Sun-2026-02-18T15:51:55Z",
+      "kind": "planet-sign",
+      "subject": "Sun",
+      "startsAt": "2026-02-18T15:51:55Z",
+      "endsAt": "2026-03-01T00:00:00Z",
+      "fact": "Sun has been in tropical Pisces since 2026-02-18 (geocentric zodiac).",
+      "sign": "Pisces"
     },
     {
       "id": "moon-sign-Aries-2026-02-19T19:39:05Z",

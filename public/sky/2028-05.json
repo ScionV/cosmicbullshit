@@ -20,12 +20,102 @@
       "fact": "The Moon is in tropical Cancer (geocentric zodiac)."
     },
     {
+      "id": "planet-sign-Jupiter-2028-05-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Jupiter",
+      "startsAt": "2028-05-01T00:00:00Z",
+      "endsAt": "2028-06-01T00:00:00Z",
+      "fact": "Jupiter has been in tropical Virgo since 2027-07-26 (geocentric zodiac).",
+      "sign": "Virgo"
+    },
+    {
+      "id": "planet-sign-Mars-2028-05-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Mars",
+      "startsAt": "2028-05-01T00:00:00Z",
+      "endsAt": "2028-06-01T00:00:00Z",
+      "fact": "Mars has been in tropical Taurus since 2028-04-27 (geocentric zodiac).",
+      "sign": "Taurus"
+    },
+    {
+      "id": "planet-sign-Mercury-2028-05-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Mercury",
+      "startsAt": "2028-05-01T00:00:00Z",
+      "endsAt": "2028-05-01T01:42:11Z",
+      "fact": "Mercury has been in tropical Taurus since 2028-04-15 (geocentric zodiac).",
+      "sign": "Taurus"
+    },
+    {
+      "id": "planet-sign-Neptune-2028-05-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Neptune",
+      "startsAt": "2028-05-01T00:00:00Z",
+      "endsAt": "2028-06-01T00:00:00Z",
+      "fact": "Neptune has been in tropical Aries since 2026-01-26 (geocentric zodiac).",
+      "sign": "Aries"
+    },
+    {
+      "id": "planet-sign-Pluto-2028-05-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Pluto",
+      "startsAt": "2028-05-01T00:00:00Z",
+      "endsAt": "2028-06-01T00:00:00Z",
+      "fact": "Pluto has been in tropical Aquarius since 2024-11-19 (geocentric zodiac).",
+      "sign": "Aquarius"
+    },
+    {
+      "id": "planet-sign-Saturn-2028-05-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Saturn",
+      "startsAt": "2028-05-01T00:00:00Z",
+      "endsAt": "2028-06-01T00:00:00Z",
+      "fact": "Saturn has been in tropical Taurus since 2028-04-13 (geocentric zodiac).",
+      "sign": "Taurus"
+    },
+    {
+      "id": "planet-sign-Sun-2028-05-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Sun",
+      "startsAt": "2028-05-01T00:00:00Z",
+      "endsAt": "2028-05-20T12:09:49Z",
+      "fact": "Sun has been in tropical Taurus since 2028-04-19 (geocentric zodiac).",
+      "sign": "Taurus"
+    },
+    {
+      "id": "planet-sign-Uranus-2028-05-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Uranus",
+      "startsAt": "2028-05-01T00:00:00Z",
+      "endsAt": "2028-06-01T00:00:00Z",
+      "fact": "Uranus has been in tropical Gemini since 2026-04-26 (geocentric zodiac).",
+      "sign": "Gemini"
+    },
+    {
+      "id": "planet-sign-Venus-2028-05-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Venus",
+      "startsAt": "2028-05-01T00:00:00Z",
+      "endsAt": "2028-06-01T00:00:00Z",
+      "fact": "Venus has been in tropical Gemini since 2028-04-03 (geocentric zodiac).",
+      "sign": "Gemini"
+    },
+    {
       "id": "retrograde-Jupiter-2028-05-01T00:00:00Z",
       "kind": "retrograde",
       "subject": "Jupiter",
       "startsAt": "2028-05-01T00:00:00Z",
       "endsAt": "2028-05-13T20:00:23Z",
       "fact": "Jupiter is in apparent retrograde motion as seen from Earth."
+    },
+    {
+      "id": "planet-sign-Mercury-2028-05-01T01:42:11Z",
+      "kind": "planet-sign",
+      "subject": "Mercury",
+      "startsAt": "2028-05-01T01:42:11Z",
+      "endsAt": "2028-06-01T00:00:00Z",
+      "fact": "Mercury has been in tropical Gemini since 2028-05-01 (geocentric zodiac).",
+      "sign": "Gemini"
     },
     {
       "id": "moon-sign-Leo-2028-05-01T05:23:09Z",
@@ -138,6 +228,15 @@
       "startsAt": "2028-05-19T07:12:32Z",
       "endsAt": "2028-05-21T17:48:31Z",
       "fact": "The Moon is in tropical Aries (geocentric zodiac)."
+    },
+    {
+      "id": "planet-sign-Sun-2028-05-20T12:09:49Z",
+      "kind": "planet-sign",
+      "subject": "Sun",
+      "startsAt": "2028-05-20T12:09:49Z",
+      "endsAt": "2028-06-01T00:00:00Z",
+      "fact": "Sun has been in tropical Gemini since 2028-05-20 (geocentric zodiac).",
+      "sign": "Gemini"
     },
     {
       "id": "retrograde-Mercury-2028-05-21T08:43:05Z",

@@ -6,7 +6,7 @@ A tongue-in-cheek fortune machine for finding something cosmic to blame.
 
 Use Node 24 (see `.node-version`) and `npm ci`, then `npm run dev`.
 `npm test` checks event eligibility, fallback behavior, unique fortune IDs,
-and the under-80-character copy limit. `npm run check`
+balanced selection, and the 80-character copy limit. `npm run check`
 checks Astro/TypeScript, and `npm run build` produces the static site in `dist/`.
 
 ## Real sky data
@@ -28,9 +28,13 @@ python -m unittest discover -s tests -p 'test_*.py'
 
 The generator uses pyswisseph 2.10.3.2 with `FLG_MOSEPH | FLG_SPEED`:
 the built-in Moshier ephemeris, geocentric tropical ecliptic positions. It
-calculates apparent retrograde intervals, Moon-sign intervals and windows
-within 9 degrees of new/quarter/full phase angles. These are astronomical
-positions and conventions, not evidence that planets cause personal problems.
+calculates apparent retrograde intervals, Moon-sign intervals, planet-sign
+placements for the Sun through Pluto (excluding the separately tracked Moon),
+and windows within 9 degrees of new/quarter/full phase angles. Planet placement
+facts include the latest actual sign-entry date in UTC, even when the calculated
+window starts at a month boundary or the body has returned during retrograde.
+These are astronomical positions and conventions, not evidence that planets
+cause personal problems.
 No external Swiss/JPL ephemeris files are bundled. See [Swiss Ephemeris](https://www.astro.com/swisseph/)
 and [pyswisseph](https://github.com/astrorigin/pyswisseph).
 
@@ -39,6 +43,17 @@ a rolling three-calendar-year range. If data is missing, invalid, unavailable,
 or outside its validity range, the site must use labeled invented excuses.
 GitHub can disable scheduled workflows on inactive public repositories;
 the workflow can also be run manually. Never present stale sky as current.
+
+Readings keep a 50/50 split between real sky and invented nonsense when real
+events are available. Within real readings, each active event kind has an equal
+chance, followed by an equal choice of event and then joke. Nine simultaneous
+planet placements therefore cannot crowd out retrogrades or lunar events.
+The previous fortune ID is excluded before selection.
+
+Planet-sign data retains schema version 1. Deploy the updated client together
+with the regenerated calendar: older clients reject the unfamiliar event kind
+and safely use invented readings. The updated client also accepts older month
+files without planet placements.
 
 ## Cloudflare
 

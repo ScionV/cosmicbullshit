@@ -20,6 +20,87 @@
       "fact": "The Moon is in tropical Aries (geocentric zodiac)."
     },
     {
+      "id": "planet-sign-Jupiter-2026-09-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Jupiter",
+      "startsAt": "2026-09-01T00:00:00Z",
+      "endsAt": "2026-10-01T00:00:00Z",
+      "fact": "Jupiter has been in tropical Leo since 2026-06-30 (geocentric zodiac).",
+      "sign": "Leo"
+    },
+    {
+      "id": "planet-sign-Mars-2026-09-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Mars",
+      "startsAt": "2026-09-01T00:00:00Z",
+      "endsAt": "2026-09-28T02:48:51Z",
+      "fact": "Mars has been in tropical Cancer since 2026-08-11 (geocentric zodiac).",
+      "sign": "Cancer"
+    },
+    {
+      "id": "planet-sign-Mercury-2026-09-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Mercury",
+      "startsAt": "2026-09-01T00:00:00Z",
+      "endsAt": "2026-09-10T16:20:38Z",
+      "fact": "Mercury has been in tropical Virgo since 2026-08-25 (geocentric zodiac).",
+      "sign": "Virgo"
+    },
+    {
+      "id": "planet-sign-Neptune-2026-09-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Neptune",
+      "startsAt": "2026-09-01T00:00:00Z",
+      "endsAt": "2026-10-01T00:00:00Z",
+      "fact": "Neptune has been in tropical Aries since 2026-01-26 (geocentric zodiac).",
+      "sign": "Aries"
+    },
+    {
+      "id": "planet-sign-Pluto-2026-09-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Pluto",
+      "startsAt": "2026-09-01T00:00:00Z",
+      "endsAt": "2026-10-01T00:00:00Z",
+      "fact": "Pluto has been in tropical Aquarius since 2024-11-19 (geocentric zodiac).",
+      "sign": "Aquarius"
+    },
+    {
+      "id": "planet-sign-Saturn-2026-09-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Saturn",
+      "startsAt": "2026-09-01T00:00:00Z",
+      "endsAt": "2026-10-01T00:00:00Z",
+      "fact": "Saturn has been in tropical Aries since 2026-02-14 (geocentric zodiac).",
+      "sign": "Aries"
+    },
+    {
+      "id": "planet-sign-Sun-2026-09-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Sun",
+      "startsAt": "2026-09-01T00:00:00Z",
+      "endsAt": "2026-09-23T00:05:13Z",
+      "fact": "Sun has been in tropical Virgo since 2026-08-23 (geocentric zodiac).",
+      "sign": "Virgo"
+    },
+    {
+      "id": "planet-sign-Uranus-2026-09-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Uranus",
+      "startsAt": "2026-09-01T00:00:00Z",
+      "endsAt": "2026-10-01T00:00:00Z",
+      "fact": "Uranus has been in tropical Gemini since 2026-04-26 (geocentric zodiac).",
+      "sign": "Gemini"
+    },
+    {
+      "id": "planet-sign-Venus-2026-09-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Venus",
+      "startsAt": "2026-09-01T00:00:00Z",
+      "endsAt": "2026-09-10T08:06:48Z",
+      "fact": "Venus has been in tropical Libra since 2026-08-06 (geocentric zodiac).",
+      "sign": "Libra"
+    },
+    {
       "id": "retrograde-Neptune-2026-09-01T00:00:00Z",
       "kind": "retrograde",
       "subject": "Neptune",
@@ -92,12 +173,30 @@
       "fact": "The Moon is in tropical Virgo (geocentric zodiac)."
     },
     {
+      "id": "planet-sign-Venus-2026-09-10T08:06:48Z",
+      "kind": "planet-sign",
+      "subject": "Venus",
+      "startsAt": "2026-09-10T08:06:48Z",
+      "endsAt": "2026-10-01T00:00:00Z",
+      "fact": "Venus has been in tropical Scorpio since 2026-09-10 (geocentric zodiac).",
+      "sign": "Scorpio"
+    },
+    {
       "id": "moon-phase-new Moon-2026-09-10T10:37:27Z",
       "kind": "moon-phase",
       "subject": "new Moon",
       "startsAt": "2026-09-10T10:37:27Z",
       "endsAt": "2026-09-11T20:31:36Z",
       "fact": "The Moon is near its new Moon phase (within 9 degrees of the phase angle)."
+    },
+    {
+      "id": "planet-sign-Mercury-2026-09-10T16:20:38Z",
+      "kind": "planet-sign",
+      "subject": "Mercury",
+      "startsAt": "2026-09-10T16:20:38Z",
+      "endsAt": "2026-09-30T11:44:24Z",
+      "fact": "Mercury has been in tropical Libra since 2026-09-10 (geocentric zodiac).",
+      "sign": "Libra"
     },
     {
       "id": "retrograde-Uranus-2026-09-10T18:27:20Z",
@@ -156,6 +255,15 @@
       "fact": "The Moon is in tropical Aquarius (geocentric zodiac)."
     },
     {
+      "id": "planet-sign-Sun-2026-09-23T00:05:13Z",
+      "kind": "planet-sign",
+      "subject": "Sun",
+      "startsAt": "2026-09-23T00:05:13Z",
+      "endsAt": "2026-10-01T00:00:00Z",
+      "fact": "Sun has been in tropical Libra since 2026-09-23 (geocentric zodiac).",
+      "sign": "Libra"
+    },
+    {
       "id": "moon-sign-Pisces-2026-09-24T03:23:38Z",
       "kind": "moon-sign",
       "subject": "Pisces",
@@ -180,12 +288,30 @@
       "fact": "The Moon is in tropical Aries (geocentric zodiac)."
     },
     {
+      "id": "planet-sign-Mars-2026-09-28T02:48:51Z",
+      "kind": "planet-sign",
+      "subject": "Mars",
+      "startsAt": "2026-09-28T02:48:51Z",
+      "endsAt": "2026-10-01T00:00:00Z",
+      "fact": "Mars has been in tropical Leo since 2026-09-28 (geocentric zodiac).",
+      "sign": "Leo"
+    },
+    {
       "id": "moon-sign-Taurus-2026-09-28T14:40:02Z",
       "kind": "moon-sign",
       "subject": "Taurus",
       "startsAt": "2026-09-28T14:40:02Z",
       "endsAt": "2026-09-30T17:26:03Z",
       "fact": "The Moon is in tropical Taurus (geocentric zodiac)."
+    },
+    {
+      "id": "planet-sign-Mercury-2026-09-30T11:44:24Z",
+      "kind": "planet-sign",
+      "subject": "Mercury",
+      "startsAt": "2026-09-30T11:44:24Z",
+      "endsAt": "2026-10-01T00:00:00Z",
+      "fact": "Mercury has been in tropical Scorpio since 2026-09-30 (geocentric zodiac).",
+      "sign": "Scorpio"
     },
     {
       "id": "moon-sign-Gemini-2026-09-30T17:26:03Z",

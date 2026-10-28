@@ -20,6 +20,87 @@
       "fact": "The Moon is in tropical Capricorn (geocentric zodiac)."
     },
     {
+      "id": "planet-sign-Jupiter-2027-12-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Jupiter",
+      "startsAt": "2027-12-01T00:00:00Z",
+      "endsAt": "2028-01-01T00:00:00Z",
+      "fact": "Jupiter has been in tropical Virgo since 2027-07-26 (geocentric zodiac).",
+      "sign": "Virgo"
+    },
+    {
+      "id": "planet-sign-Mars-2027-12-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Mars",
+      "startsAt": "2027-12-01T00:00:00Z",
+      "endsAt": "2028-01-01T00:00:00Z",
+      "fact": "Mars has been in tropical Capricorn since 2027-11-25 (geocentric zodiac).",
+      "sign": "Capricorn"
+    },
+    {
+      "id": "planet-sign-Mercury-2027-12-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Mercury",
+      "startsAt": "2027-12-01T00:00:00Z",
+      "endsAt": "2027-12-18T11:58:03Z",
+      "fact": "Mercury has been in tropical Sagittarius since 2027-11-29 (geocentric zodiac).",
+      "sign": "Sagittarius"
+    },
+    {
+      "id": "planet-sign-Neptune-2027-12-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Neptune",
+      "startsAt": "2027-12-01T00:00:00Z",
+      "endsAt": "2028-01-01T00:00:00Z",
+      "fact": "Neptune has been in tropical Aries since 2026-01-26 (geocentric zodiac).",
+      "sign": "Aries"
+    },
+    {
+      "id": "planet-sign-Pluto-2027-12-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Pluto",
+      "startsAt": "2027-12-01T00:00:00Z",
+      "endsAt": "2028-01-01T00:00:00Z",
+      "fact": "Pluto has been in tropical Aquarius since 2024-11-19 (geocentric zodiac).",
+      "sign": "Aquarius"
+    },
+    {
+      "id": "planet-sign-Saturn-2027-12-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Saturn",
+      "startsAt": "2027-12-01T00:00:00Z",
+      "endsAt": "2028-01-01T00:00:00Z",
+      "fact": "Saturn has been in tropical Aries since 2026-02-14 (geocentric zodiac).",
+      "sign": "Aries"
+    },
+    {
+      "id": "planet-sign-Sun-2027-12-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Sun",
+      "startsAt": "2027-12-01T00:00:00Z",
+      "endsAt": "2027-12-22T02:42:09Z",
+      "fact": "Sun has been in tropical Sagittarius since 2027-11-22 (geocentric zodiac).",
+      "sign": "Sagittarius"
+    },
+    {
+      "id": "planet-sign-Uranus-2027-12-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Uranus",
+      "startsAt": "2027-12-01T00:00:00Z",
+      "endsAt": "2028-01-01T00:00:00Z",
+      "fact": "Uranus has been in tropical Gemini since 2026-04-26 (geocentric zodiac).",
+      "sign": "Gemini"
+    },
+    {
+      "id": "planet-sign-Venus-2027-12-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Venus",
+      "startsAt": "2027-12-01T00:00:00Z",
+      "endsAt": "2027-12-19T18:40:13Z",
+      "fact": "Venus has been in tropical Capricorn since 2027-11-25 (geocentric zodiac).",
+      "sign": "Capricorn"
+    },
+    {
       "id": "retrograde-Neptune-2027-12-01T00:00:00Z",
       "kind": "retrograde",
       "subject": "Neptune",
@@ -124,6 +205,15 @@
       "fact": "The Moon is in tropical Virgo (geocentric zodiac)."
     },
     {
+      "id": "planet-sign-Mercury-2027-12-18T11:58:03Z",
+      "kind": "planet-sign",
+      "subject": "Mercury",
+      "startsAt": "2027-12-18T11:58:03Z",
+      "endsAt": "2028-01-01T00:00:00Z",
+      "fact": "Mercury has been in tropical Capricorn since 2027-12-18 (geocentric zodiac).",
+      "sign": "Capricorn"
+    },
+    {
       "id": "moon-phase-last-quarter Moon-2027-12-19T16:32:55Z",
       "kind": "moon-phase",
       "subject": "last-quarter Moon",
@@ -132,12 +222,30 @@
       "fact": "The Moon is near its last-quarter Moon phase (within 9 degrees of the phase angle)."
     },
     {
+      "id": "planet-sign-Venus-2027-12-19T18:40:13Z",
+      "kind": "planet-sign",
+      "subject": "Venus",
+      "startsAt": "2027-12-19T18:40:13Z",
+      "endsAt": "2028-01-01T00:00:00Z",
+      "fact": "Venus has been in tropical Aquarius since 2027-12-19 (geocentric zodiac).",
+      "sign": "Aquarius"
+    },
+    {
       "id": "moon-sign-Libra-2027-12-20T12:13:16Z",
       "kind": "moon-sign",
       "subject": "Libra",
       "startsAt": "2027-12-20T12:13:16Z",
       "endsAt": "2027-12-22T17:00:32Z",
       "fact": "The Moon is in tropical Libra (geocentric zodiac)."
+    },
+    {
+      "id": "planet-sign-Sun-2027-12-22T02:42:09Z",
+      "kind": "planet-sign",
+      "subject": "Sun",
+      "startsAt": "2027-12-22T02:42:09Z",
+      "endsAt": "2028-01-01T00:00:00Z",
+      "fact": "Sun has been in tropical Capricorn since 2027-12-22 (geocentric zodiac).",
+      "sign": "Capricorn"
     },
     {
       "id": "moon-sign-Scorpio-2027-12-22T17:00:32Z",

@@ -20,6 +20,87 @@
       "fact": "The Moon is in tropical Capricorn (geocentric zodiac)."
     },
     {
+      "id": "planet-sign-Jupiter-2026-07-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Jupiter",
+      "startsAt": "2026-07-01T00:00:00Z",
+      "endsAt": "2026-08-01T00:00:00Z",
+      "fact": "Jupiter has been in tropical Leo since 2026-06-30 (geocentric zodiac).",
+      "sign": "Leo"
+    },
+    {
+      "id": "planet-sign-Mars-2026-07-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Mars",
+      "startsAt": "2026-07-01T00:00:00Z",
+      "endsAt": "2026-08-01T00:00:00Z",
+      "fact": "Mars has been in tropical Gemini since 2026-06-28 (geocentric zodiac).",
+      "sign": "Gemini"
+    },
+    {
+      "id": "planet-sign-Mercury-2026-07-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Mercury",
+      "startsAt": "2026-07-01T00:00:00Z",
+      "endsAt": "2026-08-01T00:00:00Z",
+      "fact": "Mercury has been in tropical Cancer since 2026-06-01 (geocentric zodiac).",
+      "sign": "Cancer"
+    },
+    {
+      "id": "planet-sign-Neptune-2026-07-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Neptune",
+      "startsAt": "2026-07-01T00:00:00Z",
+      "endsAt": "2026-08-01T00:00:00Z",
+      "fact": "Neptune has been in tropical Aries since 2026-01-26 (geocentric zodiac).",
+      "sign": "Aries"
+    },
+    {
+      "id": "planet-sign-Pluto-2026-07-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Pluto",
+      "startsAt": "2026-07-01T00:00:00Z",
+      "endsAt": "2026-08-01T00:00:00Z",
+      "fact": "Pluto has been in tropical Aquarius since 2024-11-19 (geocentric zodiac).",
+      "sign": "Aquarius"
+    },
+    {
+      "id": "planet-sign-Saturn-2026-07-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Saturn",
+      "startsAt": "2026-07-01T00:00:00Z",
+      "endsAt": "2026-08-01T00:00:00Z",
+      "fact": "Saturn has been in tropical Aries since 2026-02-14 (geocentric zodiac).",
+      "sign": "Aries"
+    },
+    {
+      "id": "planet-sign-Sun-2026-07-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Sun",
+      "startsAt": "2026-07-01T00:00:00Z",
+      "endsAt": "2026-07-22T19:13:05Z",
+      "fact": "Sun has been in tropical Cancer since 2026-06-21 (geocentric zodiac).",
+      "sign": "Cancer"
+    },
+    {
+      "id": "planet-sign-Uranus-2026-07-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Uranus",
+      "startsAt": "2026-07-01T00:00:00Z",
+      "endsAt": "2026-08-01T00:00:00Z",
+      "fact": "Uranus has been in tropical Gemini since 2026-04-26 (geocentric zodiac).",
+      "sign": "Gemini"
+    },
+    {
+      "id": "planet-sign-Venus-2026-07-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Venus",
+      "startsAt": "2026-07-01T00:00:00Z",
+      "endsAt": "2026-07-09T17:22:07Z",
+      "fact": "Venus has been in tropical Leo since 2026-06-13 (geocentric zodiac).",
+      "sign": "Leo"
+    },
+    {
       "id": "retrograde-Mercury-2026-07-01T00:00:00Z",
       "kind": "retrograde",
       "subject": "Mercury",
@@ -84,6 +165,15 @@
       "fact": "The Moon is in tropical Taurus (geocentric zodiac)."
     },
     {
+      "id": "planet-sign-Venus-2026-07-09T17:22:07Z",
+      "kind": "planet-sign",
+      "subject": "Venus",
+      "startsAt": "2026-07-09T17:22:07Z",
+      "endsAt": "2026-08-01T00:00:00Z",
+      "fact": "Venus has been in tropical Virgo since 2026-07-09 (geocentric zodiac).",
+      "sign": "Virgo"
+    },
+    {
       "id": "moon-sign-Gemini-2026-07-10T22:41:36Z",
       "kind": "moon-sign",
       "subject": "Gemini",
@@ -146,6 +236,15 @@
       "startsAt": "2026-07-21T13:34:33Z",
       "endsAt": "2026-07-24T01:06:59Z",
       "fact": "The Moon is in tropical Scorpio (geocentric zodiac)."
+    },
+    {
+      "id": "planet-sign-Sun-2026-07-22T19:13:05Z",
+      "kind": "planet-sign",
+      "subject": "Sun",
+      "startsAt": "2026-07-22T19:13:05Z",
+      "endsAt": "2026-08-01T00:00:00Z",
+      "fact": "Sun has been in tropical Leo since 2026-07-22 (geocentric zodiac).",
+      "sign": "Leo"
     },
     {
       "id": "moon-sign-Sagittarius-2026-07-24T01:06:59Z",

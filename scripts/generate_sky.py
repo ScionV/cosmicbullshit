@@ -4,7 +4,6 @@ SPDX-License-Identifier: AGPL-3.0-only
 No network calls or external ephemeris files are needed at calculation time.
 """
 import argparse
-import calendar
 import json
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -15,6 +14,7 @@ FLAGS = swe.FLG_MOSEPH | swe.FLG_SPEED
 BODIES = {"Mercury": swe.MERCURY, "Venus": swe.VENUS, "Mars": swe.MARS,
           "Jupiter": swe.JUPITER, "Saturn": swe.SATURN, "Uranus": swe.URANUS,
           "Neptune": swe.NEPTUNE, "Pluto": swe.PLUTO}
+SIGN_BODIES = {"Sun": swe.SUN, **BODIES}
 SIGNS = ["Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra",
          "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces"]
 ROOT = Path(__file__).resolve().parents[1]
@@ -73,6 +73,32 @@ def event(kind, subject, start, end, fact):
             "subject": subject, "startsAt": iso(start), "endsAt": iso(end), "fact": fact}
 
 
+def sign_ingress(start, body, sign):
+    """Find the latest entry, including a return across a retrograde cusp."""
+    sign_at = lambda d: int(position(d, body)[0] // 30)
+    # crossing() rounds to seconds; probe just inside the new interval.
+    hi = start + timedelta(seconds=1)
+    limit = hi - timedelta(days=36525)
+    while hi > limit:
+        batch_start = max(hi - timedelta(days=5), limit)
+        # Inspect each five-day batch at the interval sampler's resolution:
+        # a short retrograde excursion can leave and return within five days.
+        while hi > batch_start:
+            lo = max(hi - timedelta(hours=3), batch_start)
+            previous = sign_at(lo)
+            if previous != sign:
+                return crossing(lo, hi, sign_at, previous)
+            hi = lo
+    raise RuntimeError(f"No sign ingress found within 100 years for body {body}")
+
+
+def planet_sign_event(name, body, sign, start, end):
+    ingress = sign_ingress(start, body, sign)
+    return {**event("planet-sign", name, start, end,
+                   f"{name} has been in tropical {SIGNS[sign]} since {ingress:%Y-%m-%d} (geocentric zodiac)."),
+            "sign": SIGNS[sign]}
+
+
 def generate_month(start):
     end = month_after(start)
     events = []
@@ -81,6 +107,10 @@ def generate_month(start):
             lambda d, body=body: position(d, body)[3] < 0,
             lambda retro, a, b, name=name: event("retrograde", name, a, b,
                 f"{name} is in apparent retrograde motion as seen from Earth.") if retro else None))
+    for name, body in SIGN_BODIES.items():
+        events.extend(intervals(start, end,
+            lambda d, body=body: int(position(d, body)[0] // 30),
+            lambda sign, a, b, name=name, body=body: planet_sign_event(name, body, sign, a, b)))
     events.extend(intervals(start, end, lambda d: int(position(d, swe.MOON)[0] // 30),
         lambda sign, a, b: event("moon-sign", SIGNS[sign], a, b,
             f"The Moon is in tropical {SIGNS[sign]} (geocentric zodiac)."), timedelta(hours=1)))
@@ -117,7 +147,8 @@ def main():
     for index in range(args.months):
         date = month_after(start, index)
         data = generate_month(date)
-        (args.out / f"{date:%Y-%m}.json").write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
+        (args.out / f"{date:%Y-%m}.json").write_text(
+            json.dumps(data, indent=2) + "\n", encoding="utf-8", newline="\n")
     print(f"Generated {args.months} months from {start:%Y-%m} in {args.out}")
 
 

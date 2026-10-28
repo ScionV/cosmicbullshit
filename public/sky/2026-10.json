@@ -20,6 +20,87 @@
       "fact": "The Moon is in tropical Gemini (geocentric zodiac)."
     },
     {
+      "id": "planet-sign-Jupiter-2026-10-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Jupiter",
+      "startsAt": "2026-10-01T00:00:00Z",
+      "endsAt": "2026-11-01T00:00:00Z",
+      "fact": "Jupiter has been in tropical Leo since 2026-06-30 (geocentric zodiac).",
+      "sign": "Leo"
+    },
+    {
+      "id": "planet-sign-Mars-2026-10-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Mars",
+      "startsAt": "2026-10-01T00:00:00Z",
+      "endsAt": "2026-11-01T00:00:00Z",
+      "fact": "Mars has been in tropical Leo since 2026-09-28 (geocentric zodiac).",
+      "sign": "Leo"
+    },
+    {
+      "id": "planet-sign-Mercury-2026-10-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Mercury",
+      "startsAt": "2026-10-01T00:00:00Z",
+      "endsAt": "2026-11-01T00:00:00Z",
+      "fact": "Mercury has been in tropical Scorpio since 2026-09-30 (geocentric zodiac).",
+      "sign": "Scorpio"
+    },
+    {
+      "id": "planet-sign-Neptune-2026-10-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Neptune",
+      "startsAt": "2026-10-01T00:00:00Z",
+      "endsAt": "2026-11-01T00:00:00Z",
+      "fact": "Neptune has been in tropical Aries since 2026-01-26 (geocentric zodiac).",
+      "sign": "Aries"
+    },
+    {
+      "id": "planet-sign-Pluto-2026-10-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Pluto",
+      "startsAt": "2026-10-01T00:00:00Z",
+      "endsAt": "2026-11-01T00:00:00Z",
+      "fact": "Pluto has been in tropical Aquarius since 2024-11-19 (geocentric zodiac).",
+      "sign": "Aquarius"
+    },
+    {
+      "id": "planet-sign-Saturn-2026-10-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Saturn",
+      "startsAt": "2026-10-01T00:00:00Z",
+      "endsAt": "2026-11-01T00:00:00Z",
+      "fact": "Saturn has been in tropical Aries since 2026-02-14 (geocentric zodiac).",
+      "sign": "Aries"
+    },
+    {
+      "id": "planet-sign-Sun-2026-10-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Sun",
+      "startsAt": "2026-10-01T00:00:00Z",
+      "endsAt": "2026-10-23T09:37:56Z",
+      "fact": "Sun has been in tropical Libra since 2026-09-23 (geocentric zodiac).",
+      "sign": "Libra"
+    },
+    {
+      "id": "planet-sign-Uranus-2026-10-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Uranus",
+      "startsAt": "2026-10-01T00:00:00Z",
+      "endsAt": "2026-11-01T00:00:00Z",
+      "fact": "Uranus has been in tropical Gemini since 2026-04-26 (geocentric zodiac).",
+      "sign": "Gemini"
+    },
+    {
+      "id": "planet-sign-Venus-2026-10-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Venus",
+      "startsAt": "2026-10-01T00:00:00Z",
+      "endsAt": "2026-10-25T09:09:47Z",
+      "fact": "Venus has been in tropical Scorpio since 2026-09-10 (geocentric zodiac).",
+      "sign": "Scorpio"
+    },
+    {
       "id": "retrograde-Neptune-2026-10-01T00:00:00Z",
       "kind": "retrograde",
       "subject": "Neptune",
@@ -156,6 +237,15 @@
       "fact": "The Moon is in tropical Pisces (geocentric zodiac)."
     },
     {
+      "id": "planet-sign-Sun-2026-10-23T09:37:56Z",
+      "kind": "planet-sign",
+      "subject": "Sun",
+      "startsAt": "2026-10-23T09:37:56Z",
+      "endsAt": "2026-11-01T00:00:00Z",
+      "fact": "Sun has been in tropical Scorpio since 2026-10-23 (geocentric zodiac).",
+      "sign": "Scorpio"
+    },
+    {
       "id": "moon-sign-Aries-2026-10-23T19:53:32Z",
       "kind": "moon-sign",
       "subject": "Aries",
@@ -170,6 +260,15 @@
       "startsAt": "2026-10-24T07:12:48Z",
       "endsAt": "2026-11-01T00:00:00Z",
       "fact": "Mercury is in apparent retrograde motion as seen from Earth."
+    },
+    {
+      "id": "planet-sign-Venus-2026-10-25T09:09:47Z",
+      "kind": "planet-sign",
+      "subject": "Venus",
+      "startsAt": "2026-10-25T09:09:47Z",
+      "endsAt": "2026-11-01T00:00:00Z",
+      "fact": "Venus has been in tropical Libra since 2026-10-25 (geocentric zodiac).",
+      "sign": "Libra"
     },
     {
       "id": "moon-phase-full Moon-2026-10-25T11:55:45Z",
