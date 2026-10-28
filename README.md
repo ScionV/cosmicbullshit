@@ -55,6 +55,25 @@ with the regenerated calendar: older clients reject the unfamiliar event kind
 and safely use invented readings. The updated client also accepts older month
 files without planet placements.
 
+## Daily generated readings
+
+The daily reading desk combines a factual sky planner with three focused
+writers: tech snark, woo-woo snark, and dry zen. Each event gets two lines in
+each voice. Daily catalogs include actual conjunction windows within three
+degrees of tropical longitude, alongside the existing placements, retrogrades,
+and lunar events. The model writes jokes; Moshier calculates the facts.
+
+The browser reads `public/readings/YYYY-MM-DD.json` for the New York calendar
+day. Complete valid catalogs supply the real-reading copy; absent, expired,
+or malformed catalogs fall back to the existing monthly reading pool. No
+visitor makes a live AI request. The 50/50 real/invented split remains intact.
+
+See [the daily desk workflow](docs/daily-readings.md) for planner assignments,
+generation and validation commands, editorial rules, and the authorized daily
+publication procedure. A scheduled local chat runs the writing team through
+the owner's plan and pushes checked daily catalogs directly to GitHub. The
+computer must be on and Codex running for the scheduled local work to execute.
+
 ## Cloudflare
 
 Connect `ScionV/cosmicbullshit` using Cloudflare Pages Git integration.

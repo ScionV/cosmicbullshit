@@ -50,6 +50,41 @@ agree. Fact dates use UTC rather than the visitor's local calendar date.
 This expansion validates reading logic and data; the prior visual-review
 record below remains separate.
 
+## Daily reading desk — 28 October 2026
+
+- A factual planner generated 16 assignments for the New York calendar day:
+  nine planet placements, five retrogrades, one Moon sign, and one actual
+  Uranus–Moon conjunction within the declared three-degree longitude window.
+- Three focused writers produced two tech, two woo, and two zen lines for
+  each assignment. The edited first batch contains 96 unique lines, each at
+  most 80 Unicode characters, published in `public/readings/2026-10-28.json`.
+- The publication validator recomputed every sky fact and interval, checked
+  all event/tone groups, canonical IDs, copy length, and normalized duplicates.
+  Its 30-day history check is covered by a regression test.
+- Twenty-two Python tests passed, including actual conjunction positions,
+  longitude wraparound, New York DST day lengths, month-boundary coverage,
+  incomplete or altered drafts, atomic publication, and factual cache isolation.
+- Thirty-two TypeScript tests passed, including the shipped catalog, exact
+  event eligibility, daily fallback behavior, five-kind selection balance,
+  independent UTC-month/New York-day caches, and late-response midnight races.
+- Astro/TypeScript check: zero errors, warnings, or hints. Production build
+  passed with Node 24. TypeScript tests used Node's native runner as noted in
+  the earlier validation record.
+- A browser check on the production build issued a new daily tech reading
+  for Mercury in Scorpio, displayed its existing factual source and validity,
+  and fit the copy inside the slip.
+- Independent code review found a mutable cache alias in the Python planner;
+  cached source/event records are now copied before exposure. A direct-mutation
+  regression proves changed planning facts cannot poison the validation source.
+
+The daily writer runs in a scheduled local chat, outside the website. The
+browser serves static catalogs and retains the monthly/invented fallback if a
+daily run is missed. GitHub validation checks reading uploads using the same
+site and calculation tests. Local scheduling requires an awake computer and
+the Codex app running; a push still depends on the hosting deployment to reach
+visitors. Publication and editorial instructions are in
+[the daily desk workflow](docs/daily-readings.md).
+
 ## Open visual-validation record
 
 Independent review disposition remains **fix**, not a whole-surface ship

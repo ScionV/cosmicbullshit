@@ -1,8 +1,10 @@
 export interface SkyEvent {
   id: string;
-  kind: 'retrograde' | 'moon-sign' | 'moon-phase' | 'planet-sign';
+  kind: 'retrograde' | 'moon-sign' | 'moon-phase' | 'planet-sign' | 'conjunction';
   subject: string;
   sign?: string;
+  bodies?: [string, string];
+  orbDegrees?: number;
   startsAt: string;
   endsAt: string;
   fact: string;
@@ -14,6 +16,20 @@ export interface SkyMonth {
   validUntil: string;
   source: { name: string; version: string; url: string; ephemeris: string; coordinates: string; timeScale: string };
   events: SkyEvent[];
+}
+
+export type ReadingTone = 'tech' | 'woo' | 'zen';
+
+export interface DailyReading {
+  id: string;
+  eventId: string;
+  tone: ReadingTone;
+  text: string;
+}
+
+export interface DailyReadings extends SkyMonth {
+  date: string;
+  readings: DailyReading[];
 }
 
 export interface Fortune {
@@ -83,6 +99,10 @@ export const nonsense = [
 ] as const;
 
 export const realJokes: Record<Exclude<SkyEvent['kind'], 'planet-sign'>, readonly string[]> = {
+  conjunction: [
+    'Two celestial departments have merged. Your paperwork has doubled.',
+    'The planets held a meeting. You have been assigned the action items.',
+  ],
   retrograde: [
     'An excellent time to revisit old mistakes. Apparently they have missed you.',
     'Even a planet has a “circle back” moment. Your inbox never stood a chance.',
@@ -200,6 +220,20 @@ export const planetSignFallback: readonly string[] = [
 
 const SIGNS = ['Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 'Libra',
   'Scorpio', 'Sagittarius', 'Capricorn', 'Aquarius', 'Pisces'];
+const BODIES = ['Sun', 'Moon', 'Mercury', 'Venus', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune', 'Pluto'];
+const TONES: readonly ReadingTone[] = ['tech', 'woo', 'zen'];
+const dayFormatter = new Intl.DateTimeFormat('en-CA', {
+  timeZone: 'America/New_York', year: 'numeric', month: '2-digit', day: '2-digit',
+});
+const midnightFormatter = new Intl.DateTimeFormat('en-US', {
+  timeZone: 'America/New_York', hour: '2-digit', minute: '2-digit', second: '2-digit', hourCycle: 'h23',
+});
+
+function isUtcTimestamp(value: unknown): value is string {
+  return typeof value === 'string' && /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$/.test(value)
+    && Number.isFinite(Date.parse(value))
+    && new Date(value).toISOString().replace('.000Z', 'Z') === value;
+}
 
 function randomIndex(size: number, random: () => number) {
   return Math.min(size - 1, Math.max(0, Math.floor(random() * size)));
@@ -215,12 +249,124 @@ export function parseSkyMonth(value: unknown): SkyMonth | null {
       || typeof data.source.ephemeris !== 'string') return null;
   for (const event of data.events) {
     if (!event || typeof event.id !== 'string' || typeof event.subject !== 'string' || typeof event.fact !== 'string'
-        || !['retrograde', 'moon-sign', 'moon-phase', 'planet-sign'].includes(event.kind)
+        || !['retrograde', 'moon-sign', 'moon-phase', 'planet-sign', 'conjunction'].includes(event.kind)
         || (event.kind === 'planet-sign' && (typeof event.sign !== 'string' || !SIGNS.includes(event.sign)))
+        || (event.kind === 'conjunction' && (!Array.isArray(event.bodies) || event.bodies.length !== 2
+          || event.bodies[0] === event.bodies[1] || !event.bodies.every(body => BODIES.includes(body))
+          || event.subject !== `${event.bodies[0]} conjunct ${event.bodies[1]}` || event.orbDegrees !== 3))
         || !Number.isFinite(Date.parse(event.startsAt)) || !Number.isFinite(Date.parse(event.endsAt))
         || Date.parse(event.startsAt) >= Date.parse(event.endsAt)) return null;
   }
   return data as SkyMonth;
+}
+
+/** The publishing day follows New York; astronomical windows remain UTC. */
+export function dailyKey(now: Date): string {
+  const parts = dayFormatter.formatToParts(now);
+  return ['year', 'month', 'day'].map(type => parts.find(part => part.type === type)!.value).join('-');
+}
+
+function normalizedCopy(text: string): string {
+  return text.normalize('NFKC').toLocaleLowerCase('en-US').replace(/[^\p{L}\p{N}]+/gu, '');
+}
+
+export function parseDailyReadings(value: unknown): DailyReadings | null {
+  const calendar = parseSkyMonth(value);
+  if (!calendar || !value || typeof value !== 'object') return null;
+  const data = value as Partial<DailyReadings>;
+  if (typeof data.date !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(data.date)
+      || !isUtcTimestamp(data.validFrom) || !isUtcTimestamp(data.validUntil)
+      || !Array.isArray(data.readings) || !calendar.events.length) return null;
+  const date = new Date(`${data.date}T00:00:00Z`);
+  if (!Number.isFinite(date.getTime()) || date.toISOString().slice(0, 10) !== data.date) return null;
+  const followingDate = new Date(date.getTime() + 86400000).toISOString().slice(0, 10);
+  const start = new Date(data.validFrom);
+  const end = new Date(data.validUntil);
+  if (dailyKey(start) !== data.date || dailyKey(end) !== followingDate
+      || midnightFormatter.format(start) !== '00:00:00' || midnightFormatter.format(end) !== '00:00:00'
+      || ![23, 24, 25].includes((end.getTime() - start.getTime()) / 3600000)) return null;
+  if (!['name', 'version', 'url', 'ephemeris', 'coordinates', 'timeScale'].every(key =>
+    typeof calendar.source[key as keyof SkyMonth['source']] === 'string'
+      && calendar.source[key as keyof SkyMonth['source']].trim().length > 0)) return null;
+  const events = new Map<string, SkyEvent>();
+  for (const event of calendar.events) {
+    if (!event.id.trim() || events.has(event.id) || !event.subject.trim() || !event.fact.trim()
+        || !isUtcTimestamp(event.startsAt) || !isUtcTimestamp(event.endsAt)
+        || Date.parse(event.startsAt) >= end.getTime() || Date.parse(event.endsAt) <= start.getTime()) return null;
+    events.set(event.id, event);
+  }
+  const ids = new Set<string>();
+  const texts = new Set<string>();
+  const counts = new Map<string, number>();
+  for (const reading of data.readings) {
+    if (!reading || typeof reading.id !== 'string' || !reading.id.trim() || ids.has(reading.id)
+        || typeof reading.eventId !== 'string' || !events.has(reading.eventId)
+        || !TONES.includes(reading.tone) || typeof reading.text !== 'string'
+        || reading.text !== reading.text.trim() || !reading.text.trim()
+        || Array.from(reading.text).length > 80 || /[\r\n\u0000-\u001f]/u.test(reading.text)) return null;
+    const text = normalizedCopy(reading.text);
+    if (!text || texts.has(text)) return null;
+    ids.add(reading.id);
+    texts.add(text);
+    const key = `${reading.eventId}\0${reading.tone}`;
+    counts.set(key, (counts.get(key) ?? 0) + 1);
+  }
+  for (const event of events.values()) {
+    for (const tone of TONES) if (counts.get(`${event.id}\0${tone}`) !== 2) return null;
+  }
+  return data as DailyReadings;
+}
+
+/** Cache absent batches briefly so a later daily deployment can still be picked up. */
+export function createCalendarLoader(fetcher: typeof fetch = fetch) {
+  const retryAfter = 5 * 60 * 1000;
+  async function getJson(path: string) {
+    try {
+      const response = await fetcher(path, { signal: AbortSignal.timeout(2500) });
+      return response.ok ? await response.json() : null;
+    } catch { return null; }
+  }
+  function resource<T>(folder: string, parse: (value: unknown) => T | null,
+    keyOf: (value: T) => string, refreshSuccessful = false) {
+    let key = '';
+    let value: T | null = null;
+    let attemptedAt = -Infinity;
+    let pending: Promise<void> | undefined;
+    return {
+      current: () => value,
+      async load(nextKey: string, time: number) {
+        if (key !== nextKey) {
+          key = nextKey;
+          value = null;
+          attemptedAt = -Infinity;
+          pending = undefined;
+        }
+        if (pending) return pending;
+        if ((value && !refreshSuccessful) || time - attemptedAt < retryAfter) return;
+        attemptedAt = time;
+        let request!: Promise<void>;
+        request = (async () => {
+          const parsed = parse(await getJson(`/${folder}/${nextKey}.json`));
+          // Earlier downloads may finish after the visitor crossed midnight.
+          if (key === nextKey && pending === request) {
+            value = parsed && keyOf(parsed) === nextKey ? parsed : null;
+            pending = undefined;
+          }
+        })();
+        pending = request;
+        return request;
+      },
+    };
+  }
+  const months = resource('sky', parseSkyMonth, month => monthKey(new Date(month.validFrom)));
+  // Refresh even successful daily files to pick up an editorial correction.
+  const days = resource('readings', parseDailyReadings, daily => daily.date, true);
+  return async (now = new Date()) => {
+    const time = now.getTime();
+    await Promise.all([months.load(monthKey(now), time), days.load(dailyKey(now), time)]);
+    // Always return the newest cached state, including to an older caller.
+    return { month: months.current(), daily: days.current() };
+  };
 }
 
 export function activeEvents(month: SkyMonth | null, now: Date): SkyEvent[] {
@@ -230,19 +376,26 @@ export function activeEvents(month: SkyMonth | null, now: Date): SkyEvent[] {
 }
 
 export function chooseFortune(month: SkyMonth | null, now = new Date(), previousId?: string,
-  random: () => number = Math.random): Fortune {
+  random: () => number = Math.random, daily?: DailyReadings | null): Fortune {
   const invented: Fortune[] = nonsense.map(([id, text]) => ({ id, kind: 'invented', title: 'Invented nonsense', text }));
   const real = new Map<SkyEvent['kind'], Fortune[][]>();
-  for (const event of activeEvents(month, now)) {
+  const dailyEvents = daily && Number.isFinite(now.getTime()) && daily.date === dailyKey(now)
+    ? activeEvents(daily, now) : [];
+  const useDaily = dailyEvents.length > 0;
+  const calendar = useDaily ? daily! : month;
+  for (const event of useDaily ? dailyEvents : activeEvents(month, now)) {
     const jokes = event.kind === 'planet-sign'
       ? (Object.hasOwn(planetSignJokes, event.subject) ? planetSignJokes[event.subject] : planetSignFallback)
       : realJokes[event.kind];
-    const fortunes: Fortune[] = jokes.map((text, index) => ({
-      id: `${event.id}-${index}`, kind: 'real' as const,
+    const copies = useDaily ? daily!.readings.filter(reading => reading.eventId === event.id)
+      : jokes.map((text, index) => ({ id: `${event.id}-${index}`, text }));
+    const fortunes: Fortune[] = copies.map(({ id, text }) => ({
+      id, kind: 'real' as const,
       title: event.kind === 'retrograde' ? `${event.subject} is retrograde`
         : event.kind === 'moon-sign' ? `Moon in ${event.subject}`
-        : event.kind === 'planet-sign' ? `${event.subject} in ${event.sign}` : `Near the ${event.subject}`,
-      text, fact: event.fact, source: month!.source, startsAt: event.startsAt, endsAt: event.endsAt,
+        : event.kind === 'planet-sign' ? `${event.subject} in ${event.sign}`
+        : event.kind === 'conjunction' ? event.subject : `Near the ${event.subject}`,
+      text, fact: event.fact, source: calendar!.source, startsAt: event.startsAt, endsAt: event.endsAt,
     })).filter(item => item.id !== previousId);
     if (!fortunes.length) continue;
     const events = real.get(event.kind) ?? [];

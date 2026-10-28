@@ -1,4 +1,4 @@
-import { chooseFortune, monthKey, parseSkyMonth, type Fortune, type SkyMonth } from '../lib/fortunes';
+import { chooseFortune, createCalendarLoader, type DailyReadings, type Fortune, type SkyMonth } from '../lib/fortunes';
 
 const IDLES = [
   'idle', 'idle-sleeve', 'idle-sleepy', 'idle-tie', 'idle-yawn',
@@ -40,8 +40,8 @@ export function initFortuneMachine() {
   let buttonVisible = true;
   let cancelClip: (() => void) | undefined;
   let calendar: SkyMonth | null = null;
-  let calendarKey = '';
-  let calendarPromise: Promise<void> | undefined;
+  let daily: DailyReadings | null = null;
+  const loadSky = createCalendarLoader();
 
   function canAnimate() { return !paused && !reducedMotion.matches && !document.hidden; }
 
@@ -74,19 +74,9 @@ export function initFortuneMachine() {
   }
 
   async function loadCalendar() {
-    const key = monthKey(new Date());
-    if (key === calendarKey && calendar) return;
-    if (calendarPromise) return calendarPromise;
-    calendar = null;
-    calendarKey = key;
-    calendarPromise = (async () => {
-      try {
-        const response = await fetch(`/sky/${key}.json`, { signal: AbortSignal.timeout(2500) });
-        if (response.ok) calendar = parseSkyMonth(await response.json());
-      } catch { calendar = null; }
-      finally { calendarPromise = undefined; }
-    })();
-    return calendarPromise;
+    const loaded = await loadSky();
+    calendar = loaded.month;
+    daily = loaded.daily;
   }
 
   function stopIdleTimer() { clearTimeout(idleTimer); }
@@ -197,7 +187,9 @@ export function initFortuneMachine() {
       status.textContent = 'Your excuse has been reluctantly approved.';
       lastDispensing = pick(DISPENSINGS, lastDispensing);
       await playClip(lastDispensing);
-      showFortune(chooseFortune(calendar, new Date(), previousId));
+      // A reading/dispensing animation can cross either calendar boundary.
+      await loadCalendar();
+      showFortune(chooseFortune(calendar, new Date(), previousId, Math.random, daily));
     } finally {
       busy = false;
       action.disabled = false;
