@@ -32,6 +32,35 @@ test('every published daily batch validates against its calendar date', () => {
   }
 });
 
+test('daily explanations are optional for legacy files and complete when supplied', () => {
+  assert.ok(parseDailyReadings(batch()));
+  const data = batch();
+  data.explanations = data.events.map(event => ({ eventId: event.id,
+    text: `In astrology, ${event.subject} is interpreted through traditional planetary symbolism. This describes a customary reading rather than a prediction about anyone's day.` }));
+  assert.ok(parseDailyReadings(data));
+  const selected = chooseFortune(month, now, undefined, () => 0, data);
+  assert.equal(selected.interpretation, data.explanations[0].text);
+  assert.equal(selected.fact, data.events[0].fact);
+  const invented = chooseFortune(month, now, undefined, () => 0.99, data);
+  assert.equal(invented.interpretation, undefined);
+  const expired = chooseFortune(month, new Date(data.validUntil), undefined, () => 0, data);
+  assert.equal(expired.interpretation, undefined);
+});
+
+test('malformed explanation groups reject the daily catalog instead of displaying mismatched prose', () => {
+  const data = batch();
+  const explanations = data.events.map(event => ({ eventId: event.id,
+    text: `In astrology, ${event.subject} has traditional symbolic associations. The interpretation is cultural context rather than a calculated fact or personal prediction.` }));
+  for (const invalid of [null, {}, [], explanations.slice(1), [...explanations, explanations[0]],
+    explanations.map((item, i) => i === 0 ? { ...item, eventId: 'unknown' } : item),
+    explanations.map((item, i) => i === 0 ? { ...item, text: 'too short' } : item),
+    explanations.map((item, i) => i === 0 ? { ...item, text: 'x'.repeat(651) } : item),
+    explanations.map((item, i) => i === 0 ? { ...item, text: item.text + '\n' } : item),
+    explanations.map((item, i) => i === 1 ? { ...item, text: explanations[0].text } : item)]) {
+    assert.equal(parseDailyReadings({ ...data, explanations: invalid }), null);
+  }
+});
+
 test('daily dates follow New York at UTC month boundaries and daylight transitions', () => {
   assert.equal(dailyKey(new Date('2026-11-01T03:59:59Z')), '2026-10-31');
   assert.equal(dailyKey(new Date('2026-11-01T04:00:00Z')), '2026-11-01');

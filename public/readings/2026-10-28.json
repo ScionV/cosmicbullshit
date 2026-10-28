@@ -732,5 +732,71 @@
       "tone": "zen",
       "text": "The surprise can be real without a complete personality renovation."
     }
+  ],
+  "explanations": [
+    {
+      "eventId": "planet-sign-Jupiter-2026-10-01T00:00:00Z",
+      "text": "In astrology, Jupiter represents growth, confidence, and the search for meaning. Leo gives those themes a creative, expressive style, so this placement is associated with generosity, performance, and the wish to be recognized. The balancing act is encouraging worthwhile ambitions without treating enthusiasm as proof that every grand plan will work."
+    },
+    {
+      "eventId": "planet-sign-Mars-2026-10-01T00:00:00Z",
+      "text": "In astrology, Mars represents initiative, desire, and the way a struggle is approached. Leo adds pride, creativity, and a wish to make an impression, making this combination a symbol of expressive action and visible leadership. Its familiar tension is between genuine courage and spending more effort defending an image than pursuing the actual goal."
+    },
+    {
+      "eventId": "planet-sign-Mercury-2026-10-01T00:00:00Z",
+      "text": "In astrology, Mercury describes thinking, communication, and how information is handled. In Scorpio, its symbolism becomes investigative, private, and interested in motives beneath the surface. This combination is often read as an appetite for difficult truths, with the caution that careful inquiry can become suspicion or an unwillingness to let a subject rest."
+    },
+    {
+      "eventId": "planet-sign-Neptune-2026-10-01T00:00:00Z",
+      "text": "In modern Western astrology, Neptune symbolizes ideals, imagination, and blurred boundaries; Aries brings initiative, independence, and confrontation. The combination is read as a search for causes worth acting on, alongside the risk of mistaking an inspiring vision for certainty. Because Neptune moves slowly, astrologers usually discuss this as a collective background theme."
+    },
+    {
+      "eventId": "planet-sign-Pluto-2026-10-01T00:00:00Z",
+      "text": "In modern Western astrology, Pluto represents deep transformation and questions about power, while Aquarius emphasizes groups, systems, and ideas about the future. Together they form a symbolic picture of changes in collective structures, technology, and who gets a voice. This is a long-term interpretive backdrop, rather than a personalized forecast of what must happen next."
+    },
+    {
+      "eventId": "planet-sign-Saturn-2026-10-01T00:00:00Z",
+      "text": "In traditional Western astrology, Saturn represents limits, responsibility, and patient construction, while Aries favors speed and independent action. Saturn is described as being in its fall here: an awkward fit between restraint and the urge to begin. The interpretation centers on turning initiative into sustainable effort, with consequences still included in the paperwork."
+    },
+    {
+      "eventId": "planet-sign-Uranus-2026-10-01T00:00:00Z",
+      "text": "In modern Western astrology, Uranus represents disruption, experimentation, and freedom from established patterns. Gemini directs those themes toward information, language, learning, and connections between people. Astrologers read this combination as a symbol of inventive ideas and changing communication habits, with a tension between useful discovery and constant novelty that never settles into practice."
+    },
+    {
+      "eventId": "retrograde-Neptune-2026-10-01T00:00:00Z",
+      "text": "In modern astrology, Neptune is associated with imagination, faith, ideals, and uncertainty. Its apparent backward motion is interpreted as a period for reconsidering what has been idealized, distinguishing inspiration from wishful thinking, and revisiting assumptions about meaning. This is a symbolic review of Neptune themes, not evidence that the planet creates confusion or disappointment."
+    },
+    {
+      "eventId": "retrograde-Saturn-2026-10-01T00:00:00Z",
+      "text": "In astrology, Saturn represents responsibilities, boundaries, authority, and long-term commitments. Astrologers commonly interpret its retrograde periods as a time to reassess how those structures are working, consolidate unfinished efforts, and question rules that have become automatic. The emphasis is on review and accountability, rather than a promise of punishment or an instruction to stop everything."
+    },
+    {
+      "eventId": "retrograde-Uranus-2026-10-01T00:00:00Z",
+      "text": "In modern astrology, Uranus symbolizes innovation, independence, and challenges to the status quo. Retrograde motion adds a reflective emphasis: changes already underway can be reconsidered, and the desire for freedom can be examined more carefully. The question becomes which disruptions create useful room to grow and which merely replace one unsettled pattern with another."
+    },
+    {
+      "eventId": "retrograde-Venus-2026-10-03T07:15:50Z",
+      "text": "In astrology, Venus represents relationships, pleasure, beauty, and what is valued. Its retrograde cycle is commonly read as a period of reassessment, when familiar preferences and ways of relating are reconsidered rather than simply repeated. Old themes may provide material for reflection; the symbolism does not guarantee an old romance will return or dictate a relationship decision."
+    },
+    {
+      "eventId": "planet-sign-Sun-2026-10-23T09:37:56Z",
+      "text": "In astrology, the Sun represents vitality, identity, and the direction of conscious attention. Scorpio gives those themes an intense, private, and probing quality, associated with examining motives, difficult feelings, and what lies beneath appearances. The constructive side is sustained honesty and focus; the familiar complication is treating every unanswered question as something that must be controlled."
+    },
+    {
+      "eventId": "retrograde-Mercury-2026-10-24T07:12:48Z",
+      "text": "In astrology, Mercury represents communication, learning, reasoning, and everyday exchanges. Its apparent backward motion is commonly interpreted as a review phase, emphasizing revisions, unfinished conversations, and a second look at information. That is the source of the familiar proofreading and crossed-message symbolism; it is an astrological convention, not proof that Mercury causes technical failures."
+    },
+    {
+      "eventId": "planet-sign-Venus-2026-10-25T09:09:47Z",
+      "text": "In traditional astrology, Venus rules Libra, so this placement is described as being at home, or in domicile. Venusian themes of connection, pleasure, and beauty are expressed through balance, diplomacy, and attention to another point of view. Its symbolic challenge is seeking harmony without surrendering a clear preference or avoiding every necessary disagreement."
+    },
+    {
+      "eventId": "moon-sign-Gemini-2026-10-28T01:01:52Z",
+      "text": "In astrology, the Moon represents feelings, familiar rhythms, and the need for comfort. Gemini brings curiosity, variety, and communication, so this pairing is associated with processing feelings through words, questions, and changing perspectives. As a passing transit, it is a shared symbolic theme, not a description of everyone’s personality or a requirement to feel a particular way."
+    },
+    {
+      "eventId": "conjunction-Uranus-Moon-2026-10-28T04:00:00Z",
+      "text": "In modern astrology, a conjunction combines the symbolism of the bodies involved. Here, the Moon’s associations with moods and familiar routines meet Uranus’s themes of surprise, freedom, and disruption, making the pairing a symbol of emotional novelty or a break from habit. It is a brief interpretive theme within the recorded window, not a prediction of a sudden personal event."
+    }
   ]
 }

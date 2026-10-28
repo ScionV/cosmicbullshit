@@ -146,6 +146,8 @@ export function initFortuneMachine() {
     joke.textContent = fortune.kind === 'real' ? fortune.text : '';
     fortuneElement.classList.toggle('has-real', fortune.kind === 'real');
     details.hidden = fortune.kind !== 'real';
+    document.querySelector<HTMLElement>('[data-astrology]')!.hidden = !fortune.interpretation;
+    document.querySelector<HTMLElement>('[data-interpretation]')!.textContent = fortune.interpretation ?? '';
     document.querySelector<HTMLDetailsElement>('[data-source-details]')!.open = false;
     if (fortune.kind === 'real') {
       document.querySelector<HTMLElement>('[data-fact]')!.textContent = fortune.fact!;

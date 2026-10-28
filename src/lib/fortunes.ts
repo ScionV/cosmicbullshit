@@ -30,6 +30,7 @@ export interface DailyReading {
 export interface DailyReadings extends SkyMonth {
   date: string;
   readings: DailyReading[];
+  explanations?: { eventId: string; text: string }[];
 }
 
 export interface Fortune {
@@ -38,6 +39,7 @@ export interface Fortune {
   title: string;
   text: string;
   fact?: string;
+  interpretation?: string;
   source?: SkyMonth['source'];
   startsAt?: string;
   endsAt?: string;
@@ -314,6 +316,22 @@ export function parseDailyReadings(value: unknown): DailyReadings | null {
   for (const event of events.values()) {
     for (const tone of TONES) if (counts.get(`${event.id}\0${tone}`) !== 2) return null;
   }
+  if (Object.hasOwn(data, 'explanations')) {
+    if (!Array.isArray(data.explanations) || data.explanations.length !== events.size) return null;
+    const explained = new Set<string>();
+    const prose = new Set<string>();
+    for (const explanation of data.explanations) {
+      if (!explanation || typeof explanation.eventId !== 'string' || !events.has(explanation.eventId)
+          || explained.has(explanation.eventId) || typeof explanation.text !== 'string'
+          || explanation.text !== explanation.text.trim()
+          || Array.from(explanation.text).length < 80 || Array.from(explanation.text).length > 650
+          || /[\u0000-\u001f\u007f-\u009f\u2028\u2029]/u.test(explanation.text)) return null;
+      const text = normalizedCopy(explanation.text);
+      if (!text || prose.has(text)) return null;
+      explained.add(explanation.eventId);
+      prose.add(text);
+    }
+  }
   return data as DailyReadings;
 }
 
@@ -396,6 +414,7 @@ export function chooseFortune(month: SkyMonth | null, now = new Date(), previous
         : event.kind === 'planet-sign' ? `${event.subject} in ${event.sign}`
         : event.kind === 'conjunction' ? event.subject : `Near the ${event.subject}`,
       text, fact: event.fact, source: calendar!.source, startsAt: event.startsAt, endsAt: event.endsAt,
+      interpretation: useDaily ? daily!.explanations?.find(item => item.eventId === event.id)?.text : undefined,
     })).filter(item => item.id !== previousId);
     if (!fortunes.length) continue;
     const events = real.get(event.kind) ?? [];

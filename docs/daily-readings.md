@@ -58,7 +58,9 @@ the whole sky.
 
 The scheduled parent agent is the planner and final editor. It must explicitly
 delegate the writing to three subagents, one per voice, with narrow factual
-records for each assignment. More writers can be used in sequential batches
+records for each assignment. A separate astrology explainer writes the short
+interpretation for each event. Run it after a writing slot becomes available
+to stay within the host's concurrency limit. More writers can be used in sequential batches
 when needed, keeping concurrency within the host's available slots. Use the
 chat's configured model unless the owner requests a specific model.
 
@@ -80,7 +82,18 @@ chat's configured model unless the owner requests a specific model.
    factual claims, and personal diagnoses or predictions. Prefer specific
    punchlines over variations of “fill out a form.” Ask the assigned writer
    for replacements when needed.
-6. Publish only after the deterministic validator accepts the complete batch.
+6. Ask the explainer for one 80–650-character paragraph per event, saved as an
+   array of `{eventId, text}` in `test-results/daily/explanations.json`. Use clear,
+   beginner-friendly astrology with a light cosmic-clerk voice, as requested.
+   Explain traditional symbolism, including what retrograde or a conjunction
+   contributes; distinguish it from an astronomical fact. Use primary authored
+   astrology references and `docs/astrology-sources.json` where applicable. Avoid
+   another joke, invented placements, houses, predictions, or claims about the
+   visitor. Interpretations may retain consistent meanings across days rather
+   than inventing a new belief to satisfy a novelty quota.
+7. Review the explanations for event fit and attribution to astrological
+   tradition, then publish only after the deterministic validator accepts the
+   complete batch. Never put prose in the calculated event's `fact` field.
 
 Every text must be nonempty, one or two sentences, at most **80 Unicode
 characters**, and free of embedded line breaks or markup. Keep the weary
@@ -98,7 +111,7 @@ project interpreter. Use Node 24 for the site checks.
 
 ```sh
 python scripts/daily_readings.py plan --date YYYY-MM-DD --out test-results/daily/plan.json
-python scripts/daily_readings.py publish --plan test-results/daily/plan.json --drafts test-results/daily/tech.json test-results/daily/woo.json test-results/daily/zen.json --out public/readings/YYYY-MM-DD.json
+python scripts/daily_readings.py publish --plan test-results/daily/plan.json --drafts test-results/daily/tech.json test-results/daily/woo.json test-results/daily/zen.json --explanations test-results/daily/explanations.json --out public/readings/YYYY-MM-DD.json
 python scripts/daily_readings.py validate --file public/readings/YYYY-MM-DD.json
 python -m unittest discover -s tests -p 'test_*.py'
 npm test
@@ -109,6 +122,12 @@ npm run build
 Scratch plans, drafts, and revisions belong under the ignored `test-results/`
 directory. Do not commit them. The published catalog contains factual events
 and final jokes; it does not contain worker instructions or draft exchanges.
+Explanations are stored once per event in a separate `explanations` array,
+shared by its six jokes. The additive field keeps schema version 1 and older
+catalogs remain readable without it. New scheduled catalogs must supply every
+explanation. A present but invalid or incomplete explanation array rejects the
+batch. The 80-character slip limit applies to jokes; the disclosure's prose has
+its own 80–650-character bound.
 The publication command recomputes the factual plan, checks completeness and
 copy, and writes atomically. Fix failed validation; do not waive it or replace
 missing writer output with generic templates.
@@ -121,9 +140,11 @@ limited to the daily catalogs; it does not authorize unrelated code changes,
 credentials, visibility changes, or modifying another person's work.
 
 - Determine the target date using `America/New_York`, never the machine's
-  assumed local date. If today's complete valid catalog already exists on
-  `origin/main`, finish without creating another batch or commit. An existing
-  invalid or incomplete catalog requires repair and validation.
+  assumed local date. If today's complete valid catalog, including all event
+  explanations, already exists on `origin/main`, finish without another batch
+  or commit. Upgrade a valid legacy catalog by adding explanations while
+  preserving its jokes and calculated facts. Invalid or incomplete catalogs
+  require repair and validation.
 - Refresh `origin/main` before starting. Prefer a suitable clean, task-owned
   worktree; otherwise create a managed worktree from the fetched remote main.
   Keep ongoing user work in the primary checkout intact. Use the worktree's
@@ -137,7 +158,8 @@ credentials, visibility changes, or modifying another person's work.
 - Commit with `Publish cosmic readings for YYYY-MM-DD`. Push that commit to
   `origin/main` without force. If another commit wins the race, fetch the new
   main and reapply only the daily catalog; if someone already published a valid
-  batch for the same date, keep theirs. Revalidate before retrying once.
+  batch for the same date with complete explanations, keep theirs. Revalidate
+  before retrying once.
 - Verify the remote branch contains the published commit. Archive a managed
   worktree created for the run when it is no longer needed.
 - Keep a concise completion record with date, event count, line count, and
@@ -160,3 +182,6 @@ available, using a 90/10 split with invented nonsense and the uniform
 kind/event/joke selection. The current event's exact time window still decides
 eligibility. Missing, malformed, stale, or incomplete daily data falls back to
 the monthly catalog. The existing slip and source disclosure show the result.
+When an event has an explanation, the disclosure includes a separate paragraph
+labeled “Astrological interpretation.” Legacy and fallback readings without an
+explanation omit that paragraph; explanations do not affect selection odds.

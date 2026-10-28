@@ -22,6 +22,13 @@ def complete_drafts(plan):
             for tone in TONES for number in range(2)]
 
 
+def complete_explanations(plan):
+    return [{"eventId": item["id"],
+             "text": f"Interpretation {index}: Astrologers associate this placement with familiar themes to reflect on. "
+                     "This symbolic reading is a tradition, rather than an astronomical measurement or prediction."}
+            for index, item in enumerate(plan["events"])]
+
+
 class DailyReadingsTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
@@ -211,6 +218,100 @@ class DailyReadingsTests(unittest.TestCase):
                 write_json_atomic(output, {"valid": "data"})
             self.assertEqual(output.read_text(), "existing")
             self.assertEqual(list(Path(directory).iterdir()), [output])
+
+    def test_explanations_are_complete_deterministic_and_separate_from_facts_and_jokes(self):
+        drafts = complete_drafts(self.plan)
+        explanations = complete_explanations(self.plan)
+        with tempfile.TemporaryDirectory() as directory:
+            legacy = make_batch(self.plan, drafts, directory)
+            batch = make_batch(self.plan, drafts, directory, explanations)
+            reordered = make_batch(self.plan, list(reversed(drafts)), directory, list(reversed(explanations)))
+        self.assertEqual(batch, reordered)
+        self.assertEqual(batch["explanations"], explanations)
+        self.assertEqual(batch["events"], legacy["events"])
+        self.assertEqual(batch["source"], legacy["source"])
+        self.assertEqual(batch["readings"], legacy["readings"])
+        self.assertEqual(set(batch), set(legacy) | {"explanations"})
+        self.assertNotIn("explanations", legacy)
+        batch["events"][0]["fact"] = "Mutated caller data."
+        batch["source"]["name"] = "Mutated source."
+        batch["explanations"][0]["text"] = "Mutated explanation."
+        self.assertNotEqual(make_plan(self.plan["date"])["events"][0]["fact"], "Mutated caller data.")
+        self.assertEqual(make_plan(self.plan["date"])["source"]["name"], "pyswisseph")
+        self.assertNotEqual(explanations[0]["text"], "Mutated explanation.")
+
+    def test_explanation_groups_reject_missing_unknown_duplicate_and_extra_event_references(self):
+        explanations = complete_explanations(self.plan)
+        bad_groups = [None, {}, [], explanations[:-1], explanations + [explanations[0]],
+                      [{**explanations[0], "eventId": "unknown"}] + explanations[1:],
+                      [{**explanations[0], "eventId": None}] + explanations[1:],
+                      [{**explanations[0], "fact": "Must stay separate"}] + explanations[1:],
+                      [None] + explanations[1:]]
+        for group in bad_groups:
+            with self.subTest(group=group), tempfile.TemporaryDirectory() as directory, self.assertRaises(ValueError):
+                make_batch(self.plan, complete_drafts(self.plan), directory, group)
+
+    def test_explanation_text_has_unicode_length_bounds_and_normalized_uniqueness(self):
+        explanations = complete_explanations(self.plan)
+        for text in [None, "", "a" * 79, "a" * 651, " a" * 80, "a " * 80,
+                     "a" * 80 + "\n", "a" * 40 + "\t" + "b" * 40, "." * 80]:
+            bad = deepcopy(explanations)
+            bad[0]["text"] = text
+            with self.subTest(text=text), tempfile.TemporaryDirectory() as directory, self.assertRaises(ValueError):
+                make_batch(self.plan, complete_drafts(self.plan), directory, bad)
+        for text in ["😀" * 79 + "a", "é" * 650]:
+            valid = deepcopy(explanations)
+            valid[0]["text"] = text
+            with tempfile.TemporaryDirectory() as directory:
+                batch = make_batch(self.plan, complete_drafts(self.plan), directory, valid)
+                self.assertEqual(batch["explanations"][0]["text"], text)
+        bad = deepcopy(explanations)
+        bad[1]["text"] = bad[0]["text"].upper().replace(":", "—").replace(".", "!")
+        with tempfile.TemporaryDirectory() as directory, self.assertRaisesRegex(ValueError, "Duplicate"):
+            make_batch(self.plan, complete_drafts(self.plan), directory, bad)
+
+    def test_published_explanations_validate_and_malformed_present_fields_do_not_become_legacy(self):
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory) / "2026-10-28.json"
+            legacy = make_batch(self.plan, complete_drafts(self.plan), directory)
+            write_json_atomic(output, legacy)
+            self.assertEqual(validate_batch(output), legacy)
+            batch = make_batch(self.plan, complete_drafts(self.plan), directory, complete_explanations(self.plan))
+            write_json_atomic(output, batch)
+            self.assertEqual(validate_batch(output), batch)
+            reordered = deepcopy(batch)
+            reordered["explanations"].reverse()
+            write_json_atomic(output, reordered)
+            with self.assertRaisesRegex(ValueError, "validated content"):
+                validate_batch(output)
+            for explanations in [None, {}, [], batch["explanations"][:-1]]:
+                write_json_atomic(output, {**batch, "explanations": explanations})
+                with self.subTest(explanations=explanations), self.assertRaises(ValueError):
+                    validate_batch(output)
+
+    def test_explanations_are_atomic_on_publish_and_optional_for_legacy_callers(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory)
+            plan_path, drafts_path, explanations_path = path / "plan.json", path / "drafts.json", path / "explain.json"
+            output = path / "2026-10-28.json"
+            write_json_atomic(plan_path, self.plan)
+            write_json_atomic(drafts_path, complete_drafts(self.plan))
+            legacy = publish(plan_path, [drafts_path], output)
+            original = output.read_bytes()
+            write_json_atomic(explanations_path, complete_explanations(self.plan)[:-1])
+            with self.assertRaises(ValueError):
+                publish(plan_path, [drafts_path], output, explanations_path)
+            self.assertEqual(output.read_bytes(), original)
+            write_json_atomic(explanations_path, None)
+            with self.assertRaises(ValueError):
+                publish(plan_path, [drafts_path], output, explanations_path)
+            self.assertEqual(output.read_bytes(), original)
+            write_json_atomic(explanations_path, complete_explanations(self.plan))
+            published = publish(plan_path, [drafts_path], output, explanations_path)
+            self.assertEqual(validate_batch(output), published)
+            self.assertEqual(published["events"], legacy["events"])
+            self.assertEqual(published["readings"], legacy["readings"])
+            self.assertEqual(len(published["explanations"]), len(self.plan["events"]))
 
 
 if __name__ == "__main__":

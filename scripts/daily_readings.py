@@ -26,6 +26,7 @@ JOKES_PER_TONE = 2
 CONJUNCTION_ORB = 3
 CONJUNCTION_BODIES = {**SIGN_BODIES, "Moon": swe.MOON}
 ENVELOPE_KEYS = ("schemaVersion", "date", "validFrom", "validUntil", "source", "events")
+_ABSENT = object()
 
 
 def parse_day(value):
@@ -163,7 +164,35 @@ def previous_texts(directory, target_day):
     return found
 
 
-def make_batch(plan, drafts, history_directory):
+def checked_explanations(explanations, events):
+    """Keep authored astrological interpretation separate from calculated facts."""
+    if not isinstance(explanations, list):
+        raise ValueError("Explanations must be a JSON array")
+    event_ids = {item["id"] for item in events}
+    by_event = {}
+    used_texts = set()
+    for explanation in explanations:
+        if not isinstance(explanation, dict) or set(explanation) != {"eventId", "text"}:
+            raise ValueError("Each explanation needs exactly eventId and text")
+        event_id, text = explanation["eventId"], explanation["text"]
+        if not isinstance(event_id, str) or event_id not in event_ids:
+            raise ValueError(f"Unknown explanation event ID: {event_id}")
+        if event_id in by_event:
+            raise ValueError(f"Duplicate explanation event ID: {event_id}")
+        if not isinstance(text, str) or not 80 <= len(text) <= 650 or text != text.strip() or not text.isprintable():
+            raise ValueError("Each explanation must be 80–650 printable characters without surrounding whitespace")
+        normalized = normalized_text(text)
+        if not normalized or normalized in used_texts:
+            raise ValueError("Duplicate or empty explanation text")
+        used_texts.add(normalized)
+        by_event[event_id] = text
+    missing = event_ids - by_event.keys()
+    if missing:
+        raise ValueError(f"Need exactly one explanation for each event; missing {len(missing)}")
+    return [{"eventId": item["id"], "text": by_event[item["id"]]} for item in events]
+
+
+def make_batch(plan, drafts, history_directory, explanations=_ABSENT):
     calculated = validate_plan(plan)
     event_ids = {item["id"] for item in calculated["events"]}
     history = previous_texts(Path(history_directory), calculated["date"])
@@ -195,7 +224,10 @@ def make_batch(plan, drafts, history_directory):
             for index, text in enumerate(texts):
                 readings.append({"id": f"daily-{calculated['date']}-{item['id']}-{tone}-{index}",
                                  "eventId": item["id"], "tone": tone, "text": text})
-    return {**{key: calculated[key] for key in ENVELOPE_KEYS}, "readings": readings}
+    batch = {**{key: calculated[key] for key in ENVELOPE_KEYS}, "readings": readings}
+    if explanations is not _ABSENT:
+        batch["explanations"] = checked_explanations(explanations, calculated["events"])
+    return batch
 
 
 def read_json(path):
@@ -221,7 +253,7 @@ def write_json_atomic(path, value):
             temporary.unlink()
 
 
-def publish(plan_path, draft_paths, output_path):
+def publish(plan_path, draft_paths, output_path, explanations_path=None):
     plan = read_json(plan_path)
     drafts = []
     for path in draft_paths:
@@ -232,7 +264,8 @@ def publish(plan_path, draft_paths, output_path):
     output = Path(output_path)
     if not isinstance(plan, dict) or output.name != f"{plan.get('date')}.json":
         raise ValueError("Output filename must match the plan date: YYYY-MM-DD.json")
-    batch = make_batch(plan, drafts, output.parent)
+    explanations = read_json(explanations_path) if explanations_path is not None else _ABSENT
+    batch = make_batch(plan, drafts, output.parent, explanations)
     write_json_atomic(output, batch)
     return batch
 
@@ -246,7 +279,7 @@ def validate_batch(path):
         if not isinstance(reading, dict) or set(reading) != {"id", "eventId", "tone", "text"}:
             raise ValueError("Invalid published reading")
         drafts.append({key: reading[key] for key in ("eventId", "tone", "text")})
-    expected = make_batch(batch, drafts, Path(path).parent)
+    expected = make_batch(batch, drafts, Path(path).parent, batch.get("explanations", _ABSENT))
     if batch != expected:
         raise ValueError("Published batch differs from validated content or stable IDs")
     if Path(path).name != f"{batch['date']}.json":
@@ -263,6 +296,8 @@ def main():
     publish_command = commands.add_parser("publish", help="Validate all drafts before atomically publishing")
     publish_command.add_argument("--plan", type=Path, required=True)
     publish_command.add_argument("--drafts", type=Path, nargs="+", required=True)
+    publish_command.add_argument("--explanations", type=Path,
+                                 help="Optional JSON array of one astrological explanation per event")
     publish_command.add_argument("--out", type=Path, required=True)
     validate_command = commands.add_parser("validate", help="Recheck a published daily batch")
     validate_command.add_argument("--file", type=Path, required=True)
@@ -274,7 +309,7 @@ def main():
             print(f"Planned {plan['summary']['events']} events and {plan['summary']['expectedReadings']} readings "
                   f"for {args.date} ({DAY_ZONE}) in {args.out}")
         elif args.command == "publish":
-            batch = publish(args.plan, args.drafts, args.out)
+            batch = publish(args.plan, args.drafts, args.out, args.explanations)
             print(f"Published {len(batch['readings'])} checked readings to {args.out}")
         else:
             batch = validate_batch(args.file)

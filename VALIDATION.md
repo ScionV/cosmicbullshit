@@ -95,6 +95,31 @@ preserving equal shares among active kinds and events and avoiding immediate
 repeats. All 32 TypeScript tests, the Astro check, and the production build pass.
 Missing valid sky data still yields clearly labeled invented readings only.
 
+## Astrological explanations — 28 October 2026
+
+- Added a separate astrology explainer to the daily workflow and active
+  automation. It writes one short interpretation per event, shared by all six
+  jokes, using clear astrology with a light cosmic-clerk voice.
+- Today's catalog now contains 16 original explanations, 350–410 Unicode
+  characters each. Authored astrology references and paraphrase notes are
+  retained in `docs/astrology-sources.json`.
+- The disclosure labels the new paragraph “Astrological interpretation.” It
+  keeps calculated astronomy, traditional symbolic meaning, and joke copy in
+  separate fields. Existing facts, jokes, IDs, and validity windows match the
+  previous published catalog after excluding the additive explanations array.
+- Legacy catalogs remain readable. When present, explanations require one
+  valid event reference per event and 80–650 printable characters. Unknown,
+  repeated, missing, empty, overlong, or malformed explanations reject the batch.
+- All 27 Python and 34 TypeScript tests pass. The Astro check has zero errors,
+  warnings, or hints, and the production build passes.
+- Browser checks issued explained retrograde readings at desktop width and
+  within a real 320px iframe viewport. Labels and prose wrap within the existing
+  disclosure; the slip and its layout retain the previous behavior. Missing
+  prose is hidden and cleared between readings.
+- Independent scoped review returned **ship**, with no material issues in
+  the desktop/mobile disclosure, validation, or compatibility behavior. This
+  verdict concerns the new explanation paragraph only.
+
 ## Open visual-validation record
 
 Independent review disposition remains **fix**, not a whole-surface ship

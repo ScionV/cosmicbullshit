@@ -62,6 +62,9 @@ writers: tech snark, woo-woo snark, and dry zen. Each event gets two lines in
 each voice. Daily catalogs include actual conjunction windows within three
 degrees of tropical longitude, alongside the existing placements, retrogrades,
 and lunar events. The model writes jokes; Moshier calculates the facts.
+A separate astrology explainer supplies a short, clearly labeled traditional
+interpretation in “What’s actually happening?” Explanations are stored once per
+event alongside the jokes, keeping the calculated fact separate from symbolism.
 
 The browser reads `public/readings/YYYY-MM-DD.json` for the New York calendar
 day. Complete valid catalogs supply the real-reading copy; absent, expired,
