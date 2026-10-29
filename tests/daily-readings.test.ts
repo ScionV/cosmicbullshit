@@ -16,10 +16,20 @@ function batch(date = '2026-10-28', start = '2026-10-28T04:00:00Z', end = '2026-
     { id: 'conjunction', kind: 'conjunction', subject: 'Sun conjunct Venus', bodies: ['Sun', 'Venus'], orbDegrees: 3 },
   ].map(event => ({ ...event, startsAt: start, endsAt: end, fact: `Calculated ${event.subject} fact.` })) as SkyEvent[];
   return { schemaVersion: 1, date, validFrom: start, validUntil: end, source: month.source, events,
-    readings: events.flatMap(event => (['tech', 'woo', 'zen'] as const).flatMap(tone => [0, 1].map(index => ({
-      id: `daily-${date}-${event.id}-${tone}-${index}`, eventId: event.id, tone,
-      text: `${event.subject}: ${tone} form ${index + 1} is pending.`,
-    })))) };
+    readings: events.flatMap(event => (['tech', 'woo', 'zen', 'office', 'dating', 'domestic'] as const)
+      .flatMap(tone => Array.from({ length: tone === 'zen' ? 2 : 1 }, (_, index) => ({
+        id: `daily-${date}-${event.id}-${tone}-${index}`, eventId: event.id, tone,
+        text: `${event.subject}: the ${tone} form ${index + 1} is pending.`,
+      })))) };
+}
+
+function legacyBatch(): DailyReadings {
+  const data = batch();
+  data.readings = data.events.flatMap(event => (['tech', 'woo', 'zen'] as const).flatMap(tone => [0, 1].map(index => ({
+    id: `daily-${data.date}-${event.id}-${tone}-${index}`, eventId: event.id, tone,
+    text: `${event.subject}: legacy ${tone} form ${index + 1} remains pending.`,
+  }))));
+  return data;
 }
 
 test('every published daily batch validates against its calendar date', () => {
@@ -75,6 +85,20 @@ test('daily parser accepts complete normal, short and long New York days', () =>
   }
 });
 
+test('daily parser accepts legacy three-tone catalogs and current six-tone catalogs', () => {
+  assert.ok(parseDailyReadings(legacyBatch()));
+  assert.ok(parseDailyReadings(batch()));
+  const incomplete = batch();
+  incomplete.readings = incomplete.readings.filter(reading => reading.tone !== 'domestic');
+  assert.equal(parseDailyReadings(incomplete), null);
+  const mixed = legacyBatch();
+  mixed.readings.push(batch().readings.find(reading => reading.tone === 'office')!);
+  assert.equal(parseDailyReadings(mixed), null);
+  const shortZen = batch();
+  shortZen.readings = shortZen.readings.filter(reading => reading.tone !== 'zen' || reading.id.endsWith('-0'));
+  assert.equal(parseDailyReadings(shortZen), null);
+});
+
 test('daily parser rejects invalid dates, non-UTC windows, incorrect midnights and source metadata', () => {
   for (const changes of [{ date: '2026-02-30' }, { date: '2026-10-29' },
     { validFrom: '2026-10-28T00:00:00-04:00' }, { validFrom: '2026-10-28T05:00:00Z' },
@@ -90,7 +114,7 @@ test('daily parser requires unique IDs, complete tones, referenced events and sh
     data => { data.readings.push({ ...data.readings[0], id: 'extra', text: 'Extra paperwork.' }); },
     data => { data.readings[1].id = data.readings[0].id; },
     data => { data.readings[0].eventId = 'unknown-event'; },
-    data => { data.readings[0].text = 'x'.repeat(81); },
+    data => { data.readings[0].text = 'x'.repeat(121); },
     data => { data.readings[0].text = ' '; },
     data => { data.readings[0].text = 'Your forms.\nThey are pending.'; },
     data => { data.readings[1].text = data.readings[0].text.toUpperCase().replaceAll('.', '!'); },

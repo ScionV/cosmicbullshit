@@ -38,18 +38,23 @@ and facts are preserved. A conjunction that ends in the morning cannot appear
 in an afternoon real reading. Houses, birth charts, other aspect angles, and
 claims of personal causation are outside this desk's scope.
 
-For each event interval, commission two jokes in each voice:
+For each event interval, commission one joke in each category, plus a second
+`zen` joke to keep acceptance and perspective represented alongside the more
+problem-focused categories:
 
-| Voice | Target |
-| --- | --- |
-| `tech` | Software teams, hype, overengineering, tickets, and delivery habits |
-| `woo` | Spiritual consumerism, manifesting, premium enlightenment, and vibes |
-| `zen` | Dry acceptance and absurd practical wisdom; allow both camps a turn |
+| Category | Count | Target |
+| --- | ---: | --- |
+| `tech` | 1 | Software teams, hype, overengineering, tickets, and delivery habits |
+| `woo` | 1 | Spiritual consumerism, manifesting, premium enlightenment, and vibes |
+| `zen` | 2 | Dry acceptance and absurd practical wisdom; make at least one line a genuine counterweight rather than another problem report |
+| `office` | 1 | Hierarchy, meetings, management, and procedural theatre; distinct from engineering and product hype |
+| `dating` | 1 | Courtship, curated personas, mixed expectations, and app-era rituals; never predict a visitor's love life |
+| `domestic` | 1 | Chores, household negotiations, everyday life, and inclusive parenting jokes without assuming visitors are parents |
 
-Daily yield is `event intervals × 3 voices × 2 jokes`. October 28, 2026 has
-16 assignments and yields 96 lines. In 2026 the existing monthly event types
-alone give 10–16 simultaneous assignments at 16:00 UTC (60–96 lines); day-long
-coverage can add intervals when an event changes, and conjunctions add six
+Daily yield is `event intervals × 7 jokes`. October 28, 2026 has
+16 assignments and yields 112 lines. In 2026 the existing monthly event types
+alone give 10–16 simultaneous assignments at 16:00 UTC (70–112 lines); day-long
+coverage can add intervals when an event changes, and conjunctions add seven
 lines each. There are 45 possible body pairs, but only actual close pairs are
 conjunction assignments. Do not commission every mathematical combination of
 the whole sky.
@@ -57,7 +62,7 @@ the whole sky.
 ## Planner, writers, and editor
 
 The scheduled parent agent is the planner and final editor. It must explicitly
-delegate the writing to three subagents, one per voice, with narrow factual
+delegate the writing to six subagents, one per category, with narrow factual
 records for each assignment. A separate astrology explainer writes the short
 interpretation for each event. Run it after a writing slot becomes available
 to stay within the host's concurrency limit. More writers can be used in sequential batches
@@ -72,11 +77,12 @@ chat's configured model unless the owner requests a specific model.
    The traditional association supplies a comic theme, never evidence about
    someone's life.
 3. Give each writer the event ID, title, fact, validity, editorial focus, its
-   assigned voice, and a recent-copy exclusion list. Each row is its own
+   assigned category, and a recent-copy exclusion list. Each row is its own
    narrow context. Do not combine unrelated events just because they are in
    the same input file.
-4. Each writer saves an array of `{eventId, tone, text}` objects. Require two
-   lines per event for its voice. Use UTF-8 JSON and real punctuation.
+4. Each writer saves an array of `{eventId, tone, text}` objects. Require one
+   line per event for every category except `zen`, which supplies two distinct
+   lines. Use UTF-8 JSON and real punctuation.
 5. Review all drafts together. Reject filler, repeated constructions,
    mismatched events, sign changes presented as happening today, unearned
    factual claims, and personal diagnoses or predictions. Prefer specific
@@ -95,7 +101,7 @@ chat's configured model unless the owner requests a specific model.
    tradition, then publish only after the deterministic validator accepts the
    complete batch. Never put prose in the calculated event's `fact` field.
 
-Every text must be nonempty, one or two sentences, at most **80 Unicode
+Every text must be nonempty, one or two sentences, at most **120 Unicode
 characters**, and free of embedded line breaks or markup. Keep the weary
 cosmic-clerk voice. The title already names the event. Jokes may play with the
 specific sign's themes, but must not misstate the supplied fact. Exact
@@ -111,7 +117,7 @@ project interpreter. Use Node 24 for the site checks.
 
 ```sh
 python scripts/daily_readings.py plan --date YYYY-MM-DD --out test-results/daily/plan.json
-python scripts/daily_readings.py publish --plan test-results/daily/plan.json --drafts test-results/daily/tech.json test-results/daily/woo.json test-results/daily/zen.json --explanations test-results/daily/explanations.json --out public/readings/YYYY-MM-DD.json
+python scripts/daily_readings.py publish --plan test-results/daily/plan.json --drafts test-results/daily/tech.json test-results/daily/woo.json test-results/daily/zen.json test-results/daily/office.json test-results/daily/dating.json test-results/daily/domestic.json --explanations test-results/daily/explanations.json --out public/readings/YYYY-MM-DD.json
 python scripts/daily_readings.py validate --file public/readings/YYYY-MM-DD.json
 python -m unittest discover -s tests -p 'test_*.py'
 npm test
@@ -123,10 +129,11 @@ Scratch plans, drafts, and revisions belong under the ignored `test-results/`
 directory. Do not commit them. The published catalog contains factual events
 and final jokes; it does not contain worker instructions or draft exchanges.
 Explanations are stored once per event in a separate `explanations` array,
-shared by its six jokes. The additive field keeps schema version 1 and older
-catalogs remain readable without it. New scheduled catalogs must supply every
+shared by its seven jokes. Schema version 1 accepts both the current six-category,
+seven-joke layout and the legacy tech/woo/zen layout with two jokes per voice, so
+historical catalogs remain readable without rewrites. New scheduled catalogs must supply every
 explanation. A present but invalid or incomplete explanation array rejects the
-batch. The 80-character slip limit applies to jokes; the disclosure's prose has
+batch. The 120-character slip limit applies to jokes; the disclosure's prose has
 its own 80–650-character bound.
 The publication command recomputes the factual plan, checks completeness and
 copy, and writes atomically. Fix failed validation; do not waive it or replace

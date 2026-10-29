@@ -18,7 +18,7 @@ export interface SkyMonth {
   events: SkyEvent[];
 }
 
-export type ReadingTone = 'tech' | 'woo' | 'zen';
+export type ReadingTone = 'tech' | 'woo' | 'zen' | 'office' | 'dating' | 'domestic';
 
 export interface DailyReading {
   id: string;
@@ -223,7 +223,12 @@ export const planetSignFallback: readonly string[] = [
 const SIGNS = ['Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 'Libra',
   'Scorpio', 'Sagittarius', 'Capricorn', 'Aquarius', 'Pisces'];
 const BODIES = ['Sun', 'Moon', 'Mercury', 'Venus', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune', 'Pluto'];
-const TONES: readonly ReadingTone[] = ['tech', 'woo', 'zen'];
+const TONES: readonly ReadingTone[] = ['tech', 'woo', 'zen', 'office', 'dating', 'domestic'];
+const LEGACY_TONES: readonly ReadingTone[] = ['tech', 'woo', 'zen'];
+const TONE_LAYOUTS: readonly (readonly (readonly [ReadingTone, number])[])[] = [
+  [['tech', 1], ['woo', 1], ['zen', 2], ['office', 1], ['dating', 1], ['domestic', 1]],
+  LEGACY_TONES.map(tone => [tone, 2] as const),
+];
 const dayFormatter = new Intl.DateTimeFormat('en-CA', {
   timeZone: 'America/New_York', year: 'numeric', month: '2-digit', day: '2-digit',
 });
@@ -305,7 +310,7 @@ export function parseDailyReadings(value: unknown): DailyReadings | null {
         || typeof reading.eventId !== 'string' || !events.has(reading.eventId)
         || !TONES.includes(reading.tone) || typeof reading.text !== 'string'
         || reading.text !== reading.text.trim() || !reading.text.trim()
-        || Array.from(reading.text).length > 80 || /[\r\n\u0000-\u001f]/u.test(reading.text)) return null;
+        || Array.from(reading.text).length > 120 || /[\r\n\u0000-\u001f]/u.test(reading.text)) return null;
     const text = normalizedCopy(reading.text);
     if (!text || texts.has(text)) return null;
     ids.add(reading.id);
@@ -313,9 +318,10 @@ export function parseDailyReadings(value: unknown): DailyReadings | null {
     const key = `${reading.eventId}\0${reading.tone}`;
     counts.set(key, (counts.get(key) ?? 0) + 1);
   }
-  for (const event of events.values()) {
-    for (const tone of TONES) if (counts.get(`${event.id}\0${tone}`) !== 2) return null;
-  }
+  if (!TONE_LAYOUTS.some(layout => Array.from(events.values()).every(event =>
+    layout.every(([tone, expected]) => counts.get(`${event.id}\0${tone}`) === expected)
+    && TONES.filter(tone => !layout.some(([included]) => included === tone))
+      .every(tone => !counts.has(`${event.id}\0${tone}`))))) return null;
   if (Object.hasOwn(data, 'explanations')) {
     if (!Array.isArray(data.explanations) || data.explanations.length !== events.size) return null;
     const explained = new Set<string>();

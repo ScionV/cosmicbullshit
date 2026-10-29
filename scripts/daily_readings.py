@@ -21,8 +21,11 @@ import swisseph as swe
 from generate_sky import SIGN_BODIES, UTC, event, generate_month, intervals, iso, month_after, position
 
 DAY_ZONE = "America/New_York"
-TONES = ("tech", "woo", "zen")
-JOKES_PER_TONE = 2
+TONE_COUNTS = {"tech": 1, "woo": 1, "zen": 2, "office": 1, "dating": 1, "domestic": 1}
+TONES = tuple(TONE_COUNTS)
+LEGACY_TONE_COUNTS = {"tech": 2, "woo": 2, "zen": 2}
+LEGACY_TONES = tuple(LEGACY_TONE_COUNTS)
+JOKE_MAX_LENGTH = 120
 CONJUNCTION_ORB = 3
 CONJUNCTION_BODIES = {**SIGN_BODIES, "Moon": swe.MOON}
 ENVELOPE_KEYS = ("schemaVersion", "date", "validFrom", "validUntil", "source", "events")
@@ -117,12 +120,12 @@ def make_plan(value):
         raise ValueError("Calculated event IDs are not unique")
     assignments = [{"eventId": item["id"], "title": event_title(item), "kind": item["kind"],
                     "fact": item["fact"], "startsAt": item["startsAt"], "endsAt": item["endsAt"],
-                    "tones": list(TONES), "jokesPerTone": JOKES_PER_TONE} for item in events]
+                    "toneCounts": dict(TONE_COUNTS)} for item in events]
     return {"schemaVersion": 1, "date": value, "validFrom": iso(start), "validUntil": iso(end),
             "source": source, "events": events, "assignments": assignments,
             "summary": {"events": len(events), "byKind": dict(sorted(Counter(e["kind"] for e in events).items())),
-                        "jokesPerEvent": len(TONES) * JOKES_PER_TONE,
-                        "expectedReadings": len(events) * len(TONES) * JOKES_PER_TONE}}
+                        "jokesPerEvent": sum(TONE_COUNTS.values()),
+                        "expectedReadings": len(events) * sum(TONE_COUNTS.values())}}
 
 
 def validate_plan(plan):
@@ -192,7 +195,7 @@ def checked_explanations(explanations, events):
     return [{"eventId": item["id"], "text": by_event[item["id"]]} for item in events]
 
 
-def make_batch(plan, drafts, history_directory, explanations=_ABSENT):
+def make_batch(plan, drafts, history_directory, explanations=_ABSENT, tone_counts=TONE_COUNTS):
     calculated = validate_plan(plan)
     event_ids = {item["id"] for item in calculated["events"]}
     history = previous_texts(Path(history_directory), calculated["date"])
@@ -206,10 +209,11 @@ def make_batch(plan, drafts, history_directory, explanations=_ABSENT):
         event_id, tone, text = draft["eventId"], draft["tone"], draft["text"]
         if not isinstance(event_id, str) or event_id not in event_ids:
             raise ValueError(f"Unknown event ID: {event_id}")
-        if not isinstance(tone, str) or tone not in TONES:
+        if not isinstance(tone, str) or tone not in tone_counts:
             raise ValueError(f"Unknown writing tone: {tone}")
-        if not isinstance(text, str) or not 1 <= len(text) <= 80 or text != text.strip() or not text.isprintable():
-            raise ValueError("Each joke must be 1–80 printable characters without surrounding whitespace")
+        if (not isinstance(text, str) or not 1 <= len(text) <= JOKE_MAX_LENGTH
+                or text != text.strip() or not text.isprintable()):
+            raise ValueError(f"Each joke must be 1–{JOKE_MAX_LENGTH} printable characters without surrounding whitespace")
         normalized = normalized_text(text)
         if not normalized or normalized in used or normalized in history:
             raise ValueError(f"Duplicate or empty joke: {text}")
@@ -217,10 +221,10 @@ def make_batch(plan, drafts, history_directory, explanations=_ABSENT):
         grouped[event_id, tone].append(text)
     readings = []
     for item in calculated["events"]:
-        for tone in TONES:
+        for tone, expected_count in tone_counts.items():
             texts = sorted(grouped[item["id"], tone], key=normalized_text)
-            if len(texts) != JOKES_PER_TONE:
-                raise ValueError(f"Need exactly {JOKES_PER_TONE} {tone} jokes for {item['id']}; found {len(texts)}")
+            if len(texts) != expected_count:
+                raise ValueError(f"Need exactly {expected_count} {tone} jokes for {item['id']}; found {len(texts)}")
             for index, text in enumerate(texts):
                 readings.append({"id": f"daily-{calculated['date']}-{item['id']}-{tone}-{index}",
                                  "eventId": item["id"], "tone": tone, "text": text})
@@ -279,7 +283,16 @@ def validate_batch(path):
         if not isinstance(reading, dict) or set(reading) != {"id", "eventId", "tone", "text"}:
             raise ValueError("Invalid published reading")
         drafts.append({key: reading[key] for key in ("eventId", "tone", "text")})
-    expected = make_batch(batch, drafts, Path(path).parent, batch.get("explanations", _ABSENT))
+    counts = Counter((draft.get("eventId"), draft.get("tone")) for draft in drafts)
+    layouts = (TONE_COUNTS, LEGACY_TONE_COUNTS)
+    layout = next((candidate for candidate in layouts
+                   if all(counts[event["id"], tone] == expected
+                          for event in batch.get("events", [])
+                          for tone, expected in candidate.items())
+                   and all(tone in candidate for event_id, tone in counts)), None)
+    if layout is None:
+        raise ValueError("Published batch has an unsupported writing-tone layout")
+    expected = make_batch(batch, drafts, Path(path).parent, batch.get("explanations", _ABSENT), layout)
     if batch != expected:
         raise ValueError("Published batch differs from validated content or stable IDs")
     if Path(path).name != f"{batch['date']}.json":

@@ -57,9 +57,12 @@ files without planet placements.
 
 ## Daily generated readings
 
-The daily reading desk combines a factual sky planner with three focused
-writers: tech snark, woo-woo snark, and dry zen. Each event gets two lines in
-each voice. Daily catalogs include actual conjunction windows within three
+The daily reading desk combines a factual sky planner with six focused
+writers: tech snark, woo-woo snark, dry zen, office theatre, dating rituals,
+and domestic life. Each event gets one line in every category plus a second,
+balance-oriented zen line, for seven readings per event. Daily jokes may use up
+to 120 Unicode characters. Existing three-category catalogs with two lines per voice
+remain supported. Daily catalogs include actual conjunction windows within three
 degrees of tropical longitude, alongside the existing placements, retrogrades,
 and lunar events. The model writes jokes; Moshier calculates the facts.
 A separate astrology explainer supplies a short, clearly labeled traditional

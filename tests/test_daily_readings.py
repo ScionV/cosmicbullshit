@@ -9,7 +9,8 @@ import unittest
 from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
-from daily_readings import (CONJUNCTION_BODIES, ENVELOPE_KEYS, TONES, angular_separation,
+from daily_readings import (CONJUNCTION_BODIES, ENVELOPE_KEYS, LEGACY_TONE_COUNTS, TONE_COUNTS,
+                            TONES, angular_separation,
                             conjunction_events, day_window, make_batch, make_plan,
                             publish, validate_batch, validate_plan, write_json_atomic)
 from generate_sky import UTC, position
@@ -19,7 +20,14 @@ def complete_drafts(plan):
     return [{"eventId": item["id"], "tone": tone,
              "text": f"Case {index}: {tone} excuse number {number} has entered processing."}
             for index, item in enumerate(plan["events"])
-            for tone in TONES for number in range(2)]
+            for tone, count in TONE_COUNTS.items() for number in range(count)]
+
+
+def complete_legacy_drafts(plan):
+    return [{"eventId": item["id"], "tone": tone,
+             "text": f"Legacy case {index}: {tone} excuse {number} remains on file."}
+            for index, item in enumerate(plan["events"])
+            for tone, count in LEGACY_TONE_COUNTS.items() for number in range(count)]
 
 
 def complete_explanations(plan):
@@ -59,16 +67,15 @@ class DailyReadingsTests(unittest.TestCase):
             validate_plan(altered)
         self.assertEqual(make_plan("2026-10-28")["source"]["name"], "pyswisseph")
 
-    def test_plan_contains_narrow_facts_and_six_readings_per_interval(self):
+    def test_plan_contains_narrow_facts_and_seven_readings_per_interval(self):
         plan = self.plan
         self.assertEqual(len(plan["events"]), 16)
-        self.assertEqual(plan["summary"]["expectedReadings"], 96)
+        self.assertEqual(plan["summary"]["expectedReadings"], 112)
         self.assertEqual(len(plan["assignments"]), len(plan["events"]))
         for assignment, item in zip(plan["assignments"], plan["events"]):
             self.assertEqual(assignment["eventId"], item["id"])
             self.assertEqual(assignment["fact"], item["fact"])
-            self.assertEqual(assignment["tones"], list(TONES))
-            self.assertEqual(assignment["jokesPerTone"], 2)
+            self.assertEqual(assignment["toneCounts"], TONE_COUNTS)
         base = [item for item in plan["events"] if item["kind"] != "conjunction"]
         self.assertEqual(len(base), 15)
         self.assertEqual({item["kind"] for item in base}, {"planet-sign", "moon-sign", "retrograde"})
@@ -130,8 +137,8 @@ class DailyReadingsTests(unittest.TestCase):
             batch = make_batch(self.plan, drafts, directory)
             again = make_batch(self.plan, list(reversed(drafts)), directory)
         self.assertEqual(set(batch), set(ENVELOPE_KEYS) | {"readings"})
-        self.assertEqual(len(batch["readings"]), 96)
-        self.assertEqual(len({item["id"] for item in batch["readings"]}), 96)
+        self.assertEqual(len(batch["readings"]), 112)
+        self.assertEqual(len({item["id"] for item in batch["readings"]}), 112)
         self.assertEqual(batch, again)
         self.assertEqual(batch["readings"][0]["id"],
                          f"daily-2026-10-28-{self.plan['events'][0]['id']}-tech-0")
@@ -150,13 +157,23 @@ class DailyReadingsTests(unittest.TestCase):
     def test_incomplete_or_overfull_assignments_are_rejected(self):
         drafts = complete_drafts(self.plan)
         for incomplete in [drafts[:-1], drafts + [{**drafts[0], "text": "One unrequested extra joke."}]]:
-            with tempfile.TemporaryDirectory() as directory, self.assertRaisesRegex(ValueError, "exactly 2"):
+            with tempfile.TemporaryDirectory() as directory, self.assertRaisesRegex(ValueError, "exactly"):
                 make_batch(self.plan, incomplete, directory)
+
+    def test_legacy_three_tone_catalogs_still_validate_without_rewriting(self):
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory) / "2026-10-28.json"
+            legacy = make_batch(self.plan, complete_legacy_drafts(self.plan), directory,
+                                tone_counts=LEGACY_TONE_COUNTS)
+            write_json_atomic(output, legacy)
+            before = output.read_bytes()
+            self.assertEqual(validate_batch(output), legacy)
+            self.assertEqual(output.read_bytes(), before)
 
     def test_bad_copy_and_malformed_drafts_are_rejected(self):
         invalid = [{"eventId": "unknown", "tone": "tech", "text": "An unknown event."},
                    {"eventId": self.plan["events"][0]["id"], "tone": "mean", "text": "A bad tone."},
-                   {"eventId": self.plan["events"][0]["id"], "tone": "tech", "text": "a" * 81},
+                   {"eventId": self.plan["events"][0]["id"], "tone": "tech", "text": "a" * 121},
                    {"eventId": self.plan["events"][0]["id"], "tone": "tech", "text": " trailing "},
                    {"eventId": self.plan["events"][0]["id"], "tone": "tech", "text": "A line\nbreak."},
                    {"eventId": self.plan["events"][0]["id"], "tone": "tech", "text": "..."},
@@ -167,9 +184,9 @@ class DailyReadingsTests(unittest.TestCase):
             with self.subTest(draft=bad), tempfile.TemporaryDirectory() as directory, self.assertRaises(ValueError):
                 make_batch(self.plan, [bad] + complete_drafts(self.plan)[1:], directory)
         drafts = complete_drafts(self.plan)
-        drafts[0]["text"] = "a" * 80
+        drafts[0]["text"] = "a" * 120
         with tempfile.TemporaryDirectory() as directory:
-            self.assertEqual(len(make_batch(self.plan, drafts, directory)["readings"][0]["text"]), 80)
+            self.assertEqual(len(make_batch(self.plan, drafts, directory)["readings"][0]["text"]), 120)
 
     def test_duplicate_copy_is_rejected_despite_case_or_punctuation_changes(self):
         drafts = complete_drafts(self.plan)
