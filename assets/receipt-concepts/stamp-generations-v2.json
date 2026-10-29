@@ -1,0 +1,16 @@
+[
+  {
+    "key": "smudged-stamps-v2",
+    "prompt": "Edit this six-stamp transparent atlas. Preserve all six stamp designs, exact phrases, arrangement (2 columns 3 rows), plum ink colour and transparent backgrounds. Make the impressions look carelessly applied by an exhausted cosmic clerk: modest directional ink drag on one edge, small doubled rim registration, irregular ink density, patchy broken lines and a few pooled ink patches. Keep every word readable and correctly spelled. Authentic rubber-stamp imperfections, NOT uniform blur, not glowing, not fuzzy spray paint. Lightly smudged hard ink impressions with mostly sharp letters and localized smears. EXACT six phrases: RESPONSIBILITY DECLINED; COSMICALLY APPROVED; REFERRED TO SATURN; FILED UNDER NONSENSE; PENDING UNIVERSAL REVIEW; NO FURTHER QUESTIONS. No added words. True alpha only outside and inside seals, no paper, no dark rectangular tint. Separate complete seals with transparent gutters; subtle rotation per stamp allowed.",
+    "generatedSource": "exec-31ae7b4f-8606-490c-b7d2-1d8b681dce22.png",
+    "tool": "built-in image_gen",
+    "status": "review candidate"
+  },
+  {
+    "key": "bureau-seal-v1",
+    "prompt": "One isolated antique rubber-stamp ink seal. Exact lettering: BUREAU OF COSMIC BULLSHIT. Upper curved line BUREAU OF, lower curved line COSMIC BULLSHIT, surrounding a small engraved eight-point star and tiny orbit. Circular thin double rim, deep plum #40192e ink, true transparent background and empty transparent interior. A fictional humorous celestial office, no real governmental insignia. Distressed old serif uppercase letters, authentic careless hand-stamped impression: irregular ink density, patchy worn rim, slight misregistered double edge, a short sideways ink smudge on the lower right. Letters remain clearly readable; localized ink drag not uniform blur. No solid badge fill, no paper, no glow, no shadow, no rubber stamp object. Complete seal with generous transparent margin on all sides. Intended as a small official mark on a warm parchment fortune receipt.",
+    "generatedSource": "exec-3e9bbbfe-71aa-4452-b31c-9841e6b5e577.png",
+    "tool": "built-in image_gen",
+    "status": "review candidate"
+  }
+]

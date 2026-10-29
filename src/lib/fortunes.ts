@@ -39,6 +39,8 @@ export interface Fortune {
   title: string;
   text: string;
   fact?: string;
+  /** Selected calculated event, carried through for symbolic art without changing catalog data. */
+  event?: SkyEvent;
   interpretation?: string;
   source?: SkyMonth['source'];
   startsAt?: string;
@@ -419,7 +421,7 @@ export function chooseFortune(month: SkyMonth | null, now = new Date(), previous
         : event.kind === 'moon-sign' ? `Moon in ${event.subject}`
         : event.kind === 'planet-sign' ? `${event.subject} in ${event.sign}`
         : event.kind === 'conjunction' ? event.subject : `Near the ${event.subject}`,
-      text, fact: event.fact, source: calendar!.source, startsAt: event.startsAt, endsAt: event.endsAt,
+      text, event, fact: event.fact, source: calendar!.source, startsAt: event.startsAt, endsAt: event.endsAt,
       interpretation: useDaily ? daily!.explanations?.find(item => item.eventId === event.id)?.text : undefined,
     })).filter(item => item.id !== previousId);
     if (!fortunes.length) continue;

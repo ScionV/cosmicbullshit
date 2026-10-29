@@ -1,0 +1,9 @@
+{
+  "tool": "built-in image_gen",
+  "prompt": "Use case: logo-brand. Asset type: ONE transparent atlas of three engraved social platform emblems for an antique cosmic fortune receipt. Landscape 3:1 proportions, exactly THREE equally sized square cells side by side, with twenty percent clear transparent padding around each icon. Left: unmistakable lowercase Facebook f silhouette. Centre: unmistakable Instagram rounded-square camera outline, central circular lens and small upper-right viewfinder dot. Right: unmistakable X social-network emblem, two crossing diagonal strokes with one narrow and one double outlined stroke. Deep plum #40192e ink only, no other colours; genuine transparent background inside and outside. Clean recognizable geometric platform marks, lightly distressed ink with very fine engraved parallel hatching inside thick strokes and a few imperfect ink edges, like small lithographic printing blocks. NO circular badges, no paper squares, no surrounding stars, no letters spelling names, no captions, no extra symbols. Each whole mark contained in its own cell; ample transparent gutters. Must stay legible at 32 pixels, strong simple silhouette with restrained engraved detail. Not metallic, 3D, wax, neon or modern glossy buttons.",
+  "source": "social-icons.png",
+  "generatedSource": "exec-2e6dcedd-0eff-4558-afe5-240dda8b6f6a.png",
+  "cropRecipe": "Three 724px square cells, left to right Facebook, Instagram, X; proportional 240px RGBA PNG output",
+  "accessibility": "Historical use: decorative images inside named buttons with visible platform/action labels; no longer rendered.",
+  "status": "archived-source: Share panel and derived public/art/social icons removed; preserve this source, exact prompt and historical crop recipe."
+}

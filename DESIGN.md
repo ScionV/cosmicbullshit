@@ -11,6 +11,7 @@ colors:
   action-hover: "#7e2417"
   action-disabled: "#773425"
   action-rim: "#cda855"
+  receipt-export-paper: "#f4dfb9"
 typography:
   display:
     fontFamily: "Buenard, Georgia, serif"
@@ -29,17 +30,29 @@ typography:
     fontWeight: 400
     lineHeight: 1.5
   fortune:
-    fontFamily: "Buenard, Georgia, serif"
-    fontSize: "clamp(18px, 1.9vw, 28px)"
-    fontWeight: 700
-    lineHeight: 1.05
-    letterSpacing: "-0.02em"
+    fontFamily: "SpecialElite, Courier New, monospace"
+    fontSize: "24px"
+    fontWeight: 400
+    lineHeight: 1.2
+    letterSpacing: "0"
+  receipt-reading:
+    fontFamily: "SpecialElite, Courier New, monospace"
+    fontSize: "19px"
+    fontWeight: 400
+    lineHeight: 1.4
+    letterSpacing: "0"
+  receipt-signoff:
+    fontFamily: "SpecialElite, Courier New, monospace"
+    fontSize: "9px"
+    fontWeight: 400
+    lineHeight: 1.3
+    letterSpacing: "0"
   label:
-    fontFamily: "Buenard, Georgia, serif"
-    fontSize: "11px"
-    fontWeight: 700
-    lineHeight: 1.25
-    letterSpacing: "0.11em"
+    fontFamily: "SpecialElite, Courier New, monospace"
+    fontSize: "10px"
+    fontWeight: 400
+    lineHeight: 1.4
+    letterSpacing: "0"
   action:
     fontFamily: "Buenard, Georgia, serif"
     fontSize: "clamp(11px, 1.05vw, 14px)"
@@ -72,6 +85,18 @@ components:
   fortune-copy:
     textColor: "{colors.ink}"
     typography: "{typography.fortune}"
+  receipt-reading:
+    textColor: "{colors.ink}"
+    typography: "{typography.receipt-reading}"
+  receipt-paper:
+    textColor: "{colors.ink}"
+    padding: "0"
+    width: "72%"
+  export-action:
+    textColor: "{colors.ink}"
+    padding: "10px"
+    width: "44px"
+    height: "44px"
 ---
 
 # Design System: Cosmic Bullshit
@@ -82,12 +107,12 @@ components:
 
 Cosmic Bullshit feels like an old printed amusement made operational: warm ochre paper, plum engraving, worn brass, and an exhausted but charming clerk. The illustration carries the ornate personality; the surrounding interface stays readable and spare. The humor is warm, absurd, and plainly entertainment.
 
-This document records the implemented system in `src/pages/index.astro`, `src/pages/license.astro`, `src/styles/home.css`, and `src/scripts/fortune-machine.ts`. It describes code authority, not a finish verdict. The user approved the taller production cabinet during asset review; the original decision comp retains shorter geometry. Automated comparison and plate concerns remain open and are not converted into design rules.
+This document records the implemented system in `src/pages/index.astro`, `src/pages/license.astro`, `src/styles/home.css`, `src/styles/receipt.css`, and `src/scripts/fortune-machine.ts`. It describes code authority, not a whole-page finish verdict. The user approved the taller production cabinet during asset review; the original decision comp retains shorter geometry. The receipt extension has a scoped local-review verdict; historical whole-page comparison and plate concerns remain open and are not converted into design rules.
 
 **Key Characteristics:**
 
 - Warm printed material and plum ink.
-- One locally hosted serif family with a compact hierarchy.
+- Locally hosted Buenard for the page and SpecialElite for receipt/export text.
 - Illustrated depth with real HTML text and controls.
 - Mostly still character performance with deliberate comic pauses.
 - Clear separation between factual sky events and invented excuses.
@@ -109,6 +134,7 @@ The palette behaves like ink, paper, paint, and brass rather than a collection o
 
 - **Ochre paper** (`paper`): the continuous page ground beneath a repeating fine paper texture.
 - **Cream action lettering** (`action-text`): high-contrast type on the vermilion button.
+- **Receipt export paper** (`receipt-export-paper`): the lighter paper ground in the standalone selected-fortune PNG.
 
 ### Named Rules
 
@@ -118,29 +144,35 @@ The palette behaves like ink, paper, paint, and brass rather than a collection o
 
 **Display Font:** Buenard, with Georgia and serif fallbacks.
 **Body Font:** Buenard, with the same fallbacks.
+**Receipt Font:** SpecialElite, with Courier New and monospace fallbacks; scoped to the issued paper and selected-fortune PNG.
 
 The local variable font is served from `public/fonts/Buenard.ttf` with a declared normal weight range of 400–700 and `font-display: swap`. Its literary serif character connects live text with printed ornament. Bold weight establishes hierarchy; body copy remains open and readable.
+
+SpecialElite is the user-approved typewriter face, served from `public/fonts/SpecialElite-Regular.ttf` at weight 400 with `font-display: swap`. Its Apache-2.0 license is retained in `public/fonts/SpecialElite-LICENSE.txt`. It does not replace Buenard in navigation, export controls, explanatory prose, or the separate homepage preview.
 
 ### Hierarchy
 
 - **Display:** the brand uses the frontmatter's responsive size, bold weight, tight tracking, and short line height. It becomes 36px at tablet width, 32px on mobile, and 26px at 360px and below.
 - **Headline:** explanatory section heading; 30px on mobile.
 - **Body:** explanatory prose; 18px on mobile. The section width is capped at 720px including side padding.
-- **Fortune:** compact, centered, bold result text on paper. Invented results use the responsive frontmatter role; real-event results begin at 23px on desktop and 21px on mobile.
-- **Label:** a small uppercase content classification on the fortune, not a decorative eyebrow. Real-event labels become 9px with tighter tracking on mobile.
+- **Fortune:** centered, regular SpecialElite title: 24px desktop, 23px tablet (701–1100px), and 21px mobile, line height 1.2.
+- **Receipt reading:** regular SpecialElite at 19px above 700px and 18px on mobile, line height 1.4. Full titles and unbroken words wrap; paper grows.
+- **Receipt signoff/date:** quiet printed details at 9px above 700px and 8px on mobile, line height 1.3, with a thin paper-colored text stroke over the art.
+- **Label:** the receipt's semantic real/invented classification is 10px SpecialElite, weight 400, line height 1.4 and no tracking.
+- **Export controls:** 22px native SVGs in 44px square targets. Tooltips use 12px Buenard; receipt-following status uses 15px Buenard at line height 1.4.
 - **Action:** uppercase button text. Mobile fixes it at 11px and reduces tracking to 0.03em.
 
-The busy button uses the user-selected `🟍✹☾✹🟍` sequence. A locally hosted 2.7kB symbol-font subset keeps these glyphs consistent across devices, at 0.9em with a fixed 5em width. Reveal one Unicode code point at a time so the outer star is never split; ordinary labels and content retain Buenard.
+The busy button uses the user-selected `🟍✹☾✹🟍` sequence. A locally hosted 2.7kB symbol-font subset keeps these glyphs consistent across devices, at 0.9em with a fixed 5em width. Reveal one Unicode code point at a time so the outer star is never split; ordinary page labels and content retain Buenard, with SpecialElite confined to the receipt/export.
 
-Fortune copy is fitted within the upper 58% of its paper bounds. The script can reduce result type toward 16px and supporting text toward 11px to keep long content inside that region. These are containment limits, not a general type scale.
+The live receipt grows with its title, full reading, artwork, and signoff. It has no fixed content-height region, text-fitting loop, clamp, or ellipsis. Daily readings support up to 120 Unicode characters; historical authored fallback copy retains its earlier 80-character limit. The fixed-size downloaded PNG has its own wrapping and fitting template, documented in `docs/receipt-sharing.md`; its export behavior does not reduce live reading type.
 
 ## Layout
 
 The current homepage's composition belongs to `.impeccable/surfaces/src-pages-index-astro.md`. Its reusable spatial grammar is one illustrated focal object, quiet peripheral navigation, and centered readable supporting text below.
 
-The main cabinet is a 3:4 stage, normally `min(700px, 64vw)`, and 740px at 1600px and above. At 701–1100px it becomes 68vw with 80px top clearance. At 700px and below the masthead joins document flow; the cabinet is centered at 125% viewport width with a 620px cap. The mobile crop favors face, action, and result while the sky artwork moves toward the edges.
+The cabinet retains a 3:4 stage inside a content-height machine wrapper, normally `min(700px, 64vw)`, and 740px at 1600px and above. At 701–1100px the cabinet becomes 68vw and the masthead joins document flow, with a 6px gap before the machine. At 700px and below the masthead also stays in flow; the cabinet is centered at 125% viewport width with a 620px cap. The mobile crop favors face, action, and result while the sky artwork moves toward the edges.
 
-The paper result and controls align to proportions of the cabinet rather than a generic card grid. Supporting factual disclosure has a 440px maximum width, narrowing to 380px on mobile. The page supports widths from 320px. Observed 12px, 20px, and 24px steps recur in ordinary gaps and margins; the illustration uses measured proportional placement rather than an invented universal spacing grid.
+The paper result aligns with the cabinet slot through a negative top margin, then occupies normal document flow. Its width is 72% of the machine on desktop, 86% at tablet width, and 80% on mobile. The centered words occupy 54% of the paper width (56% mobile). Receipt copy has 64px top padding at every width. Download and Copy sit at the receipt’s upper-right (right 24%, top 6px), with tooltips above; About remains alone at the page upper-right. Export status follows the receipt in document flow; factual disclosure follows the full paper height. Disclosure has a 480px maximum width, narrowing to 420px on mobile. The page supports widths from 320px. Observed 12px, 20px, and 24px steps recur in ordinary gaps and margins; the illustration uses measured proportional placement rather than an invented universal spacing grid. `docs/receipt-layout.md` records the receipt measurements and reflow evidence.
 
 ## Elevation & Depth
 
@@ -152,9 +184,9 @@ The resting action also has a local worn-brass halo behind its face (`0 2px 12px
 
 ## Shapes
 
-The cabinet, finials, clouds, and flared fortune sheet are image silhouettes. Preserve their proportions and genuine transparency when producing replacements. The action is a brass-rimmed pill; keyboard focus has a small rounded outline. Thin rules and custom star SVGs provide the sparse surrounding ornament.
+The cabinet, finials, and clouds are image silhouettes. Preserve their proportions and genuine transparency when producing replacements. The current receipt preserves the user-edited flared stock from `assets/plates/fortune-paper-edited.png`, preserved pixel-for-pixel in `public/art/dispensed-paper.png`. A canvas splits it at source y=500, extending only the blank upper area; the lower stars, clouds, torn edge, and flared silhouette scale uniformly with paper width. Superseded `receipt-stock.png` and the original `assets/plates/fortune-paper.png` remain historical references. The action is a brass-rimmed pill; keyboard focus has a small rounded outline. Thin rules and custom star SVGs provide the sparse surrounding ornament.
 
-The sky now uses one continuous cloud bank with genuine transparency between the celestial objects and a naturally scalloped lower edge. The former separated cloud-panel edges are resolved. Remaining cabinet and fortune-paper plate concerns are outside this scoped fix and are not a prescribed framing device.
+The sky uses one continuous cloud bank with genuine transparency between the celestial objects and a naturally scalloped lower edge. The former separated cloud-panel edges are resolved. The receipt extension replaces the former fixed paper rendering; it does not close historical whole-page or cabinet plate concerns.
 
 ## Components
 
@@ -178,9 +210,25 @@ The motion control is a quiet underlined text button, 14px on desktop and 13px o
 
 ### Fortune paper
 
-The illustration is separate from live text. A content label distinguishes “Invented nonsense” from “Real sky · comic excuse”; the factual version includes a separate comic interpretation. The paper is hidden during reading and dispensing, then revealed once with a 650ms clipped feed and a small downward translation.
+The receipt is a content-height paper object with live SpecialElite HTML text. Classification, title and full reading occupy a centered upper column. Below, the native-proportion cloud/star scene holds symbolic art centrally, a fixed Bureau seal on the left, a randomly selected smudged stamp on the right, and the issue date and two-line “Filed by the cosmos. Responsibility declined.” signoff. The paper is hidden during reading and dispensing, then revealed once with the existing 650ms clipped feed and small downward translation.
 
-The label's semantic distinction must survive future styling. A source disclosure appears only for real events and supplies the fact, calculation window, and provenance, including the pyswisseph calculation source. The project's AGPL-3.0 source and license are available through the footer; licensing was chosen by the user.
+The lower scene has aspect ratio 1482/562. Its event-art square is 36% of paper width at left 32% and top -2%. Body/sign placements put the full-size sign behind the centered half-size body at opacity 0.15; contain sizing preserves silhouettes. The resolver uses selected event metadata, named scenes and reusable compositions before kind-level and generic fallbacks. Failed generic art can be omitted while preserving the reading. All scene art is decorative.
+
+Each issue captures the chosen fortune, artwork and presentation together. Presentation contains a permanent ISO issue instant and one of six stamps, excluding the immediately preceding stamp. The printed date is formatted in America/New_York from that saved instant; downloads reuse the same presentation across midnight.
+
+The label's semantic distinction must survive future styling. A source disclosure appears only for real events and supplies the fact, a separate labeled traditional interpretation when available, calculation window, and provenance, including the pyswisseph calculation source. The project's AGPL-3.0 source and license are available through the footer; licensing was chosen by the user.
+
+**The Growing Paper Rule.** Let the live receipt grow to preserve all title and reading text at its established readable size; never shrink the reading to fit a decorative plate.
+
+### Opening paper and export controls
+
+The opening paper reads “Bad Day?” followed by one of six questions from `src/lib/intro-questions.ts`. Initialization chooses once per page load; these prompts never enter the issued-reading catalog. The Moon version asks “Has the Moon put your motivation on airplane mode?” The introductory classification is empty and hidden; “Before we begin” is absent. The opening has generic invented artwork, no issued stamp/date and no exportable selection. A normal request replaces it with the chosen fortune, visible classification, artwork and frozen presentation.
+
+Download and Copy occupy the receipt’s upper-right, anchored within the narrow top edge of the flared paper at right 24% and top 6px, in a named “Save your fortune” group. Two 44px square buttons contain authored 22px native SVGs, accessible names and above-control hover/focus tooltips. About remains alone at the page upper-right at every width. Both start disabled with “Get a fortune first” tooltips, enable after an actual issue and disable during issuing or an export operation. There is no Share button, platform panel, social-network action or native-sharing path.
+
+A polite status region follows the receipt in document flow, centered at a maximum width of 360px with 20px side padding and 15px Buenard at line height 1.4; it disappears when empty. Download prepares the cached PNG as `cosmic-bullshit-fortune.png` and announces that it is ready to save. Copy retains the chosen title when applicable, full reading, real/invented label, brand and homepage URL; success explicitly identifies the link as the homepage. Failures offer retry or the other action. Clipboard availability depends on browser permissions.
+
+The cached 1080 × 1350 PNG preserves the exact selected fortune, resolved artwork, fixed Bureau seal, frozen stamp/date, brand and domain. Receipt controls are excluded. Website text begins at y=1317 below the border/cloud clip at y=1306. The separate 1200 × 630 homepage preview remains static. Source social atlas and exact prompt remain archival in `assets/receipt-art/social-icons.*`; the three derived public social icons were removed. The scoped receipt-corner review returned ship for the requested correction; the historical whole-page gate remains open. See `docs/receipt-sharing.md` for export behavior and verification limits.
 
 ### License reading page
 
@@ -196,7 +244,9 @@ Ten idle variants avoid immediate repetition, including the two fist gestures or
 
 ### Asset provenance
 
-Shipping raster sources are `assets/plates/cabinet.png`, `fortune-paper.png`, `sky-panorama.png`, and `paper.png`. The 1774×887 RGBA panorama joins the moon and airplane at left with Saturn at right in the existing plum engraving and cream fill. Its exact generation prompt is embedded in the PNG and retained in `sky-panorama.prompt.txt` and `sky-panorama.png.json`. Original `left-sky.png` and `right-sky.png` plates remain as generation references with their provenance; the page no longer renders them directly. Each shipping plate has a matching `.png.json` generation record and `.prompt.txt` prompt; `.base-prompt.txt` retains earlier prompt history where present. These are generated production plates, not crops presented as an approved final page.
+Shipping original page raster sources are `assets/plates/cabinet.png`, `sky-panorama.png`, and `paper.png`. The retained `assets/plates/fortune-paper.png` is the original paper source reference; it is not rendered by the growing receipt. The 1774×887 RGBA panorama joins the moon and airplane at left with Saturn at right in the existing plum engraving and cream fill. Its exact generation prompt is embedded in the PNG and retained in `sky-panorama.prompt.txt` and `sky-panorama.png.json`. Original `left-sky.png` and `right-sky.png` plates remain as generation references with their provenance; the page no longer renders them directly. Each retained plate has a matching `.png.json` generation record and `.prompt.txt` prompt; `.base-prompt.txt` retains earlier prompt history where present. These are generated production plates, not crops presented as an approved final page.
+
+The receipt adds 34 prepared plum-and-cream engravings under `public/art/{bodies,signs,states,scenes}/` plus the current flared paper, seven stamp/seal images and panorama; the superseded `receipt-stock.png` remains historical. All illustrations are 480 × 480 RGBA PNGs with a 24px transparent inset. Their five generated source images, exact prompts, source identities, and crop recipes remain in `assets/receipt-art/`, `generations.json`, and `crops.json`; the prepared PNGs embed the exact generation prompt, while the manifests retain source identities and preparation recipes. `assets/receipt-concepts/stamp-generations-v2.json` retains the stamp prompts and generation identities. `public/art/share-panorama.png` copies the existing approved sky panorama. Shipping `public/art` PNG provenance covers all 44 rasters with zero missing records. `docs/receipt-art.md` is the inventory and resolver contract. Approved `receipt-120-proof-v3.png` and `share-120-proof-v3.png` in `assets/receipt-concepts/` remain the historical visual authorities, with the later website-lowering instruction governing the export footer. The separate `public/social-preview.png` is a deterministic composition of the approved cabinet, paper texture, local Buenard, and brand-star geometry; its `.png.json` records source hashes and the preparation recipe.
 
 Character-generation records are in `assets/animation-provenance.json`; it preserves the Kling 3.0 job IDs and prompts, including the superseded first reading and the steadier-lighting revision. Current character media lives in `public/media/v2/`. `scripts/prepare_media.py` applies the same native 396×376 crop at (216, 254) to all eighteen 828×1108 originals without scaling, encoding silent H.264 at CRF 17 with the slow preset. The lossless BGRA WebP resting image comes from the first decoded frame of the delivered `idle.mp4`, preserving its decoded RGB exactly. `public/media/v2/resting-window.webp.json` records the recipe, source hashes, and generation record. The new namespace keeps the current poster and videos together; earlier media and its provenance remain for cached clients and history. Keep these records when transforming or replacing assets; do not treat the historical entries as a guarantee that every generated variant ships.
 
@@ -210,10 +260,12 @@ Remaining softness inherited from the generated 540×720 reference is an asset l
 - **Do** keep text and interaction in live HTML above the illustration.
 - **Do** preserve the clerk's identity, steady lighting, fixed window, and long still pauses.
 - **Do** retain visible factual-versus-invented labels, keyboard focus, motion preferences, and asset provenance.
+- **Do** let the receipt grow for the full chosen reading and use the same frozen selection for download and copy.
 
 ### Don't:
 
 - **Don't** replace the illustration's material depth with generic floating cards.
 - **Don't** bake changing fortune text or the interactive action label into artwork.
+- **Don't** shrink live reading text, clamp content, or use the homepage preview as a selected-fortune image.
 - **Don't** turn unresolved plate edges, crop drift, or old-comp geometry differences into reusable design rules.
 - **Don't** describe this documentation or the taller-cabinet approval as a closed finish review.

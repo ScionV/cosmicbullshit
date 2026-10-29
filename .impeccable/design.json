@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-25T20:43:51-04:00",
+  "generatedAt": "2026-10-29T17:33:18.198127+00:00",
   "title": "Design System: Cosmic Bullshit",
   "extensions": {
     "colorMeta": {
@@ -124,6 +124,21 @@
           "oklch(95.00% 0.0978 34.01)"
         ]
       },
+      "receipt-export-paper": {
+        "role": "neutral",
+        "displayName": "Receipt Export Paper",
+        "canonical": "#f4dfb9",
+        "tonalRamp": [
+          "oklch(15.00% 0.0549 82.36)",
+          "oklch(26.43% 0.0549 82.36)",
+          "oklch(37.86% 0.0549 82.36)",
+          "oklch(49.29% 0.0549 82.36)",
+          "oklch(60.71% 0.0549 82.36)",
+          "oklch(72.14% 0.0549 82.36)",
+          "oklch(83.57% 0.0549 82.36)",
+          "oklch(95.00% 0.0549 82.36)"
+        ]
+      },
       "action-rim": {
         "role": "secondary",
         "displayName": "Brass Action Rim",
@@ -154,12 +169,20 @@
         "purpose": "Readable supporting explanation."
       },
       "fortune": {
-        "displayName": "Fortune Result",
-        "purpose": "Live text over separate fortune stock; responsive fitting may reduce size."
+        "displayName": "Receipt Title",
+        "purpose": "SpecialElite weight-400 title: 24px desktop, 23px tablet, 21px mobile; 1.2 line height, full wrapping."
+      },
+      "receipt-reading": {
+        "displayName": "Receipt Reading",
+        "purpose": "SpecialElite 19px above 700px, 18px mobile, 1.4 line height. Full 120-Unicode-character reading; paper grows rather than text shrinking."
+      },
+      "receipt-signoff": {
+        "displayName": "Receipt Signoff",
+        "purpose": "SpecialElite date and signoff at 9px above 700px, 8px mobile; line height 1.3, no tracking."
       },
       "label": {
         "displayName": "Fortune Classification",
-        "purpose": "Semantic factual/invented distinction, uppercase."
+        "purpose": "Semantic factual/invented receipt classification in SpecialElite, 10px regular, 1.4 line height, no tracking."
       },
       "action": {
         "displayName": "Cabinet Action",
@@ -207,7 +230,7 @@
       {
         "name": "fortune-feed",
         "value": "issue-fortune .65s cubic-bezier(.16,1,.3,1) both",
-        "purpose": "Clip from inset(0 0 100%) and translateY(-12px) to full paper."
+        "purpose": "Existing single reveal, from inset(0 0 100%) and translateY(-12px) to the complete content-height paper."
       },
       {
         "name": "idle-pause",
@@ -225,6 +248,27 @@
         "purpose": "Disable CSS motion, smooth scrolling, character playback, button halo, and symbol typing; retain still, result, and a full static busy sky."
       }
     ],
+    "receiptMedia": {
+      "scope": "Scoped receipt-corner/opening-copy documentation merge; unrelated historical component/token drift was not re-audited.",
+      "stock": "public/art/dispensed-paper.png preserves all decoded RGBA pixels of the untouched user-edited assets/plates/fortune-paper-edited.png. Canvas splits at source y=500, stretching blank upper stock only; lower printing keeps native proportions.",
+      "illustrations": "34 transparent 480 × 480 RGBA PNGs under public/art/{bodies,signs,states,scenes}/; 24px outer inset, contain sizing",
+      "sources": "assets/receipt-art/{bodies,signs,states,scenes,receipt-stock}.png; exact prompts and source identities in generations.json, crop recipes in crops.json, provenance also embedded in prepared PNGs",
+      "originalPaper": "assets/plates/fortune-paper.png and public/art/receipt-stock.png are historical sources, no longer rendered by the live receipt",
+      "selection": "Selected event metadata resolves exact overrides, named scenes, reusable compositions, event kind, then generic real/invented art; failed generic art may be omitted while preserving text",
+      "sharing": "1080 × 1350 selected-fortune downloadable PNG: typewriter copy above, art centered at (540,825) within 475px square, cloud bank below, fixed Bureau and frozen stamp/date. Website y1317 below border/cloud clip y1306. Facts and expanded explanation excluded.",
+      "homepagePreview": "public/social-preview.png is a separate 1200 × 630 cabinet-and-brand composition; source hashes and recipe are in public/social-preview.png.json",
+      "composition": "72% paper desktop / 86% tablet / 80% mobile; word column 54% / 56% mobile. Fixed Bureau seal left, centered art, smudged stamp right; sign behind half-size centered body at opacity 0.15.",
+      "font": "Receipt/export only: public/fonts/SpecialElite-Regular.ttf, Apache-2.0 license in public/fonts/SpecialElite-LICENSE.txt; page and export controls retain Buenard.",
+      "presentation": "Permanent ISO issue instant and random non-immediately-repeating stamp captured with the chosen reading. America/New_York printed date; cloned presentation and cached PNG stay identical across midnight.",
+      "provenance": "44 shipping public/art PNGs scanned, zero missing provenance records. Stamp sources/prompts: assets/receipt-concepts/stamp-generations-v2.json. share-panorama.png copies approved sky-panorama.png; v3 approval comps retained as history. Stamp preparation recipes: assets/receipt-concepts/stamp-crops.json. Source paper pixels verified identical; panorama copy bytes verified identical.",
+      "socialProvenance": "Archival assets/receipt-art/social-icons.png and social-icons.json preserve original exact prompt, source identity and crop recipe. The Share panel and three derived public/art/social icons were removed.",
+      "toolbarReview": "Historical share-toolbar-finish-review.md records the superseded panel implementation; no longer current UI authority.",
+      "pageTools": "Download and Copy occupy the receipt’s upper-right, anchored within the narrow top edge of the flared paper at right 24% and top 6px, in a named “Save your fortune” group. Two 44px square buttons contain authored 22px native SVGs, accessible names and above-control hover/focus tooltips. About remains alone at the page upper-right at every width. Both start disabled with “Get a fortune first” tooltips, enable after an actual issue and disable during issuing or an export operation. There is no Share button, platform panel, social-network action or native-sharing path. A polite status region follows the receipt in document flow, centered at a maximum width of 360px with 20px side padding and 15px Buenard at line height 1.4; it disappears when empty. Download prepares the cached PNG as `cosmic-bullshit-fortune.png` and announces that it is ready to save. Copy retains the chosen title when applicable, full reading, real/invented label, brand and homepage URL; success explicitly identifies the link as the homepage. Failures offer retry or the other action. Clipboard availability depends on browser permissions.",
+      "opening": "The opening paper reads “Bad Day?” followed by one of six questions from `src/lib/intro-questions.ts`. Initialization chooses once per page load; these prompts never enter the issued-reading catalog. The Moon version asks “Has the Moon put your motivation on airplane mode?” The introductory classification is empty and hidden; “Before we begin” is absent. Classification becomes visible on issue. The opening has generic invented artwork, no issued stamp/date and no exportable selection. A normal request replaces it with the chosen fortune, classification, artwork and frozen presentation.",
+      "copyPadding": "64px top padding at every width clears receipt-corner controls; prior 10% and 74px treatments are historical.",
+      "pageToolsReview": "Historical page-tools-finish-review.md records the superseded header placement and opening label; no longer current UI authority.",
+      "receiptCornerReview": "receipt-corner-finish-review.md: SHIP for requested correction, no material fixes. Twelve intro/issued captures at six widths independently inspected. Parent reports 48 passing tests, zero check diagnostics, successful build, browser download/copy/frozen-midnight/error-recovery checks. Detector advisories only. Historical whole-page gate remains open. User authorized pushing corrected work; completed push/deployment is not claimed."
+    },
     "breakpoints": [
       {
         "name": "small-mobile",
@@ -269,27 +313,35 @@
       "css": ".ds-motion{font-family:Buenard,Georgia,serif;font-size:14px;border:0;border-bottom:1px solid currentColor;padding:4px 0;background:none;color:var(--ink,#40192e);cursor:pointer}.ds-motion:hover{border-bottom-width:2px}.ds-motion:disabled{cursor:wait}.ds-action:focus-visible,.ds-nav a:focus-visible,.ds-motion:focus-visible,.ds-disclosure summary:focus-visible{outline:3px solid var(--focus,#722d47);outline-offset:5px;border-radius:3px}"
     },
     {
-      "name": "Fortune Copy",
+      "name": "Receipt Text",
       "kind": "custom",
       "refersTo": "fortune-copy",
-      "description": "Live classification and result text; artwork intentionally omitted from this text-only preview.",
-      "html": "<section class=\"ds-fortune\"><p class=\"ds-kind\">Invented nonsense</p><h2 class=\"ds-result\">The Moon has put your motivation on airplane mode.</h2></section>",
-      "css": ".ds-fortune{font-family:Buenard,Georgia,serif;color:var(--ink,#40192e);width:240px;text-align:center}.ds-kind{font-size:11px;letter-spacing:.11em;text-transform:uppercase;margin:0 0 9px;font-weight:700;line-height:1.25}.ds-result{font-size:28px;font-weight:700;line-height:1.05;letter-spacing:-.02em;margin:0;text-wrap:balance}"
+      "description": "Text-only preview of the approved SpecialElite receipt; production adds flared canvas stock and lower scene. See extensions.receiptMedia.",
+      "html": "<section class=\"ds-fortune\"><p class=\"ds-kind\">Invented nonsense</p><h2 class=\"ds-result\">Your cosmic excuse</h2><p class=\"ds-reading\">The Moon has put your motivation on airplane mode.</p><p class=\"ds-signoff\">Filed by the cosmos.<br>Responsibility declined.</p></section>",
+      "css": "@font-face{font-family:SpecialElite;src:url('/fonts/SpecialElite-Regular.ttf') format('truetype');font-weight:400;font-display:swap}.ds-fortune{font-family:SpecialElite,'Courier New',monospace;color:var(--ink,#40192e);width:100%;max-width:504px;padding:64px 0 9%;text-align:center;font-weight:400}.ds-kind,.ds-result,.ds-reading,.ds-signoff{width:54%;margin-left:auto;margin-right:auto;font-weight:400;letter-spacing:0}.ds-kind{font-size:10px;line-height:1.4;margin-top:0;margin-bottom:16px}.ds-result{font-size:24px;line-height:1.2;overflow-wrap:anywhere;text-wrap:balance}.ds-reading{font-size:19px;line-height:1.4;margin-top:18px;overflow-wrap:anywhere;text-wrap:pretty}.ds-signoff{font-size:9px;line-height:1.3;margin-top:12px}@media(max-width:1100px) and (min-width:701px){.ds-result{font-size:23px}}@media(max-width:700px){.ds-kind,.ds-result,.ds-reading,.ds-signoff{width:56%}.ds-result{font-size:21px}.ds-reading{font-size:18px;margin-top:16px}.ds-kind{margin-bottom:14px}.ds-signoff{font-size:8px}}"
+    },
+    {
+      "name": "Fortune Export Actions",
+      "kind": "button",
+      "refersTo": "export-action",
+      "description": "Download and Copy occupy the receipt’s upper-right, anchored within the narrow top edge of the flared paper at right 24% and top 6px, in a named “Save your fortune” group. Two 44px square buttons contain authored 22px native SVGs, accessible names and above-control hover/focus tooltips. About remains alone at the page upper-right at every width. Both start disabled with “Get a fortune first” tooltips, enable after an actual issue and disable during issuing or an export operation. There is no Share button, platform panel, social-network action or native-sharing path.",
+      "html": "<section class=\"ds-paper\"><div class=\"ds-tools\" role=\"group\" aria-label=\"Save your fortune\"><button type=\"button\" aria-label=\"Download fortune image\" data-tooltip=\"Download image\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 2v13m-5-5 5 5 5-5M4 16v6h16v-6\"/></svg></button><button type=\"button\" aria-label=\"Copy fortune text\" data-tooltip=\"Copy text\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M8 8h13v14H8zM16 8V2H2v14h6\"/></svg></button></div><div class=\"ds-copy\"><p class=\"ds-kind\">Invented nonsense</p><h2>Your cosmic excuse</h2><p>The Moon has put your motivation on airplane mode.</p></div></section><p class=\"ds-export-status\" role=\"status\">Your fortune text and homepage link have been copied.</p>",
+      "css": "@font-face{font-family:SpecialElite;src:url('/fonts/SpecialElite-Regular.ttf') format('truetype');font-weight:400;font-display:swap}.ds-paper{position:relative;width:100%;max-width:504px;color:var(--ink,#40192e)}.ds-copy{padding:64px 0 9%;font-family:SpecialElite,'Courier New',monospace;text-align:center}.ds-copy h2,.ds-copy p{width:54%;margin-left:auto;margin-right:auto;overflow-wrap:anywhere;font-weight:400}.ds-copy .ds-kind{font-size:10px;line-height:1.4;margin-top:0;margin-bottom:16px}.ds-copy h2{margin-top:0;font-size:24px;line-height:1.2;text-wrap:balance}.ds-copy p{font-size:19px;line-height:1.4;margin-top:18px}.ds-tools{position:absolute;right:24%;top:6px;display:flex;gap:0;z-index:2}.ds-tools button{position:relative;display:grid;place-items:center;width:44px;height:44px;padding:10px;border:0;background:none;color:inherit;cursor:pointer}.ds-tools svg{width:22px;height:22px}.ds-tools button:hover:not(:disabled){background:#40192e10}.ds-tools button:disabled{opacity:.35;cursor:default}.ds-tools button:focus-visible{outline:3px solid var(--focus,#722d47);outline-offset:5px;border-radius:3px}.ds-tools button::after{content:attr(data-tooltip);position:absolute;right:0;bottom:calc(100% + 4px);padding:5px 8px;background:var(--ink,#40192e);color:#fff2d4;white-space:nowrap;font:12px Buenard,Georgia,serif;opacity:0;pointer-events:none}.ds-tools button:hover::after,.ds-tools button:focus-visible::after{opacity:1}.ds-export-status{width:100%;max-width:360px;margin:12px auto 0;padding:0 20px;color:var(--ink,#40192e);font:15px/1.4 Buenard,Georgia,serif;text-align:center}.ds-export-status:empty{display:none}@media(max-width:1100px) and (min-width:701px){.ds-copy h2{font-size:23px}}@media(max-width:700px){.ds-copy h2,.ds-copy p{width:56%}.ds-copy h2{font-size:21px}.ds-copy p{font-size:18px;margin-top:16px}}"
     },
     {
       "name": "Factual Disclosure",
       "kind": "custom",
       "description": "Native disclosure for the real event, calculation window, and source.",
       "html": "<details class=\"ds-disclosure\"><summary>What’s actually happening?</summary><p>The event is real. Blaming your day on it is the joke.</p></details>",
-      "css": ".ds-disclosure{font-family:Buenard,Georgia,serif;max-width:392px;color:var(--ink,#40192e);font-size:17px;line-height:1.4;padding:10px 24px 0}.ds-disclosure summary{cursor:pointer;text-align:center;text-underline-offset:.2em;text-decoration:underline}.ds-disclosure p{margin:.8rem 0;font-style:italic}.ds-action:focus-visible,.ds-nav a:focus-visible,.ds-motion:focus-visible,.ds-disclosure summary:focus-visible{outline:3px solid var(--focus,#722d47);outline-offset:5px;border-radius:3px}"
+      "css": ".ds-disclosure{font-family:Buenard,Georgia,serif;max-width:480px;color:var(--ink,#40192e);font-size:17px;line-height:1.4;padding:10px 24px 0;overflow-wrap:anywhere}.ds-disclosure summary{cursor:pointer;text-align:center;text-underline-offset:.2em;text-decoration:underline}.ds-disclosure p{margin:.8rem 0;font-style:italic}.ds-action:focus-visible,.ds-nav a:focus-visible,.ds-motion:focus-visible,.ds-disclosure summary:focus-visible{outline:3px solid var(--focus,#722d47);outline-offset:5px;border-radius:3px}@media(max-width:700px){.ds-disclosure{max-width:420px;font-size:16px}}"
     }
   ],
   "narrative": {
     "northStar": "The Weary Cosmic Clerk",
-    "overview": "Cosmic Bullshit feels like an old printed amusement made operational: warm ochre paper, plum engraving, worn brass, and an exhausted but charming clerk. The illustration carries the ornate personality; the surrounding interface stays readable and spare. The humor is warm, absurd, and plainly entertainment.\n\nThis document records the implemented system in `src/pages/index.astro`, `src/pages/license.astro`, `src/styles/home.css`, and `src/scripts/fortune-machine.ts`. It describes code authority, not a finish verdict. The user approved the taller production cabinet during asset review; the original decision comp retains shorter geometry. Automated comparison and plate concerns remain open and are not converted into design rules.",
+    "overview": "Cosmic Bullshit feels like an old printed amusement made operational: warm ochre paper, plum engraving, worn brass, and an exhausted but charming clerk. The illustration carries the ornate personality; the surrounding interface stays readable and spare. The humor is warm, absurd, and plainly entertainment.\n\nThis document records the implemented system in `src/pages/index.astro`, `src/pages/license.astro`, `src/styles/home.css`, `src/styles/receipt.css`, and `src/scripts/fortune-machine.ts`. It describes code authority, not a whole-page finish verdict. The user approved the taller production cabinet during asset review; the original decision comp retains shorter geometry. The receipt extension has a scoped local-review verdict; historical whole-page comparison and plate concerns remain open and are not converted into design rules.",
     "keyCharacteristics": [
       "Warm printed material and plum ink.",
-      "One locally hosted serif family with a compact hierarchy.",
+      "Locally hosted Buenard for the page and SpecialElite for receipt/export text.",
       "Illustrated depth with real HTML text and controls.",
       "Mostly still character performance with deliberate comic pauses.",
       "Clear separation between factual sky events and invented excuses."
@@ -306,6 +358,11 @@
         "section": "elevation"
       },
       {
+        "name": "The Growing Paper Rule",
+        "body": "Let the live receipt grow to preserve all title and reading text at its established readable size; never shrink the reading to fit a decorative plate.",
+        "section": "components"
+      },
+      {
         "name": "The Still First Rule",
         "body": "Keep the clerk still most of the time; animate one restrained gesture only after a random 15–30 second pause or a user request.",
         "section": "components"
@@ -315,11 +372,13 @@
       "Do preserve warm paper, plum ink, and restrained vermilion action.",
       "Do keep text and interaction in live HTML above the illustration.",
       "Do preserve the clerk's identity, steady lighting, fixed window, and long still pauses.",
-      "Do retain visible factual-versus-invented labels, keyboard focus, motion preferences, and asset provenance."
+      "Do retain visible factual-versus-invented labels, keyboard focus, motion preferences, and asset provenance.",
+      "Do let the receipt grow for the full chosen reading and use the same frozen selection for download and copy."
     ],
     "donts": [
       "Don't replace the illustration's material depth with generic floating cards.",
       "Don't bake changing fortune text or the interactive action label into artwork.",
+      "Don't shrink live reading text, clamp content, or use the homepage preview as a selected-fortune image.",
       "Don't turn unresolved plate edges, crop drift, or old-comp geometry differences into reusable design rules.",
       "Don't describe this documentation or the taller-cabinet approval as a closed finish review."
     ]

@@ -1,0 +1,35 @@
+/* The cabinet keeps its original geometry; the issued paper takes its own height. */
+.machine{aspect-ratio:auto;margin-bottom:24px}
+.machine-stage{position:relative;aspect-ratio:3/4}
+@font-face{font-family:SpecialElite;src:url('/fonts/SpecialElite-Regular.ttf') format('truetype');font-style:normal;font-weight:400;font-display:swap}
+.fortune{position:relative;top:auto;left:auto;width:72%;aspect-ratio:auto;margin:-39.86% auto 0;padding:0;border:0;isolation:isolate;font-family:SpecialElite,'Courier New',monospace;font-weight:400;filter:drop-shadow(0 7px 5px #54311c30)}
+.receipt-paper{position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
+.fortune.paper-unavailable{background:#f4dfb9}
+.fortune-copy,.fortune.has-real .fortune-copy{padding:64px 0 0;min-height:0;text-align:center}
+.receipt-words{width:54%;margin:0 auto;padding-bottom:9%;min-height:190px}
+.fortune-kind,.fortune.has-real .fortune-kind{font-size:10px;line-height:1.4;letter-spacing:0;margin:0 0 16px;font-weight:400}
+.fortune h2,.fortune.has-real h2{font-size:24px;line-height:1.2;letter-spacing:0;overflow-wrap:anywhere;margin:0;text-wrap:balance;font-weight:400}
+.fortune-joke,.fortune.has-real .fortune-joke{font-size:19px;line-height:1.4;margin:18px 0 0;overflow-wrap:anywhere;text-wrap:pretty}
+.receipt-scene{position:relative;width:100%;aspect-ratio:1482/562}
+.receipt-art{position:absolute;isolation:isolate;left:32%;top:-2%;width:36%;max-width:none;aspect-ratio:1;margin:0;pointer-events:none}
+.receipt-art img{position:absolute;object-fit:contain}
+.receipt-bureau,.receipt-stamp{position:absolute;height:auto;object-fit:contain;pointer-events:none}
+.receipt-bureau{left:17.6%;top:32%;width:12%}
+.receipt-stamp{left:68.2%;top:54%;width:17.6%}
+.receipt-signoff{position:absolute;right:16%;bottom:12%;max-width:38%;font-size:9px;line-height:1.3;margin:0;text-align:right;letter-spacing:0}
+.receipt-date{position:absolute;left:16.3%;bottom:12%;font-size:9px;line-height:1.3;margin:0;text-align:left}
+.receipt-signoff,.receipt-date{paint-order:stroke fill;-webkit-text-stroke:1px #f4dfb9}
+/* Keep the controls within the narrow top edge of the flared paper. */
+.receipt-tools{position:absolute;right:24%;top:6px;display:flex;gap:0;z-index:2}
+.receipt-tools button{position:relative;display:grid;place-items:center;width:44px;height:44px;padding:10px;border:0;background:none;color:var(--ink)}
+.receipt-tools svg{width:22px;height:22px}
+.receipt-tools button:hover:not(:disabled){background:#40192e10}
+.receipt-tools button:disabled{opacity:.35;cursor:default}
+.receipt-tools button::after{content:attr(data-tooltip);position:absolute;right:0;bottom:calc(100% + 4px);padding:5px 8px;background:var(--ink);color:#fff2d4;white-space:nowrap;font:12px Buenard,Georgia,serif;opacity:0;pointer-events:none}
+.receipt-tools button:hover::after,.receipt-tools button:focus-visible::after{opacity:1}
+.export-status{width:100%;max-width:360px;margin:12px auto 0;padding:0 20px;color:var(--ink);font-size:15px;line-height:1.4;text-align:center}
+.export-status:empty{display:none}
+.fortune-details{max-width:480px;padding-top:10px;margin:0 auto 28px;overflow-wrap:anywhere}
+@media(max-width:1100px) and (min-width:701px){.fortune{width:86%}.fortune h2,.fortune.has-real h2{font-size:23px}.masthead{position:relative;inset:auto;margin:23px 22px 0}.brand{padding-right:60px}.premise{max-width:280px;margin-top:12px;line-height:1.2}.machine{margin-top:6px}}
+@media(max-width:700px){.machine{margin-bottom:22px}.fortune{width:80%;margin-top:-38.53%}.fortune-copy,.fortune.has-real .fortune-copy{padding:64px 0 0}.receipt-words{width:56%;min-height:180px}.fortune h2,.fortune.has-real h2{font-size:21px}.fortune-joke,.fortune.has-real .fortune-joke{font-size:18px;line-height:1.4;margin-top:16px}.fortune-kind,.fortune.has-real .fortune-kind{font-size:10px;letter-spacing:0;margin-bottom:14px}.receipt-signoff,.receipt-date{font-size:8px}.fortune-details{max-width:420px}}
+

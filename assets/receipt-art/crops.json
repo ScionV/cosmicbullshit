@@ -1,0 +1,376 @@
+{
+  "bodies/sun": {
+    "atlas": "assets/receipt-art/bodies.png",
+    "crop": [
+      0,
+      0,
+      450,
+      416
+    ],
+    "safeArea": "Contained square with 24px transparent inset at 480px",
+    "decorative": true
+  },
+  "bodies/moon": {
+    "atlas": "assets/receipt-art/bodies.png",
+    "crop": [
+      450,
+      0,
+      365,
+      410
+    ],
+    "safeArea": "Contained square with 24px transparent inset at 480px",
+    "decorative": true
+  },
+  "bodies/mercury": {
+    "atlas": "assets/receipt-art/bodies.png",
+    "crop": [
+      815,
+      0,
+      365,
+      400
+    ],
+    "safeArea": "Contained square with 24px transparent inset at 480px",
+    "decorative": true
+  },
+  "bodies/venus": {
+    "atlas": "assets/receipt-art/bodies.png",
+    "crop": [
+      1180,
+      0,
+      430,
+      410
+    ],
+    "safeArea": "Contained square with 24px transparent inset at 480px",
+    "decorative": true
+  },
+  "bodies/mars": {
+    "atlas": "assets/receipt-art/bodies.png",
+    "crop": [
+      1610,
+      0,
+      373,
+      410
+    ],
+    "safeArea": "Contained square with 24px transparent inset at 480px",
+    "decorative": true
+  },
+  "bodies/jupiter": {
+    "atlas": "assets/receipt-art/bodies.png",
+    "crop": [
+      0,
+      420,
+      400,
+      373
+    ],
+    "safeArea": "Contained square with 24px transparent inset at 480px",
+    "decorative": true
+  },
+  "bodies/saturn": {
+    "atlas": "assets/receipt-art/bodies.png",
+    "crop": [
+      400,
+      420,
+      495,
+      373
+    ],
+    "safeArea": "Contained square with 24px transparent inset at 480px",
+    "decorative": true
+  },
+  "bodies/uranus": {
+    "atlas": "assets/receipt-art/bodies.png",
+    "crop": [
+      895,
+      397,
+      322,
+      396
+    ],
+    "safeArea": "Contained square with 24px transparent inset at 480px",
+    "decorative": true
+  },
+  "bodies/neptune": {
+    "atlas": "assets/receipt-art/bodies.png",
+    "crop": [
+      1217,
+      410,
+      428,
+      383
+    ],
+    "safeArea": "Contained square with 24px transparent inset at 480px",
+    "decorative": true
+  },
+  "bodies/pluto": {
+    "atlas": "assets/receipt-art/bodies.png",
+    "crop": [
+      1645,
+      450,
+      338,
+      343
+    ],
+    "safeArea": "Contained square with 24px transparent inset at 480px",
+    "decorative": true
+  },
+  "signs/aries": {
+    "atlas": "assets/receipt-art/signs.png",
+    "crop": [
+      0,
+      0,
+      362,
+      362
+    ],
+    "safeArea": "Contained square with 24px transparent inset at 480px",
+    "decorative": true
+  },
+  "signs/taurus": {
+    "atlas": "assets/receipt-art/signs.png",
+    "crop": [
+      362,
+      0,
+      362,
+      362
+    ],
+    "safeArea": "Contained square with 24px transparent inset at 480px",
+    "decorative": true
+  },
+  "signs/gemini": {
+    "atlas": "assets/receipt-art/signs.png",
+    "crop": [
+      724,
+      0,
+      362,
+      362
+    ],
+    "safeArea": "Contained square with 24px transparent inset at 480px",
+    "decorative": true
+  },
+  "signs/cancer": {
+    "atlas": "assets/receipt-art/signs.png",
+    "crop": [
+      1086,
+      0,
+      362,
+      362
+    ],
+    "safeArea": "Contained square with 24px transparent inset at 480px",
+    "decorative": true
+  },
+  "signs/leo": {
+    "atlas": "assets/receipt-art/signs.png",
+    "crop": [
+      0,
+      362,
+      362,
+      362
+    ],
+    "safeArea": "Contained square with 24px transparent inset at 480px",
+    "decorative": true
+  },
+  "signs/virgo": {
+    "atlas": "assets/receipt-art/signs.png",
+    "crop": [
+      362,
+      362,
+      362,
+      362
+    ],
+    "safeArea": "Contained square with 24px transparent inset at 480px",
+    "decorative": true
+  },
+  "signs/libra": {
+    "atlas": "assets/receipt-art/signs.png",
+    "crop": [
+      724,
+      362,
+      362,
+      362
+    ],
+    "safeArea": "Contained square with 24px transparent inset at 480px",
+    "decorative": true
+  },
+  "signs/scorpio": {
+    "atlas": "assets/receipt-art/signs.png",
+    "crop": [
+      1086,
+      362,
+      362,
+      362
+    ],
+    "safeArea": "Contained square with 24px transparent inset at 480px",
+    "decorative": true
+  },
+  "signs/sagittarius": {
+    "atlas": "assets/receipt-art/signs.png",
+    "crop": [
+      0,
+      724,
+      362,
+      362
+    ],
+    "safeArea": "Contained square with 24px transparent inset at 480px",
+    "decorative": true
+  },
+  "signs/capricorn": {
+    "atlas": "assets/receipt-art/signs.png",
+    "crop": [
+      362,
+      724,
+      362,
+      362
+    ],
+    "safeArea": "Contained square with 24px transparent inset at 480px",
+    "decorative": true
+  },
+  "signs/aquarius": {
+    "atlas": "assets/receipt-art/signs.png",
+    "crop": [
+      724,
+      724,
+      362,
+      362
+    ],
+    "safeArea": "Contained square with 24px transparent inset at 480px",
+    "decorative": true
+  },
+  "signs/pisces": {
+    "atlas": "assets/receipt-art/signs.png",
+    "crop": [
+      1086,
+      724,
+      362,
+      362
+    ],
+    "safeArea": "Contained square with 24px transparent inset at 480px",
+    "decorative": true
+  },
+  "states/new-moon": {
+    "atlas": "assets/receipt-art/states.png",
+    "crop": [
+      0,
+      0,
+      443,
+      405
+    ],
+    "safeArea": "Contained square with 24px transparent inset at 480px",
+    "decorative": true
+  },
+  "states/first-quarter": {
+    "atlas": "assets/receipt-art/states.png",
+    "crop": [
+      443,
+      0,
+      443,
+      405
+    ],
+    "safeArea": "Contained square with 24px transparent inset at 480px",
+    "decorative": true
+  },
+  "states/full-moon": {
+    "atlas": "assets/receipt-art/states.png",
+    "crop": [
+      886,
+      0,
+      443,
+      405
+    ],
+    "safeArea": "Contained square with 24px transparent inset at 480px",
+    "decorative": true
+  },
+  "states/last-quarter": {
+    "atlas": "assets/receipt-art/states.png",
+    "crop": [
+      1329,
+      0,
+      445,
+      405
+    ],
+    "safeArea": "Contained square with 24px transparent inset at 480px",
+    "decorative": true
+  },
+  "states/retrograde": {
+    "atlas": "assets/receipt-art/states.png",
+    "crop": [
+      0,
+      405,
+      443,
+      482
+    ],
+    "safeArea": "Contained square with 24px transparent inset at 480px",
+    "decorative": true
+  },
+  "states/conjunction": {
+    "atlas": "assets/receipt-art/states.png",
+    "crop": [
+      443,
+      405,
+      443,
+      482
+    ],
+    "safeArea": "Contained square with 24px transparent inset at 480px",
+    "decorative": true
+  },
+  "states/placement": {
+    "atlas": "assets/receipt-art/states.png",
+    "crop": [
+      886,
+      405,
+      443,
+      482
+    ],
+    "safeArea": "Contained square with 24px transparent inset at 480px",
+    "decorative": true
+  },
+  "states/invented": {
+    "atlas": "assets/receipt-art/states.png",
+    "crop": [
+      1329,
+      405,
+      445,
+      482
+    ],
+    "safeArea": "Contained square with 24px transparent inset at 480px",
+    "decorative": true
+  },
+  "scenes/sun-mercury": {
+    "atlas": "assets/receipt-art/scenes.png",
+    "crop": [
+      0,
+      0,
+      645,
+      627
+    ],
+    "safeArea": "Contained square with 24px transparent inset at 480px",
+    "decorative": true
+  },
+  "scenes/mars-jupiter": {
+    "atlas": "assets/receipt-art/scenes.png",
+    "crop": [
+      645,
+      0,
+      609,
+      627
+    ],
+    "safeArea": "Contained square with 24px transparent inset at 480px",
+    "decorative": true
+  },
+  "scenes/mercury-pluto": {
+    "atlas": "assets/receipt-art/scenes.png",
+    "crop": [
+      0,
+      627,
+      627,
+      627
+    ],
+    "safeArea": "Contained square with 24px transparent inset at 480px",
+    "decorative": true
+  },
+  "scenes/sun-pluto": {
+    "atlas": "assets/receipt-art/scenes.png",
+    "crop": [
+      627,
+      627,
+      627,
+      627
+    ],
+    "safeArea": "Contained square with 24px transparent inset at 480px",
+    "decorative": true
+  }
+}

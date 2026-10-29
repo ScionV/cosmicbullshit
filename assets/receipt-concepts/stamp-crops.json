@@ -1,0 +1,17 @@
+{
+  "source": "assets/receipt-concepts/smudged-stamps-v2.png",
+  "outputDirectory": "public/art/stamps",
+  "operation": "FFmpeg crop, proportional scale to fit 600x360, transparent centered padding, RGBA PNG",
+  "cropCoordinates": "x, y, width, height in source pixels",
+  "crops": {
+    "responsibility-declined": [100, 0, 700, 335],
+    "cosmically-approved": [800, 0, 736, 335],
+    "referred-to-saturn": [100, 335, 700, 340],
+    "filed-under-nonsense": [800, 335, 736, 340],
+    "pending-universal-review": [100, 675, 700, 349],
+    "no-further-questions": [800, 675, 736, 349]
+  },
+  "fixedSeal": "assets/receipt-concepts/bureau-seal-v1.png copied to public/art/stamps/bureau.png",
+  "prompts": "assets/receipt-concepts/stamp-generations-v2.json; exact prompts are embedded in prepared PNGs",
+  "accessibility": "Decorative transparent ink marks; adjacent HTML supplies fortune classification and issue date."
+}

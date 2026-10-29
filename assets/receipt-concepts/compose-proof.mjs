@@ -1,0 +1,22 @@
+import {chromium} from 'file:///C:/Users/Entered%20Adepti/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs';
+import {readFileSync,writeFileSync} from 'node:fs';
+const files=['assets/receipt-concepts/flared-paper-v1.png','assets/receipt-concepts/cloud-surround-v1.png','assets/receipt-concepts/bureau-stamps-v1.png','public/art/signs/leo.png','public/art/bodies/jupiter.png'];
+const urls=files.map(p=>'data:image/png;base64,'+readFileSync(p).toString('base64'));
+const browser=await chromium.launch({headless:true,channel:'msedge'});const page=await browser.newPage();
+await page.goto('http://127.0.0.1:4321/');
+const outputs=await page.evaluate(async urls=>{
+ const font=await new FontFace('ProofBuenard','url(/fonts/Buenard.ttf)',{weight:'400 700'}).load();document.fonts.add(font);
+ const images=await Promise.all(urls.map(src=>new Promise(resolve=>{const i=new Image();i.onload=()=>resolve(i);i.src=src;})));
+ const c=document.createElement('canvas');c.width=800;c.height=1200;const x=c.getContext('2d');
+ x.fillStyle='#e8c898';x.fillRect(0,0,800,1200);x.drawImage(images[0],32,18,736,1104);
+ x.fillStyle='#40192e';x.textAlign='center';x.textBaseline='top';x.font='700 16px ProofBuenard';x.fillText('REAL SKY · COMIC EXCUSE',400,155);
+ x.font='700 43px ProofBuenard';x.fillText('Jupiter in Leo',400,204);
+ x.font='400 30px ProofBuenard';['Growth is up. Mostly the','slide deck explaining why','nothing shipped.'].forEach((s,i)=>x.fillText(s,400,278+i*39));
+ x.globalAlpha=.15;x.drawImage(images[3],180,455,440,440);x.globalAlpha=1;
+ x.drawImage(images[1],145,420,510,510);x.drawImage(images[4],290,587,220,220);
+ x.font='400 20px ProofBuenard';x.fillText('Filed by the cosmos.',400,958);x.fillText('Responsibility declined.',400,985);
+ const receipt=c.toDataURL();c.width=1200;c.height=800;x.fillStyle='#f4dfb9';x.fillRect(0,0,1200,800);x.drawImage(images[2],0,0,1200,800);
+ return [receipt,c.toDataURL()];
+},urls);
+for(const [i,name] of ['receipt-layered-proof','stamps-paper-proof'].entries())writeFileSync(`assets/receipt-concepts/${name}.png`,Buffer.from(outputs[i].split(',')[1],'base64'));
+await browser.close();

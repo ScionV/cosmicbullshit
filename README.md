@@ -6,7 +6,8 @@ A tongue-in-cheek fortune machine for finding something cosmic to blame.
 
 Use Node 24 (see `.node-version`) and `npm ci`, then `npm run dev`.
 `npm test` checks event eligibility, fallback behavior, unique fortune IDs,
-balanced selection, and the 80-character copy limit. `npm run check`
+balanced selection, the historical authored pool's 80-character limit, daily
+readings up to 120 Unicode characters, event artwork, and sharing text. `npm run check`
 checks Astro/TypeScript, and `npm run build` produces the static site in `dist/`.
 
 ## Real sky data
@@ -81,6 +82,20 @@ generation and validation commands, editorial rules, and the authorized daily
 publication procedure. A scheduled local chat runs the writing team through
 the owner's plan and pushes checked daily catalogs directly to GitHub. The
 computer must be on and Codex running for the scheduled local work to execute.
+
+## Receipt and sharing
+
+The live receipt grows for the complete reading with event-specific plum
+engraving. Share fortune and Download image retain the exact chosen reading in
+a PNG; Copy text retains that selection with a homepage link. The separate
+homepage preview carries the brand and cabinet. The receipt and selected-fortune
+PNG use locally hosted SpecialElite under Apache-2.0; its license is retained
+in [SpecialElite-LICENSE.txt](public/fonts/SpecialElite-LICENSE.txt). Other page
+text and the homepage preview retain Buenard.
+
+See [receipt layout](docs/receipt-layout.md), [artwork and provenance](docs/receipt-art.md),
+and [sharing behavior](docs/receipt-sharing.md) for the implementation contract
+and local review evidence.
 
 ## Cloudflare
 

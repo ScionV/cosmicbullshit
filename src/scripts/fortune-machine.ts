@@ -1,4 +1,9 @@
+import { INTRO_QUESTIONS } from '../lib/intro-questions';
 import { chooseFortune, createCalendarLoader, type DailyReadings, type Fortune, type SkyMonth } from '../lib/fortunes';
+import { genericReceiptArtwork, resolveReceiptArtwork, type ReceiptArtwork } from '../lib/receipt-art';
+import { initFortuneSharing } from '../lib/fortune-share';
+import { createReceiptPresentation, receiptDate, stampSource } from '../lib/receipt-presentation';
+import { initReceiptPaper } from './receipt-paper';
 
 const IDLES = [
   'idle', 'idle-sleeve', 'idle-sleepy', 'idle-tie', 'idle-yawn',
@@ -42,6 +47,33 @@ export function initFortuneMachine() {
   let calendar: SkyMonth | null = null;
   let daily: DailyReadings | null = null;
   const loadSky = createCalendarLoader();
+  const sharing = initFortuneSharing();
+  const art = document.querySelector<HTMLElement>('[data-receipt-art]')!;
+  let artRevision = 0;
+  let previousStamp = '';
+  initReceiptPaper(fortuneElement);
+  const introduction = INTRO_QUESTIONS[Math.floor(Math.random() * INTRO_QUESTIONS.length)]!;
+  joke.textContent = introduction;
+
+  async function showArtwork(fortune: Fortune, artwork: ReceiptArtwork, fallback = false) {
+    const revision = ++artRevision;
+    const images = await Promise.all(artwork.layers.map(layer => new Promise<HTMLImageElement | null>(resolve => {
+      const image = new Image();
+      image.alt = '';
+      image.onload = () => resolve(image);
+      image.onerror = () => resolve(null);
+      image.src = layer.src;
+      Object.assign(image.style, { left: `${layer.x * 100}%`, top: `${layer.y * 100}%`,
+        width: `${layer.width * 100}%`, height: `${layer.height * 100}%`, opacity: String(layer.opacity ?? 1) });
+    })));
+    if (revision !== artRevision) return;
+    if (images.some(image => !image)) {
+      if (!fallback) return showArtwork(fortune, genericReceiptArtwork(fortune.kind), true);
+      art.replaceChildren();
+      return;
+    }
+    art.replaceChildren(...images as HTMLImageElement[]);
+  }
 
   function canAnimate() { return !paused && !reducedMotion.matches && !document.hidden; }
 
@@ -122,28 +154,26 @@ export function initFortuneMachine() {
     }, 15000 + Math.random() * 15000);
   }
 
-  function fitFortuneCopy() {
-    title.style.fontSize = '';
-    joke.style.fontSize = '';
-    const boundary = fortuneElement.getBoundingClientRect();
-    const bottomLimit = boundary.top + boundary.height * 0.58;
-    let titleSize = Number.parseFloat(getComputedStyle(title).fontSize);
-    let jokeSize = Number.parseFloat(getComputedStyle(joke).fontSize);
-    const lastLine = () => (joke.hidden ? title : joke).getBoundingClientRect().bottom;
-    while (lastLine() > bottomLimit && (titleSize > 16 || (!joke.hidden && jokeSize > 11))) {
-      titleSize = Math.max(16, titleSize - 1);
-      jokeSize = Math.max(11, jokeSize - 0.5);
-      title.style.fontSize = `${titleSize}px`;
-      if (!joke.hidden) joke.style.fontSize = `${jokeSize}px`;
-    }
-  }
-
   function showFortune(fortune: Fortune) {
     previousId = fortune.id;
     kind.textContent = fortune.kind === 'real' ? 'Real sky · comic excuse' : 'Invented nonsense';
-    title.textContent = fortune.kind === 'real' ? fortune.title : fortune.text;
-    joke.hidden = fortune.kind !== 'real';
-    joke.textContent = fortune.kind === 'real' ? fortune.text : '';
+    kind.hidden = false;
+    title.textContent = fortune.kind === 'real' ? fortune.title : 'Your cosmic excuse';
+    joke.hidden = false;
+    joke.textContent = fortune.text;
+    const artwork = resolveReceiptArtwork(fortune);
+    art.replaceChildren();
+    void showArtwork(fortune, artwork);
+    const presentation = createReceiptPresentation(new Date(), previousStamp);
+    previousStamp = presentation.stamp;
+    const stamp = document.querySelector<HTMLImageElement>('[data-receipt-stamp]')!;
+    stamp.hidden = false;
+    stamp.onerror = () => { stamp.hidden = true; };
+    stamp.src = stampSource(presentation);
+    fortuneElement.dataset.stamp = presentation.stamp;
+    fortuneElement.dataset.issuedAt = presentation.issuedAt;
+    document.querySelector<HTMLElement>('[data-receipt-date]')!.textContent = `ISSUED ${receiptDate(presentation)}`;
+    sharing.setFortune(fortune, artwork, presentation);
     fortuneElement.classList.toggle('has-real', fortune.kind === 'real');
     details.hidden = fortune.kind !== 'real';
     document.querySelector<HTMLElement>('[data-astrology]')!.hidden = !fortune.interpretation;
@@ -159,7 +189,6 @@ export function initFortuneMachine() {
         `Calculated window: ${format(fortune.startsAt!)} – ${format(fortune.endsAt!)} UTC.`;
     }
     root.dataset.state = 'resting';
-    fitFortuneCopy();
     fortuneElement.classList.remove('is-revealing');
     // Restart the single paper reveal for each issued fortune.
     void fortuneElement.offsetWidth;
@@ -169,6 +198,7 @@ export function initFortuneMachine() {
   action.addEventListener('click', async () => {
     if (busy) return;
     busy = true;
+    sharing.setBusy(true);
     action.disabled = true;
     action.setAttribute('aria-busy', 'true');
     action.setAttribute('aria-label', 'Reading the stars. Your request has been received.');
@@ -194,6 +224,7 @@ export function initFortuneMachine() {
       showFortune(chooseFortune(calendar, new Date(), previousId, Math.random, daily));
     } finally {
       busy = false;
+      sharing.setBusy(false);
       action.disabled = false;
       action.setAttribute('aria-busy', 'false');
       action.removeAttribute('aria-label');
@@ -230,7 +261,7 @@ export function initFortuneMachine() {
     updateButtonMotion();
   }).observe(action);
   updateMotion();
-  void document.fonts.ready.then(fitFortuneCopy);
-  new ResizeObserver(fitFortuneCopy).observe(root);
+  void showArtwork({ id: 'airplane-mode', kind: 'invented', title: 'Invented nonsense',
+    text: introduction }, genericReceiptArtwork('invented'));
   void loadCalendar();
 }

@@ -1,0 +1,19 @@
+{
+  "kind": "deterministic-composite",
+  "width": 1200,
+  "height": 630,
+  "purpose": "Generic homepage Open Graph and Twitter preview; never a selected fortune.",
+  "origin": "Existing approved cabinet and paper plates, local Buenard, and the existing brand star geometry.",
+  "recipe": "scripts/prepare_social_preview.mjs",
+  "sourceHashes": {
+    "assets/plates/cabinet.png": "62eccc0bd0f4e181a072613d8d217f035e384ba7159221dd7bca7a800667c3bf",
+    "assets/plates/paper.png": "bbd948c904d6e536869ae24b0d0e961864627c5a4cfd539e9025832e244f908f",
+    "public/fonts/Buenard.ttf": "275f9307353c7502ce7553cbd09ab7c80c73dd2da854728df18d796f9455beb9"
+  },
+  "text": [
+    "Cosmic Bullshit",
+    "A cosmic excuse for whatever went wrong.",
+    "cosmicbullshit.com"
+  ],
+  "safeArea": "Left text remains between x90 and x600, y64 and y570; clerk cabinet occupies the right."
+}

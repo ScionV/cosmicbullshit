@@ -1,0 +1,9 @@
+---
+interface Props { name: 'download' | 'copy' }
+const { name } = Astro.props;
+const paths = {
+  download: 'M12 2v13m-5-5 5 5 5-5M4 16v6h16v-6',
+  copy: 'M8 8h13v14H8zM16 8V2H2v14h6',
+};
+---
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d={paths[name]} /></svg>

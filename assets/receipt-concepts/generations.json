@@ -1,0 +1,23 @@
+[
+  {
+    "key": "flared-paper-v1",
+    "prompt": "Edit the reference fortune-paper image into a clean elongated production paper cutout. Preserve its distinctive perspective silhouette: a narrow straight top emerging from a slot, gently widening curved sides that flare toward a broad bottom, softly torn scalloped lower edge. Make the sheet PORTRAIT, roughly 2:3 width to height, much longer than the original landscape sheet. Warm light cream parchment, subtle fine fibres and ochre edge shading matching the reference. Entire interior blank and uniformly quiet for live text and independently layered illustrations. REMOVE the moon, airplane, clouds, stars, dotted orbits and every ink mark. No writing or graphics. Fully transparent exterior, including around the curved paper silhouette; no rectangular backdrop, no table, no cast shadow outside paper. Front-on suspended receipt, not a scroll or curled page. Preserve material and the flared dispensing perspective rather than making a rectangular stationery page.",
+    "generatedSource": "exec-dff1bdf5-a098-4678-8421-26615f6a349c.png",
+    "tool": "built-in image_gen",
+    "status": "concept candidate, not integrated"
+  },
+  {
+    "key": "cloud-surround-v1",
+    "prompt": "Use case illustration-story. One production decorative overlay on a genuinely TRANSPARENT background, approximately square. Use reference only for the plum ink engraving style, cream highlights, tiny eight-point stars, delicate crosshatching and softly billowing clouds. Draw an open celestial stage: a low bank of engraved puffy clouds along the bottom, rising a little at the far left and right, with a few scattered small stars above and between; large completely EMPTY transparent central region, about sixty percent of the picture, intended for a separately composited zodiac lithograph and planet character. Keep all clouds and stars away from the top central third intended for receipt text. NO moon, NO airplane, NO planets, NO zodiac signs, NO faces, NO orbit ellipse, NO text, NO border, NO paper rectangle. Plum #40192e fine antique lithography, restrained cream fill inside cloud shapes, transparent gaps and exterior. Match the original receipt's magical little cloud scene. All illustration complete with 6 percent transparent padding, no cut-off cloud edges.",
+    "generatedSource": "exec-52287aa7-8b55-49f5-b812-4d9634042b62.png",
+    "tool": "built-in image_gen",
+    "status": "concept candidate, not integrated"
+  },
+  {
+    "key": "bureau-stamps-v1",
+    "prompt": "One transparent sprite atlas of SIX antique bureaucratic rubber-stamp ink seals for the playful website Cosmic Bullshit. 2 equal columns by 3 equal rows, square cells, 20 percent clear gutters. Plum #40192e ink ONLY, genuinely transparent backgrounds and inside seals; subtle worn uneven stamped ink, no paper, no shadows, no rubber stamp tools. Match antique cosmic almanac print. Mix oval, round and simple rectangular thin double-line seals; modest engraved star or tiny crescent ornament allowed, coherent late Victorian cosmic office. Very readable serif uppercase lettering, each exact phrase once, no other words or pseudo text. TOP LEFT oval: 'RESPONSIBILITY DECLINED'. TOP RIGHT rectangular: 'COSMICALLY APPROVED'. MIDDLE LEFT round: 'REFERRED TO SATURN'. MIDDLE RIGHT rectangular: 'FILED UNDER NONSENSE'. BOTTOM LEFT oval: 'PENDING UNIVERSAL REVIEW'. BOTTOM RIGHT round: 'NO FURTHER QUESTIONS'. Every phrase spelled precisely. Each complete seal centered within its own cell and wholly separate. Wry official ink impressions, not glossy badges, wax, metallic medals or modern UI icons. These are novelty prop marks, no real institution or government insignia.",
+    "generatedSource": "exec-bd7475ad-ddb9-4fb9-9c40-c8ad62a3dffb.png",
+    "tool": "built-in image_gen",
+    "status": "concept candidate, not integrated"
+  }
+]

@@ -1,0 +1,5 @@
+Special Elite Regular by Astigmatic
+Source: https://github.com/google/fonts/tree/main/apache/specialelite
+Font: SpecialElite-Regular.ttf
+License: Apache License 2.0; retained as SpecialElite-LICENSE.txt
+Use: Local receipt HTML and selected-fortune PNG typography.

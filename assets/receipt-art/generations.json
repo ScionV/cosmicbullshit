@@ -1,0 +1,42 @@
+[
+  {
+    "key": "bodies",
+    "filename": "bodies.png",
+    "prompt": "Use case: illustration-story. Asset type: ONE production sprite atlas, 5 equal columns by 2 equal rows, landscape 5:2 proportions, each cell square with 15 percent transparent padding. Match the supplied style-reference celestial engraving: plum ink #40192e, fine hand-cut crosshatching and stippling, warm pale cream fills, Victorian almanac woodcut, slightly wry storybook faces, antique cosmic bureaucracy. Actual transparent background outside subjects. No paper rectangles, gradients, labels, glyph text, numbers, frames, borders, or watermark. Bold clear silhouettes readable at 100px. Reference image is style only. Draw exactly TEN separate celestial body portraits, centered in their respective cells; nothing crosses cell borders. Left to right top row: Sun with tired human face and sun rays; crescent Moon with sleepy face; Mercury as small cratered sphere with tiny winged messenger cap; Venus as cloud-striped sphere with tasteful little decorative scallop; Mars as cratered sphere with stern brow. Bottom row left to right: Jupiter as banded sphere with big oval storm; Saturn with clearly visible broad rings; Uranus as sphere with narrow upright tilted rings; Neptune as sphere with little trident behind it; Pluto as small icy mottled sphere with heavy-lidded eyes. All distinct, same scale and pen weight. Artwork only, no writing.",
+    "tool": "built-in image_gen",
+    "styleReference": "assets/plates/sky-panorama.png",
+    "generatedSource": "exec-aeb10b52-cb0e-4bf1-a699-389cfa4a944c.png"
+  },
+  {
+    "key": "signs",
+    "filename": "signs.png",
+    "prompt": "Use case: illustration-story. Asset type: ONE production transparent sprite atlas 4 columns by 3 rows in 4:3 image proportions. Match the supplied style-reference celestial engraving: plum ink #40192e, fine hand-cut crosshatching and stippling, warm pale cream fills, Victorian almanac woodcut, slightly wry storybook faces, antique cosmic bureaucracy. Actual transparent background outside subjects. No paper rectangles, gradients, labels, glyph text, numbers, frames, borders, or watermark. Bold clear silhouettes readable at 100px. Style reference only. Exactly TWELVE distinct zodiac emblems, each centered within its own equally sized square cell and maximum 65 percent cell width AND height, with ample transparent gutters so no piece enters a neighboring cell. No circles around the emblems. In reading order: row1 Aries a curled-horn ram head, Taurus bull head, Gemini two matching human profile faces, Cancer a crab; row2 Leo a lion head, Virgo a maiden holding wheat, Libra balanced weighing scales, Scorpio a scorpion; row3 Sagittarius a bow and arrow, Capricorn a goat with fish tail, Aquarius an earthen pitcher pouring water, Pisces two fish swimming in opposite directions. Delicate engraved plum outlines with cream fills, clear small silhouettes. Absolutely no writing, letters or zodiac glyphs; fully illustrated vignettes.",
+    "tool": "built-in image_gen",
+    "styleReference": "assets/plates/sky-panorama.png",
+    "generatedSource": "exec-f5c82c3a-812e-46ee-9fb7-c7fbe591bdfb.png"
+  },
+  {
+    "key": "states",
+    "filename": "states.png",
+    "prompt": "Use case: illustration-story. Asset type: ONE transparent production sprite atlas, four equal columns by two equal rows, 2:1 proportions, exactly eight symbols with transparent 20 percent padding in each cell; no art crosses cells. Match the supplied style-reference celestial engraving: plum ink #40192e, fine hand-cut crosshatching and stippling, warm pale cream fills, Victorian almanac woodcut, slightly wry storybook faces, antique cosmic bureaucracy. Actual transparent background outside subjects. No paper rectangles, gradients, labels, glyph text, numbers, frames, borders, or watermark. Bold clear silhouettes readable at 100px. Eight designs reading order. Top row: NEW MOON a nearly dark crosshatched round moon disk with a very thin cream rim; FIRST QUARTER MOON a straight central terminator with RIGHT half cream and LEFT half dark plum hatching; FULL MOON a round full cream disk with small craters; LAST QUARTER MOON a straight central terminator with LEFT half cream and RIGHT half dark plum hatching. All four lunar disks identically sized and round, no human faces so the phases remain unmistakable. Bottom row: RETROGRADE a decorative broad curved arrow looping backward around a small star; CONJUNCTION two thin separate elliptical orbital paths with a small star between them, no planetary collisions; PLACEMENT an ornate antique compass rose with a tiny star in the centre; INVENTED NONSENSE a weary little crescent moon managing a stack of absurdly curling paperwork and one rubber stamp. No writing, labels or pseudo text anywhere.",
+    "tool": "built-in image_gen",
+    "styleReference": "assets/plates/sky-panorama.png",
+    "generatedSource": "exec-0c50d995-b0cf-49f3-b8b4-1748e58a99c7.png"
+  },
+  {
+    "key": "scenes",
+    "filename": "scenes.png",
+    "prompt": "Use case: illustration-story. Asset type: ONE production transparent sprite atlas with four symbolic conjunction vignettes, 2 equal columns by 2 equal rows, square image. Match the supplied style-reference celestial engraving: plum ink #40192e, fine hand-cut crosshatching and stippling, warm pale cream fills, Victorian almanac woodcut, slightly wry storybook faces, antique cosmic bureaucracy. Actual transparent background outside subjects. No paper rectangles, gradients, labels, glyph text, numbers, frames, borders, or watermark. Bold clear silhouettes readable at 100px. Four scenes centered in each square cell, 18 percent transparent padding, absolutely no writing. These are symbolic illustrations, not photographs or evidence, so body scales are playful but all planets remain completely separate and NEVER touching or colliding. Each scene one fine elliptical orbital line, tiny stars and two separate celestial characters with subtly weary human faces. TOP LEFT: Sun with engraved flame rays facing a small cratered Mercury wearing a winged messenger cap across a noticeable gap. TOP RIGHT: cratered stern Mars facing large striped Jupiter with oval storm, like two department heads awkwardly attending a meeting; clear space between them. BOTTOM LEFT: small Mercury in winged cap and icy mottled little Pluto on opposing sides of a quiet orbit. BOTTOM RIGHT: Sun with flame rays facing small icy mottled Pluto across a generous gap. Do not put ringed Saturn in any scene. In each scene two bodies only, fine plum crosshatching, cream fills, one coherent celestial woodcut. No paperwork, labels, literal contact or large black solid areas.",
+    "tool": "built-in image_gen",
+    "styleReference": "assets/plates/sky-panorama.png",
+    "generatedSource": "exec-b9d0eb3f-7d1e-4538-8ab7-b09eaaef3464.png"
+  },
+  {
+    "key": "receipt-stock",
+    "filename": "receipt-stock.png",
+    "prompt": "Use case: illustration-story. Asset type: production blank fortune receipt stock with genuine transparent exterior, portrait 2:3 proportions. Match supplied parchment colour and printing material but REMOVE ALL drawings and ink. One single flat front-on creamy ivory paper sheet with slightly irregular naturally torn edges, almost rectangular and nearly parallel sides, fine real paper fibres, subtle warm ochre edge wear, very mild physical shading. The central 85 percent must be uniform quiet light cream for live readable text. No perspective, no curl, no folds, no text, no moon, no stars, no illustrations, no objects, no hands, no shadow outside the paper. All four corners complete. This will be used as a nine-slice scalable web paper background, so all distinctive paper-edge detail stays within the outer 4 percent and interior stays neutral and smooth. Style reference image is for colour/material only.",
+    "tool": "built-in image_gen",
+    "styleReference": "assets/plates/fortune-paper.png",
+    "generatedSource": "exec-644bb06f-b311-4605-bc13-18bdf36f29da.png"
+  }
+]
