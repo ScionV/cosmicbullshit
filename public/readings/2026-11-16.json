@@ -1,0 +1,844 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-16",
+  "validFrom": "2026-11-16T05:00:00Z",
+  "validUntil": "2026-11-17T05:00:00Z",
+  "source": {
+    "name": "pyswisseph",
+    "version": "2.10.03",
+    "url": "https://github.com/astrorigin/pyswisseph",
+    "ephemeris": "Moshier (built into Swiss Ephemeris)",
+    "coordinates": "geocentric tropical ecliptic",
+    "timeScale": "UT"
+  },
+  "events": [
+    {
+      "id": "planet-sign-Jupiter-2026-11-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Jupiter",
+      "startsAt": "2026-11-01T00:00:00Z",
+      "endsAt": "2026-12-01T00:00:00Z",
+      "fact": "Jupiter has been in tropical Leo since 2026-06-30 (geocentric zodiac).",
+      "sign": "Leo"
+    },
+    {
+      "id": "planet-sign-Mars-2026-11-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Mars",
+      "startsAt": "2026-11-01T00:00:00Z",
+      "endsAt": "2026-11-25T23:37:04Z",
+      "fact": "Mars has been in tropical Leo since 2026-09-28 (geocentric zodiac).",
+      "sign": "Leo"
+    },
+    {
+      "id": "planet-sign-Mercury-2026-11-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Mercury",
+      "startsAt": "2026-11-01T00:00:00Z",
+      "endsAt": "2026-12-01T00:00:00Z",
+      "fact": "Mercury has been in tropical Scorpio since 2026-09-30 (geocentric zodiac).",
+      "sign": "Scorpio"
+    },
+    {
+      "id": "planet-sign-Neptune-2026-11-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Neptune",
+      "startsAt": "2026-11-01T00:00:00Z",
+      "endsAt": "2026-12-01T00:00:00Z",
+      "fact": "Neptune has been in tropical Aries since 2026-01-26 (geocentric zodiac).",
+      "sign": "Aries"
+    },
+    {
+      "id": "planet-sign-Pluto-2026-11-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Pluto",
+      "startsAt": "2026-11-01T00:00:00Z",
+      "endsAt": "2026-12-01T00:00:00Z",
+      "fact": "Pluto has been in tropical Aquarius since 2024-11-19 (geocentric zodiac).",
+      "sign": "Aquarius"
+    },
+    {
+      "id": "planet-sign-Saturn-2026-11-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Saturn",
+      "startsAt": "2026-11-01T00:00:00Z",
+      "endsAt": "2026-12-01T00:00:00Z",
+      "fact": "Saturn has been in tropical Aries since 2026-02-14 (geocentric zodiac).",
+      "sign": "Aries"
+    },
+    {
+      "id": "planet-sign-Sun-2026-11-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Sun",
+      "startsAt": "2026-11-01T00:00:00Z",
+      "endsAt": "2026-11-22T07:23:21Z",
+      "fact": "Sun has been in tropical Scorpio since 2026-10-23 (geocentric zodiac).",
+      "sign": "Scorpio"
+    },
+    {
+      "id": "planet-sign-Uranus-2026-11-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Uranus",
+      "startsAt": "2026-11-01T00:00:00Z",
+      "endsAt": "2026-12-01T00:00:00Z",
+      "fact": "Uranus has been in tropical Gemini since 2026-04-26 (geocentric zodiac).",
+      "sign": "Gemini"
+    },
+    {
+      "id": "planet-sign-Venus-2026-11-01T00:00:00Z",
+      "kind": "planet-sign",
+      "subject": "Venus",
+      "startsAt": "2026-11-01T00:00:00Z",
+      "endsAt": "2026-12-01T00:00:00Z",
+      "fact": "Venus has been in tropical Libra since 2026-10-25 (geocentric zodiac).",
+      "sign": "Libra"
+    },
+    {
+      "id": "retrograde-Neptune-2026-11-01T00:00:00Z",
+      "kind": "retrograde",
+      "subject": "Neptune",
+      "startsAt": "2026-11-01T00:00:00Z",
+      "endsAt": "2026-12-01T00:00:00Z",
+      "fact": "Neptune is in apparent retrograde motion as seen from Earth."
+    },
+    {
+      "id": "retrograde-Saturn-2026-11-01T00:00:00Z",
+      "kind": "retrograde",
+      "subject": "Saturn",
+      "startsAt": "2026-11-01T00:00:00Z",
+      "endsAt": "2026-12-01T00:00:00Z",
+      "fact": "Saturn is in apparent retrograde motion as seen from Earth."
+    },
+    {
+      "id": "retrograde-Uranus-2026-11-01T00:00:00Z",
+      "kind": "retrograde",
+      "subject": "Uranus",
+      "startsAt": "2026-11-01T00:00:00Z",
+      "endsAt": "2026-12-01T00:00:00Z",
+      "fact": "Uranus is in apparent retrograde motion as seen from Earth."
+    },
+    {
+      "id": "moon-sign-Aquarius-2026-11-15T09:24:15Z",
+      "kind": "moon-sign",
+      "subject": "Aquarius",
+      "startsAt": "2026-11-15T09:24:15Z",
+      "endsAt": "2026-11-17T21:19:25Z",
+      "fact": "The Moon is in tropical Aquarius (geocentric zodiac)."
+    },
+    {
+      "id": "conjunction-Mars-Jupiter-2026-11-16T05:00:00Z",
+      "kind": "conjunction",
+      "subject": "Mars conjunct Jupiter",
+      "startsAt": "2026-11-16T05:00:00Z",
+      "endsAt": "2026-11-17T05:00:00Z",
+      "fact": "The geocentric tropical ecliptic longitudes of Mars and Jupiter differ by at most 3 degrees.",
+      "bodies": [
+        "Mars",
+        "Jupiter"
+      ],
+      "orbDegrees": 3
+    },
+    {
+      "id": "moon-phase-first-quarter Moon-2026-11-16T16:18:03Z",
+      "kind": "moon-phase",
+      "subject": "first-quarter Moon",
+      "startsAt": "2026-11-16T16:18:03Z",
+      "endsAt": "2026-11-18T06:55:24Z",
+      "fact": "The Moon is near its first-quarter Moon phase (within 9 degrees of the phase angle)."
+    }
+  ],
+  "readings": [
+    {
+      "id": "daily-2026-11-16-planet-sign-Jupiter-2026-11-01T00:00:00Z-tech-0",
+      "eventId": "planet-sign-Jupiter-2026-11-01T00:00:00Z",
+      "tone": "tech",
+      "text": "The roadmap added a balcony for applause. The core feature is still waiting for a chair."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Jupiter-2026-11-01T00:00:00Z-woo-0",
+      "eventId": "planet-sign-Jupiter-2026-11-01T00:00:00Z",
+      "tone": "woo",
+      "text": "The prosperity mystic ordered a billboard for one blessing. Expansion is now blocking its own sunlight."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Jupiter-2026-11-01T00:00:00Z-zen-0",
+      "eventId": "planet-sign-Jupiter-2026-11-01T00:00:00Z",
+      "tone": "zen",
+      "text": "Growth can wear plain clothes. It will still recognize itself at the counter."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Jupiter-2026-11-01T00:00:00Z-zen-1",
+      "eventId": "planet-sign-Jupiter-2026-11-01T00:00:00Z",
+      "tone": "zen",
+      "text": "Jupiter in Leo served confidence on the largest platter. One honest bite proved sufficient."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Jupiter-2026-11-01T00:00:00Z-office-0",
+      "eventId": "planet-sign-Jupiter-2026-11-01T00:00:00Z",
+      "tone": "office",
+      "text": "Leadership booked the atrium for a two-line forecast. Expansion has excellent acoustics."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Jupiter-2026-11-01T00:00:00Z-dating-0",
+      "eventId": "planet-sign-Jupiter-2026-11-01T00:00:00Z",
+      "tone": "dating",
+      "text": "A promising match enlarged dinner into a world tour. Tuesday is checking its passport."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Jupiter-2026-11-01T00:00:00Z-domestic-0",
+      "eventId": "planet-sign-Jupiter-2026-11-01T00:00:00Z",
+      "tone": "domestic",
+      "text": "One houseplant became six during a quick nursery visit. The windowsill is drafting an expansion plan."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Mars-2026-11-01T00:00:00Z-tech-0",
+      "eventId": "planet-sign-Mars-2026-11-01T00:00:00Z",
+      "tone": "tech",
+      "text": "The compiler optimized for confidence. Every warning now ships as an assertion."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Mars-2026-11-01T00:00:00Z-woo-0",
+      "eventId": "planet-sign-Mars-2026-11-01T00:00:00Z",
+      "tone": "woo",
+      "text": "The willpower oracle treats every candle like opening night. The match would prefer a quiet shift."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Mars-2026-11-01T00:00:00Z-zen-0",
+      "eventId": "planet-sign-Mars-2026-11-01T00:00:00Z",
+      "tone": "zen",
+      "text": "A brave act stays brave after the audience goes for lunch."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Mars-2026-11-01T00:00:00Z-zen-1",
+      "eventId": "planet-sign-Mars-2026-11-01T00:00:00Z",
+      "tone": "zen",
+      "text": "Mars in Leo wore tap shoes to turn the page. The story advanced by one quiet sheet."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Mars-2026-11-01T00:00:00Z-office-0",
+      "eventId": "planet-sign-Mars-2026-11-01T00:00:00Z",
+      "tone": "office",
+      "text": "The director opened the workday with a triumphal briefing. Operations is still waiting for the first task."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Mars-2026-11-01T00:00:00Z-dating-0",
+      "eventId": "planet-sign-Mars-2026-11-01T00:00:00Z",
+      "tone": "dating",
+      "text": "Desire booked the arena before asking anyone out. The ticket desk is accepting one quiet correction."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Mars-2026-11-01T00:00:00Z-domestic-0",
+      "eventId": "planet-sign-Mars-2026-11-01T00:00:00Z",
+      "tone": "domestic",
+      "text": "The bin lid gets a victory speech before opening. The rubbish would settle for steady hands."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Mercury-2026-11-01T00:00:00Z-tech-0",
+      "eventId": "planet-sign-Mercury-2026-11-01T00:00:00Z",
+      "tone": "tech",
+      "text": "The API response used three nested envelopes. The useful field is named definitelyNotASecret."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Mercury-2026-11-01T00:00:00Z-woo-0",
+      "eventId": "planet-sign-Mercury-2026-11-01T00:00:00Z",
+      "tone": "woo",
+      "text": "The pendulum filed a freedom-of-information request against itself. Answers remain heavily perfumed."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Mercury-2026-11-01T00:00:00Z-zen-0",
+      "eventId": "planet-sign-Mercury-2026-11-01T00:00:00Z",
+      "tone": "zen",
+      "text": "Mercury in Scorpio subpoenaed the small print. It turned out to be merely small."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Mercury-2026-11-01T00:00:00Z-zen-1",
+      "eventId": "planet-sign-Mercury-2026-11-01T00:00:00Z",
+      "tone": "zen",
+      "text": "One clear answer is deep enough. The well does not charge by the bucket."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Mercury-2026-11-01T00:00:00Z-office-0",
+      "eventId": "planet-sign-Mercury-2026-11-01T00:00:00Z",
+      "tone": "office",
+      "text": "The briefing decoded the euphemism. Senior management immediately classified the dictionary."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Mercury-2026-11-01T00:00:00Z-dating-0",
+      "eventId": "planet-sign-Mercury-2026-11-01T00:00:00Z",
+      "tone": "dating",
+      "text": "The flirty question kept drilling past the answer. Small talk has requested a shallower table."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Mercury-2026-11-01T00:00:00Z-domestic-0",
+      "eventId": "planet-sign-Mercury-2026-11-01T00:00:00Z",
+      "tone": "domestic",
+      "text": "The washing label's tiny print has acquired a study group. The jumper waits for a plain answer."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Neptune-2026-11-01T00:00:00Z-tech-0",
+      "eventId": "planet-sign-Neptune-2026-11-01T00:00:00Z",
+      "tone": "tech",
+      "text": "The spec rendered as mist, so the build system marked urgency as its only dependency."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Neptune-2026-11-01T00:00:00Z-woo-0",
+      "eventId": "planet-sign-Neptune-2026-11-01T00:00:00Z",
+      "tone": "woo",
+      "text": "The astral sprinter brought a starter pistol to a cloud. The cloud has declined to choose a lane."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Neptune-2026-11-01T00:00:00Z-zen-0",
+      "eventId": "planet-sign-Neptune-2026-11-01T00:00:00Z",
+      "tone": "zen",
+      "text": "A vision may walk before it runs. The scenery is not withholding approval."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Neptune-2026-11-01T00:00:00Z-zen-1",
+      "eventId": "planet-sign-Neptune-2026-11-01T00:00:00Z",
+      "tone": "zen",
+      "text": "Neptune in Aries sent a daydream through the express lane. Its destination remained handwritten."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Neptune-2026-11-01T00:00:00Z-office-0",
+      "eventId": "planet-sign-Neptune-2026-11-01T00:00:00Z",
+      "tone": "office",
+      "text": "The strategy fled the fog at a sprint. Its destination is still awaiting a name badge."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Neptune-2026-11-01T00:00:00Z-dating-0",
+      "eventId": "planet-sign-Neptune-2026-11-01T00:00:00Z",
+      "tone": "dating",
+      "text": "The crush sent ‘on my way’ before choosing a person. Romance is circling the block in fog."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Neptune-2026-11-01T00:00:00Z-domestic-0",
+      "eventId": "planet-sign-Neptune-2026-11-01T00:00:00Z",
+      "tone": "domestic",
+      "text": "A hazy plan for a reading loft charges upstairs. The ladder and available ceiling have questions."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Pluto-2026-11-01T00:00:00Z-tech-0",
+      "eventId": "planet-sign-Pluto-2026-11-01T00:00:00Z",
+      "tone": "tech",
+      "text": "The platform abolished gatekeepers, then made the permissions graph chair of the board."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Pluto-2026-11-01T00:00:00Z-woo-0",
+      "eventId": "planet-sign-Pluto-2026-11-01T00:00:00Z",
+      "tone": "woo",
+      "text": "The collective healer put systemic renewal in a subscription box. Power dynamics ship separately."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Pluto-2026-11-01T00:00:00Z-zen-0",
+      "eventId": "planet-sign-Pluto-2026-11-01T00:00:00Z",
+      "tone": "zen",
+      "text": "Pluto in Aquarius convened a public forum on who owns the emergency lever."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Pluto-2026-11-01T00:00:00Z-zen-1",
+      "eventId": "planet-sign-Pluto-2026-11-01T00:00:00Z",
+      "tone": "zen",
+      "text": "Transformation does not require constant urgency. The commons may pause between decisions."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Pluto-2026-11-01T00:00:00Z-office-0",
+      "eventId": "planet-sign-Pluto-2026-11-01T00:00:00Z",
+      "tone": "office",
+      "text": "The reform council redesigned power as a network. Every path still terminates at the chair."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Pluto-2026-11-01T00:00:00Z-dating-0",
+      "eventId": "planet-sign-Pluto-2026-11-01T00:00:00Z",
+      "tone": "dating",
+      "text": "Courtship formed a cooperative. Nobody has accepted the shift for saying how they feel."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Pluto-2026-11-01T00:00:00Z-domestic-0",
+      "eventId": "planet-sign-Pluto-2026-11-01T00:00:00Z",
+      "tone": "domestic",
+      "text": "The hallway hooks entered collective renewal. Every coat now belongs to the weather committee."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Saturn-2026-11-01T00:00:00Z-tech-0",
+      "eventId": "planet-sign-Saturn-2026-11-01T00:00:00Z",
+      "tone": "tech",
+      "text": "The new thread charged ahead until the mutex explained adulthood."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Saturn-2026-11-01T00:00:00Z-woo-0",
+      "eventId": "planet-sign-Saturn-2026-11-01T00:00:00Z",
+      "tone": "woo",
+      "text": "The impulse guru sells a ceremonial brake pedal. Acceleration must complete the restraint practicum."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Saturn-2026-11-01T00:00:00Z-zen-0",
+      "eventId": "planet-sign-Saturn-2026-11-01T00:00:00Z",
+      "tone": "zen",
+      "text": "Saturn in Aries asked the first impulse for proof of structural integrity."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Saturn-2026-11-01T00:00:00Z-zen-1",
+      "eventId": "planet-sign-Saturn-2026-11-01T00:00:00Z",
+      "tone": "zen",
+      "text": "The boundary can lend courage a shape. The open gate remains open."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Saturn-2026-11-01T00:00:00Z-office-0",
+      "eventId": "planet-sign-Saturn-2026-11-01T00:00:00Z",
+      "tone": "office",
+      "text": "The new director demanded a running start. Facilities marked the acceptable length of the corridor."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Saturn-2026-11-01T00:00:00Z-dating-0",
+      "eventId": "planet-sign-Saturn-2026-11-01T00:00:00Z",
+      "tone": "dating",
+      "text": "The bold hello passed courage inspection. Load-bearing compatibility remains at the engineer's desk."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Saturn-2026-11-01T00:00:00Z-domestic-0",
+      "eventId": "planet-sign-Saturn-2026-11-01T00:00:00Z",
+      "tone": "domestic",
+      "text": "The laundry starts at once, after the weight limit and three care labels finish their briefing."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Sun-2026-11-01T00:00:00Z-tech-0",
+      "eventId": "planet-sign-Sun-2026-11-01T00:00:00Z",
+      "tone": "tech",
+      "text": "The profiler exposed the secret hot path. It now runs behind an NDA and two feature flags."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Sun-2026-11-01T00:00:00Z-woo-0",
+      "eventId": "planet-sign-Sun-2026-11-01T00:00:00Z",
+      "tone": "woo",
+      "text": "The illumination priest booked a spotlight for the occult. The occult is hiding under the lighting invoice."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Sun-2026-11-01T00:00:00Z-zen-0",
+      "eventId": "planet-sign-Sun-2026-11-01T00:00:00Z",
+      "tone": "zen",
+      "text": "The Scorpio Sun put a desk lamp in the vault. The shadows kept reasonable hours."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Sun-2026-11-01T00:00:00Z-zen-1",
+      "eventId": "planet-sign-Sun-2026-11-01T00:00:00Z",
+      "tone": "zen",
+      "text": "What is hidden may stay whole without becoming public property."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Sun-2026-11-01T00:00:00Z-office-0",
+      "eventId": "planet-sign-Sun-2026-11-01T00:00:00Z",
+      "tone": "office",
+      "text": "The executive agenda listed ‘confidential motives’ as open business. Nobody seconded the item."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Sun-2026-11-01T00:00:00Z-dating-0",
+      "eventId": "planet-sign-Sun-2026-11-01T00:00:00Z",
+      "tone": "dating",
+      "text": "The profile lit one candle and closed every curtain. Visibility may apply through discreet channels."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Sun-2026-11-01T00:00:00Z-domestic-0",
+      "eventId": "planet-sign-Sun-2026-11-01T00:00:00Z",
+      "tone": "domestic",
+      "text": "The bright cupboard bulb exposed a private colony of crumbs. Breakfast requests discretion."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Uranus-2026-11-01T00:00:00Z-tech-0",
+      "eventId": "planet-sign-Uranus-2026-11-01T00:00:00Z",
+      "tone": "tech",
+      "text": "One API change generated seven SDKs. None agree on which surprise is canonical."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Uranus-2026-11-01T00:00:00Z-woo-0",
+      "eventId": "planet-sign-Uranus-2026-11-01T00:00:00Z",
+      "tone": "woo",
+      "text": "The revelation hotline forked into twelve podcasts. Static has secured the best sponsorship deal."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Uranus-2026-11-01T00:00:00Z-zen-0",
+      "eventId": "planet-sign-Uranus-2026-11-01T00:00:00Z",
+      "tone": "zen",
+      "text": "Choose one signal and listen. The others will survive being possibilities."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Uranus-2026-11-01T00:00:00Z-zen-1",
+      "eventId": "planet-sign-Uranus-2026-11-01T00:00:00Z",
+      "tone": "zen",
+      "text": "Uranus in Gemini put every fresh thought on call waiting."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Uranus-2026-11-01T00:00:00Z-office-0",
+      "eventId": "planet-sign-Uranus-2026-11-01T00:00:00Z",
+      "tone": "office",
+      "text": "One staff question returned as five executive anecdotes. Secretariat filed them under ‘clarity.’"
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Uranus-2026-11-01T00:00:00Z-dating-0",
+      "eventId": "planet-sign-Uranus-2026-11-01T00:00:00Z",
+      "tone": "dating",
+      "text": "Every notification introduced a new romantic thesis. The inbox is demanding a coalition government."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Uranus-2026-11-01T00:00:00Z-domestic-0",
+      "eventId": "planet-sign-Uranus-2026-11-01T00:00:00Z",
+      "tone": "domestic",
+      "text": "A new door chime speaks in three voices. Nobody can tell guest from parcel from passing pigeon."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Venus-2026-11-01T00:00:00Z-tech-0",
+      "eventId": "planet-sign-Venus-2026-11-01T00:00:00Z",
+      "tone": "tech",
+      "text": "The design tokens split every pixel fairly. Contrast received custody on alternate weekends."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Venus-2026-11-01T00:00:00Z-woo-0",
+      "eventId": "planet-sign-Venus-2026-11-01T00:00:00Z",
+      "tone": "woo",
+      "text": "The aura mediator split one compliment evenly. Neither half feels properly admired."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Venus-2026-11-01T00:00:00Z-zen-0",
+      "eventId": "planet-sign-Venus-2026-11-01T00:00:00Z",
+      "tone": "zen",
+      "text": "Fairness may leave someone unconvinced. Harmony is allowed to finish without unanimity."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Venus-2026-11-01T00:00:00Z-zen-1",
+      "eventId": "planet-sign-Venus-2026-11-01T00:00:00Z",
+      "tone": "zen",
+      "text": "Venus in Libra gave the compromise a tasteful little arbitration scarf."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Venus-2026-11-01T00:00:00Z-office-0",
+      "eventId": "planet-sign-Venus-2026-11-01T00:00:00Z",
+      "tone": "office",
+      "text": "HR matched the grievance forms to the lobby décor. Workplace harmony is now available in taupe."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Venus-2026-11-01T00:00:00Z-dating-0",
+      "eventId": "planet-sign-Venus-2026-11-01T00:00:00Z",
+      "tone": "dating",
+      "text": "The date matched every opinion so beautifully that nobody could locate either person."
+    },
+    {
+      "id": "daily-2026-11-16-planet-sign-Venus-2026-11-01T00:00:00Z-domestic-0",
+      "eventId": "planet-sign-Venus-2026-11-01T00:00:00Z",
+      "tone": "domestic",
+      "text": "Bath time and the laundry cycle share one clock. Harmony grants each a diplomatic twenty minutes."
+    },
+    {
+      "id": "daily-2026-11-16-retrograde-Neptune-2026-11-01T00:00:00Z-tech-0",
+      "eventId": "retrograde-Neptune-2026-11-01T00:00:00Z",
+      "tone": "tech",
+      "text": "The AI vision is retracing its prompt. The benchmark quietly removed the incense."
+    },
+    {
+      "id": "daily-2026-11-16-retrograde-Neptune-2026-11-01T00:00:00Z-woo-0",
+      "eventId": "retrograde-Neptune-2026-11-01T00:00:00Z",
+      "tone": "woo",
+      "text": "The dream concierge is inventorying mirages. Three horizons belong to the deluxe package."
+    },
+    {
+      "id": "daily-2026-11-16-retrograde-Neptune-2026-11-01T00:00:00Z-zen-0",
+      "eventId": "retrograde-Neptune-2026-11-01T00:00:00Z",
+      "tone": "zen",
+      "text": "An ideal under review still has room for wonder. Awe keeps no performance score."
+    },
+    {
+      "id": "daily-2026-11-16-retrograde-Neptune-2026-11-01T00:00:00Z-zen-1",
+      "eventId": "retrograde-Neptune-2026-11-01T00:00:00Z",
+      "tone": "zen",
+      "text": "Retrograde Neptune routed the dream inward. Reception misplaced the map."
+    },
+    {
+      "id": "daily-2026-11-16-retrograde-Neptune-2026-11-01T00:00:00Z-office-0",
+      "eventId": "retrograde-Neptune-2026-11-01T00:00:00Z",
+      "tone": "office",
+      "text": "The vision office recalled its daydream for inspection. The fog passed with minor revisions."
+    },
+    {
+      "id": "daily-2026-11-16-retrograde-Neptune-2026-11-01T00:00:00Z-dating-0",
+      "eventId": "retrograde-Neptune-2026-11-01T00:00:00Z",
+      "tone": "dating",
+      "text": "The fantasy withdrew to reconsider its casting. Actual humans may submit unretouched applications."
+    },
+    {
+      "id": "daily-2026-11-16-retrograde-Neptune-2026-11-01T00:00:00Z-domestic-0",
+      "eventId": "retrograde-Neptune-2026-11-01T00:00:00Z",
+      "tone": "domestic",
+      "text": "The scented fog has turned inward. Three abandoned mending projects wait where the vision left them."
+    },
+    {
+      "id": "daily-2026-11-16-retrograde-Saturn-2026-11-01T00:00:00Z-tech-0",
+      "eventId": "retrograde-Saturn-2026-11-01T00:00:00Z",
+      "tone": "tech",
+      "text": "The scheduler is moving backward through its deadlines. Every missed job has acquired tenure."
+    },
+    {
+      "id": "daily-2026-11-16-retrograde-Saturn-2026-11-01T00:00:00Z-woo-0",
+      "eventId": "retrograde-Saturn-2026-11-01T00:00:00Z",
+      "tone": "woo",
+      "text": "The austerity retreat is reviewing its lifetime membership. Responsibility discovered a recurring fee."
+    },
+    {
+      "id": "daily-2026-11-16-retrograde-Saturn-2026-11-01T00:00:00Z-zen-0",
+      "eventId": "retrograde-Saturn-2026-11-01T00:00:00Z",
+      "tone": "zen",
+      "text": "A duty can be examined without becoming a sentence. Keep the useful hinge."
+    },
+    {
+      "id": "daily-2026-11-16-retrograde-Saturn-2026-11-01T00:00:00Z-zen-1",
+      "eventId": "retrograde-Saturn-2026-11-01T00:00:00Z",
+      "tone": "zen",
+      "text": "Retrograde Saturn invited duty to sit with yesterday's unfinished knot. Both ends finally softened."
+    },
+    {
+      "id": "daily-2026-11-16-retrograde-Saturn-2026-11-01T00:00:00Z-office-0",
+      "eventId": "retrograde-Saturn-2026-11-01T00:00:00Z",
+      "tone": "office",
+      "text": "The policy returned to audit its own authority. Compliance offered it the senior clipboard."
+    },
+    {
+      "id": "daily-2026-11-16-retrograde-Saturn-2026-11-01T00:00:00Z-dating-0",
+      "eventId": "retrograde-Saturn-2026-11-01T00:00:00Z",
+      "tone": "dating",
+      "text": "The six-hour reply rule is reviewing its authority. No legislature admits passing it."
+    },
+    {
+      "id": "daily-2026-11-16-retrograde-Saturn-2026-11-01T00:00:00Z-domestic-0",
+      "eventId": "retrograde-Saturn-2026-11-01T00:00:00Z",
+      "tone": "domestic",
+      "text": "The washing-up rules returned for audit. The roasting tray cites a historic exemption."
+    },
+    {
+      "id": "daily-2026-11-16-retrograde-Uranus-2026-11-01T00:00:00Z-tech-0",
+      "eventId": "retrograde-Uranus-2026-11-01T00:00:00Z",
+      "tone": "tech",
+      "text": "The feature flag inverted itself. Innovation is now enabled only in the legacy environment."
+    },
+    {
+      "id": "daily-2026-11-16-retrograde-Uranus-2026-11-01T00:00:00Z-woo-0",
+      "eventId": "retrograde-Uranus-2026-11-01T00:00:00Z",
+      "tone": "woo",
+      "text": "The enlightenment outlet is repricing last season's breakthroughs. Store credit cannot purchase surprise."
+    },
+    {
+      "id": "daily-2026-11-16-retrograde-Uranus-2026-11-01T00:00:00Z-zen-0",
+      "eventId": "retrograde-Uranus-2026-11-01T00:00:00Z",
+      "tone": "zen",
+      "text": "Rebellion can learn from its echo. Quiet insight does not revoke the original spark."
+    },
+    {
+      "id": "daily-2026-11-16-retrograde-Uranus-2026-11-01T00:00:00Z-zen-1",
+      "eventId": "retrograde-Uranus-2026-11-01T00:00:00Z",
+      "tone": "zen",
+      "text": "Retrograde Uranus recalled the breakthrough for quieter packaging."
+    },
+    {
+      "id": "daily-2026-11-16-retrograde-Uranus-2026-11-01T00:00:00Z-office-0",
+      "eventId": "retrograde-Uranus-2026-11-01T00:00:00Z",
+      "tone": "office",
+      "text": "The reorganization returned its daring new titles. Human Resources restored the previous nameplates."
+    },
+    {
+      "id": "daily-2026-11-16-retrograde-Uranus-2026-11-01T00:00:00Z-dating-0",
+      "eventId": "retrograde-Uranus-2026-11-01T00:00:00Z",
+      "tone": "dating",
+      "text": "The chaotic type is testing a radical pilot called keeping plans. Results feel suspiciously pleasant."
+    },
+    {
+      "id": "daily-2026-11-16-retrograde-Uranus-2026-11-01T00:00:00Z-domestic-0",
+      "eventId": "retrograde-Uranus-2026-11-01T00:00:00Z",
+      "tone": "domestic",
+      "text": "The clever tap has reversed its upgrade. Hot and cold may resume their old, comprehensible dispute."
+    },
+    {
+      "id": "daily-2026-11-16-moon-sign-Aquarius-2026-11-15T09:24:15Z-tech-0",
+      "eventId": "moon-sign-Aquarius-2026-11-15T09:24:15Z",
+      "tone": "tech",
+      "text": "The incident bot summarized every feeling. Human context is available in the enterprise plan."
+    },
+    {
+      "id": "daily-2026-11-16-moon-sign-Aquarius-2026-11-15T09:24:15Z-woo-0",
+      "eventId": "moon-sign-Aquarius-2026-11-15T09:24:15Z",
+      "tone": "woo",
+      "text": "The feelings commune moved tenderness to cold storage. Access remains open to all registered souls."
+    },
+    {
+      "id": "daily-2026-11-16-moon-sign-Aquarius-2026-11-15T09:24:15Z-zen-0",
+      "eventId": "moon-sign-Aquarius-2026-11-15T09:24:15Z",
+      "tone": "zen",
+      "text": "A little distance can hold care gently. The sky keeps every star without crowding."
+    },
+    {
+      "id": "daily-2026-11-16-moon-sign-Aquarius-2026-11-15T09:24:15Z-zen-1",
+      "eventId": "moon-sign-Aquarius-2026-11-15T09:24:15Z",
+      "tone": "zen",
+      "text": "The Aquarius Moon circulated the feeling as an abstract for peer review."
+    },
+    {
+      "id": "daily-2026-11-16-moon-sign-Aquarius-2026-11-15T09:24:15Z-office-0",
+      "eventId": "moon-sign-Aquarius-2026-11-15T09:24:15Z",
+      "tone": "office",
+      "text": "The feelings forum submitted emotion as a systems diagram. The chair praised its useful distance."
+    },
+    {
+      "id": "daily-2026-11-16-moon-sign-Aquarius-2026-11-15T09:24:15Z-dating-0",
+      "eventId": "moon-sign-Aquarius-2026-11-15T09:24:15Z",
+      "tone": "dating",
+      "text": "A tender feeling addressed the entire dating pool. Its intended recipient is requesting a direct message."
+    },
+    {
+      "id": "daily-2026-11-16-moon-sign-Aquarius-2026-11-15T09:24:15Z-domestic-0",
+      "eventId": "moon-sign-Aquarius-2026-11-15T09:24:15Z",
+      "tone": "domestic",
+      "text": "Everyone labeled their mood on the fridge. The magnets provide distance; the soup provides care."
+    },
+    {
+      "id": "daily-2026-11-16-conjunction-Mars-Jupiter-2026-11-16T05:00:00Z-tech-0",
+      "eventId": "conjunction-Mars-Jupiter-2026-11-16T05:00:00Z",
+      "tone": "tech",
+      "text": "Velocity and ambition paired on one ticket. The estimate has become a launch vehicle."
+    },
+    {
+      "id": "daily-2026-11-16-conjunction-Mars-Jupiter-2026-11-16T05:00:00Z-woo-0",
+      "eventId": "conjunction-Mars-Jupiter-2026-11-16T05:00:00Z",
+      "tone": "woo",
+      "text": "The action mantra drank the abundance elixir. Its indoor voice has entered another dimension."
+    },
+    {
+      "id": "daily-2026-11-16-conjunction-Mars-Jupiter-2026-11-16T05:00:00Z-zen-0",
+      "eventId": "conjunction-Mars-Jupiter-2026-11-16T05:00:00Z",
+      "tone": "zen",
+      "text": "Large energy may choose a small task. The task will not feel patronized."
+    },
+    {
+      "id": "daily-2026-11-16-conjunction-Mars-Jupiter-2026-11-16T05:00:00Z-zen-1",
+      "eventId": "conjunction-Mars-Jupiter-2026-11-16T05:00:00Z",
+      "tone": "zen",
+      "text": "Mars and Jupiter shared one counter. Momentum ordered the family-size ambition."
+    },
+    {
+      "id": "daily-2026-11-16-conjunction-Mars-Jupiter-2026-11-16T05:00:00Z-office-0",
+      "eventId": "conjunction-Mars-Jupiter-2026-11-16T05:00:00Z",
+      "tone": "office",
+      "text": "Ambition and action booked the same podium. The agenda now includes a controlled stampede."
+    },
+    {
+      "id": "daily-2026-11-16-conjunction-Mars-Jupiter-2026-11-16T05:00:00Z-dating-0",
+      "eventId": "conjunction-Mars-Jupiter-2026-11-16T05:00:00Z",
+      "tone": "dating",
+      "text": "Meeting the friends became a victory banquet. The relationship is still learning everyone's names."
+    },
+    {
+      "id": "daily-2026-11-16-conjunction-Mars-Jupiter-2026-11-16T05:00:00Z-domestic-0",
+      "eventId": "conjunction-Mars-Jupiter-2026-11-16T05:00:00Z",
+      "tone": "domestic",
+      "text": "One loose handle inspired a renovation sprint. The entire cabinet now waits in the corridor."
+    },
+    {
+      "id": "daily-2026-11-16-moon-phase-first-quarter Moon-2026-11-16T16:18:03Z-tech-0",
+      "eventId": "moon-phase-first-quarter Moon-2026-11-16T16:18:03Z",
+      "tone": "tech",
+      "text": "The migration crossed its halfway marker. Both schemas now claim to be the source of truth."
+    },
+    {
+      "id": "daily-2026-11-16-moon-phase-first-quarter Moon-2026-11-16T16:18:03Z-woo-0",
+      "eventId": "moon-phase-first-quarter Moon-2026-11-16T16:18:03Z",
+      "tone": "woo",
+      "text": "The moon ritual reached its decision point. Both paths sell matching courage amulets."
+    },
+    {
+      "id": "daily-2026-11-16-moon-phase-first-quarter Moon-2026-11-16T16:18:03Z-zen-0",
+      "eventId": "moon-phase-first-quarter Moon-2026-11-16T16:18:03Z",
+      "tone": "zen",
+      "text": "Half-lit is enough for the next choice. The unseen stretch requires no decision yet."
+    },
+    {
+      "id": "daily-2026-11-16-moon-phase-first-quarter Moon-2026-11-16T16:18:03Z-zen-1",
+      "eventId": "moon-phase-first-quarter Moon-2026-11-16T16:18:03Z",
+      "tone": "zen",
+      "text": "The first-quarter Moon filed friction under necessary office supplies."
+    },
+    {
+      "id": "daily-2026-11-16-moon-phase-first-quarter Moon-2026-11-16T16:18:03Z-office-0",
+      "eventId": "moon-phase-first-quarter Moon-2026-11-16T16:18:03Z",
+      "tone": "office",
+      "text": "Momentum met resistance at the quarterly checkpoint. Both were assigned adjacent cubicles."
+    },
+    {
+      "id": "daily-2026-11-16-moon-phase-first-quarter Moon-2026-11-16T16:18:03Z-dating-0",
+      "eventId": "moon-phase-first-quarter Moon-2026-11-16T16:18:03Z",
+      "tone": "dating",
+      "text": "Half-lit resolve drafted the honest question. The typing bubble has requested one final adjournment."
+    },
+    {
+      "id": "daily-2026-11-16-moon-phase-first-quarter Moon-2026-11-16T16:18:03Z-domestic-0",
+      "eventId": "moon-phase-first-quarter Moon-2026-11-16T16:18:03Z",
+      "tone": "domestic",
+      "text": "Dinner is chopped but not assembled. The hungry household approves one decisive pan."
+    }
+  ],
+  "explanations": [
+    {
+      "eventId": "planet-sign-Jupiter-2026-11-01T00:00:00Z",
+      "text": "In traditional astrology, Jupiter symbolizes growth, confidence, and generosity, while Leo favors creative expression and visible leadership. The symbolism desk therefore reads this pairing as expansive enthusiasm with a taste for the spotlight, plus a reminder that abundance can become excess."
+    },
+    {
+      "eventId": "planet-sign-Mars-2026-11-01T00:00:00Z",
+      "text": "In traditional astrology, Mars represents drive, assertion, and the urge to act; Leo adds pride, performance, and a wish to be recognized. Filed together, they symbolize bold, expressive effort whose courage may be genuine even when the presentation becomes theatrical."
+    },
+    {
+      "eventId": "planet-sign-Mercury-2026-11-01T00:00:00Z",
+      "text": "In traditional astrology, Mercury governs thought and communication, while Scorpio is associated with privacy, depth, and probing beneath appearances. The cosmic records office reads the combination as selective speech, concentrated inquiry, and an instinct to inspect the fine print."
+    },
+    {
+      "eventId": "planet-sign-Neptune-2026-11-01T00:00:00Z",
+      "text": "In modern astrology, Neptune symbolizes ideals, imagination, and dissolving boundaries; Aries supplies initiative and a pioneering impulse. Their joint file describes visions eager to become action, with the usual clerical caution that inspiration and certainty are not identical forms."
+    },
+    {
+      "eventId": "planet-sign-Pluto-2026-11-01T00:00:00Z",
+      "text": "In modern astrology, Pluto signifies deep transformation and questions of power, while Aquarius concerns groups, systems, and unconventional futures. The symbolism ledger combines them as long-range revision of collective structures, especially where technology and authority share a desk."
+    },
+    {
+      "eventId": "planet-sign-Saturn-2026-11-01T00:00:00Z",
+      "text": "In traditional astrology, Saturn represents limits, duty, and durable structure; Aries favors immediacy, independence, and the first move. This pairing symbolizes initiative meeting necessary restraint: the impulse may proceed, but the cosmic clerk still requests a load-bearing plan."
+    },
+    {
+      "eventId": "planet-sign-Sun-2026-11-01T00:00:00Z",
+      "text": "In traditional astrology, the Sun symbolizes purpose, vitality, and what becomes visible, while Scorpio is linked with privacy, intensity, and hidden motives. The combined symbolism favors focused awareness and honest examination rather than a claim that any secret must be revealed."
+    },
+    {
+      "eventId": "planet-sign-Uranus-2026-11-01T00:00:00Z",
+      "text": "In modern astrology, Uranus represents disruption, freedom, and invention; Gemini concerns language, learning, and networks of exchange. The symbolism department reads their pairing as experiments in how ideas travel, with novelty circulating faster than the filing system can classify it."
+    },
+    {
+      "eventId": "planet-sign-Venus-2026-11-01T00:00:00Z",
+      "text": "In traditional astrology, Venus signifies connection, pleasure, values, and aesthetics, and Libra is one of its home signs, emphasizing balance and reciprocity. The clerk's interpretation is a strong preference for graceful agreement, while noting that harmony can postpone useful friction."
+    },
+    {
+      "eventId": "retrograde-Neptune-2026-11-01T00:00:00Z",
+      "text": "Astrologers traditionally treat retrograde periods as reviews rather than literal reversals of a planet's meaning. For Neptune, the symbolism desk turns inward toward faith, ideals, imagination, and disillusionment, asking which visions remain meaningful after the mist is refiled."
+    },
+    {
+      "eventId": "retrograde-Saturn-2026-11-01T00:00:00Z",
+      "text": "In astrological tradition, retrograde symbolism redirects a planet's themes toward reconsideration. Saturn's docket covers responsibility, boundaries, and long-term structure, so this interval is read as consolidation and review of existing commitments, not a forecast of obstruction."
+    },
+    {
+      "eventId": "retrograde-Uranus-2026-11-01T00:00:00Z",
+      "text": "In modern astrology, retrograde motion is interpreted as a period of inward review. Applied to Uranus, whose file concerns disruption, innovation, and freedom, it symbolizes reexamining what truly needs changing before the revolution receives another version number."
+    },
+    {
+      "eventId": "moon-sign-Aquarius-2026-11-15T09:24:15Z",
+      "text": "In astrology, the Moon symbolizes habits, needs, and emotional rhythms, while Aquarius emphasizes independence, community, and a wider social view. The combined symbolism places feeling beside observation, as though the heart submitted its notes through a public-interest committee."
+    },
+    {
+      "eventId": "conjunction-Mars-Jupiter-2026-11-16T05:00:00Z",
+      "text": "Astrologers interpret a conjunction as two planetary symbol sets working in one concentrated file. Mars contributes action, assertion, and appetite for effort; Jupiter adds expansion, confidence, and scale, so the pairing symbolizes amplified initiative, with excess included in the margins."
+    },
+    {
+      "eventId": "moon-phase-first-quarter Moon-2026-11-16T16:18:03Z",
+      "text": "In traditional lunar symbolism, the first-quarter phase marks tension between an emerging intention and the effort needed to develop it. The cosmic clerk files it under action, adjustment, and practical choice: enough illumination to proceed, with the outcome still unfinished."
+    }
+  ]
+}
